@@ -160,134 +160,110 @@ for (int i = 0; i < 2; i++) {
     
 }
 
+bool check_match(int id1,int id2) {
+    if(id1 == id2){ 
+        return true;
+    } 
+    else {
+        return false; 
+    }
+
+
+}
+
 void process_button1(Sprite *cards, int size) { 
     if(button1->pressed) {
         button1Pressed = true; 
         counter_cards++;
     }
     if(button1Pressed) { 
-        
         draw_sprite_xpm(&matrix[0][0], 0, 0);
-        if(counter_cards == 2 && (matrix[0][0].id == matrix[0][1].id)) 
-        { 
-            menuState = END;
+        if(button2Pressed){
+            if(check_match(matrix[0][0].id,matrix[0][1].id)){   //match entre o id 1 e o id 2;
+                menuState = END;
+            } 
+            else {
+                button1Pressed = false; 
+                button2Pressed = false; 
+                counter_cards = 0;
+            }
         }
-        else if(counter_cards == 2 && (matrix[0][0].id != matrix[0][1].id)) 
-        { 
-            button2Pressed = false;
-            button1Pressed = false;
-            counter_cards = 0;
+        if(button3Pressed) { 
+            if(check_match(matrix[0][0].id,matrix[1][0].id)){
+                menuState = END;
+            }
+            else {
+                button1Pressed = false; 
+                button3Pressed = false;
+                counter_cards = 0;
+            }
         }
-        if(counter_cards == 2 && (matrix[0][0].id == matrix[1][0].id))
-        {
-            menuState = END;
+        if(button4Pressed) {
+            if(check_match(matrix[0][0].id,matrix[1][1].id)){
+                menuState = END;
+            }
+            else {
+                button1Pressed = false; 
+                button4Pressed = false;
+                counter_cards = 0;
+            }
         }
-        else if(counter_cards == 2 && (matrix[0][0].id != matrix[1][0].id))
-        {
-            button1Pressed = false; 
-            button3Pressed = false; 
-            counter_cards = 0;
-        }
-        if(counter_cards == 2 && (matrix[0][0].id == matrix[1][1].id)) 
-        {
-            menuState = END;
-        }
-        else if(counter_cards == 2 && (matrix[0][0].id != matrix[1][1].id))
-        {
-            button1Pressed = false; 
-            button4Pressed = false; 
-            counter_cards = 0;
-        }
-       
     }
 }
 void process_button2(Sprite *cards, int size){
     if(button2->pressed) {
        button2Pressed = true; 
        counter_cards++;
-       
     }
     
     if(button2Pressed){      
-    
         draw_sprite_xpm(&matrix[0][1], mode_info.XResolution/2, 0);
-        
-        if(counter_cards == 2 && (matrix[0][0].id == matrix[0][1].id)) 
-        { 
-            menuState = END;
+        if(button3Pressed) { 
+            if(check_match(matrix[0][1].id,matrix[1][0].id)){
+                menuState = END;
+            }
+            else {
+                button2Pressed = false; 
+                button3Pressed = false;
+                counter_cards = 0;
+            }
         }
-        else if(counter_cards == 2 && (matrix[0][0].id != matrix[0][1].id)) 
-        { 
-            button2Pressed = false;
-            button1Pressed = false;
-            counter_cards = 0;
+        if(button4Pressed) {
+            if(check_match(matrix[0][1].id,matrix[1][1].id)){
+                menuState = END;
+            }
+            else {
+                button2Pressed = false; 
+                button4Pressed = false;
+                counter_cards = 0;
+            }
         }
-        if(counter_cards == 2 && (matrix[0][1].id == matrix[1][0].id))
-        {
-            menuState = END;
-        }
-        else if(counter_cards == 2 && (matrix[0][1].id != matrix[1][0].id))
-        {
-            button2Pressed = false; 
-            button3Pressed = false; 
-            counter_cards = 0;
-        }
-        if(counter_cards == 2 && (matrix[0][1].id == matrix[1][1].id))
-        {
-            menuState = END;
-        }
-        else if(counter_cards == 2 && (matrix[0][1].id != matrix[1][1].id))
-        {
-            button2Pressed = false; 
-            button4Pressed = false; 
-            counter_cards = 0;
-        }
-        
     }
 }
 
 void process_button3(Sprite *cards, int size)
 {   
-    
     if(button3->pressed) {
         button3Pressed = true; 
         counter_cards++;
+
     }
     
     if(button3Pressed){ 
         draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution/2);
-        if(counter_cards == 2 && (matrix[0][0].id == matrix[1][0].id))
-        {
-            menuState = END;
+        if(button4Pressed) { 
+            if(check_match(matrix[1][0].id,matrix[1][1].id)){
+                menuState = END;
+            }
+            else {
+                button3Pressed = false; 
+                button4Pressed = false;
+                counter_cards = 0;
+            }
         }
-        else if(counter_cards == 2 && (matrix[0][0].id != matrix[1][0].id))
-        {
-            button3Pressed = false; 
-            button1Pressed = false; 
-            counter_cards = 0;
-        }
-        if(counter_cards == 2 && (matrix[0][1].id == matrix[1][0].id))
-        {
-            menuState = END;
-        }
-        else if(counter_cards == 2 && (matrix[0][1].id != matrix[1][0].id))
-        {
-            button3Pressed = false;
-            button2Pressed = false; 
-            counter_cards = 0;
-        }
-        if(counter_cards == 2 && (matrix[1][0].id == matrix[1][1].id))
-        {
-            menuState = END;
-        }
-        else if(counter_cards == 2 && (matrix[1][0].id != matrix[1][1].id))
-        {
-            button3Pressed = false; 
-            button4Pressed = false; 
-            counter_cards = 0;
-        }
-    }
+        
 
+}
 }
 
 void process_button4(Sprite *cards,int size) 
@@ -299,38 +275,8 @@ void process_button4(Sprite *cards,int size)
     
     if(button4Pressed){ 
         draw_sprite_xpm(&matrix[1][1], mode_info.XResolution/2, mode_info.YResolution/2);
-        if(counter_cards == 2 && (matrix[0][0].id == matrix[1][1].id)) 
-        {
-            menuState = END;
-        }
-        else if(counter_cards == 2 && (matrix[0][0].id != matrix[1][1].id))
-        {
-            button1Pressed = false; 
-            button4Pressed = false; 
-            counter_cards = 0;
-        }
-        if(counter_cards == 2 && (matrix[0][1].id == matrix[1][1].id))
-        {
-            menuState = END;
-        }
-        else if(counter_cards == 2 && (matrix[0][1].id != matrix[1][1].id))
-        {
-            button2Pressed = false; 
-            button4Pressed = false; 
-            counter_cards = 0;
-        }
-        if(counter_cards == 2 && (matrix[1][0].id == matrix[1][1].id))
-        {
-            menuState = END;
-        }
-        else if(counter_cards == 2 && (matrix[1][0].id != matrix[1][1].id))
-        {
-            button3Pressed = false; 
-            button4Pressed = false; 
-            counter_cards = 0;
-        }
         
-    }
+}
 }
 
 
