@@ -5,6 +5,7 @@
 #include <stdio.h> 
 #include <time.h> 
 
+
 // Variáveis externas importantes à visualização do modelo e dos seus estados
 uint8_t *main_frame_buffer;
 uint8_t *secondary_frame_buffer;
@@ -101,86 +102,259 @@ bool button4Pressed = false;
 bool auxiliar1Pressed = false; 
 bool auxiliar2Pressed = false;
 int counter_cards = 0; 
+int random_index = 0;
 int aux = 0; 
 int aux2= 0;
+int aux3 = 0; 
+int aux4 = 0;
+int pre = 0;
 int j = 0;
 int k = 0;
+Sprite matrix[2][2];
+int id_sprite1; 
+int id_sprite2; 
+int id_sprite3; 
+int id_sprite4;
 
 int get_number(Sprite *cards,int size) {
 
     int random_number = rand() % size;
     return random_number;
 }
+void shuffle(Sprite *cards, int size) 
+{
+    srand(time(NULL));
+    for (int i = size -1; i >= 0; i--) {
+        int j = rand() % (i + 1); 
+        Sprite temp = cards[i];
+        cards[i] = cards[j];
+        cards[j] = temp;
+    }
+    
+    matrix[0][0] = cards[0];
+    matrix[0][1] = cards[1];
+    matrix[1][0] = cards[2];
+    matrix[1][1] = cards[3];
+    //how can I compare the values  ? 
+    // Compare all elements in the matrix
+for (int i = 0; i < 2; i++) {
+    for (int j = 0; j < 2; j++) {
+        // Compare the current element to all other elements in the matrix
+        for (int k = 0; k < 2; k++) {
+            for (int l = 0; l < 2; l++) {
+                // If the current element is not being compared to itself and has the same id as another element,
+                // print a message indicating that there is a match
+                if (i != k || j != l) {
+                    if (matrix[i][j].id == matrix[k][l].id) {
+                        printf("Match found: matrix[%d][%d].id = %d and matrix[%d][%d].id = %d\n",
+                            i, j, matrix[i][j].id, k, l, matrix[k][l].id);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+    
+}
 
 void process_button1(Sprite *cards, int size) { 
     if(button1->pressed) {
         button1Pressed = true; 
-        printf("Button1 pressed");
         counter_cards++;
     }
     if(button1Pressed) { 
-        if(aux == 0){
-        aux++;
-        k = get_number(cards,size); //para funcionar apenas uma primeira vez
-        }
-        printf("%d",counter_cards);
-        draw_sprite_xpm(&cards[k], 0, 0);
-        if(k == j && counter_cards == 2) { 
-            printf("Acertou");
+        
+        draw_sprite_xpm(&matrix[0][0], 0, 0);
+        if(counter_cards == 2 && (matrix[0][0].id == matrix[0][1].id)) 
+        { 
             menuState = END;
-             
         }
-        else if(k != j && counter_cards == 2) {
+        else if(counter_cards == 2 && (matrix[0][0].id != matrix[0][1].id)) 
+        { 
+            button2Pressed = false;
             button1Pressed = false;
-            button2Pressed = false; 
-            printf("Errou");
-            counter_cards = 0;  
-            
-           
+            counter_cards = 0;
         }
+        if(counter_cards == 2 && (matrix[0][0].id == matrix[1][0].id))
+        {
+            menuState = END;
+        }
+        else if(counter_cards == 2 && (matrix[0][0].id != matrix[1][0].id))
+        {
+            button1Pressed = false; 
+            button3Pressed = false; 
+            counter_cards = 0;
+        }
+        if(counter_cards == 2 && (matrix[0][0].id == matrix[1][1].id)) 
+        {
+            menuState = END;
+        }
+        else if(counter_cards == 2 && (matrix[0][0].id != matrix[1][1].id))
+        {
+            button1Pressed = false; 
+            button4Pressed = false; 
+            counter_cards = 0;
+        }
+       
     }
 }
 void process_button2(Sprite *cards, int size){
-
     if(button2->pressed) {
        button2Pressed = true; 
-       printf("Button2 pressed");
        counter_cards++;
        
     }
-    if(button2Pressed){         
-        if(aux2 == 0) {
-        aux2++; 
-        j = get_number(cards,size);
-        } 
-        printf("%d",counter_cards);
-        draw_sprite_xpm(&cards[j], mode_info.XResolution/2, 0);
+    
+    if(button2Pressed){      
+    
+        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution/2, 0);
         
-        if(k == j & counter_cards == 2) { 
-            printf("Acertou");
+        if(counter_cards == 2 && (matrix[0][0].id == matrix[0][1].id)) 
+        { 
             menuState = END;
-            
         }
-        else if(k != j & counter_cards == 2) {
-            button2Pressed = false; 
+        else if(counter_cards == 2 && (matrix[0][0].id != matrix[0][1].id)) 
+        { 
+            button2Pressed = false;
             button1Pressed = false;
-            printf("Errou");
-            counter_cards = 0;         
+            counter_cards = 0;
         }
+        if(counter_cards == 2 && (matrix[0][1].id == matrix[1][0].id))
+        {
+            menuState = END;
+        }
+        else if(counter_cards == 2 && (matrix[0][1].id != matrix[1][0].id))
+        {
+            button2Pressed = false; 
+            button3Pressed = false; 
+            counter_cards = 0;
+        }
+        if(counter_cards == 2 && (matrix[0][1].id == matrix[1][1].id))
+        {
+            menuState = END;
+        }
+        else if(counter_cards == 2 && (matrix[0][1].id != matrix[1][1].id))
+        {
+            button2Pressed = false; 
+            button4Pressed = false; 
+            counter_cards = 0;
+        }
+        
     }
 }
 
+void process_button3(Sprite *cards, int size)
+{   
+    
+    if(button3->pressed) {
+        button3Pressed = true; 
+        counter_cards++;
+    }
+    
+    if(button3Pressed){ 
+        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution/2);
+        if(counter_cards == 2 && (matrix[0][0].id == matrix[1][0].id))
+        {
+            menuState = END;
+        }
+        else if(counter_cards == 2 && (matrix[0][0].id != matrix[1][0].id))
+        {
+            button3Pressed = false; 
+            button1Pressed = false; 
+            counter_cards = 0;
+        }
+        if(counter_cards == 2 && (matrix[0][1].id == matrix[1][0].id))
+        {
+            menuState = END;
+        }
+        else if(counter_cards == 2 && (matrix[0][1].id != matrix[1][0].id))
+        {
+            button3Pressed = false;
+            button2Pressed = false; 
+            counter_cards = 0;
+        }
+        if(counter_cards == 2 && (matrix[1][0].id == matrix[1][1].id))
+        {
+            menuState = END;
+        }
+        else if(counter_cards == 2 && (matrix[1][0].id != matrix[1][1].id))
+        {
+            button3Pressed = false; 
+            button4Pressed = false; 
+            counter_cards = 0;
+        }
+    }
+
+}
+
+void process_button4(Sprite *cards,int size) 
+{
+    if(button4->pressed) {
+        button4Pressed = true; 
+        counter_cards++;
+    }
+    
+    if(button4Pressed){ 
+        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution/2, mode_info.YResolution/2);
+        if(counter_cards == 2 && (matrix[0][0].id == matrix[1][1].id)) 
+        {
+            menuState = END;
+        }
+        else if(counter_cards == 2 && (matrix[0][0].id != matrix[1][1].id))
+        {
+            button1Pressed = false; 
+            button4Pressed = false; 
+            counter_cards = 0;
+        }
+        if(counter_cards == 2 && (matrix[0][1].id == matrix[1][1].id))
+        {
+            menuState = END;
+        }
+        else if(counter_cards == 2 && (matrix[0][1].id != matrix[1][1].id))
+        {
+            button2Pressed = false; 
+            button4Pressed = false; 
+            counter_cards = 0;
+        }
+        if(counter_cards == 2 && (matrix[1][0].id == matrix[1][1].id))
+        {
+            menuState = END;
+        }
+        else if(counter_cards == 2 && (matrix[1][0].id != matrix[1][1].id))
+        {
+            button3Pressed = false; 
+            button4Pressed = false; 
+            counter_cards = 0;
+        }
+        
+    }
+}
+
+
+
 // O menu do jogo é constituído por quatro botões
 void draw_game_menu() {
-    Sprite cards[] = {*mouse,*smile,*hand};
+    Sprite cards[] = {*mouse,*mouse,*smile,*smile};
+    int j = sizeof(cards) / sizeof(cards[0]);
+    if(pre == 0){
+        shuffle(cards,j);
+        pre++;
+    }
+    
+    
     draw_sprite_button(button1, 0, 0);
     draw_sprite_button(button2, mode_info.XResolution/2, 0);
     draw_sprite_button(button3, 0, mode_info.YResolution/2);
     draw_sprite_button(button4, mode_info.XResolution/2, mode_info.YResolution/2);
-    srand(time(NULL));
-    int j = sizeof(cards) / sizeof(cards[0]);
+    
+    
     process_button1(cards,j); 
-    process_button2(cards,j);    
+    process_button2(cards,j);
+    process_button3(cards,j);    
+    process_button4(cards,j); 
 }
     
 

@@ -1,13 +1,12 @@
-NOW: 2023/5/8 @19:12:38
-Button2 pressed1NOW: 2023/5/8 @19:12:39
-111111111111111111Button1 pressed2ErrouNOW: 2023/5/8 @19:12:40
-Button1 pressed11111111111111111111Button2 pressed2ErrouNOW: 2023/5/8 @19:12:41
-Button2 pressed1Button2 pressed2ErrouNOW: 2023/5/8 @19:12:42
-Button2 pressed111111111111111NOW: 2023/5/8 @19:12:43
-111111Button1 pressed2ErrouNOW: 2023/5/8 @19:12:44
-Button2 pressed111111111111111111111111NOW: 2023/5/8 @19:12:45
-1111111111111111111111Button1 pressed2ErrouNOW: 2023/5/8 @19:12:46
-Button1 pressed1Button1 pressed2ErrouButton1 pressed1111111NOW: 2023/5/8 @19:12:47
-111111111111111Button2 pressed2ErrouNOW: 2023/5/8 @19:12:48
-Button1 pressed11111111111111111111111111Button2 pressed2ErrouNOW: 2023/5/8 @19:12:49
-NOW: 2023/5/8 @19:12:50
+NOW: 2023/5/9 @19:15:1
+Match found: matrix[0][0].id = -1 and matrix[1][1].id = -1
+Match found: matrix[0][1].id = 8194 and matrix[1][0].id = 8194
+Match found: matrix[1][0].id = 8194 and matrix[0][1].id = 8194
+Match found: matrix[1][1].id = -1 and matrix[0][0].id = -1
+NOW: 2023/5/9 @19:15:2
+NOW: 2023/5/9 @19:15:3
+NOW: 2023/5/9 @19:15:4
+NOW: 2023/5/9 @19:15:5
+NOW: 2023/5/9 @19:15:6
+NOW: 2023/5/9 @19:15:7
+NOW: 2023/5/9 @19:15:8

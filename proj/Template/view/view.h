@@ -24,4 +24,7 @@ void draw_xpm_draw_buffer(xpm_map_t xpm, uint16_t x, uint16_t y) ;
 int get_number(Sprite *cards,int size);
 void process_button2(Sprite *cards,int size);
 void process_button1(Sprite *cards,int size);
+void process_button3(Sprite *cards, int size);
+void process_button4(Sprite *cards,int size);
+void shuffle(Sprite *cards, int size);
 #endif
