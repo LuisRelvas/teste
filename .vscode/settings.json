@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "*.xpm": "c",
+        "__split_buffer": "c",
+        "array": "c",
+        "deque": "c",
+        "string_view": "c",
+        "list": "c",
+        "queue": "c",
+        "string": "c",
+        "vector": "c"
+    }
+}
