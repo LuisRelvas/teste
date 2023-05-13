@@ -92,7 +92,11 @@ void draw_new_frame()
     case END:
         draw_finish_menu();
         break;
+    case GAME_2:
+        draw_game_menu_2();
+        break;
     }
+    
     draw_mouse();
 }
 
@@ -122,6 +126,7 @@ int pre = 0;
 int j = 0;
 int k = 0;
 Sprite matrix[2][2];
+Sprite matrix2[2][4];
 int id_sprite1;
 int id_sprite2;
 int id_sprite3;
@@ -131,6 +136,18 @@ bool block1 = false;
 bool block2 = false;
 bool block3 = false;
 bool block4 = false;
+//game_2
+bool cardPressed1 = false;
+bool cardPressed2 = false;
+bool cardPressed3 = false;
+bool cardPressed4 = false;
+bool cardPressed5 = false;
+bool cardPressed6 = false;
+bool cardPressed7 = false;
+bool cardPressed8 = false;
+int pre1 = 0;
+int prato = 0; 
+
 
 
 int get_number(Sprite *cards, int size)
@@ -180,6 +197,42 @@ void shuffle(Sprite *cards, int size)
         }
     }
 }
+
+void shuffle2(Sprite *cards)
+{
+    int size = 8; 
+
+    srand(time(NULL));
+    for (int i = size - 1; i >= 0; i--)
+    {
+        int j = rand() % (i + 1);
+        Sprite temp = cards[i];
+        cards[i] = cards[j];
+        cards[j] = temp;
+    }
+    matrix2[0][0] = cards[0];
+    matrix2[0][1] = cards[1];
+    matrix2[0][2] = cards[2];
+    matrix2[0][3] = cards[3];
+    matrix2[1][0] = cards[4];
+    matrix2[1][1] = cards[5];
+    matrix2[1][2] = cards[6];
+    matrix2[1][3] = cards[7];
+
+
+
+    // Printing the shuffled matrix
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            printf("%d ", matrix2[i][j].id);
+        }
+        printf("\n");
+    }
+
+}
+
 
 bool check_match(int id1, int id2)
 {
@@ -384,6 +437,146 @@ void draw_game_menu()
     }
 }
 
+void process_cardPressed1() { 
+    if(mouse_info.x >= 0 && mouse_info.y >= 0 && mouse_info.x <= mode_info.XResolution / 4 && mouse_info.y <= mode_info.YResolution / 2) {
+        if(mouse_info.left_click){
+        cardPressed1 = true;
+               }
+    }
+    if(cardPressed1){
+    draw_sprite_xpm(&matrix2[0][0],0,0);}
+
+}
+void process_cardPressed2(){
+     if(mouse_info.x >= mode_info.XResolution / 4 && mouse_info.y >= 0 && mouse_info.x <= mode_info.XResolution / 2 && mouse_info.y <= mode_info.YResolution / 2) {
+        if(mouse_info.left_click){
+        cardPressed2 = true;
+               }
+    }
+    if(cardPressed2) { 
+        
+        draw_sprite_xpm(&matrix2[0][1], mode_info.XResolution / 4, 0);
+    }
+    
+}
+
+void process_cardPressed3() { 
+    if(mouse_info.x >= mode_info.XResolution / 2 && mouse_info.y >= 0 && mouse_info.x <= 3 * mode_info.XResolution / 4 && mouse_info.y <= mode_info.YResolution / 2) {
+        if(mouse_info.left_click){
+        cardPressed3 = true;
+               }
+    }
+    if(cardPressed3) { 
+        
+        draw_sprite_xpm(&matrix2[0][2], mode_info.XResolution / 2, 0);
+    }
+}
+
+void process_cardPressed4() {
+    if(mouse_info.x >= 3 * mode_info.XResolution / 4 && mouse_info.y >= 0 && mouse_info.x <= mode_info.XResolution && mouse_info.y <= mode_info.YResolution / 2) {
+        if(mouse_info.left_click){
+        cardPressed4 = true;
+               }
+    }
+    if(cardPressed4) {
+        draw_sprite_xpm(&matrix2[0][3], 3 * mode_info.XResolution / 4, 0);
+    }
+}
+
+void process_cardPressed5() {
+    if(mouse_info.x >= 0 && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.x <= mode_info.XResolution / 4 && mouse_info.y <= mode_info.YResolution) {
+        if(mouse_info.left_click){
+            cardPressed5 = true;
+                   }
+    } 
+    if(cardPressed5) { 
+        draw_sprite_xpm(&matrix2[1][0], 0, mode_info.YResolution / 2);
+    }
+
+}
+
+void process_cardPressed6() {
+    if(mouse_info.x >= mode_info.XResolution / 4 && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.x <= mode_info.XResolution / 2 && mouse_info.y <= mode_info.YResolution) {
+        if(mouse_info.left_click){
+            cardPressed6 = true;
+                   }
+    }
+    if(cardPressed6) {
+        draw_sprite_xpm(&matrix2[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
+    }
+}
+
+void process_cardPressed7() {
+    if(mouse_info.x >= mode_info.XResolution / 2 && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.x <= 3 * mode_info.XResolution / 4 && mouse_info.y <= mode_info.YResolution) {
+        if(mouse_info.left_click){
+        cardPressed7 = true;
+               }
+    }
+    if(cardPressed7) {
+        draw_sprite_xpm(&matrix2[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
+    }
+
+}
+
+void process_cardPressed8() {
+    if(mouse_info.x >= 3 * mode_info.XResolution / 4 && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.x <= mode_info.XResolution && mouse_info.y <= mode_info.YResolution) {
+        if(mouse_info.left_click){
+            cardPressed8 = true;
+                   }
+    }
+    if(cardPressed8 ) {
+    draw_sprite_xpm(&matrix2[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+    }
+}
+
+
+
+void draw_game_menu_2() {
+    Sprite *back1 = back;
+    Sprite *back2 = back;
+    Sprite *back3 = back;
+    Sprite *back4 = back;
+    Sprite *back5 = back;
+    Sprite *back6 = back;
+    Sprite *back7 = back;
+    Sprite *back8 = back;
+    Sprite cards2[] = {*number1,*number1,*number1,*number1,*number2,*number2,*number2,*number2};
+    if(pre1 == 0) {
+        shuffle2(cards2);
+        pre1++;
+    }
+    
+    memset(drawing_frame_buffer, 0, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
+    draw_sprite_xpm(back1,0,0);
+    draw_sprite_xpm(back2, mode_info.XResolution / 4, 0);
+    draw_sprite_xpm(back3, mode_info.XResolution / 2, 0);
+    draw_sprite_xpm(back4, 3 * mode_info.XResolution / 4, 0);
+    draw_sprite_xpm(back5, 0, mode_info.YResolution / 2);
+    draw_sprite_xpm(back6, mode_info.XResolution / 4, mode_info.YResolution / 2);
+    draw_sprite_xpm(back7, mode_info.XResolution / 2, mode_info.YResolution / 2);
+    draw_sprite_xpm(back8, 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+
+    process_cardPressed1();
+    process_cardPressed2();
+    process_cardPressed3();
+    process_cardPressed4();
+    process_cardPressed5();
+    process_cardPressed6();
+    process_cardPressed7();
+    process_cardPressed8();
+   
+    
+    
+    
+    
+    
+    
+
+
+
+
+}
+
 // O menu final é apenas um retângulo com tamanho máximo, com um smile ao centro
 void draw_finish_menu()
 {
@@ -404,6 +597,9 @@ void draw_mouse()
         break;
     case GAME:
         draw_sprite_xpm(hand, mouse_info.x, mouse_info.y);
+        break;
+    case GAME_2:
+        draw_sprite_xpm(hand,mouse_info.x, mouse_info.y);
         break;
     }
 }
@@ -457,7 +653,7 @@ int draw_sprite_button(Sprite *sprite, int x, int y)
             }
             else if (mouse_info.x > 0 && mouse_info.x < mode_info.XResolution / 2 && mouse_info.y > mode_info.YResolution / 2 && mouse_info.y < mode_info.YResolution)
             {
-                menuState = END;
+                menuState = GAME_2;
             }
             else if (mouse_info.x > mode_info.XResolution / 2 && mouse_info.x < mode_info.XResolution && mouse_info.y > mode_info.YResolution / 2 && mouse_info.y < mode_info.YResolution)
             {

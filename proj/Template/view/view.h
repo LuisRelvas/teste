@@ -14,6 +14,7 @@ void draw_new_frame();
 void draw_initial_menu();
 void draw_game_menu();
 void draw_finish_menu();
+void draw_game_menu_2();
 void draw_mouse();
 void swap_buffers();
 void display_real_time();
@@ -27,4 +28,14 @@ void process_button1(Sprite *cards,int size);
 void process_button3(Sprite *cards,int size);
 void process_button4(Sprite *cards,int size);
 void shuffle(Sprite *cards, int size);
+void shuffle2(Sprite *cards);
+void process_cardPressed1();
+void process_cardPressed2();
+void process_cardPressed3();
+void process_cardPressed4();
+void process_cardPressed5();
+void process_cardPressed6();
+void process_cardPressed7();
+void process_cardPressed8();
+
 #endif

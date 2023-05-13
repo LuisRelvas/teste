@@ -102,6 +102,8 @@ void update_keyboard_state()
         break;
     case E_KEY:
         menuState = END;
+    case H_KEY:
+        menuState = GAME_2;
     default:
         break;
     }
@@ -152,4 +154,5 @@ void update_buttons_state()
         button3->pressed = 0;
         button4->pressed = 0;
     }
-}
+    }
+

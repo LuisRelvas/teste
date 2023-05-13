@@ -27,6 +27,7 @@ typedef enum {
 typedef enum {
     START,
     GAME,
+    GAME_2,
     END
 } MenuState;
 
