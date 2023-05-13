@@ -126,6 +126,12 @@ int id_sprite1;
 int id_sprite2;
 int id_sprite3;
 int id_sprite4;
+int final = 0;
+bool block1 = false;
+bool block2 = false;
+bool block3 = false;
+bool block4 = false;
+
 
 int get_number(Sprite *cards, int size)
 {
@@ -201,7 +207,10 @@ void process_button1(Sprite *cards, int size)
         {
             if (check_match(matrix[0][0].id, matrix[0][1].id))
             { // match entre o id 1 e o id 2;
-                menuState = END;
+                block1 = true;
+                block2 = true;
+                final++;
+
             }
             else
             {
@@ -214,7 +223,9 @@ void process_button1(Sprite *cards, int size)
         {
             if (check_match(matrix[0][0].id, matrix[1][0].id))
             {
-                menuState = END;
+                block1 = true;
+                block3 = true;
+                final++;
             }
             else
             {
@@ -227,7 +238,9 @@ void process_button1(Sprite *cards, int size)
         {
             if (check_match(matrix[0][0].id, matrix[1][1].id))
             {
-                menuState = END;
+                block1 = true;
+                block4 = true;
+                final++;
             }
             else
             {
@@ -253,7 +266,9 @@ void process_button2(Sprite *cards, int size)
         {
             if (check_match(matrix[0][1].id, matrix[1][0].id))
             {
-                menuState = END;
+                block2 = true;
+                block3 = true;
+                final++;
             }
             else
             {
@@ -266,7 +281,9 @@ void process_button2(Sprite *cards, int size)
         {
             if (check_match(matrix[0][1].id, matrix[1][1].id))
             {
-                menuState = END;
+                block2 = true;
+                block4 = true;
+                final++;
             }
             else
             {
@@ -293,7 +310,10 @@ void process_button3(Sprite *cards, int size)
         {
             if (check_match(matrix[1][0].id, matrix[1][1].id))
             {
-                menuState = END;
+                block3 = true;
+                block4 = true;
+                final++;
+                }
             }
             else
             {
@@ -303,7 +323,7 @@ void process_button3(Sprite *cards, int size)
             }
         }
     }
-}
+
 
 void process_button4(Sprite *cards, int size)
 {
@@ -319,9 +339,15 @@ void process_button4(Sprite *cards, int size)
     }
 }
 
+
+
 // O menu do jogo é constituído por quatro botões
 void draw_game_menu()
 {
+    Sprite *back1 = back;
+    Sprite *back2 = back;
+    Sprite *back3 = back;
+    Sprite *back4 = back;
     Sprite cards[] = {*number1, *number1, *number2, *number2};
     int j = sizeof(cards) / sizeof(cards[0]);
     if (pre == 0)
@@ -329,22 +355,33 @@ void draw_game_menu()
         shuffle(cards, j);
         pre++;
     }
+    
+    memset(drawing_frame_buffer, 0, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
+    draw_sprite_xpm(back1,0, 0);
+    draw_sprite_xpm(back2, mode_info.XResolution /2, 0);
+    draw_sprite_xpm(back3, 0, mode_info.YResolution / 2);
+    draw_sprite_xpm(back4, mode_info.XResolution / 2, mode_info.YResolution / 2);
 
-    draw_sprite_button(button1, 0, 0);
-    draw_sprite_button(button2, mode_info.XResolution / 2, 0);
-    draw_sprite_button(button3, 0, mode_info.YResolution / 2);
-    draw_sprite_button(button4, mode_info.XResolution / 2, mode_info.YResolution / 2);
-
-    /*
-        draw_sprite_xpm(back, 0, 0);
-        draw_sprite_xpm(back, mode_info.XResolution / 2, 0);
-        draw_sprite_xpm(back, 0, mode_info.YResolution / 2);
-        draw_sprite_xpm(back, mode_info.XResolution / 2, mode_info.YResolution / 2);*/
-
-    process_button1(cards, j);
-    process_button2(cards, j);
-    process_button3(cards, j);
-    process_button4(cards, j);
+    if(!block1){
+    process_button1(cards, j);}
+    else if(block1) {
+        draw_sprite_xpm(&matrix[0][0], 0, 0);
+    }
+    if(!block2){
+    process_button2(cards, j);}
+    else if(block2) {
+        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 2, 0);
+    }
+    if(!block3){
+    process_button3(cards, j);}
+    else if(block3) {
+        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
+    }
+    if(!block4){
+    process_button4(cards, j);}
+    else if(block4) {
+        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 2, mode_info.YResolution / 2);
+    }
 }
 
 // O menu final é apenas um retângulo com tamanho máximo, com um smile ao centro

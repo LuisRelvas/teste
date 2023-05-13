@@ -1,9 +1,13 @@
-NOW: 2023/5/9 @20:7:51
-Match found: matrix[0][0].id = -1 and matrix[1][1].id = -1
-Match found: matrix[0][1].id = 8194 and matrix[1][0].id = 8194
-Match found: matrix[1][0].id = 8194 and matrix[0][1].id = 8194
-Match found: matrix[1][1].id = -1 and matrix[0][0].id = -1
-NOW: 2023/5/9 @20:7:52
-NOW: 2023/5/9 @20:7:53
-NOW: 2023/5/9 @20:7:54
-NOW: 2023/5/9 @20:7:55
+NOW: 2023/5/13 @16:24:2
+Match found: matrix[0][0].id = 2105348 and matrix[1][0].id = 2105348
+Match found: matrix[0][1].id = 8194 and matrix[1][1].id = 8194
+Match found: matrix[1][0].id = 2105348 and matrix[0][0].id = 2105348
+Match found: matrix[1][1].id = 8194 and matrix[0][1].id = 8194
+NOW: 2023/5/13 @16:24:3
+NOW: 2023/5/13 @16:24:4
+NOW: 2023/5/13 @16:24:5
+NOW: 2023/5/13 @16:24:6
+NOW: 2023/5/13 @16:24:7
+NOW: 2023/5/13 @16:24:8
+NOW: 2023/5/13 @16:24:9
+NOW: 2023/5/13 @16:24:10

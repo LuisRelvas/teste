@@ -38,7 +38,7 @@ void setup_sprites()
     logo = create_sprite_xpm((xpm_map_t)logo_xpm);
     number1 = create_sprite_xpm((xpm_map_t)number1_xpm);
     number2 = create_sprite_xpm((xpm_map_t)number2_xpm);
-    // back = create_sprite_xpm((xpm_map_t)back_xpm);
+    back = create_sprite_xpm((xpm_map_t) back_xpm);
     button1 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, ORANGE);
     button2 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, BLUE);
     button3 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, GREEN);
@@ -56,6 +56,7 @@ void destroy_sprites()
     destroy_sprite(teste);
     destroy_sprite(number1);
     destroy_sprite(number2);
+    destroy_sprite(back);
     destroy_sprite(button1);
     destroy_sprite(button2);
     destroy_sprite(button3);

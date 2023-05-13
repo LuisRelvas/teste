@@ -15,6 +15,7 @@
 #include "view/view.h"
 #include "model/sprite.h"
 #include "config.h"
+#include "xpm/back.xpm"
 #include "xpm/number1.xpm"
 #include "xpm/number2.xpm"
 
