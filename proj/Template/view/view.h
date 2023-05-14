@@ -38,5 +38,6 @@ void process_cardPressed6();
 void process_cardPressed7();
 void process_cardPressed8();
 void draw_mode_menu();
+void draw_game_menu_3();
 
 #endif

@@ -26,6 +26,7 @@
 #define G_KEY           34
 #define E_KEY           18
 #define Q_KEY           16
-#define H_KEY           23
+#define I_KEY           23
+#define H_KEY           35
 
 #endif

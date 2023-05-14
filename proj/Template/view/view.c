@@ -100,7 +100,11 @@ void draw_new_frame()
     case MODE: 
         draw_mode_menu();
         break;
+    case GAME_3:
+        draw_game_menu_3();
+        break;
     }
+    
     
     draw_mouse();
 }
@@ -155,6 +159,15 @@ void process_mode2() {
     }
 }
 
+void process_mode3() {
+    if(mouse_info.x >= mode_info.XResolution / 2 && mouse_info.x <= mode_info.XResolution / 2 + back->width && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.y <= mode_info.YResolution / 2 + back->height) {
+        draw_sprite_xpm(back, mode_info.XResolution / 2, mode_info.YResolution / 2);
+        if(mouse_info.left_click) {
+            menuState = GAME_3;
+        }
+    }
+}
+
 
 
 void draw_mode_menu() 
@@ -164,6 +177,8 @@ void draw_mode_menu()
     process_mode1();
     draw_sprite_xpm(number2,mode_info.XResolution/4,mode_info.YResolution/2);
     process_mode2();
+    draw_sprite_xpm(back,mode_info.XResolution/2,mode_info.YResolution/2);
+    process_mode3();
 }
 
 bool button1Pressed = false;
@@ -183,6 +198,7 @@ int j = 0;
 int k = 0;
 Sprite matrix[2][2];
 Sprite matrix2[2][4];
+Sprite matrix3[4][4];
 int id_sprite1;
 int id_sprite2;
 int id_sprite3;
@@ -211,6 +227,40 @@ bool cardBlock7 = false;
 bool cardBlock8 = false;
 int pre1 = 0;
 int prato = 0; 
+//game_3
+int pre2 = 0;
+bool backPressed1 = false;
+bool backPressed2 = false;
+bool backPressed3 = false;
+bool backPressed4 = false;
+bool backPressed5 = false;
+bool backPressed6 = false;
+bool backPressed7 = false;
+bool backPressed8 = false;
+bool backPressed9 = false;
+bool backPressed10 = false;
+bool backPressed11 = false;
+bool backPressed12 = false;
+bool backPressed13 = false;
+bool backPressed14 = false;
+bool backPressed15 = false;
+bool backPressed16 = false;
+bool backBlock1 = false;
+bool backBlock2 = false;
+bool backBlock3 = false;
+bool backBlock4 = false;
+bool backBlock5 = false;
+bool backBlock6 = false;
+bool backBlock7 = false;
+bool backBlock8 = false;
+bool backBlock9 = false;
+bool backBlock10 = false;
+bool backBlock11 = false;
+bool backBlock12 = false;
+bool backBlock13 = false;
+bool backBlock14 = false;
+bool backBlock15 = false;
+bool backBlock16 = false;
 
 
 
@@ -291,6 +341,50 @@ void shuffle2(Sprite *cards)
         for (int j = 0; j < 4; j++)
         {
             printf("%d ", matrix2[i][j].id);
+        }
+        printf("\n");
+    }
+
+}
+
+void shuffle3(Sprite *cards)
+{
+    int size = 16; 
+
+    srand(time(NULL));
+    for (int i = size - 1; i >= 0; i--)
+    {
+        int j = rand() % (i + 1);
+        Sprite temp = cards[i];
+        cards[i] = cards[j];
+        cards[j] = temp;
+    }
+    matrix3[0][0] = cards[0];
+    matrix3[0][1] = cards[1];
+    matrix3[0][2] = cards[2];
+    matrix3[0][3] = cards[3];
+    matrix3[1][0] = cards[4];
+    matrix3[1][1] = cards[5];
+    matrix3[1][2] = cards[6];
+    matrix3[1][3] = cards[7];
+    matrix3[2][0] = cards[8];
+    matrix3[2][1] = cards[9];
+    matrix3[2][2] = cards[10];
+    matrix3[2][3] = cards[11];
+    matrix3[3][0] = cards[12];
+    matrix3[3][1] = cards[13];
+    matrix3[3][2] = cards[14];
+    matrix3[3][3] = cards[15];
+
+
+
+
+    // Printing the shuffled matrix
+    for (int i = 0; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            printf("%d ", matrix3[i][j].id);
         }
         printf("\n");
     }
@@ -1568,13 +1662,297 @@ void draw_game_menu_2() {
         draw_finish_menu();
         menuState = END;
     }
-   
+}
+void process_deck1() {
+    if(mouse_info.x > 0 && mouse_info.x < mode_info.XResolution / 4 && mouse_info.y > 0 && mouse_info.y < mode_info.YResolution / 4) {
+        if(mouse_info.left_click) {
+            backPressed1 = true;
+        }
+    }
+    if(backPressed1) {
+        draw_sprite_xpm(&matrix3[0][0],0,0);
+    }
+}
+void process_deck2() {
+    if(mouse_info.x > mode_info.XResolution / 4 && mouse_info.x < mode_info.XResolution / 2 && mouse_info.y > 0 && mouse_info.y < mode_info.YResolution / 4) {
+        if(mouse_info.left_click) {
+            backPressed2 = true;
+        }
+    }
+    if(backPressed2) {
+        draw_sprite_xpm(&matrix3[0][1], mode_info.XResolution / 4, 0);
+    }
+}
+void process_deck3() {
+    if(mouse_info.x > mode_info.XResolution / 2 && mouse_info.x < 3 * mode_info.XResolution / 4 && mouse_info.y > 0 && mouse_info.y < mode_info.YResolution / 4) {
+        if(mouse_info.left_click) {
+            backPressed3 = true;
+        }
+    }
+    if(backPressed3) {
+        draw_sprite_xpm(&matrix3[0][2], mode_info.XResolution / 2, 0);
+    }
+}
+void process_deck4() {
+    if(mouse_info.x > 3 * mode_info.XResolution / 4 && mouse_info.x < mode_info.XResolution && mouse_info.y > 0 && mouse_info.y < mode_info.YResolution / 4) {
+        if(mouse_info.left_click) {
+            backPressed4 = true;
+        }
+    }
+    if(backPressed4) {
+        draw_sprite_xpm(&matrix3[0][3], 3 * mode_info.XResolution / 4, 0);
+    }
+}
+void process_deck5() {
+    if(mouse_info.x > 0 && mouse_info.x < mode_info.XResolution / 4 && mouse_info.y > mode_info.YResolution / 4 && mouse_info.y < mode_info.YResolution / 2) {
+        if(mouse_info.left_click) {
+            backPressed5 = true;
+        }
+    }
+    if(backPressed5) {
+        draw_sprite_xpm(&matrix3[1][0], 0, mode_info.YResolution / 4);
+    }
+}
+void process_deck6() {
+    if(mouse_info.x > mode_info.XResolution / 4 && mouse_info.x < mode_info.XResolution / 2 && mouse_info.y > mode_info.YResolution / 4 && mouse_info.y < mode_info.YResolution / 2) {
+        if(mouse_info.left_click) {
+            backPressed6 = true;
+        }
+    }
+    if(backPressed6) {
+        draw_sprite_xpm(&matrix3[1][1], mode_info.XResolution / 4, mode_info.YResolution / 4);
+    }
+}
+void process_deck7() {
+    if(mouse_info.x > mode_info.XResolution / 2 && mouse_info.x < 3 * mode_info.XResolution / 4 && mouse_info.y > mode_info.YResolution / 4 && mouse_info.y < mode_info.YResolution / 2) {
+        if(mouse_info.left_click) {
+            backPressed7 = true;
+        }
+    }
+    if(backPressed7) {
+        draw_sprite_xpm(&matrix3[1][2], mode_info.XResolution / 2, mode_info.YResolution / 4);
+    }
+}
+void process_deck8() {
+    if(mouse_info.x > 3 * mode_info.XResolution / 4 && mouse_info.x < mode_info.XResolution && mouse_info.y > mode_info.YResolution / 4 && mouse_info.y < mode_info.YResolution / 2) {
+        if(mouse_info.left_click) {
+            backPressed8 = true;
+        }
+    }
+    if(backPressed8) {
+        draw_sprite_xpm(&matrix3[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 4);
+    }
+}
+void process_deck9() {
+    if(mouse_info.x > 0 && mouse_info.x < mode_info.XResolution / 4 && mouse_info.y > mode_info.YResolution / 2 && mouse_info.y < 3 * mode_info.YResolution / 4) {
+        if(mouse_info.left_click) {
+            backPressed9 = true;
+        }
+    }
+    if(backPressed9) {
+        draw_sprite_xpm(&matrix3[2][0], 0, mode_info.YResolution / 2);
+    }
+}
+void process_deck10() {
+    if(mouse_info.x > mode_info.XResolution / 4 && mouse_info.x < mode_info.XResolution / 2 && mouse_info.y > mode_info.YResolution / 2 && mouse_info.y < 3 * mode_info.YResolution / 4) {
+        if(mouse_info.left_click) {
+            backPressed10 = true;
+        }
+    }
+    if(backPressed10) {
+        draw_sprite_xpm(&matrix3[2][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
+    }
+}
+void process_deck11() {
+    if(mouse_info.x > mode_info.XResolution / 2 && mouse_info.x < 3 * mode_info.XResolution / 4 && mouse_info.y > mode_info.YResolution / 2 && mouse_info.y < 3 * mode_info.YResolution / 4) {
+        if(mouse_info.left_click) {
+            backPressed11 = true;
+        }
+    }
+    if(backPressed11) {
+        draw_sprite_xpm(&matrix3[2][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
+    }
+}
+void process_deck12() {
+    if(mouse_info.x > 3 * mode_info.XResolution / 4 && mouse_info.x < mode_info.XResolution && mouse_info.y > mode_info.YResolution / 2 && mouse_info.y < 3 * mode_info.YResolution / 4) {
+        if(mouse_info.left_click) {
+            backPressed12 = true;
+        }
+    }
+    if(backPressed12) {
+        draw_sprite_xpm(&matrix3[2][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+    }
+}
+void process_deck13() {
+    if(mouse_info.x > 0 && mouse_info.x < mode_info.XResolution / 4 && mouse_info.y > 3 * mode_info.YResolution / 4 && mouse_info.y < mode_info.YResolution) {
+        if(mouse_info.left_click) {
+            backPressed13 = true;
+        }
+    }
+    if(backPressed13) {
+        draw_sprite_xpm(&matrix3[3][0], 0, 3 * mode_info.YResolution / 4);
+    }
+}
+void process_deck14() {
+    if(mouse_info.x > mode_info.XResolution / 4 && mouse_info.x < mode_info.XResolution / 2 && mouse_info.y > 3 * mode_info.YResolution / 4 && mouse_info.y < mode_info.YResolution) {
+        if(mouse_info.left_click) {
+            backPressed14 = true;
+        }
+    }
+    if(backPressed14) {
+        draw_sprite_xpm(&matrix3[3][1], mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+    }
+}
+void process_deck15() {
+    if(mouse_info.x > mode_info.XResolution / 2 && mouse_info.x < 3 * mode_info.XResolution / 4 && mouse_info.y > 3 * mode_info.YResolution / 4 && mouse_info.y < mode_info.YResolution) {
+        if(mouse_info.left_click) {
+            backPressed15 = true;
+        }
+    }
+    if(backPressed15) {
+        draw_sprite_xpm(&matrix3[3][2], mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
+    }
+}
+void process_deck16() {
+    if(mouse_info.x > 3 * mode_info.XResolution / 4 && mouse_info.x < mode_info.XResolution && mouse_info.y > 3 * mode_info.YResolution / 4 && mouse_info.y < mode_info.YResolution) {
+        if(mouse_info.left_click) {
+            backPressed16 = true;
+        }
+    }
+    if(backPressed16) {
+        draw_sprite_xpm(&matrix3[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+    }
+}
+
+
+void draw_game_menu_3() 
+{
+    Sprite *deck1 = back;
+    Sprite *deck2 = back;
+    Sprite *deck3 = back;
+    Sprite *deck4 = back;
+    Sprite *deck5 = back;
+    Sprite *deck6 = back;
+    Sprite *deck7 = back;
+    Sprite *deck8 = back;
+    Sprite *deck9 = back;
+    Sprite *deck10 = back;
+    Sprite *deck11 = back;
+    Sprite *deck12 = back;
+    Sprite *deck13 = back;
+    Sprite *deck14 = back;
+    Sprite *deck15 = back;
+    Sprite *deck16 = back;
+
+    Sprite cards3[] = {*number1,*number1,*number1,*number1,*number1,*number1,*number1,*number1,*number2,*number2,*number2,*number2,*number2,*number2,*number2,*number2};
+    if(pre2 == 0) {
+        shuffle3(cards3);
+        pre2++;
+    }
+
     
+
+    memset(drawing_frame_buffer,0x000000, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
+    draw_sprite_xpm(deck1,0,0);
+    draw_sprite_xpm(deck2, mode_info.XResolution / 4, 0);
+    draw_sprite_xpm(deck3, mode_info.XResolution / 2, 0);
+    draw_sprite_xpm(deck4, 3 * mode_info.XResolution / 4, 0);
+    draw_sprite_xpm(deck5,0,mode_info.YResolution / 4);
+    draw_sprite_xpm(deck6, mode_info.XResolution / 4, mode_info.YResolution / 4);
+    draw_sprite_xpm(deck7, mode_info.XResolution / 2, mode_info.YResolution / 4);
+    draw_sprite_xpm(deck8, 3 * mode_info.XResolution / 4, mode_info.YResolution / 4);
+    draw_sprite_xpm(deck9,0,mode_info.YResolution / 2);
+    draw_sprite_xpm(deck10, mode_info.XResolution / 4, mode_info.YResolution / 2);
+    draw_sprite_xpm(deck11, mode_info.XResolution / 2, mode_info.YResolution / 2);
+    draw_sprite_xpm(deck12, 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+    draw_sprite_xpm(deck13,0,3 * mode_info.YResolution / 4);
+    draw_sprite_xpm(deck14, mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+    draw_sprite_xpm(deck15, mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
+    draw_sprite_xpm(deck16, 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+
+    if(!backBlock1) {
+    process_deck1();}
+    else if(backBlock1) {
+        draw_sprite_xpm(&matrix3[0][0],0,0);
+    }
+    if(!backBlock2) {
+    process_deck2();}
+    else if(backBlock2) {
+        draw_sprite_xpm(&matrix3[0][1], mode_info.XResolution / 4, 0);
+    }
+    if(!backBlock3) {
+    process_deck3();}
+    else if(backBlock3) {
+        draw_sprite_xpm(&matrix3[0][2], mode_info.XResolution / 2, 0);
+    }
+    if(!backBlock4) {
+    process_deck4();}
+    else if(backBlock4) {
+        draw_sprite_xpm(&matrix3[0][3], 3 * mode_info.XResolution / 4, 0);
+    }
+    if(!backBlock5) {
+    process_deck5();}
+    else if(backBlock5) {
+        draw_sprite_xpm(&matrix3[1][0],0,mode_info.YResolution / 4);
+    }
+    if(!backBlock6) {
+    process_deck6();}
+    else if(backBlock6) {
+        draw_sprite_xpm(&matrix3[1][1], mode_info.XResolution / 4, mode_info.YResolution / 4);
+    }
+    if(!backBlock7) {
+    process_deck7();}
+    else if(backBlock7) {
+        draw_sprite_xpm(&matrix3[1][2], mode_info.XResolution / 2, mode_info.YResolution / 4);
+    }
+    if(!backBlock8) {
+    process_deck8();}
+    else if(backBlock8) {
+        draw_sprite_xpm(&matrix3[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 4);
+    }
+    if(!backBlock9) {
+    process_deck9();}
+    else if(backBlock9) {
+        draw_sprite_xpm(&matrix3[2][0],0,mode_info.YResolution / 2);
+    }
+    if(!backBlock10) {
+    process_deck10();}
+    else if(backBlock10) {
+        draw_sprite_xpm(&matrix3[2][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
+    }
+    if(!backBlock11) {
+    process_deck11();}
+    else if(backBlock11) {
+        draw_sprite_xpm(&matrix3[2][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
+    }
+    if(!backBlock12) {
+    process_deck12();}
+    else if(backBlock12) {
+        draw_sprite_xpm(&matrix3[2][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+    }
+    if(!backBlock13) {
+    process_deck13();}
+    else if(backBlock13) {
+        draw_sprite_xpm(&matrix3[3][0],0,3 * mode_info.YResolution / 4);
+    }
+    if(!backBlock14) {
+    process_deck14();}
+    else if(backBlock14) {
+        draw_sprite_xpm(&matrix3[3][1], mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+    }
+    if(!backBlock15) {
+    process_deck15();}
+    else if(backBlock15) {
+        draw_sprite_xpm(&matrix3[3][2], mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
+    }
+    if(!backBlock16) {
+    process_deck16();}
+    else if(backBlock16) {
+        draw_sprite_xpm(&matrix3[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+    }
     
-    
-    
-    
-    
+
+
 
 
 
@@ -1607,6 +1985,9 @@ void draw_mouse()
         break;
     case MODE: 
         draw_sprite_xpm(mouse, mouse_info.x, mouse_info.y);
+        break;
+    case GAME_3: 
+        draw_sprite_xpm(hand,mouse_info.x, mouse_info.y);
         break;
     }
 }
