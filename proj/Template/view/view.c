@@ -433,7 +433,7 @@ void process_button3(Sprite *cards, int size)
                 block4 = true;
                 final++;
                 }
-            }
+            
             else
             {
                 button3Pressed = false;
@@ -442,6 +442,7 @@ void process_button3(Sprite *cards, int size)
             }
         }
     }
+}
 
 
 void process_button4(Sprite *cards, int size)
