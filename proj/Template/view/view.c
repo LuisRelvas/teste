@@ -1671,6 +1671,216 @@ void process_deck1() {
     }
     if(backPressed1) {
         draw_sprite_xpm(&matrix3[0][0],0,0);
+        if(backPressed2) {
+            if(check_match(matrix3[0][0].id,matrix3[0][1].id)){
+                backBlock1 = true;
+                backBlock2 = true;
+                backPressed1 = false;
+                backPressed2 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed2 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[0][0].id,matrix3[0][2].id)){
+                backBlock1 = true;
+                backBlock3 = true;
+                backPressed1 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[0][0].id,matrix3[0][3].id)){
+                backBlock1 = true;
+                backBlock4 = true;
+                backPressed1 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[0][0].id,matrix3[1][0].id)){
+                backBlock1 = true;
+                backBlock5 = true;
+                backPressed1 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[0][0].id,matrix3[1][1].id)){
+                backBlock1 = true;
+                backBlock6 = true;
+                backPressed1 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[0][0].id,matrix3[1][2].id)){
+                backBlock1 = true;
+                backBlock7 = true;
+                backPressed1 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[0][0].id,matrix3[1][3].id)){
+                backBlock1 = true;
+                backBlock8 = true;
+                backPressed1 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9){
+            if(check_match(matrix3[0][0].id,matrix3[2][0].id)){
+                backBlock1 = true;
+                backBlock9 = true;
+                backPressed1 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10){
+            if(check_match(matrix3[0][0].id,matrix3[2][1].id)){
+                backBlock1 = true;
+                backBlock10 = true;
+                backPressed1 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11){
+            if(check_match(matrix3[0][0].id,matrix3[2][2].id)){
+                backBlock1 = true;
+                backBlock11 = true;
+                backPressed1 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12){
+            if(check_match(matrix3[0][0].id,matrix3[2][3].id)){
+                backBlock1 = true;
+                backBlock12 = true;
+                backPressed1 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[0][0].id,matrix3[3][0].id)){
+                backBlock1 = true;
+                backBlock13 = true;
+                backPressed1 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[0][0].id,matrix3[3][1].id)){
+                backBlock1 = true;
+                backBlock14 = true;
+                backPressed1 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[0][0].id,matrix3[3][2].id)){
+                backBlock1 = true;
+                backBlock15 = true;
+                backPressed1 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[0][0].id,matrix3[3][3].id)){
+                backBlock1 = true;
+                backBlock16 = true;
+                backPressed1 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
     }
 }
 void process_deck2() {
@@ -1681,6 +1891,216 @@ void process_deck2() {
     }
     if(backPressed2) {
         draw_sprite_xpm(&matrix3[0][1], mode_info.XResolution / 4, 0);
+        if(backPressed1) {
+            if(check_match(matrix3[0][1].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock2 = true;
+                backPressed1 = false;
+                backPressed2 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed2 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[0][1].id,matrix3[0][2].id)){
+                backBlock2 = true;
+                backBlock3 = true;
+                backPressed2 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[0][1].id,matrix3[0][3].id)){
+                backBlock2 = true;
+                backBlock4 = true;
+                backPressed2 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[0][1].id,matrix3[1][0].id)){
+                backBlock2 = true;
+                backBlock5 = true;
+                backPressed2 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[0][1].id,matrix3[1][1].id)){
+                backBlock2 = true;
+                backBlock6 = true;
+                backPressed2 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[0][1].id,matrix3[1][2].id)){
+                backBlock2 = true;
+                backBlock7 = true;
+                backPressed2 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[0][1].id,matrix3[1][3].id)){
+                backBlock2 = true;
+                backBlock8 = true;
+                backPressed2 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[0][1].id,matrix3[2][0].id)){
+                backBlock2 = true;
+                backBlock9 = true;
+                backPressed2 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[0][1].id,matrix3[2][1].id)){
+                backBlock2 = true;
+                backBlock10 = true;
+                backPressed2 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[0][1].id,matrix3[2][2].id)){
+                backBlock2 = true;
+                backBlock11 = true;
+                backPressed2 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[0][1].id,matrix3[2][3].id)){
+                backBlock2 = true;
+                backBlock12 = true;
+                backPressed2 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[0][1].id,matrix3[3][0].id)){
+                backBlock2 = true;
+                backBlock13 = true;
+                backPressed2 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[0][1].id,matrix3[3][1].id)){
+                backBlock2 = true;
+                backBlock14 = true;
+                backPressed2 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[0][1].id,matrix3[3][2].id)){
+                backBlock2 = true;
+                backBlock15 = true;
+                backPressed2 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[0][1].id,matrix3[3][3].id)){
+                backBlock2 = true;
+                backBlock16 = true;
+                backPressed2 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
     }
 }
 void process_deck3() {
@@ -1691,6 +2111,217 @@ void process_deck3() {
     }
     if(backPressed3) {
         draw_sprite_xpm(&matrix3[0][2], mode_info.XResolution / 2, 0);
+        if(backPressed1) {
+            if(check_match(matrix3[0][2].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock3 = true;
+                backPressed1 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[0][2].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock3 = true;
+                backPressed2 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[0][2].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock3 = true;
+                backPressed4 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[0][2].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock3 = true;
+                backPressed5 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[0][2].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock3 = true;
+                backPressed6 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[0][2].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock3 = true;
+                backPressed7 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[0][2].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock3 = true;
+                backPressed8 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[0][2].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock3 = true;
+                backPressed9 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[0][2].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock3 = true;
+                backPressed10 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[0][2].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock3 = true;
+                backPressed11 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[0][2].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock3 = true;
+                backPressed12 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[0][2].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock3 = true;
+                backPressed13 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[0][2].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock3 = true;
+                backPressed14 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed14 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[0][2].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock3 = true;
+                backPressed15 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed15 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[0][2].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock3 = true;
+                backPressed16 = false;
+                backPressed3 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed16 = false;
+                backPressed3 = false;
+                printf("ERROU");
+            }
+        }
+
     }
 }
 void process_deck4() {
@@ -1701,6 +2332,220 @@ void process_deck4() {
     }
     if(backPressed4) {
         draw_sprite_xpm(&matrix3[0][3], 3 * mode_info.XResolution / 4, 0);
+        if(backPressed1) {
+            if(check_match(matrix3[0][3].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock4 = true;
+                backPressed1 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[0][3].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock4 = true;
+                backPressed2 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[0][3].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock4 = true;
+                backPressed3 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[0][3].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock4 = true;
+                backPressed5 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[0][3].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock4 = true;
+                backPressed6 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[0][3].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock4 = true;
+                backPressed7 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[0][3].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock4 = true;
+                backPressed8 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[0][3].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock4 = true;
+                backPressed9 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[0][3].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock4 = true;
+                backPressed10 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[0][3].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock4 = true;
+                backPressed11 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[0][3].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock4 = true;
+                backPressed12 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13){
+            if(check_match(matrix3[0][3].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock4 = true;
+                backPressed13 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[0][3].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock4 = true;
+                backPressed14 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed14 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[0][3].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock4 = true;
+                backPressed15 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed15 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[0][3].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock4 = true;
+                backPressed16 = false;
+                backPressed4 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed16 = false;
+                backPressed4 = false;
+                printf("ERROU");
+            }
+        }
+
+        
+
+
     }
 }
 void process_deck5() {
@@ -1711,6 +2556,217 @@ void process_deck5() {
     }
     if(backPressed5) {
         draw_sprite_xpm(&matrix3[1][0], 0, mode_info.YResolution / 4);
+        if(backPressed1) {
+            if(check_match(matrix3[1][0].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock5 = true;
+                backPressed1 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[1][0].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock5 = true;
+                backPressed2 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[1][0].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock5 = true;
+                backPressed3 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[1][0].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock5 = true;
+                backPressed4 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[1][0].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock5 = true;
+                backPressed6 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[1][0].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock5 = true;
+                backPressed7 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[1][0].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock5 = true;
+                backPressed8 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[1][0].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock5 = true;
+                backPressed9 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[1][0].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock5 = true;
+                backPressed10 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[1][0].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock5 = true;
+                backPressed11 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[1][0].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock5 = true;
+                backPressed12 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[1][0].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock5 = true;
+                backPressed13 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[1][0].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock5 = true;
+                backPressed14 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed14 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[1][0].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock5 = true;
+                backPressed15 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed15 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[1][0].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock5 = true;
+                backPressed16 = false;
+                backPressed5 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed16 = false;
+                backPressed5 = false;
+                printf("ERROU");
+            }
+        }
+
     }
 }
 void process_deck6() {
@@ -1721,6 +2777,216 @@ void process_deck6() {
     }
     if(backPressed6) {
         draw_sprite_xpm(&matrix3[1][1], mode_info.XResolution / 4, mode_info.YResolution / 4);
+        if(backPressed1) {
+            if(check_match(matrix3[1][1].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock6 = true;
+                backPressed1 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[1][1].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock6 = true;
+                backPressed2 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[1][1].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock6 = true;
+                backPressed3 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[1][1].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock6 = true;
+                backPressed4 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[1][1].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock6 = true;
+                backPressed5 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7){
+            if(check_match(matrix3[1][1].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock6 = true;
+                backPressed7 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[1][1].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock6 = true;
+                backPressed8 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[1][1].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock6 = true;
+                backPressed9 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[1][1].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock6 = true;
+                backPressed10 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[1][1].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock6 = true;
+                backPressed11 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[1][1].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock6 = true;
+                backPressed12 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[1][1].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock6 = true;
+                backPressed13 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[1][1].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock6 = true;
+                backPressed14 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed14 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[1][1].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock6 = true;
+                backPressed15 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed15 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[1][1].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock6 = true;
+                backPressed16 = false;
+                backPressed6 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed16 = false;
+                backPressed6 = false;
+                printf("ERROU");
+            }
+        }
     }
 }
 void process_deck7() {
@@ -1731,6 +2997,216 @@ void process_deck7() {
     }
     if(backPressed7) {
         draw_sprite_xpm(&matrix3[1][2], mode_info.XResolution / 2, mode_info.YResolution / 4);
+        if(backPressed1) {
+            if(check_match(matrix3[1][2].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock7 = true;
+                backPressed1 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[1][2].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock7 = true;
+                backPressed2 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[1][2].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock7 = true;
+                backPressed3 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[1][2].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock7 = true;
+                backPressed4 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[1][2].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock7 = true;
+                backPressed5 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[1][2].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock7 = true;
+                backPressed6 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[1][2].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock7 = true;
+                backPressed8 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[1][2].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock7 = true;
+                backPressed9 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[1][2].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock7 = true;
+                backPressed10 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[1][2].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock7 = true;
+                backPressed11 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[1][2].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock7 = true;
+                backPressed12 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[1][2].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock7 = true;
+                backPressed13 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[1][2].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock7 = true;
+                backPressed14 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed14 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[1][2].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock7 = true;
+                backPressed15 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed15 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[1][2].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock7 = true;
+                backPressed16 = false;
+                backPressed7 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed16 = false;
+                backPressed7 = false;
+                printf("ERROU");
+            }
+        }
     }
 }
 void process_deck8() {
@@ -1741,6 +3217,216 @@ void process_deck8() {
     }
     if(backPressed8) {
         draw_sprite_xpm(&matrix3[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 4);
+        if(backPressed1) { 
+            if(check_match(matrix3[1][3].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock8 = true;
+                backPressed1 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[1][3].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock8 = true;
+                backPressed2 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[1][3].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock8 = true;
+                backPressed3 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[1][3].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock8 = true;
+                backPressed4 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[1][3].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock8 = true;
+                backPressed5 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[1][3].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock8 = true;
+                backPressed6 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[1][3].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock8 = true;
+                backPressed7 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[1][3].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock8 = true;
+                backPressed9 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[1][3].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock8 = true;
+                backPressed10 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[1][3].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock8 = true;
+                backPressed11 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[1][3].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock8 = true;
+                backPressed12 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[1][3].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock8 = true;
+                backPressed13 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[1][3].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock8 = true;
+                backPressed14 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed14 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[1][3].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock8 = true;
+                backPressed15 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed15 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[1][3].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock8 = true;
+                backPressed16 = false;
+                backPressed8 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed16 = false;
+                backPressed8 = false;
+                printf("ERROU");
+            }
+        }
     }
 }
 void process_deck9() {
@@ -1751,6 +3437,216 @@ void process_deck9() {
     }
     if(backPressed9) {
         draw_sprite_xpm(&matrix3[2][0], 0, mode_info.YResolution / 2);
+        if(backPressed1) {
+            if(check_match(matrix3[2][0].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock9 = true;
+                backPressed1 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[2][0].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock9 = true;
+                backPressed2 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[2][0].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock9 = true;
+                backPressed3 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[2][0].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock9 = true;
+                backPressed4 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[2][0].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock9 = true;
+                backPressed5 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[2][0].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock9 = true;
+                backPressed6 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[2][0].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock9 = true;
+                backPressed7 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[2][0].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock9 = true;
+                backPressed8 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[2][0].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock9 = true;
+                backPressed10 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[2][0].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock9 = true;
+                backPressed11 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[2][0].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock9 = true;
+                backPressed12 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[2][0].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock9 = true;
+                backPressed13 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[2][0].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock9 = true;
+                backPressed14 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed14 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[2][0].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock9 = true;
+                backPressed15 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed15 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[2][0].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock9 = true;
+                backPressed16 = false;
+                backPressed9 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed16 = false;
+                backPressed9 = false;
+                printf("ERROU");
+            }
+        }
     }
 }
 void process_deck10() {
@@ -1761,6 +3657,218 @@ void process_deck10() {
     }
     if(backPressed10) {
         draw_sprite_xpm(&matrix3[2][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
+        if(backPressed1) { 
+            if(check_match(matrix3[2][1].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock10 = true;
+                backPressed1 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[2][1].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock10 = true;
+                backPressed2 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[2][1].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock10 = true;
+                backPressed3 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[2][1].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock10 = true;
+                backPressed4 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[2][1].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock10 = true;
+                backPressed5 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[2][1].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock10 = true;
+                backPressed6 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[2][1].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock10 = true;
+                backPressed7 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[2][1].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock10 = true;
+                backPressed8 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[2][1].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock10 = true;
+                backPressed9 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[2][1].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock10 = true;
+                backPressed11 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[2][1].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock10 = true;
+                backPressed12 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[2][1].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock10 = true;
+                backPressed13 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[2][1].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock10 = true;
+                backPressed14 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed14 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[2][1].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock10 = true;
+                backPressed15 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed15 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[2][1].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock10 = true;
+                backPressed16 = false;
+                backPressed10 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed16 = false;
+                backPressed10 = false;
+                printf("ERROU");
+            }
+        }
+
+
     }
 }
 void process_deck11() {
@@ -1771,6 +3879,216 @@ void process_deck11() {
     }
     if(backPressed11) {
         draw_sprite_xpm(&matrix3[2][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
+        if(backPressed1) {
+            if(check_match(matrix3[2][2].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock11 = true;
+                backPressed1 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[2][2].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock11 = true;
+                backPressed2 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[2][2].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock11 = true;
+                backPressed3 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[2][2].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock11 = true;
+                backPressed4 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[2][2].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock11 = true;
+                backPressed5 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[2][2].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock11 = true;
+                backPressed6 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[2][2].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock11 = true;
+                backPressed7 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[2][2].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock11 = true;
+                backPressed8 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[2][2].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock11 = true;
+                backPressed9 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[2][2].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock11 = true;
+                backPressed10 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[2][2].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock11 = true;
+                backPressed12 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[2][2].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock11 = true;
+                backPressed13 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[2][2].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock11 = true;
+                backPressed14 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed14 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[2][2].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock11 = true;
+                backPressed15 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed15 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[2][2].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock11 = true;
+                backPressed16 = false;
+                backPressed11 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed16 = false;
+                backPressed11 = false;
+                printf("ERROU");
+            }
+        }
     }
 }
 void process_deck12() {
@@ -1781,6 +4099,216 @@ void process_deck12() {
     }
     if(backPressed12) {
         draw_sprite_xpm(&matrix3[2][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+        if(backPressed1) {
+            if(check_match(matrix3[2][3].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock12 = true;
+                backPressed1 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[2][3].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock12 = true;
+                backPressed2 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[2][3].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock12 = true;
+                backPressed3 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[2][3].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock12 = true;
+                backPressed4 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[2][3].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock12 = true;
+                backPressed5 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[2][3].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock12 = true;
+                backPressed6 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[2][3].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock12 = true;
+                backPressed7 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[2][3].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock12 = true;
+                backPressed8 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[2][3].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock12 = true;
+                backPressed9 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[2][3].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock12 = true;
+                backPressed10 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[2][3].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock12 = true;
+                backPressed11 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[2][3].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock12 = true;
+                backPressed13 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[2][3].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock12 = true;
+                backPressed14 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed14 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[2][3].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock12 = true;
+                backPressed15 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed15 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[2][3].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock12 = true;
+                backPressed16 = false;
+                backPressed12 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed16 = false;
+                backPressed12 = false;
+                printf("ERROU");
+            }
+        }
     }
 }
 void process_deck13() {
@@ -1791,6 +4319,215 @@ void process_deck13() {
     }
     if(backPressed13) {
         draw_sprite_xpm(&matrix3[3][0], 0, 3 * mode_info.YResolution / 4);
+        if(backPressed1) {
+            if(check_match(matrix3[3][0].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock13 = true;
+                backPressed1 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[3][0].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock13 = true;
+                backPressed2 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[3][0].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock13 = true;
+                backPressed3 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[3][0].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock13 = true;
+                backPressed4 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[3][0].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock13 = true;
+                backPressed5 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[3][0].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock13 = true;
+                backPressed6 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[3][0].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock13 = true;
+                backPressed7 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[3][0].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock13 = true;
+                backPressed8 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[3][0].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock13 = true;
+                backPressed9 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[3][0].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock13 = true;
+                backPressed10 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[3][0].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock13 = true;
+                backPressed11 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[3][0].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock13 = true;
+                backPressed12 = false;
+                backPressed13 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[3][0].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock13 = true;
+                backPressed13 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[3][0].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock13 = true;
+                backPressed13 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[3][0].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock13 = true;
+                backPressed13 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                printf("ERROU");
+            }
+        }
+
+
     }
 }
 void process_deck14() {
@@ -1801,6 +4538,216 @@ void process_deck14() {
     }
     if(backPressed14) {
         draw_sprite_xpm(&matrix3[3][1], mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+        if(backPressed1) {
+            if(check_match(matrix3[3][1].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock14 = true;
+                backPressed1 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[3][1].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock14 = true;
+                backPressed2 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[3][1].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock14 = true;
+                backPressed3 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[3][1].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock14 = true;
+                backPressed4 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[3][1].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock14 = true;
+                backPressed5 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[3][1].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock14 = true;
+                backPressed6 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[3][1].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock14 = true;
+                backPressed7 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[3][1].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock14 = true;
+                backPressed8 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[3][1].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock14 = true;
+                backPressed9 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[3][1].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock14 = true;
+                backPressed10 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[3][1].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock14 = true;
+                backPressed11 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[3][1].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock14 = true;
+                backPressed12 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[3][1].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock14 = true;
+                backPressed13 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) { 
+            if(check_match(matrix3[3][1].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock14 = true;
+                backPressed15 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed15 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[3][1].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock14 = true;
+                backPressed16 = false;
+                backPressed14 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed16 = false;
+                backPressed14 = false;
+                printf("ERROU");
+            }
+        }
     }
 }
 void process_deck15() {
@@ -1811,6 +4758,216 @@ void process_deck15() {
     }
     if(backPressed15) {
         draw_sprite_xpm(&matrix3[3][2], mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
+        if(backPressed1) {
+            if(check_match(matrix3[3][2].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock15 = true;
+                backPressed1 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[3][2].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock15 = true;
+                backPressed2 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[3][2].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock15 = true;
+                backPressed3 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[3][2].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock15 = true;
+                backPressed4 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[3][2].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock15 = true;
+                backPressed5 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[3][2].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock15 = true;
+                backPressed6 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[3][2].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock15 = true;
+                backPressed7 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[3][2].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock15 = true;
+                backPressed8 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[3][2].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock15 = true;
+                backPressed9 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[3][2].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock15 = true;
+                backPressed10 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[3][2].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock15 = true;
+                backPressed11 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[3][2].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock15 = true;
+                backPressed12 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[3][2].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock15 = true;
+                backPressed13 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[3][2].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock15 = true;
+                backPressed14 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed14 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed16) {
+            if(check_match(matrix3[3][2].id,matrix3[3][3].id)){
+                backBlock16 = true;
+                backBlock15 = true;
+                backPressed16 = false;
+                backPressed15 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed16 = false;
+                backPressed15 = false;
+                printf("ERROU");
+            }
+        }
     }
 }
 void process_deck16() {
@@ -1821,6 +4978,217 @@ void process_deck16() {
     }
     if(backPressed16) {
         draw_sprite_xpm(&matrix3[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+        if(backPressed1){
+            if(check_match(matrix3[3][3].id,matrix3[0][0].id)){
+                backBlock1 = true;
+                backBlock16 = true;
+                backPressed1 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed1 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed2) {
+            if(check_match(matrix3[3][3].id,matrix3[0][1].id)){
+                backBlock2 = true;
+                backBlock16 = true;
+                backPressed2 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed2 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed3) {
+            if(check_match(matrix3[3][3].id,matrix3[0][2].id)){
+                backBlock3 = true;
+                backBlock16 = true;
+                backPressed3 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed3 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed4) {
+            if(check_match(matrix3[3][3].id,matrix3[0][3].id)){
+                backBlock4 = true;
+                backBlock16 = true;
+                backPressed4 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed4 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed5) {
+            if(check_match(matrix3[3][3].id,matrix3[1][0].id)){
+                backBlock5 = true;
+                backBlock16 = true;
+                backPressed5 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed5 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed6) {
+            if(check_match(matrix3[3][3].id,matrix3[1][1].id)){
+                backBlock6 = true;
+                backBlock16 = true;
+                backPressed6 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed6 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed7) {
+            if(check_match(matrix3[3][3].id,matrix3[1][2].id)){
+                backBlock7 = true;
+                backBlock16 = true;
+                backPressed7 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed7 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed8) {
+            if(check_match(matrix3[3][3].id,matrix3[1][3].id)){
+                backBlock8 = true;
+                backBlock16 = true;
+                backPressed8 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed8 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed9) {
+            if(check_match(matrix3[3][3].id,matrix3[2][0].id)){
+                backBlock9 = true;
+                backBlock16 = true;
+                backPressed9 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed9 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed10) {
+            if(check_match(matrix3[3][3].id,matrix3[2][1].id)){
+                backBlock10 = true;
+                backBlock16 = true;
+                backPressed10 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed10 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed11) {
+            if(check_match(matrix3[3][3].id,matrix3[2][2].id)){
+                backBlock11 = true;
+                backBlock16 = true;
+                backPressed11 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed11 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed12) {
+            if(check_match(matrix3[3][3].id,matrix3[2][3].id)){
+                backBlock12 = true;
+                backBlock16 = true;
+                backPressed12 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed12 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed13) {
+            if(check_match(matrix3[3][3].id,matrix3[3][0].id)){
+                backBlock13 = true;
+                backBlock16 = true;
+                backPressed13 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed13 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed14) {
+            if(check_match(matrix3[3][3].id,matrix3[3][1].id)){
+                backBlock14 = true;
+                backBlock16 = true;
+                backPressed14 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed14 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+        if(backPressed15) {
+            if(check_match(matrix3[3][3].id,matrix3[3][2].id)){
+                backBlock15 = true;
+                backBlock16 = true;
+                backPressed15 = false;
+                backPressed16 = false;
+                printf("ACERTOU");
+            }
+            else {
+                backPressed15 = false;
+                backPressed16 = false;
+                printf("ERROU");
+            }
+        }
+
     }
 }
 
@@ -1950,13 +5318,9 @@ void draw_game_menu_3()
     else if(backBlock16) {
         draw_sprite_xpm(&matrix3[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
     }
-    
-
-
-
-
-
-
+    if(backBlock1 && backBlock2 && backBlock3 && backBlock4 && backBlock5 && backBlock6 && backBlock7 && backBlock8 && backBlock9 && backBlock10 && backBlock11 && backBlock12 && backBlock13 && backBlock14 && backBlock15 && backBlock16) {
+        menuState = END;
+    }
 }
 
 // O menu final é apenas um retângulo com tamanho máximo, com um smile ao centro
