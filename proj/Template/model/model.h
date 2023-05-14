@@ -16,6 +16,7 @@
 #include "model/sprite.h"
 #include "config.h"
 #include "xpm/back.xpm"
+#include "xpm/game.xpm"
 #include "xpm/number1.xpm"
 #include "xpm/number2.xpm"
 
@@ -28,7 +29,8 @@ typedef enum {
     START,
     GAME,
     GAME_2,
-    END
+    END,
+    MODE
 } MenuState;
 
 void update_timer_state();

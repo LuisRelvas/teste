@@ -24,6 +24,7 @@ Sprite *button4;
 Sprite *number1;
 Sprite *number2;
 Sprite *back;
+Sprite *game;
 
 // Contador de interrupções do timer
 int timer_interrupts = 0;
@@ -39,17 +40,20 @@ void setup_sprites()
     number1 = create_sprite_xpm((xpm_map_t)number1_xpm);
     number2 = create_sprite_xpm((xpm_map_t)number2_xpm);
     back = create_sprite_xpm((xpm_map_t) back_xpm);
+    game = create_sprite_xpm((xpm_map_t)game_xpm);
     button1 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, ORANGE);
     button2 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, BLUE);
     button3 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, GREEN);
     button4 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, YELLOW);
     quitButton = create_sprite_xpm((xpm_map_t)quitButton_xpm);
     quitButtonPressed = create_sprite_xpm((xpm_map_t)quitButtonPressed_xpm);
+    
 }
 
 // É boa prática antes de acabar o programa libertar a memória alocada
 void destroy_sprites()
 {
+    destroy_sprite(game);
     destroy_sprite(mouse);
     destroy_sprite(hand);
     destroy_sprite(smile);

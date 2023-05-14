@@ -19,22 +19,6 @@ bool quitPressed = false;
 
 
 
-int process_quit_button(uint16_t x , uint16_t y) 
-{ 
-    if(x > 450 && x < 650 && y > 420 && y < 520) 
-    {
-        if(!quitPresssed) 
-            if(mouseP.lb)
-                quitPressed = true;
-        if(quitPressed) 
-            if(!mouseP.lb) 
-                gameRunning = false; 
-                quitPressed = false; 
-    }
-    else quitPressed = false; 
-    return 0;
-
-}
 
 int drawMenu() 
 {

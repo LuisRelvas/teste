@@ -18,6 +18,7 @@ extern MenuState menuState;
 extern SystemState systemState;
 
 // Objetos
+
 extern Sprite *mouse;
 extern Sprite *hand;
 extern Sprite *smile;
@@ -32,6 +33,7 @@ extern Sprite *button4;
 extern Sprite *number1;
 extern Sprite *number2;
 extern Sprite *back;
+extern Sprite *game;
 int chosen;
 
 // Alocação de memória ao(s) buffer(s)
@@ -95,19 +97,73 @@ void draw_new_frame()
     case GAME_2:
         draw_game_menu_2();
         break;
+    case MODE: 
+        draw_mode_menu();
+        break;
     }
     
     draw_mouse();
 }
 
+void process_quit_button() { 
+    if(mouse_info.x >= mode_info.XResolution / 4 && mouse_info.x <= mode_info.XResolution / 4 + quitButton->width && mouse_info.y >= mode_info.YResolution/2 && mouse_info.y <= mode_info.YResolution/2 + quitButton->height) {
+        draw_sprite_xpm(quitButtonPressed,mode_info.XResolution / 4,mode_info.YResolution/2);
+        if(mouse_info.left_click) {
+            menuState = END;
+        }
+    }
+}
+
+void process_game_button() {
+    if(mouse_info.x >= mode_info.XResolution / 2 && mouse_info.x <= mode_info.XResolution / 2 + game->width && mouse_info.y >= mode_info.YResolution / 4 && mouse_info.y <= mode_info.YResolution / 4 + game->height) {
+        draw_sprite_xpm(game, mode_info.XResolution / 2, mode_info.YResolution / 4);
+        if(mouse_info.left_click) {
+            menuState = MODE;
+        }
+    }
+}
+
 // O menu inicial é apenas um retângulo com tamanho máximo, com um smile ao centro
 void draw_initial_menu()
 {
-    draw_rectangle(0, 0, mode_info.XResolution, mode_info.YResolution, 0xFFFFFF, drawing_frame_buffer);
-    draw_sprite_button(button1, 0, 0);
-    draw_sprite_button(button2, mode_info.XResolution / 2, 0);
-    draw_sprite_button(button3, 0, mode_info.YResolution / 2);
-    draw_sprite_button(button4, mode_info.XResolution / 2, mode_info.YResolution / 2);
+    memset(drawing_frame_buffer, 0xFFFFFF, frame_buffer_size);
+    draw_sprite_xpm(logo,mode_info.XResolution/3,0);
+    
+    draw_sprite_xpm(quitButton,mode_info.XResolution / 4,mode_info.YResolution/2);
+    process_quit_button();
+
+    draw_sprite_xpm(game, mode_info.XResolution / 2, mode_info.YResolution / 4);
+    process_game_button();
+}
+
+void process_mode1() {
+    if(mouse_info.x >= mode_info.XResolution / 2 && mouse_info.x <= mode_info.XResolution / 2 + number1->width && mouse_info.y >= mode_info.YResolution / 4 && mouse_info.y <= mode_info.YResolution / 4 + number1->height) {
+        draw_sprite_xpm(number1, mode_info.XResolution / 2, mode_info.YResolution / 4);
+        if(mouse_info.left_click) {
+            menuState = GAME;
+            chosen = 1;
+        }
+    }
+}
+void process_mode2() {
+    if(mouse_info.x >= mode_info.XResolution / 4 && mouse_info.x <= mode_info.XResolution / 4 + number2->width && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.y <= mode_info.YResolution / 2 + number2->height) {
+        draw_sprite_xpm(number2, mode_info.XResolution / 4, mode_info.YResolution / 2);
+        if(mouse_info.left_click) {
+            menuState = GAME_2;
+            chosen = 2;
+        }
+    }
+}
+
+
+
+void draw_mode_menu() 
+{
+    memset(drawing_frame_buffer, 0x000000, frame_buffer_size);
+    draw_sprite_xpm(number1,mode_info.XResolution/2,mode_info.YResolution/4);
+    process_mode1();
+    draw_sprite_xpm(number2,mode_info.XResolution/4,mode_info.YResolution/2);
+    process_mode2();
 }
 
 bool button1Pressed = false;
@@ -1548,6 +1604,9 @@ void draw_mouse()
         break;
     case GAME_2:
         draw_sprite_xpm(hand,mouse_info.x, mouse_info.y);
+        break;
+    case MODE: 
+        draw_sprite_xpm(mouse, mouse_info.x, mouse_info.y);
         break;
     }
 }

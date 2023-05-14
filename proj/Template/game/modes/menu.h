@@ -6,6 +6,5 @@
 #include "../../controller/mouse/mouse.h"
 
 int drawMenu();
-int process_quit_button(uint16_t x , uint16_t y);
 
 #endif
