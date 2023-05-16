@@ -40,6 +40,11 @@ extern Sprite *number7;
 extern Sprite *number8;
 extern Sprite *back;
 extern Sprite *game;
+extern Sprite *easy;
+extern Sprite *medium;
+extern Sprite *hard;
+extern Sprite *quit;
+extern Sprite *start;
 int chosen;
 
 // Alocação de memória ao(s) buffer(s)
