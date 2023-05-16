@@ -23,6 +23,12 @@ Sprite *button3;
 Sprite *button4;
 Sprite *number1;
 Sprite *number2;
+Sprite *number3;
+Sprite *number4;
+Sprite *number5;
+Sprite *number6;
+Sprite *number7;
+Sprite *number8;
 Sprite *back;
 Sprite *game;
 
@@ -39,7 +45,13 @@ void setup_sprites()
     logo = create_sprite_xpm((xpm_map_t)logo_xpm);
     number1 = create_sprite_xpm((xpm_map_t)number1_xpm);
     number2 = create_sprite_xpm((xpm_map_t)number2_xpm);
-    back = create_sprite_xpm((xpm_map_t) back_xpm);
+    number3 = create_sprite_xpm((xpm_map_t)number3_xpm);
+    number4 = create_sprite_xpm((xpm_map_t)number4_xpm);
+    number5 = create_sprite_xpm((xpm_map_t)number5_xpm);
+    number6 = create_sprite_xpm((xpm_map_t)number6_xpm);
+    number7 = create_sprite_xpm((xpm_map_t)number7_xpm);
+    number8 = create_sprite_xpm((xpm_map_t)number8_xpm);
+    back = create_sprite_xpm((xpm_map_t)back_xpm);
     game = create_sprite_xpm((xpm_map_t)game_xpm);
     button1 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, ORANGE);
     button2 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, BLUE);
@@ -47,7 +59,6 @@ void setup_sprites()
     button4 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, YELLOW);
     quitButton = create_sprite_xpm((xpm_map_t)quitButton_xpm);
     quitButtonPressed = create_sprite_xpm((xpm_map_t)quitButtonPressed_xpm);
-    
 }
 
 // É boa prática antes de acabar o programa libertar a memória alocada
@@ -60,6 +71,11 @@ void destroy_sprites()
     destroy_sprite(teste);
     destroy_sprite(number1);
     destroy_sprite(number2);
+    destroy_sprite(number3);
+    destroy_sprite(number4);
+    destroy_sprite(number5);
+    destroy_sprite(number6);
+    destroy_sprite(number7);
     destroy_sprite(back);
     destroy_sprite(button1);
     destroy_sprite(button2);
@@ -67,7 +83,7 @@ void destroy_sprites()
     destroy_sprite(button4);
     destroy_sprite(quitButton);
     destroy_sprite(quitButtonPressed);
-    // destroy_sprite(back);
+    destroy_sprite(back);
 }
 
 // Na altura da interrupção há troca dos buffers e incremento do contador
@@ -160,5 +176,4 @@ void update_buttons_state()
         button3->pressed = 0;
         button4->pressed = 0;
     }
-    }
-
+}
