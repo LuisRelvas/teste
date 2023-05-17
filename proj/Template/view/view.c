@@ -119,26 +119,26 @@ void draw_new_frame()
     draw_mouse();
 }
 
-void process_quit_button()
+void process_start_button()
 {
-    if (mouse_info.x >= mode_info.XResolution / 4 && mouse_info.x <= mode_info.XResolution / 4 + quitButton->width && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.y <= mode_info.YResolution / 2 + quitButton->height)
+    if (mouse_info.x >= mode_info.XResolution/3 && mouse_info.x <= mode_info.XResolution / 3 + game->width && mouse_info.y >= mode_info.YResolution/3 && mouse_info.y <= mode_info.YResolution / 3 + game->height)
     {
-        draw_sprite_xpm(quitButtonPressed, mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(start, mode_info.XResolution / 3, mode_info.YResolution / 3);
         if (mouse_info.left_click)
         {
-            menuState = END;
+            menuState = MODE;
         }
     }
 }
 
-void process_game_button()
+void process_quit_button()
 {
-    if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.x <= mode_info.XResolution / 2 + game->width && mouse_info.y >= mode_info.YResolution / 4 && mouse_info.y <= mode_info.YResolution / 4 + game->height)
+    if (mouse_info.x >= mode_info.XResolution / 3 && mouse_info.x <= mode_info.XResolution / 3 + quit->width && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.y <= mode_info.YResolution / 2 + quit->height)
     {
-        draw_sprite_xpm(game, mode_info.XResolution / 2, mode_info.YResolution / 4);
+        draw_sprite_xpm(quit, mode_info.XResolution / 3, mode_info.YResolution / 2);
         if (mouse_info.left_click)
         {
-            menuState = MODE;
+            menuState = END;
         }
     }
 }
@@ -149,18 +149,18 @@ void draw_initial_menu()
     memset(drawing_frame_buffer, 0xFFFFFF, frame_buffer_size);
     draw_sprite_xpm(logo, mode_info.XResolution / 3, 0);
 
-    draw_sprite_xpm(quitButton, mode_info.XResolution / 4, mode_info.YResolution / 2);
-    process_quit_button();
+    draw_sprite_xpm(start, mode_info.XResolution / 3, mode_info.YResolution / 3);
+    process_start_button();
 
-    draw_sprite_xpm(game, mode_info.XResolution / 2, mode_info.YResolution / 4);
-    process_game_button();
+    draw_sprite_xpm(quit, mode_info.XResolution / 3, mode_info.YResolution / 2);
+    process_quit_button();
 }
 
 void process_mode1()
 {
-    if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.x <= mode_info.XResolution / 2 + number1->width && mouse_info.y >= mode_info.YResolution / 4 && mouse_info.y <= mode_info.YResolution / 4 + number1->height)
+    if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.x <= mode_info.XResolution / 2 + easy->width && mouse_info.y >= mode_info.YResolution / 4 && mouse_info.y <= mode_info.YResolution / 4 + easy->height)
     {
-        draw_sprite_xpm(number1, mode_info.XResolution / 2, mode_info.YResolution / 4);
+        draw_sprite_xpm(easy, mode_info.XResolution / 2, mode_info.YResolution / 4);
         if (mouse_info.left_click)
         {
             menuState = GAME;
@@ -170,9 +170,9 @@ void process_mode1()
 }
 void process_mode2()
 {
-    if (mouse_info.x >= mode_info.XResolution / 4 && mouse_info.x <= mode_info.XResolution / 4 + number2->width && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.y <= mode_info.YResolution / 2 + number2->height)
+    if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.x <= mode_info.XResolution / 2 + medium->width && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.y <= mode_info.YResolution / 2 + medium->height)
     {
-        draw_sprite_xpm(number2, mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(medium, mode_info.XResolution / 2, mode_info.YResolution / 2);
         if (mouse_info.left_click)
         {
             menuState = GAME_2;
@@ -183,9 +183,9 @@ void process_mode2()
 
 void process_mode3()
 {
-    if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.x <= mode_info.XResolution / 2 + back->width && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.y <= mode_info.YResolution / 2 + back->height)
+    if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.x <= mode_info.XResolution / 2 + hard->width && mouse_info.y >= 3 * mode_info.YResolution / 4 && mouse_info.y <= 3 * mode_info.YResolution / 4 + hard->height)
     {
-        draw_sprite_xpm(back, mode_info.XResolution / 2, mode_info.YResolution / 2);
+        draw_sprite_xpm(hard, mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
         if (mouse_info.left_click)
         {
             menuState = GAME_3;
@@ -196,11 +196,11 @@ void process_mode3()
 void draw_mode_menu()
 {
     memset(drawing_frame_buffer, 0x000000, frame_buffer_size);
-    draw_sprite_xpm(number1, mode_info.XResolution / 2, mode_info.YResolution / 4);
+    draw_sprite_xpm(easy, mode_info.XResolution / 2, mode_info.YResolution / 4);
     process_mode1();
-    draw_sprite_xpm(number2, mode_info.XResolution / 4, mode_info.YResolution / 2);
+    draw_sprite_xpm(medium, mode_info.XResolution / 2, mode_info.YResolution / 2);
     process_mode2();
-    draw_sprite_xpm(back, mode_info.XResolution / 2, mode_info.YResolution / 2);
+    draw_sprite_xpm(hard, mode_info.XResolution / 2, 3*mode_info.YResolution / 4 );
     process_mode3();
 }
 
@@ -1815,7 +1815,7 @@ void draw_game_menu_2()
     Sprite *back6 = back;
     Sprite *back7 = back;
     Sprite *back8 = back;
-    Sprite cards2[] = {*number1, *number1, *number1, *number1, *number2, *number2, *number2, *number2};
+    Sprite cards2[] = {*number1, *number1, *number2, *number2, *number3, *number3, *number4, *number4};
     if (pre1 == 0)
     {
         shuffle2(cards2);
@@ -6222,7 +6222,7 @@ void draw_game_menu_3()
     Sprite *deck15 = back;
     Sprite *deck16 = back;
 
-    Sprite cards3[] = {*number1, *number1, *number1, *number1, *number1, *number1, *number1, *number1, *number2, *number2, *number2, *number2, *number2, *number2, *number2, *number2};
+    Sprite cards3[] = {*number1, *number1, *number2, *number2, *number3, *number3, *number4, *number4, *number5, *number5, *number6, *number6, *number7, *number7, *number8, *number8};
     if (pre2 == 0)
     {
         shuffle3(cards3);

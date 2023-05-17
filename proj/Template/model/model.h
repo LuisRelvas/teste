@@ -19,6 +19,19 @@
 #include "xpm/game.xpm"
 #include "xpm/number1.xpm"
 #include "xpm/number2.xpm"
+#include "xpm/number3.xpm"
+#include "xpm/number4.xpm"
+#include "xpm/number5.xpm"
+#include "xpm/number6.xpm"
+#include "xpm/number7.xpm"
+#include "xpm/number8.xpm"
+#include "xpm/start.xpm"
+#include "xpm/hard.xpm"
+#include "xpm/easy.xpm"
+#include "xpm/medium.xpm"
+#include "xpm/quit.xpm"
+
+
 
 typedef enum {
     RUNNING,

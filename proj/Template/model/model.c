@@ -31,11 +31,19 @@ Sprite *number7;
 Sprite *number8;
 Sprite *back;
 Sprite *game;
+<<<<<<< HEAD
 Sprite *easy;
 Sprite *medium;
 Sprite *hard;
 Sprite *quit;
 Sprite *start;
+=======
+Sprite *start;
+Sprite *hard;
+Sprite *easy;
+Sprite *medium;
+Sprite *quit;
+>>>>>>> 1c47680f7da062caed0c00ad2aa24f113164752e
 
 // Contador de interrupções do timer
 int timer_interrupts = 0;
@@ -58,6 +66,11 @@ void setup_sprites()
     number8 = create_sprite_xpm((xpm_map_t)number8_xpm);
     back = create_sprite_xpm((xpm_map_t)back_xpm);
     game = create_sprite_xpm((xpm_map_t)game_xpm);
+    start = create_sprite_xpm((xpm_map_t)start_xpm);
+    easy = create_sprite_xpm((xpm_map_t)easy_xpm);
+    medium = create_sprite_xpm((xpm_map_t)medium_xpm);
+    hard = create_sprite_xpm((xpm_map_t)hard_xpm);
+    quit = create_sprite_xpm((xpm_map_t)quit_xpm);
     button1 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, ORANGE);
     button2 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, BLUE);
     button3 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, GREEN);
