@@ -31,6 +31,11 @@ Sprite *number7;
 Sprite *number8;
 Sprite *back;
 Sprite *game;
+Sprite *easy;
+Sprite *medium;
+Sprite *hard;
+Sprite *quit;
+Sprite *start;
 
 // Contador de interrupções do timer
 int timer_interrupts = 0;
@@ -59,6 +64,11 @@ void setup_sprites()
     button4 = create_sprite_button(mode_info.XResolution / 2, mode_info.YResolution / 2, YELLOW);
     quitButton = create_sprite_xpm((xpm_map_t)quitButton_xpm);
     quitButtonPressed = create_sprite_xpm((xpm_map_t)quitButtonPressed_xpm);
+    easy = create_sprite_xpm((xpm_map_t)easy_xpm);
+    medium = create_sprite_xpm((xpm_map_t)medium_xpm);
+    hard = create_sprite_xpm((xpm_map_t)hard_xpm);
+    quit = create_sprite_xpm((xpm_map_t)quit_xpm);
+    start = create_sprite_xpm((xpm_map_t)start_xpm);
 }
 
 // É boa prática antes de acabar o programa libertar a memória alocada
@@ -84,6 +94,11 @@ void destroy_sprites()
     destroy_sprite(quitButton);
     destroy_sprite(quitButtonPressed);
     destroy_sprite(back);
+    destroy_sprite(easy);
+    destroy_sprite(medium);
+    destroy_sprite(hard);
+    destroy_sprite(quit);
+    destroy_sprite(start);
 }
 
 // Na altura da interrupção há troca dos buffers e incremento do contador
