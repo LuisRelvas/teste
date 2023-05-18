@@ -114,6 +114,9 @@ void draw_new_frame()
     case GAME_3:
         draw_game_menu_3();
         break;
+    case GAME_4_2:
+        draw_game_menu_game_2();
+        break;
     }
 
     draw_mouse();
@@ -231,6 +234,10 @@ bool block1 = false;
 bool block2 = false;
 bool block3 = false;
 bool block4 = false;
+bool player1 = true;
+bool player2 = false;
+int player_1 = 0;
+int player_2 = 0; 
 // game_2
 bool cardPressed1 = false;
 bool cardPressed2 = false;
@@ -284,6 +291,7 @@ bool backBlock13 = false;
 bool backBlock14 = false;
 bool backBlock15 = false;
 bool backBlock16 = false;
+
 
 int get_number(Sprite *cards, int size)
 {
@@ -435,12 +443,29 @@ void process_button1(Sprite *cards, int size)
                 block2 = true;
                 button1Pressed = false;
                 button2Pressed = false;
-                final++;
+                if(menuState == GAME_4_2) {
+                if(player1){
+                    player_1++;
+                }
+                else if(player2){
+                    player_2++;
+                }
+                }
             }
             else
             {
                 button1Pressed = false;
                 button2Pressed = false;
+                if(menuState == GAME_4_2) { 
+                if(player1) { 
+                    player1 = false; 
+                    player2 = true;
+                }
+                else if(player2) { 
+                    player2 = false; 
+                    player1 = true;
+                }
+                }
                 counter_cards = 0;
             }
         }
@@ -452,13 +477,30 @@ void process_button1(Sprite *cards, int size)
                 block3 = true;
                 button1Pressed = false;
                 button3Pressed = false;
-                final++;
+                if(menuState == GAME_4_2) {
+                if(player1){
+                    player_1++;
+                }
+                else if(player2){
+                    player_2++;
+                }
+                }
             }
             else
             {
                 button1Pressed = false;
                 button3Pressed = false;
                 counter_cards = 0;
+                if(menuState == GAME_4_2) { 
+                if(player1) { 
+                    player1 = false; 
+                    player2 = true;
+                }
+                else if(player2) { 
+                    player2 = false; 
+                    player1 = true;
+                }
+                }
             }
         }
         if (button4Pressed)
@@ -469,13 +511,30 @@ void process_button1(Sprite *cards, int size)
                 block4 = true;
                 button1Pressed = false;
                 button4Pressed = false;
-                final++;
+                if(menuState == GAME_4_2) {
+                if(player1){
+                    player_1++;
+                }
+                else if(player2){
+                    player_2++;
+                }
+                }
             }
             else
             {
                 button1Pressed = false;
                 button4Pressed = false;
                 counter_cards = 0;
+                if(menuState == GAME_4_2) { 
+                if(player1) { 
+                    player1 = false; 
+                    player2 = true;
+                }
+                else if(player2) { 
+                    player2 = false; 
+                    player1 = true;
+                }
+                }
             }
         }
     }
@@ -499,12 +558,30 @@ void process_button2(Sprite *cards, int size)
                 block2 = true;
                 button1Pressed = false;
                 button2Pressed = false;
+                if(menuState == GAME_4_2) {
+                if(player1){
+                    player_1++;
+                }
+                else if(player2){
+                    player_2++;
+                }
+                }
             }
             else
             {
                 button1Pressed = false;
                 button2Pressed = false;
                 counter_cards = 0;
+               if(menuState == GAME_4_2) { 
+                if(player1) { 
+                    player1 = false; 
+                    player2 = true;
+                }
+                else if(player2) { 
+                    player2 = false; 
+                    player1 = true;
+                }
+                }
             }
         }
         if (button3Pressed)
@@ -516,12 +593,30 @@ void process_button2(Sprite *cards, int size)
                 button2Pressed = false;
                 button3Pressed = false;
                 final++;
+                if(menuState == GAME_4_2) {
+                if(player1){
+                    player_1++;
+                }
+                else if(player2){
+                    player_2++;
+                }
+                }
             }
             else
             {
                 button2Pressed = false;
                 button3Pressed = false;
                 counter_cards = 0;
+                if(menuState == GAME_4_2) { 
+                if(player1) { 
+                    player1 = false; 
+                    player2 = true;
+                }
+                else if(player2) { 
+                    player2 = false; 
+                    player1 = true;
+                }
+                }
             }
         }
         if (button4Pressed)
@@ -533,12 +628,30 @@ void process_button2(Sprite *cards, int size)
                 button2Pressed = false;
                 button4Pressed = false;
                 final++;
+                if(menuState == GAME_4_2) {
+                if(player1){
+                    player_1++;
+                }
+                else if(player2){
+                    player_2++;
+                }
+                }
             }
             else
             {
                 button2Pressed = false;
                 button4Pressed = false;
                 counter_cards = 0;
+                if(menuState == GAME_4_2) { 
+                if(player1) { 
+                    player1 = false; 
+                    player2 = true;
+                }
+                else if(player2) { 
+                    player2 = false; 
+                    player1 = true;
+                }
+                }
             }
         }
     }
@@ -564,12 +677,30 @@ void process_button3(Sprite *cards, int size)
                 button1Pressed = false;
                 button3Pressed = false;
                 final++;
+                if(menuState == GAME_4_2) {
+                if(player1){
+                    player_1++;
+                }
+                else if(player2){
+                    player_2++;
+                }
+                }
             }
             else
             {
                 button1Pressed = false;
                 button3Pressed = false;
                 counter_cards = 0;
+                if(menuState == GAME_4_2) { 
+                if(player1) { 
+                    player1 = false; 
+                    player2 = true;
+                }
+                else if(player2) { 
+                    player2 = false; 
+                    player1 = true;
+                }
+                }
             }
         }
         if (button2Pressed)
@@ -581,12 +712,30 @@ void process_button3(Sprite *cards, int size)
                 button2Pressed = false;
                 button3Pressed = false;
                 final++;
+                if(menuState == GAME_4_2) {
+                if(player1){
+                    player_1++;
+                }
+                else if(player2){
+                    player_2++;
+                }
+                }
             }
             else
             {
                 button2Pressed = false;
                 button3Pressed = false;
                 counter_cards = 0;
+                if(menuState == GAME_4_2) { 
+                if(player1) { 
+                    player1 = false; 
+                    player2 = true;
+                }
+                else if(player2) { 
+                    player2 = false; 
+                    player1 = true;
+                }
+                }
             }
         }
         if (button4Pressed)
@@ -596,6 +745,14 @@ void process_button3(Sprite *cards, int size)
                 block3 = true;
                 block4 = true;
                 final++;
+                if(menuState == GAME_4_2) {
+                if(player1){
+                    player_1++;
+                }
+                else if(player2){
+                    player_2++;
+                }
+                }
             }
 
             else
@@ -603,6 +760,16 @@ void process_button3(Sprite *cards, int size)
                 button3Pressed = false;
                 button4Pressed = false;
                 counter_cards = 0;
+                if(menuState == GAME_4_2) { 
+                if(player1) { 
+                    player1 = false; 
+                    player2 = true;
+                }
+                else if(player2) { 
+                    player2 = false; 
+                    player1 = true;
+                }
+                }
             }
         }
     }
@@ -628,12 +795,30 @@ void process_button4(Sprite *cards, int size)
                 button1Pressed = false;
                 button4Pressed = false;
                 final++;
+                if(menuState == GAME_4_2) {
+                if(player1){
+                    player_1++;
+                }
+                else if(player2){
+                    player_2++;
+                }
+                }
             }
             else
             {
                 button1Pressed = false;
                 button4Pressed = false;
                 counter_cards = 0;
+                if(menuState == GAME_4_2) { 
+                if(player1) { 
+                    player1 = false; 
+                    player2 = true;
+                }
+                else if(player2) { 
+                    player2 = false; 
+                    player1 = true;
+                }
+                }
             }
         }
         if (button2Pressed)
@@ -645,12 +830,30 @@ void process_button4(Sprite *cards, int size)
                 button2Pressed = false;
                 button4Pressed = false;
                 final++;
+                if(menuState == GAME_4_2) {
+                if(player1){
+                    player_1++;
+                }
+                else if(player2){
+                    player_2++;
+                }
+                }
             }
             else
             {
                 button2Pressed = false;
                 button4Pressed = false;
                 counter_cards = 0;
+                if(menuState == GAME_4_2) { 
+                if(player1) { 
+                    player1 = false; 
+                    player2 = true;
+                }
+                else if(player2) { 
+                    player2 = false; 
+                    player1 = true;
+                }
+                }
             }
         }
         if (button3Pressed)
@@ -661,13 +864,30 @@ void process_button4(Sprite *cards, int size)
                 block4 = true;
                 button3Pressed = false;
                 button4Pressed = false;
-                final++;
+                if(menuState == GAME_4_2) {
+                if(player1){
+                    player_1++;
+                }
+                else if(player2){
+                    player_2++;
+                }
+                }
             }
             else
             {
                 button3Pressed = false;
                 button4Pressed = false;
                 counter_cards = 0;
+                if(menuState == GAME_4_2) { 
+                if(player1) { 
+                    player1 = false; 
+                    player2 = true;
+                }
+                else if(player2) { 
+                    player2 = false; 
+                    player1 = true;
+                }
+                }
             }
         }
     }
@@ -697,22 +917,32 @@ void draw_game_menu()
     if (!block1)
     {
         process_button1(cards, j);
+        printf("player1: %d\n", player1);
+        printf("player2: %d\n", player2);
     }
     else if (block1)
     {
         draw_sprite_xpm(&matrix[0][0], 0, 0);
+        printf("player1: %d\n", player1);
+        printf("player2: %d\n", player2);
     }
     if (!block2)
     {
         process_button2(cards, j);
+        printf("player1: %d\n", player1);
+        printf("player2: %d\n", player2);
     }
     else if (block2)
     {
         draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 2, 0);
+        printf("player1: %d\n", player1);
+        printf("player2: %d\n", player2);
     }
     if (!block3)
     {
         process_button3(cards, j);
+        printf("player1: %d\n", player1);
+        printf("player2: %d\n", player2);
     }
     else if (block3)
     {
@@ -728,8 +958,90 @@ void draw_game_menu()
     }
     if (block1 && block2 && block3 && block4)
     {
+        printf("player1: %d\n", player_1);
+        printf("player2: %d\n", player_2);
         menuState = END;
     }
+}
+
+
+void draw_game_menu_game_2() 
+{
+     Sprite *back1 = back;
+    Sprite *back2 = back;
+    Sprite *back3 = back;
+    Sprite *back4 = back;
+    Sprite cards[] = {*number1, *number1, *number2, *number2};
+    int j = sizeof(cards) / sizeof(cards[0]);
+    if (pre == 0)
+    {
+        shuffle(cards, j);
+        pre++;
+    }
+
+    memset(drawing_frame_buffer, 0, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
+    draw_sprite_xpm(back1, 0, 0);
+    draw_sprite_xpm(back2, mode_info.XResolution / 2, 0);
+    draw_sprite_xpm(back3, 0, mode_info.YResolution / 2);
+    draw_sprite_xpm(back4, mode_info.XResolution / 2, mode_info.YResolution / 2);
+
+    if (!block1)
+    {
+        process_button1(cards, j);
+        printf("player1: %d\n", player1);
+        printf("player2: %d\n", player2);
+       
+    }
+    else if (block1)
+    {
+        draw_sprite_xpm(&matrix[0][0], 0, 0);
+        printf("player1: %d\n", player1);
+        printf("player2: %d\n", player2);
+        
+    }
+    if (!block2)
+    {
+        process_button2(cards, j);
+        printf("player1: %d\n", player1);
+        printf("player2: %d\n", player2);
+       
+    }
+    else if (block2)
+    {
+        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 2, 0);
+        printf("player1: %d\n", player1);
+        printf("player2: %d\n", player2);
+        
+    }
+    if (!block3)
+    {
+        process_button3(cards, j);
+        printf("player1: %d\n", player1);
+        printf("player2: %d\n", player2);
+        
+    }
+    else if (block3)
+    {
+        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
+        
+    }
+    if (!block4)
+    {
+        process_button4(cards, j);
+        
+    }
+    else if (block4)
+    {
+        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 2, mode_info.YResolution / 2);
+        
+    }
+    if (block1 && block2 && block3 && block4)
+    {
+        printf("The value of l is: %d\n", player_1);
+        printf("The value of l is: %d\n", player_2);
+        menuState = END;
+    }
+
 }
 
 void process_cardPressed1()
@@ -6384,8 +6696,32 @@ void draw_game_menu_3()
 // O menu final é apenas um retângulo com tamanho máximo, com um smile ao centro
 void draw_finish_menu()
 {
-    draw_rectangle(0, 0, mode_info.XResolution, mode_info.YResolution, DARKBLUE, drawing_frame_buffer);
-    draw_sprite_xpm(smile, mode_info.XResolution / 2 - 100, mode_info.YResolution / 2 - 100);
+    draw_rectangle(0, 0, mode_info.XResolution, mode_info.YResolution, 0x000000, drawing_frame_buffer);
+    if(player_1 != 0) { 
+        if(player_1 == 0) { 
+            draw_sprite_xpm(back, mode_info.XResolution / 2 - 100, mode_info.YResolution / 2 - 100);
+        }
+        else if(player_1 == 1) { 
+            draw_sprite_xpm(number1, mode_info.XResolution / 2 - 100, mode_info.YResolution / 2 - 100);
+        }
+        else if(player_1 == 2) { 
+            draw_sprite_xpm(number2, mode_info.XResolution / 2 - 100, mode_info.YResolution / 2 - 100);
+        }
+    }
+    if(player_2 != 0) { 
+        if(player_2 == 0) { 
+            draw_sprite_xpm(back, mode_info.XResolution / 3, mode_info.YResolution / 3);
+        }
+        else if(player_2 == 1) { 
+            draw_sprite_xpm(number1, mode_info.XResolution / 3, mode_info.YResolution / 3);
+        }
+        else if(player_2 == 2) { 
+            draw_sprite_xpm(number2, mode_info.XResolution / 3, mode_info.YResolution / 3);
+        }
+    }
+    if(player_1 == 0 && player_2 == 0) { 
+        draw_sprite_xpm(smile, mode_info.XResolution / 2 - 100, mode_info.YResolution / 2 - 100);
+    }
 }
 
 // O cursor mode ter dois estados:
@@ -6410,6 +6746,9 @@ void draw_mouse()
         break;
     case GAME_3:
         draw_sprite_xpm(hand, mouse_info.x, mouse_info.y);
+        break;
+    case GAME_4_2: 
+        draw_sprite_xpm(hand,mouse_info.x,mouse_info.y);
         break;
     }
 }

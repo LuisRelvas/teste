@@ -132,10 +132,16 @@ void update_keyboard_state()
         break;
     case E_KEY:
         menuState = END;
+        break;
     case I_KEY:
         menuState = GAME_2;
+        break;
     case H_KEY:
         menuState = GAME_3;
+        break;
+    case J_KEY:
+        menuState = GAME_4_2;
+        break;
     default:
         break;
     }
