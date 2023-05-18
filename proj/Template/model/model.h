@@ -49,7 +49,9 @@ typedef enum
     END,
     MODE,
     GAME_3,
-    GAME_4_2
+    GAME_4_2,
+    GAME_8_2,
+    GAME_16_2
 } MenuState;
 
 void update_timer_state();
