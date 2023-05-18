@@ -21,12 +21,12 @@ void display_real_time();
 int draw_sprite_xpm(Sprite *sprite, int x, int y);
 int draw_sprite_button(Sprite *sprite, int x, int y);
 int set_frame_buffers(uint16_t mode);
-void draw_xpm_draw_buffer(xpm_map_t xpm, uint16_t x, uint16_t y) ;
-int get_number(Sprite *cards,int size);
-void process_button2(Sprite *cards,int size);
-void process_button1(Sprite *cards,int size);
-void process_button3(Sprite *cards,int size);
-void process_button4(Sprite *cards,int size);
+void draw_xpm_draw_buffer(xpm_map_t xpm, uint16_t x, uint16_t y);
+int get_number(Sprite *cards, int size);
+void process_button2(Sprite *cards, int size);
+void process_button1(Sprite *cards, int size);
+void process_button3(Sprite *cards, int size);
+void process_button4(Sprite *cards, int size);
 void shuffle(Sprite *cards, int size);
 void shuffle2(Sprite *cards);
 void process_cardPressed1();
@@ -40,5 +40,6 @@ void process_cardPressed8();
 void draw_mode_menu();
 void draw_game_menu_3();
 void draw_game_menu_game_2();
+void draw_card_animation(uint16_t x, uint16_t y);
 
 #endif

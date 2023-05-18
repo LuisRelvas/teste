@@ -30,15 +30,19 @@
 #include "xpm/easy.xpm"
 #include "xpm/medium.xpm"
 #include "xpm/quit.xpm"
+#include "xpm/back_anim1.xpm"
+#include "xpm/back_anim2.xpm"
+#include "xpm/back_anim3.xpm"
+#include "xpm/back_anim4.xpm"
 
-
-
-typedef enum {
+typedef enum
+{
     RUNNING,
     EXIT,
 } SystemState;
 
-typedef enum {
+typedef enum
+{
     START,
     GAME,
     GAME_2,

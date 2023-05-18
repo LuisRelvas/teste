@@ -30,6 +30,10 @@ Sprite *number6;
 Sprite *number7;
 Sprite *number8;
 Sprite *back;
+Sprite *back_anim1;
+Sprite *back_anim2;
+Sprite *back_anim3;
+Sprite *back_anim4;
 Sprite *game;
 Sprite *start;
 Sprite *hard;
@@ -74,6 +78,10 @@ void setup_sprites()
     hard = create_sprite_xpm((xpm_map_t)hard_xpm);
     quit = create_sprite_xpm((xpm_map_t)quit_xpm);
     start = create_sprite_xpm((xpm_map_t)start_xpm);
+    back_anim1 = create_sprite_xpm((xpm_map_t)back_anim1_xpm);
+    back_anim2 = create_sprite_xpm((xpm_map_t)back_anim2_xpm);
+    back_anim3 = create_sprite_xpm((xpm_map_t)back_anim3_xpm);
+    back_anim4 = create_sprite_xpm((xpm_map_t)back_anim4_xpm);
 }
 
 // É boa prática antes de acabar o programa libertar a memória alocada
@@ -104,6 +112,10 @@ void destroy_sprites()
     destroy_sprite(hard);
     destroy_sprite(quit);
     destroy_sprite(start);
+    destroy_sprite(back_anim1);
+    destroy_sprite(back_anim2);
+    destroy_sprite(back_anim3);
+    destroy_sprite(back_anim4);
 }
 
 // Na altura da interrupção há troca dos buffers e incremento do contador
