@@ -12,7 +12,8 @@ typedef struct {
     uint32_t *colors;
     uint32_t color;
     uint8_t pressed;
-    int id ;
+    int id;
+    bool block;
 } Sprite; 
 
 

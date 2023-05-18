@@ -1,1867 +1,1206 @@
-NOW: 2023/5/18 @20:11:18
-NOW: 2023/5/18 @20:11:19
-NOW: 2023/5/18 @20:11:20
+NOW: 2023/5/18 @22:38:15
+NOW: 2023/5/18 @22:38:16
 Match found: matrix[0][0].id = 5 and matrix[1][1].id = 5
 Match found: matrix[0][1].id = 6 and matrix[1][0].id = 6
 Match found: matrix[1][0].id = 6 and matrix[0][1].id = 6
 Match found: matrix[1][1].id = 5 and matrix[0][0].id = 5
 matrix allocated
-,137765504player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-NOW: 2023/5/18 @20:11:21
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-NOW: 2023/5/18 @20:11:22
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
+,137769600matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+NOW: 2023/5/18 @22:38:17
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
-NOW: 2023/5/18 @20:11:23
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+NOW: 2023/5/18 @22:38:18
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
-NOW: 2023/5/18 @20:11:24
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+NOW: 2023/5/18 @22:38:19
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
 player2: 0
+matrix: -1
+process_button1
+The value of index_1 is: 139350016
+matrix bool: 0
+The value of index_2 is: 139350040
+matrix bool: 0
 player1: 1
 player2: 0
 player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-player1: 0
 player2: 0
-NOW: 2023/5/18 @20:11:25

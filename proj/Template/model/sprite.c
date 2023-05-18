@@ -13,6 +13,8 @@ Sprite *create_sprite_xpm(xpm_map_t sprite){
   sp->height = img.height;
   sp->width = img.width;
   sp->id = counter_test++;
+  sp->block = false;
+  sp->pressed = 0;
 
   if( sp->colors == NULL ) {
     free(sp);

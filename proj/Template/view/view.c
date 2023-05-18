@@ -226,7 +226,17 @@ void draw_mode_menu()
     draw_sprite_xpm(hard, mode_info.XResolution / 2, 3*mode_info.YResolution / 4 );
     process_mode3();
 }
+
+//varibles for the game1
 Sprite **matrix;
+Sprite *index_1;
+Sprite *index_2;
+
+
+int id1 = 0; 
+int id2 = 0;
+int matrix_id1 = -1; 
+int matrix_id2 = -1;
 bool button1Pressed = false;
 bool button2Pressed = false;
 bool button3Pressed = false;
@@ -242,8 +252,6 @@ int aux4 = 0;
 int pre = 0;
 int j = 0;
 int k = 0;
-Sprite matrix2[2][4];
-Sprite matrix3[4][4];
 int id_sprite1;
 int id_sprite2;
 int id_sprite3;
@@ -375,21 +383,21 @@ void shuffle2(Sprite *cards)
         cards[i] = cards[j];
         cards[j] = temp;
     }
-    matrix2[0][0] = cards[0];
-    matrix2[0][1] = cards[1];
-    matrix2[0][2] = cards[2];
-    matrix2[0][3] = cards[3];
-    matrix2[1][0] = cards[4];
-    matrix2[1][1] = cards[5];
-    matrix2[1][2] = cards[6];
-    matrix2[1][3] = cards[7];
+    matrix[0][0] = cards[0];
+    matrix[0][1] = cards[1];
+    matrix[0][2] = cards[2];
+    matrix[0][3] = cards[3];
+    matrix[1][0] = cards[4];
+    matrix[1][1] = cards[5];
+    matrix[1][2] = cards[6];
+    matrix[1][3] = cards[7];
 
     // Printing the shuffled matrix
     for (int i = 0; i < 2; i++)
     {
         for (int j = 0; j < 4; j++)
         {
-            printf("%d ", matrix2[i][j].id);
+            printf("%d ", matrix[i][j].id);
         }
         printf("\n");
     }
@@ -407,29 +415,29 @@ void shuffle3(Sprite *cards)
         cards[i] = cards[j];
         cards[j] = temp;
     }
-    matrix3[0][0] = cards[0];
-    matrix3[0][1] = cards[1];
-    matrix3[0][2] = cards[2];
-    matrix3[0][3] = cards[3];
-    matrix3[1][0] = cards[4];
-    matrix3[1][1] = cards[5];
-    matrix3[1][2] = cards[6];
-    matrix3[1][3] = cards[7];
-    matrix3[2][0] = cards[8];
-    matrix3[2][1] = cards[9];
-    matrix3[2][2] = cards[10];
-    matrix3[2][3] = cards[11];
-    matrix3[3][0] = cards[12];
-    matrix3[3][1] = cards[13];
-    matrix3[3][2] = cards[14];
-    matrix3[3][3] = cards[15];
+    matrix[0][0] = cards[0];
+    matrix[0][1] = cards[1];
+    matrix[0][2] = cards[2];
+    matrix[0][3] = cards[3];
+    matrix[1][0] = cards[4];
+    matrix[1][1] = cards[5];
+    matrix[1][2] = cards[6];
+    matrix[1][3] = cards[7];
+    matrix[2][0] = cards[8];
+    matrix[2][1] = cards[9];
+    matrix[2][2] = cards[10];
+    matrix[2][3] = cards[11];
+    matrix[3][0] = cards[12];
+    matrix[3][1] = cards[13];
+    matrix[3][2] = cards[14];
+    matrix[3][3] = cards[15];
 
     // Printing the shuffled matrix
     for (int i = 0; i < 4; i++)
     {
         for (int j = 0; j < 4; j++)
         {
-            printf("%d ", matrix3[i][j].id);
+            printf("%d ", matrix[i][j].id);
         }
         printf("\n");
     }
@@ -449,233 +457,90 @@ bool check_match(int id1, int id2)
 
 void process_button1(Sprite *cards, int size)
 {
+    printf("process_button1\n");
     if (button1->pressed)
     {
         button1Pressed = true;
         counter_cards++;
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[0][0].id;
+        } 
+        else if(matrix_id2 == -1) {
+            matrix_id2 = matrix[0][0].id;
+         }
+        
     }
-    if (button1Pressed)
+        if (button1Pressed)
     {
+        if(index_1 == NULL){
+        index_1 = &matrix[0][0];
+        printf("The value of index_1 is: %d\n", index_1); 
+        }
+        else if(index_2 == NULL) {
+            index_2 = &matrix[0][0];
+            printf("The value of index_2 is: %d\n", index_2);
+            
+        }
+        printf("matrix bool: %d\n", matrix[0][0].block);
         draw_sprite_xpm(&matrix[0][0], 0, 0);
-        if (button2Pressed)
-        {
-            if (check_match(matrix[0][0].id, matrix[0][1].id))
-            { // match entre o id 1 e o id 2;
-                block1 = true;
-                block2 = true;
-                button1Pressed = false;
-                button2Pressed = false;
-                if(menuState == GAME_4_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                button1Pressed = false;
-                button2Pressed = false;
-                if(menuState == GAME_4_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-                counter_cards = 0;
-            }
-        }
-        if (button3Pressed)
-        {
-            if (check_match(matrix[0][0].id, matrix[1][0].id))
-            {
-                block1 = true;
-                block3 = true;
-                button1Pressed = false;
-                button3Pressed = false;
-                if(menuState == GAME_4_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                button1Pressed = false;
-                button3Pressed = false;
-                counter_cards = 0;
-                if(menuState == GAME_4_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (button4Pressed)
-        {
-            if (check_match(matrix[0][0].id, matrix[1][1].id))
-            {
-                block1 = true;
-                block4 = true;
-                button1Pressed = false;
-                button4Pressed = false;
-                if(menuState == GAME_4_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                button1Pressed = false;
-                button4Pressed = false;
-                counter_cards = 0;
-                if(menuState == GAME_4_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-    }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2))
+        printf("Match found");
+        index_1->block = true;
+        index_2->block = true;}
+         }
+         else{
+            index_1 = NULL;
+            index_2 = NULL;
+            matrix_id1 = -1;
+            matrix_id2 = -1;
+            
+         }
+        
 }
+
 void process_button2(Sprite *cards, int size)
 {
     if (button2->pressed)
     {
         button2Pressed = true;
         counter_cards++;
+        if(matrix_id1 == 0) { 
+            matrix_id1 = matrix[0][1].id;
+        }
+        else if(matrix_id2 != 0) { 
+            matrix_id2 = matrix[0][1].id;
+        }
     }
 
     if (button2Pressed)
-    {
+    {if(index_1 == NULL){
+        index_1 = &matrix[0][1]; 
+
+        printf("The value of index_1 is: %d\n", index_1);}
+        else if(index_2 == NULL) {
+            
+            index_2 = &matrix[0][1];
+            printf("The value of index_2 is: %d\n", index_2);
+            
+        }
+        printf("matrix bool: %d\n", matrix[0][0].block);
         draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 2, 0);
-        if (button1Pressed)
-        {
-            if (check_match(matrix[0][0].id, matrix[0][1].id))
-            { // match entre o id 1 e o id 2;
-                block1 = true;
-                block2 = true;
-                button1Pressed = false;
-                button2Pressed = false;
-                if(menuState == GAME_4_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                button1Pressed = false;
-                button2Pressed = false;
-                counter_cards = 0;
-               if(menuState == GAME_4_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2))
+        printf("Match found");
+        index_1->block = true;
+        index_2->block = true;
         }
-        if (button3Pressed)
-        {
-            if (check_match(matrix[0][1].id, matrix[1][0].id))
-            {
-                block2 = true;
-                block3 = true;
-                button2Pressed = false;
-                button3Pressed = false;
-                final++;
-                if(menuState == GAME_4_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                button2Pressed = false;
-                button3Pressed = false;
-                counter_cards = 0;
-                if(menuState == GAME_4_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        else {
+            index_1 = NULL;
+            index_2 = NULL;
+            matrix_id1 = -1;
+            matrix_id2 = -1;
+
+            
         }
-        if (button4Pressed)
-        {
-            if (check_match(matrix[0][1].id, matrix[1][1].id))
-            {
-                block2 = true;
-                block4 = true;
-                button2Pressed = false;
-                button4Pressed = false;
-                final++;
-                if(menuState == GAME_4_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                button2Pressed = false;
-                button4Pressed = false;
-                counter_cards = 0;
-                if(menuState == GAME_4_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
+        
     }
 }
 
@@ -916,9 +781,10 @@ void process_button4(Sprite *cards, int size)
 }
 
 // O menu do jogo é constituído por quatro botões
+
 void draw_game_menu()
 {
-
+    
     Sprite *back1 = back;
     Sprite *back2 = back;
     Sprite *back3 = back;
@@ -944,18 +810,18 @@ void draw_game_menu()
     draw_sprite_xpm(back3, 0, mode_info.YResolution / 2);
     draw_sprite_xpm(back4, mode_info.XResolution / 2, mode_info.YResolution / 2);
 
-    if (!block1)
+    
+    printf("matrix: %d\n", matrix_id1);
+       
+    if(matrix[0][0].block == false)
     {
-        process_button1(cards, j);
-        printf("player1: %d\n", player1);
-        printf("player2: %d\n", player2);
+        process_button1(cards,j);
     }
-    else if (block1)
-    {
+    if(matrix[0][0].block == true) 
+    { 
         draw_sprite_xpm(&matrix[0][0], 0, 0);
-        printf("player1: %d\n", player1);
-        printf("player2: %d\n", player2);
     }
+    
     if (!block2)
     {
         process_button2(cards, j);
@@ -997,7 +863,7 @@ void draw_game_menu()
 
 void draw_game_menu_game_2() 
 {
-     Sprite *back1 = back;
+    Sprite *back1 = back;
     Sprite *back2 = back;
     Sprite *back3 = back;
     Sprite *back4 = back;
@@ -1015,7 +881,7 @@ void draw_game_menu_game_2()
     draw_sprite_xpm(back2, mode_info.XResolution / 2, 0);
     draw_sprite_xpm(back3, 0, mode_info.YResolution / 2);
     draw_sprite_xpm(back4, mode_info.XResolution / 2, mode_info.YResolution / 2);
-
+    printf("matrix[0][0]->block: %d\n", matrix[0][0].block);
     if (!block1)
     {
         process_button1(cards, j);
@@ -1110,7 +976,7 @@ void draw_game_menu_game_3() {
     }
     else if (cardBlock1)
     {
-        draw_sprite_xpm(&matrix2[0][0], 0, 0);
+        draw_sprite_xpm(&matrix[0][0], 0, 0);
         printf("player1: %d\n", player1);
         printf("player2: %d\n", player2);
     }
@@ -1122,7 +988,7 @@ void draw_game_menu_game_3() {
     }
     else if (cardBlock2)
     {
-        draw_sprite_xpm(&matrix2[0][1], mode_info.XResolution / 4, 0);
+        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
         printf("player1: %d\n", player1);
         printf("player2: %d\n", player2);
     }
@@ -1132,7 +998,7 @@ void draw_game_menu_game_3() {
     }
     else if (cardBlock3)
     {
-        draw_sprite_xpm(&matrix2[0][2], mode_info.XResolution / 2, 0);
+        draw_sprite_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
         printf("player1: %d\n", player1);
         printf("player2: %d\n", player2);
     }
@@ -1144,7 +1010,7 @@ void draw_game_menu_game_3() {
     }
     else if (cardBlock4)
     {
-        draw_sprite_xpm(&matrix2[0][3], 3 * mode_info.XResolution / 4, 0);
+        draw_sprite_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
         printf("player1: %d\n", player1);
         printf("player2: %d\n", player2);
     }
@@ -1156,7 +1022,7 @@ void draw_game_menu_game_3() {
     }
     else if (cardBlock5)
     {
-        draw_sprite_xpm(&matrix2[1][0], 0, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
         printf("player1: %d\n", player1);
         printf("player2: %d\n", player2);
     }
@@ -1166,7 +1032,7 @@ void draw_game_menu_game_3() {
     }
     else if (cardBlock6)
     {
-        draw_sprite_xpm(&matrix2[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
         printf("player1: %d\n", player1);
         printf("player2: %d\n", player2);
     }
@@ -1178,7 +1044,7 @@ void draw_game_menu_game_3() {
     }
     else if (cardBlock7)
     {
-        draw_sprite_xpm(&matrix2[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
         printf("player1: %d\n", player1);
         printf("player2: %d\n", player2);
     }
@@ -1190,7 +1056,7 @@ void draw_game_menu_game_3() {
     }
     else if (cardBlock8)
     {
-        draw_sprite_xpm(&matrix2[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
         printf("player1: %d\n", player1);
         printf("player2: %d\n", player2);
     }
@@ -1215,10 +1081,10 @@ void process_cardPressed1()
     }
     if (cardPressed1)
     {
-        draw_sprite_xpm(&matrix2[0][0], 0, 0);
+        draw_sprite_xpm(&matrix[0][0], 0, 0);
         if (cardPressed2)
         {
-            if (check_match(matrix2[0][0].id, matrix2[0][1].id))
+            if (check_match(matrix[0][0].id, matrix[0][1].id))
             {
                 cardBlock1 = true;
                 cardBlock2 = true;
@@ -1255,7 +1121,7 @@ void process_cardPressed1()
         }
         if (cardPressed3)
         {
-            if (check_match(matrix2[0][0].id, matrix2[0][2].id))
+            if (check_match(matrix[0][0].id, matrix[0][2].id))
             {
                 cardBlock1 = true;
                 cardBlock3 = true;
@@ -1290,7 +1156,7 @@ void process_cardPressed1()
         }
         if (cardPressed4)
         {
-            if (check_match(matrix2[0][0].id, matrix2[0][3].id))
+            if (check_match(matrix[0][0].id, matrix[0][3].id))
             {
                 cardBlock1 = true;
                 cardBlock4 = true;
@@ -1326,7 +1192,7 @@ void process_cardPressed1()
         }
         if (cardPressed5)
         {
-            if (check_match(matrix2[0][0].id, matrix2[1][0].id))
+            if (check_match(matrix[0][0].id, matrix[1][0].id))
             {
                 cardBlock1 = true;
                 cardBlock5 = true;
@@ -1361,7 +1227,7 @@ void process_cardPressed1()
         }
         if (cardPressed6)
         {
-            if (check_match(matrix2[0][0].id, matrix2[1][1].id))
+            if (check_match(matrix[0][0].id, matrix[1][1].id))
             {
                 cardBlock1 = true;
                 cardBlock6 = true;
@@ -1396,7 +1262,7 @@ void process_cardPressed1()
         }
         if (cardPressed7)
         {
-            if (check_match(matrix2[0][0].id, matrix2[1][2].id))
+            if (check_match(matrix[0][0].id, matrix[1][2].id))
             {
                 cardBlock1 = true;
                 cardBlock7 = true;
@@ -1431,7 +1297,7 @@ void process_cardPressed1()
         }
         if (cardPressed8)
         {
-            if (check_match(matrix2[0][0].id, matrix2[1][3].id))
+            if (check_match(matrix[0][0].id, matrix[1][3].id))
             {
                 cardBlock1 = true;
                 cardBlock8 = true;
@@ -1479,10 +1345,10 @@ void process_cardPressed2()
     if (cardPressed2)
     {
 
-        draw_sprite_xpm(&matrix2[0][1], mode_info.XResolution / 4, 0);
+        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
         if (cardPressed1)
         {
-            if (check_match(matrix2[0][1].id, matrix2[0][0].id))
+            if (check_match(matrix[0][1].id, matrix[0][0].id))
             {
                 cardBlock1 = true;
                 cardBlock2 = true;
@@ -1518,7 +1384,7 @@ void process_cardPressed2()
         }
         if (cardPressed3)
         {
-            if (check_match(matrix2[0][1].id, matrix2[0][2].id))
+            if (check_match(matrix[0][1].id, matrix[0][2].id))
             {
                 cardBlock2 = true;
                 cardBlock3 = true;
@@ -1553,7 +1419,7 @@ void process_cardPressed2()
         }
         if (cardPressed4)
         {
-            if (check_match(matrix2[0][1].id, matrix2[0][3].id))
+            if (check_match(matrix[0][1].id, matrix[0][3].id))
             {
                 cardBlock2 = true;
                 cardBlock4 = true;
@@ -1588,7 +1454,7 @@ void process_cardPressed2()
         }
         if (cardPressed5)
         {
-            if (check_match(matrix2[0][1].id, matrix2[1][0].id))
+            if (check_match(matrix[0][1].id, matrix[1][0].id))
             {
                 cardBlock2 = true;
                 cardBlock5 = true;
@@ -1623,7 +1489,7 @@ void process_cardPressed2()
         }
         if (cardPressed6)
         {
-            if (check_match(matrix2[0][1].id, matrix2[1][1].id))
+            if (check_match(matrix[0][1].id, matrix[1][1].id))
             {
                 cardBlock2 = true;
                 cardBlock6 = true;
@@ -1659,7 +1525,7 @@ if(menuState == GAME_8_2) {
         }
         if (cardPressed7)
         {
-            if (check_match(matrix2[0][1].id, matrix2[1][2].id))
+            if (check_match(matrix[0][1].id, matrix[1][2].id))
             {
                 cardBlock2 = true;
                 cardBlock7 = true;
@@ -1696,7 +1562,7 @@ if(menuState == GAME_8_2) {
         }
         if (cardPressed8)
         {
-            if (check_match(matrix2[0][1].id, matrix2[1][3].id))
+            if (check_match(matrix[0][1].id, matrix[1][3].id))
             {
                 cardBlock2 = true;
                 cardBlock8 = true;
@@ -1745,10 +1611,10 @@ void process_cardPressed3()
     if (cardPressed3)
     {
 
-        draw_sprite_xpm(&matrix2[0][2], mode_info.XResolution / 2, 0);
+        draw_sprite_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
         if (cardPressed1)
         {
-            if (check_match(matrix2[0][2].id, matrix2[0][0].id))
+            if (check_match(matrix[0][2].id, matrix[0][0].id))
             {
                 cardBlock1 = true;
                 cardBlock3 = true;
@@ -1783,7 +1649,7 @@ void process_cardPressed3()
         }
         if (cardPressed2)
         {
-            if (check_match(matrix2[0][2].id, matrix2[0][1].id))
+            if (check_match(matrix[0][2].id, matrix[0][1].id))
             {
                 cardBlock2 = true;
                 cardBlock3 = true;
@@ -1818,7 +1684,7 @@ void process_cardPressed3()
         }
         if (cardPressed4)
         {
-            if (check_match(matrix2[0][2].id, matrix2[0][3].id))
+            if (check_match(matrix[0][2].id, matrix[0][3].id))
             {
                 cardBlock3 = true;
                 cardBlock4 = true;
@@ -1853,7 +1719,7 @@ void process_cardPressed3()
         }
         if (cardPressed5)
         {
-            if (check_match(matrix2[0][2].id, matrix2[1][0].id))
+            if (check_match(matrix[0][2].id, matrix[1][0].id))
             {
                 cardBlock3 = true;
                 cardBlock5 = true;
@@ -1888,7 +1754,7 @@ void process_cardPressed3()
         }
         if (cardPressed6)
         {
-            if (check_match(matrix2[0][2].id, matrix2[1][1].id))
+            if (check_match(matrix[0][2].id, matrix[1][1].id))
             {
                 cardBlock3 = true;
                 cardBlock6 = true;
@@ -1923,7 +1789,7 @@ void process_cardPressed3()
         }
         if (cardPressed7)
         {
-            if (check_match(matrix2[0][2].id, matrix2[1][2].id))
+            if (check_match(matrix[0][2].id, matrix[1][2].id))
             {
                 cardBlock3 = true;
                 cardBlock7 = true;
@@ -1958,7 +1824,7 @@ void process_cardPressed3()
         }
         if (cardPressed8)
         {
-            if (check_match(matrix2[0][2].id, matrix2[1][3].id))
+            if (check_match(matrix[0][2].id, matrix[1][3].id))
             {
                 cardBlock3 = true;
                 cardBlock8 = true;
@@ -2005,10 +1871,10 @@ void process_cardPressed4()
     }
     if (cardPressed4)
     {
-        draw_sprite_xpm(&matrix2[0][3], 3 * mode_info.XResolution / 4, 0);
+        draw_sprite_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
         if (cardPressed1)
         {
-            if (check_match(matrix2[0][3].id, matrix2[0][0].id))
+            if (check_match(matrix[0][3].id, matrix[0][0].id))
             {
                 cardBlock1 = true;
                 cardBlock4 = true;
@@ -2043,7 +1909,7 @@ void process_cardPressed4()
         }
         if (cardPressed2)
         {
-            if (check_match(matrix2[0][3].id, matrix2[0][1].id))
+            if (check_match(matrix[0][3].id, matrix[0][1].id))
             {
                 cardBlock2 = true;
                 cardBlock4 = true;
@@ -2078,7 +1944,7 @@ void process_cardPressed4()
         }
         if (cardPressed3)
         {
-            if (check_match(matrix2[0][3].id, matrix2[0][2].id))
+            if (check_match(matrix[0][3].id, matrix[0][2].id))
             {
                 cardBlock3 = true;
                 cardBlock4 = true;
@@ -2113,7 +1979,7 @@ void process_cardPressed4()
         }
         if (cardPressed5)
         {
-            if (check_match(matrix2[0][3].id, matrix2[1][0].id))
+            if (check_match(matrix[0][3].id, matrix[1][0].id))
             {
                 cardBlock4 = true;
                 cardBlock5 = true;
@@ -2148,7 +2014,7 @@ void process_cardPressed4()
         }
         if (cardPressed6)
         {
-            if (check_match(matrix2[0][3].id, matrix2[1][1].id))
+            if (check_match(matrix[0][3].id, matrix[1][1].id))
             {
                 cardBlock4 = true;
                 cardBlock6 = true;
@@ -2183,7 +2049,7 @@ void process_cardPressed4()
         }
         if (cardPressed7)
         {
-            if (check_match(matrix2[0][3].id, matrix2[1][2].id))
+            if (check_match(matrix[0][3].id, matrix[1][2].id))
             {
                 cardBlock4 = true;
                 cardBlock7 = true;
@@ -2218,7 +2084,7 @@ void process_cardPressed4()
         }
         if (cardPressed8)
         {
-            if (check_match(matrix2[0][3].id, matrix2[1][3].id))
+            if (check_match(matrix[0][3].id, matrix[1][3].id))
             {
                 cardBlock4 = true;
                 cardBlock8 = true;
@@ -2265,10 +2131,10 @@ void process_cardPressed5()
     }
     if (cardPressed5)
     {
-        draw_sprite_xpm(&matrix2[1][0], 0, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
         if (cardPressed1)
         {
-            if (check_match(matrix2[1][0].id, matrix2[0][0].id))
+            if (check_match(matrix[1][0].id, matrix[0][0].id))
             {
                 cardBlock1 = true;
                 cardBlock5 = true;
@@ -2303,7 +2169,7 @@ void process_cardPressed5()
         }
         if (cardPressed2)
         {
-            if (check_match(matrix2[1][0].id, matrix2[0][1].id))
+            if (check_match(matrix[1][0].id, matrix[0][1].id))
             {
                 cardBlock2 = true;
                 cardBlock5 = true;
@@ -2338,7 +2204,7 @@ void process_cardPressed5()
         }
         if (cardPressed3)
         {
-            if (check_match(matrix2[1][0].id, matrix2[0][2].id))
+            if (check_match(matrix[1][0].id, matrix[0][2].id))
             {
                 cardBlock3 = true;
                 cardBlock5 = true;
@@ -2373,7 +2239,7 @@ void process_cardPressed5()
         }
         if (cardPressed4)
         {
-            if (check_match(matrix2[1][0].id, matrix2[0][3].id))
+            if (check_match(matrix[1][0].id, matrix[0][3].id))
             {
                 cardBlock4 = true;
                 cardBlock5 = true;
@@ -2408,7 +2274,7 @@ void process_cardPressed5()
         }
         if (cardPressed6)
         {
-            if (check_match(matrix2[1][0].id, matrix2[1][1].id))
+            if (check_match(matrix[1][0].id, matrix[1][1].id))
             {
                 cardBlock5 = true;
                 cardBlock6 = true;
@@ -2443,7 +2309,7 @@ void process_cardPressed5()
         }
         if (cardPressed7)
         {
-            if (check_match(matrix2[1][0].id, matrix2[1][2].id))
+            if (check_match(matrix[1][0].id, matrix[1][2].id))
             {
                 cardBlock5 = true;
                 cardBlock7 = true;
@@ -2478,7 +2344,7 @@ void process_cardPressed5()
         }
         if (cardPressed8)
         {
-            if (check_match(matrix2[1][0].id, matrix2[1][3].id))
+            if (check_match(matrix[1][0].id, matrix[1][3].id))
             {
                 cardBlock5 = true;
                 cardBlock8 = true;
@@ -2525,10 +2391,10 @@ void process_cardPressed6()
     }
     if (cardPressed6)
     {
-        draw_sprite_xpm(&matrix2[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
         if (cardPressed1)
         {
-            if (check_match(matrix2[1][1].id, matrix2[0][0].id))
+            if (check_match(matrix[1][1].id, matrix[0][0].id))
             {
                 cardBlock1 = true;
                 cardBlock6 = true;
@@ -2563,7 +2429,7 @@ void process_cardPressed6()
         }
         if (cardPressed2)
         {
-            if (check_match(matrix2[1][1].id, matrix2[0][1].id))
+            if (check_match(matrix[1][1].id, matrix[0][1].id))
             {
                 cardBlock2 = true;
                 cardBlock6 = true;
@@ -2598,7 +2464,7 @@ void process_cardPressed6()
         }
         if (cardPressed3)
         {
-            if (check_match(matrix2[1][1].id, matrix2[0][2].id))
+            if (check_match(matrix[1][1].id, matrix[0][2].id))
             {
                 cardBlock3 = true;
                 cardBlock6 = true;
@@ -2633,7 +2499,7 @@ void process_cardPressed6()
         }
         if (cardPressed4)
         {
-            if (check_match(matrix2[1][1].id, matrix2[0][3].id))
+            if (check_match(matrix[1][1].id, matrix[0][3].id))
             {
                 cardBlock4 = true;
                 cardBlock6 = true;
@@ -2669,7 +2535,7 @@ void process_cardPressed6()
         }
         if (cardPressed5)
         {
-            if (check_match(matrix2[1][1].id, matrix2[1][0].id))
+            if (check_match(matrix[1][1].id, matrix[1][0].id))
             {
                 cardBlock5 = true;
                 cardBlock6 = true;
@@ -2704,7 +2570,7 @@ void process_cardPressed6()
         }
         if (cardPressed7)
         {
-            if (check_match(matrix2[1][1].id, matrix2[1][2].id))
+            if (check_match(matrix[1][1].id, matrix[1][2].id))
             {
                 cardBlock6 = true;
                 cardBlock7 = true;
@@ -2739,7 +2605,7 @@ void process_cardPressed6()
         }
         if (cardPressed8)
         {
-            if (check_match(matrix2[1][1].id, matrix2[1][3].id))
+            if (check_match(matrix[1][1].id, matrix[1][3].id))
             {
                 cardBlock6 = true;
                 cardBlock8 = true;
@@ -2786,10 +2652,10 @@ void process_cardPressed7()
     }
     if (cardPressed7)
     {
-        draw_sprite_xpm(&matrix2[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
         if (cardPressed1)
         {
-            if (check_match(matrix2[1][2].id, matrix2[0][0].id))
+            if (check_match(matrix[1][2].id, matrix[0][0].id))
             {
                 cardBlock1 = true;
                 cardBlock7 = true;
@@ -2824,7 +2690,7 @@ void process_cardPressed7()
         }
         if (cardPressed2)
         {
-            if (check_match(matrix2[1][2].id, matrix2[0][1].id))
+            if (check_match(matrix[1][2].id, matrix[0][1].id))
             {
                 cardBlock2 = true;
                 cardBlock7 = true;
@@ -2859,7 +2725,7 @@ void process_cardPressed7()
         }
         if (cardPressed3)
         {
-            if (check_match(matrix2[1][2].id, matrix2[0][2].id))
+            if (check_match(matrix[1][2].id, matrix[0][2].id))
             {
                 cardBlock3 = true;
                 cardBlock7 = true;
@@ -2894,7 +2760,7 @@ void process_cardPressed7()
         }
         if (cardPressed4)
         {
-            if (check_match(matrix2[1][2].id, matrix2[0][3].id))
+            if (check_match(matrix[1][2].id, matrix[0][3].id))
             {
                 cardBlock4 = true;
                 cardBlock7 = true;
@@ -2929,7 +2795,7 @@ void process_cardPressed7()
         }
         if (cardPressed5)
         {
-            if (check_match(matrix2[1][2].id, matrix2[1][0].id))
+            if (check_match(matrix[1][2].id, matrix[1][0].id))
             {
                 cardBlock5 = true;
                 cardBlock7 = true;
@@ -2964,7 +2830,7 @@ void process_cardPressed7()
         }
         if (cardPressed6)
         {
-            if (check_match(matrix2[1][2].id, matrix2[1][1].id))
+            if (check_match(matrix[1][2].id, matrix[1][1].id))
             {
                 cardBlock6 = true;
                 cardBlock7 = true;
@@ -2999,7 +2865,7 @@ void process_cardPressed7()
         }
         if (cardPressed8)
         {
-            if (check_match(matrix2[1][2].id, matrix2[1][3].id))
+            if (check_match(matrix[1][2].id, matrix[1][3].id))
             {
                 cardBlock7 = true;
                 cardBlock8 = true;
@@ -3046,10 +2912,10 @@ void process_cardPressed8()
     }
     if (cardPressed8)
     {
-        draw_sprite_xpm(&matrix2[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
         if (cardPressed1)
         {
-            if (check_match(matrix2[1][3].id, matrix2[0][0].id))
+            if (check_match(matrix[1][3].id, matrix[0][0].id))
             {
                 cardBlock1 = true;
                 cardBlock8 = true;
@@ -3084,7 +2950,7 @@ void process_cardPressed8()
         }
         if (cardPressed2)
         {
-            if (check_match(matrix2[1][3].id, matrix2[0][1].id))
+            if (check_match(matrix[1][3].id, matrix[0][1].id))
             {
                 cardBlock2 = true;
                 cardBlock8 = true;
@@ -3119,7 +2985,7 @@ void process_cardPressed8()
         }
         if (cardPressed3)
         {
-            if (check_match(matrix2[1][3].id, matrix2[0][2].id))
+            if (check_match(matrix[1][3].id, matrix[0][2].id))
             {
                 cardBlock3 = true;
                 cardBlock8 = true;
@@ -3154,7 +3020,7 @@ void process_cardPressed8()
         }
         if (cardPressed4)
         {
-            if (check_match(matrix2[1][3].id, matrix2[0][3].id))
+            if (check_match(matrix[1][3].id, matrix[0][3].id))
             {
                 cardBlock4 = true;
                 cardBlock8 = true;
@@ -3189,7 +3055,7 @@ void process_cardPressed8()
         }
         if (cardPressed5)
         {
-            if (check_match(matrix2[1][3].id, matrix2[1][0].id))
+            if (check_match(matrix[1][3].id, matrix[1][0].id))
             {
                 cardBlock5 = true;
                 cardBlock8 = true;
@@ -3224,7 +3090,7 @@ void process_cardPressed8()
         }
         if (cardPressed6)
         {
-            if (check_match(matrix2[1][3].id, matrix2[1][1].id))
+            if (check_match(matrix[1][3].id, matrix[1][1].id))
             {
                 cardBlock6 = true;
                 cardBlock8 = true;
@@ -3259,7 +3125,7 @@ void process_cardPressed8()
         }
         if (cardPressed7)
         {
-            if (check_match(matrix2[1][3].id, matrix2[1][2].id))
+            if (check_match(matrix[1][3].id, matrix[1][2].id))
             {
                 cardBlock7 = true;
                 cardBlock8 = true;
@@ -3327,7 +3193,7 @@ void draw_game_menu_2()
     }
     else if (cardBlock1)
     {
-        draw_sprite_xpm(&matrix2[0][0], 0, 0);
+        draw_sprite_xpm(&matrix[0][0], 0, 0);
     }
     if (!cardBlock2)
     {
@@ -3335,7 +3201,7 @@ void draw_game_menu_2()
     }
     else if (cardBlock2)
     {
-        draw_sprite_xpm(&matrix2[0][1], mode_info.XResolution / 4, 0);
+        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
     }
     if (!cardBlock3)
     {
@@ -3343,7 +3209,7 @@ void draw_game_menu_2()
     }
     else if (cardBlock3)
     {
-        draw_sprite_xpm(&matrix2[0][2], mode_info.XResolution / 2, 0);
+        draw_sprite_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
     }
     if (!cardBlock4)
     {
@@ -3351,7 +3217,7 @@ void draw_game_menu_2()
     }
     else if (cardBlock4)
     {
-        draw_sprite_xpm(&matrix2[0][3], 3 * mode_info.XResolution / 4, 0);
+        draw_sprite_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
     }
     if (!cardBlock5)
     {
@@ -3359,7 +3225,7 @@ void draw_game_menu_2()
     }
     else if (cardBlock5)
     {
-        draw_sprite_xpm(&matrix2[1][0], 0, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
     }
     if (!cardBlock6)
     {
@@ -3367,7 +3233,7 @@ void draw_game_menu_2()
     }
     else if (cardBlock6)
     {
-        draw_sprite_xpm(&matrix2[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
     }
     if (!cardBlock7)
     {
@@ -3375,7 +3241,7 @@ void draw_game_menu_2()
     }
     else if (cardBlock7)
     {
-        draw_sprite_xpm(&matrix2[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
     }
     if (!cardBlock8)
     {
@@ -3383,7 +3249,7 @@ void draw_game_menu_2()
     }
     else if (cardBlock8)
     {
-        draw_sprite_xpm(&matrix2[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
     }
     if (cardBlock1 && cardBlock2 && cardBlock3 && cardBlock4 && cardBlock5 && cardBlock6 && cardBlock7 && cardBlock8)
     {
@@ -3402,10 +3268,10 @@ void process_deck1()
     }
     if (backPressed1)
     {
-        draw_sprite_xpm(&matrix3[0][0], 0, 0);
+        draw_sprite_xpm(&matrix[0][0], 0, 0);
         if (backPressed2)
         {
-            if (check_match(matrix3[0][0].id, matrix3[0][1].id))
+            if (check_match(matrix[0][0].id, matrix[0][1].id))
             {
                 backBlock1 = true;
                 backBlock2 = true;
@@ -3422,7 +3288,7 @@ void process_deck1()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[0][0].id, matrix3[0][2].id))
+            if (check_match(matrix[0][0].id, matrix[0][2].id))
             {
                 backBlock1 = true;
                 backBlock3 = true;
@@ -3439,7 +3305,7 @@ void process_deck1()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[0][0].id, matrix3[0][3].id))
+            if (check_match(matrix[0][0].id, matrix[0][3].id))
             {
                 backBlock1 = true;
                 backBlock4 = true;
@@ -3456,7 +3322,7 @@ void process_deck1()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[0][0].id, matrix3[1][0].id))
+            if (check_match(matrix[0][0].id, matrix[1][0].id))
             {
                 backBlock1 = true;
                 backBlock5 = true;
@@ -3473,7 +3339,7 @@ void process_deck1()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[0][0].id, matrix3[1][1].id))
+            if (check_match(matrix[0][0].id, matrix[1][1].id))
             {
                 backBlock1 = true;
                 backBlock6 = true;
@@ -3490,7 +3356,7 @@ void process_deck1()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[0][0].id, matrix3[1][2].id))
+            if (check_match(matrix[0][0].id, matrix[1][2].id))
             {
                 backBlock1 = true;
                 backBlock7 = true;
@@ -3507,7 +3373,7 @@ void process_deck1()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[0][0].id, matrix3[1][3].id))
+            if (check_match(matrix[0][0].id, matrix[1][3].id))
             {
                 backBlock1 = true;
                 backBlock8 = true;
@@ -3524,7 +3390,7 @@ void process_deck1()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[0][0].id, matrix3[2][0].id))
+            if (check_match(matrix[0][0].id, matrix[2][0].id))
             {
                 backBlock1 = true;
                 backBlock9 = true;
@@ -3541,7 +3407,7 @@ void process_deck1()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[0][0].id, matrix3[2][1].id))
+            if (check_match(matrix[0][0].id, matrix[2][1].id))
             {
                 backBlock1 = true;
                 backBlock10 = true;
@@ -3558,7 +3424,7 @@ void process_deck1()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[0][0].id, matrix3[2][2].id))
+            if (check_match(matrix[0][0].id, matrix[2][2].id))
             {
                 backBlock1 = true;
                 backBlock11 = true;
@@ -3575,7 +3441,7 @@ void process_deck1()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[0][0].id, matrix3[2][3].id))
+            if (check_match(matrix[0][0].id, matrix[2][3].id))
             {
                 backBlock1 = true;
                 backBlock12 = true;
@@ -3592,7 +3458,7 @@ void process_deck1()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[0][0].id, matrix3[3][0].id))
+            if (check_match(matrix[0][0].id, matrix[3][0].id))
             {
                 backBlock1 = true;
                 backBlock13 = true;
@@ -3609,7 +3475,7 @@ void process_deck1()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[0][0].id, matrix3[3][1].id))
+            if (check_match(matrix[0][0].id, matrix[3][1].id))
             {
                 backBlock1 = true;
                 backBlock14 = true;
@@ -3626,7 +3492,7 @@ void process_deck1()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[0][0].id, matrix3[3][2].id))
+            if (check_match(matrix[0][0].id, matrix[3][2].id))
             {
                 backBlock1 = true;
                 backBlock15 = true;
@@ -3643,7 +3509,7 @@ void process_deck1()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[0][0].id, matrix3[3][3].id))
+            if (check_match(matrix[0][0].id, matrix[3][3].id))
             {
                 backBlock1 = true;
                 backBlock16 = true;
@@ -3671,10 +3537,10 @@ void process_deck2()
     }
     if (backPressed2)
     {
-        draw_sprite_xpm(&matrix3[0][1], mode_info.XResolution / 4, 0);
+        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
         if (backPressed1)
         {
-            if (check_match(matrix3[0][1].id, matrix3[0][0].id))
+            if (check_match(matrix[0][1].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock2 = true;
@@ -3691,7 +3557,7 @@ void process_deck2()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[0][1].id, matrix3[0][2].id))
+            if (check_match(matrix[0][1].id, matrix[0][2].id))
             {
                 backBlock2 = true;
                 backBlock3 = true;
@@ -3708,7 +3574,7 @@ void process_deck2()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[0][1].id, matrix3[0][3].id))
+            if (check_match(matrix[0][1].id, matrix[0][3].id))
             {
                 backBlock2 = true;
                 backBlock4 = true;
@@ -3725,7 +3591,7 @@ void process_deck2()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[0][1].id, matrix3[1][0].id))
+            if (check_match(matrix[0][1].id, matrix[1][0].id))
             {
                 backBlock2 = true;
                 backBlock5 = true;
@@ -3742,7 +3608,7 @@ void process_deck2()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[0][1].id, matrix3[1][1].id))
+            if (check_match(matrix[0][1].id, matrix[1][1].id))
             {
                 backBlock2 = true;
                 backBlock6 = true;
@@ -3759,7 +3625,7 @@ void process_deck2()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[0][1].id, matrix3[1][2].id))
+            if (check_match(matrix[0][1].id, matrix[1][2].id))
             {
                 backBlock2 = true;
                 backBlock7 = true;
@@ -3776,7 +3642,7 @@ void process_deck2()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[0][1].id, matrix3[1][3].id))
+            if (check_match(matrix[0][1].id, matrix[1][3].id))
             {
                 backBlock2 = true;
                 backBlock8 = true;
@@ -3793,7 +3659,7 @@ void process_deck2()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[0][1].id, matrix3[2][0].id))
+            if (check_match(matrix[0][1].id, matrix[2][0].id))
             {
                 backBlock2 = true;
                 backBlock9 = true;
@@ -3810,7 +3676,7 @@ void process_deck2()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[0][1].id, matrix3[2][1].id))
+            if (check_match(matrix[0][1].id, matrix[2][1].id))
             {
                 backBlock2 = true;
                 backBlock10 = true;
@@ -3827,7 +3693,7 @@ void process_deck2()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[0][1].id, matrix3[2][2].id))
+            if (check_match(matrix[0][1].id, matrix[2][2].id))
             {
                 backBlock2 = true;
                 backBlock11 = true;
@@ -3844,7 +3710,7 @@ void process_deck2()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[0][1].id, matrix3[2][3].id))
+            if (check_match(matrix[0][1].id, matrix[2][3].id))
             {
                 backBlock2 = true;
                 backBlock12 = true;
@@ -3861,7 +3727,7 @@ void process_deck2()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[0][1].id, matrix3[3][0].id))
+            if (check_match(matrix[0][1].id, matrix[3][0].id))
             {
                 backBlock2 = true;
                 backBlock13 = true;
@@ -3878,7 +3744,7 @@ void process_deck2()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[0][1].id, matrix3[3][1].id))
+            if (check_match(matrix[0][1].id, matrix[3][1].id))
             {
                 backBlock2 = true;
                 backBlock14 = true;
@@ -3895,7 +3761,7 @@ void process_deck2()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[0][1].id, matrix3[3][2].id))
+            if (check_match(matrix[0][1].id, matrix[3][2].id))
             {
                 backBlock2 = true;
                 backBlock15 = true;
@@ -3912,7 +3778,7 @@ void process_deck2()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[0][1].id, matrix3[3][3].id))
+            if (check_match(matrix[0][1].id, matrix[3][3].id))
             {
                 backBlock2 = true;
                 backBlock16 = true;
@@ -3940,10 +3806,10 @@ void process_deck3()
     }
     if (backPressed3)
     {
-        draw_sprite_xpm(&matrix3[0][2], mode_info.XResolution / 2, 0);
+        draw_sprite_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
         if (backPressed1)
         {
-            if (check_match(matrix3[0][2].id, matrix3[0][0].id))
+            if (check_match(matrix[0][2].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock3 = true;
@@ -3960,7 +3826,7 @@ void process_deck3()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[0][2].id, matrix3[0][1].id))
+            if (check_match(matrix[0][2].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock3 = true;
@@ -3977,7 +3843,7 @@ void process_deck3()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[0][2].id, matrix3[0][3].id))
+            if (check_match(matrix[0][2].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock3 = true;
@@ -3994,7 +3860,7 @@ void process_deck3()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[0][2].id, matrix3[1][0].id))
+            if (check_match(matrix[0][2].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock3 = true;
@@ -4011,7 +3877,7 @@ void process_deck3()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[0][2].id, matrix3[1][1].id))
+            if (check_match(matrix[0][2].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock3 = true;
@@ -4028,7 +3894,7 @@ void process_deck3()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[0][2].id, matrix3[1][2].id))
+            if (check_match(matrix[0][2].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock3 = true;
@@ -4045,7 +3911,7 @@ void process_deck3()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[0][2].id, matrix3[1][3].id))
+            if (check_match(matrix[0][2].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock3 = true;
@@ -4062,7 +3928,7 @@ void process_deck3()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[0][2].id, matrix3[2][0].id))
+            if (check_match(matrix[0][2].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock3 = true;
@@ -4079,7 +3945,7 @@ void process_deck3()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[0][2].id, matrix3[2][1].id))
+            if (check_match(matrix[0][2].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock3 = true;
@@ -4096,7 +3962,7 @@ void process_deck3()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[0][2].id, matrix3[2][2].id))
+            if (check_match(matrix[0][2].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock3 = true;
@@ -4113,7 +3979,7 @@ void process_deck3()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[0][2].id, matrix3[2][3].id))
+            if (check_match(matrix[0][2].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock3 = true;
@@ -4130,7 +3996,7 @@ void process_deck3()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[0][2].id, matrix3[3][0].id))
+            if (check_match(matrix[0][2].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock3 = true;
@@ -4147,7 +4013,7 @@ void process_deck3()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[0][2].id, matrix3[3][1].id))
+            if (check_match(matrix[0][2].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock3 = true;
@@ -4164,7 +4030,7 @@ void process_deck3()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[0][2].id, matrix3[3][2].id))
+            if (check_match(matrix[0][2].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock3 = true;
@@ -4181,7 +4047,7 @@ void process_deck3()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[0][2].id, matrix3[3][3].id))
+            if (check_match(matrix[0][2].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock3 = true;
@@ -4209,10 +4075,10 @@ void process_deck4()
     }
     if (backPressed4)
     {
-        draw_sprite_xpm(&matrix3[0][3], 3 * mode_info.XResolution / 4, 0);
+        draw_sprite_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
         if (backPressed1)
         {
-            if (check_match(matrix3[0][3].id, matrix3[0][0].id))
+            if (check_match(matrix[0][3].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock4 = true;
@@ -4229,7 +4095,7 @@ void process_deck4()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[0][3].id, matrix3[0][1].id))
+            if (check_match(matrix[0][3].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock4 = true;
@@ -4246,7 +4112,7 @@ void process_deck4()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[0][3].id, matrix3[0][2].id))
+            if (check_match(matrix[0][3].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock4 = true;
@@ -4263,7 +4129,7 @@ void process_deck4()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[0][3].id, matrix3[1][0].id))
+            if (check_match(matrix[0][3].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock4 = true;
@@ -4280,7 +4146,7 @@ void process_deck4()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[0][3].id, matrix3[1][1].id))
+            if (check_match(matrix[0][3].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock4 = true;
@@ -4297,7 +4163,7 @@ void process_deck4()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[0][3].id, matrix3[1][2].id))
+            if (check_match(matrix[0][3].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock4 = true;
@@ -4314,7 +4180,7 @@ void process_deck4()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[0][3].id, matrix3[1][3].id))
+            if (check_match(matrix[0][3].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock4 = true;
@@ -4331,7 +4197,7 @@ void process_deck4()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[0][3].id, matrix3[2][0].id))
+            if (check_match(matrix[0][3].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock4 = true;
@@ -4348,7 +4214,7 @@ void process_deck4()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[0][3].id, matrix3[2][1].id))
+            if (check_match(matrix[0][3].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock4 = true;
@@ -4365,7 +4231,7 @@ void process_deck4()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[0][3].id, matrix3[2][2].id))
+            if (check_match(matrix[0][3].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock4 = true;
@@ -4382,7 +4248,7 @@ void process_deck4()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[0][3].id, matrix3[2][3].id))
+            if (check_match(matrix[0][3].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock4 = true;
@@ -4399,7 +4265,7 @@ void process_deck4()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[0][3].id, matrix3[3][0].id))
+            if (check_match(matrix[0][3].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock4 = true;
@@ -4416,7 +4282,7 @@ void process_deck4()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[0][3].id, matrix3[3][1].id))
+            if (check_match(matrix[0][3].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock4 = true;
@@ -4433,7 +4299,7 @@ void process_deck4()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[0][3].id, matrix3[3][2].id))
+            if (check_match(matrix[0][3].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock4 = true;
@@ -4450,7 +4316,7 @@ void process_deck4()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[0][3].id, matrix3[3][3].id))
+            if (check_match(matrix[0][3].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock4 = true;
@@ -4478,10 +4344,10 @@ void process_deck5()
     }
     if (backPressed5)
     {
-        draw_sprite_xpm(&matrix3[1][0], 0, mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 4);
         if (backPressed1)
         {
-            if (check_match(matrix3[1][0].id, matrix3[0][0].id))
+            if (check_match(matrix[1][0].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock5 = true;
@@ -4498,7 +4364,7 @@ void process_deck5()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[1][0].id, matrix3[0][1].id))
+            if (check_match(matrix[1][0].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock5 = true;
@@ -4515,7 +4381,7 @@ void process_deck5()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[1][0].id, matrix3[0][2].id))
+            if (check_match(matrix[1][0].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock5 = true;
@@ -4532,7 +4398,7 @@ void process_deck5()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[1][0].id, matrix3[0][3].id))
+            if (check_match(matrix[1][0].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock5 = true;
@@ -4549,7 +4415,7 @@ void process_deck5()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[1][0].id, matrix3[1][1].id))
+            if (check_match(matrix[1][0].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock5 = true;
@@ -4566,7 +4432,7 @@ void process_deck5()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[1][0].id, matrix3[1][2].id))
+            if (check_match(matrix[1][0].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock5 = true;
@@ -4583,7 +4449,7 @@ void process_deck5()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[1][0].id, matrix3[1][3].id))
+            if (check_match(matrix[1][0].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock5 = true;
@@ -4600,7 +4466,7 @@ void process_deck5()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[1][0].id, matrix3[2][0].id))
+            if (check_match(matrix[1][0].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock5 = true;
@@ -4617,7 +4483,7 @@ void process_deck5()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[1][0].id, matrix3[2][1].id))
+            if (check_match(matrix[1][0].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock5 = true;
@@ -4634,7 +4500,7 @@ void process_deck5()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[1][0].id, matrix3[2][2].id))
+            if (check_match(matrix[1][0].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock5 = true;
@@ -4651,7 +4517,7 @@ void process_deck5()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[1][0].id, matrix3[2][3].id))
+            if (check_match(matrix[1][0].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock5 = true;
@@ -4668,7 +4534,7 @@ void process_deck5()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[1][0].id, matrix3[3][0].id))
+            if (check_match(matrix[1][0].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock5 = true;
@@ -4685,7 +4551,7 @@ void process_deck5()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[1][0].id, matrix3[3][1].id))
+            if (check_match(matrix[1][0].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock5 = true;
@@ -4702,7 +4568,7 @@ void process_deck5()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[1][0].id, matrix3[3][2].id))
+            if (check_match(matrix[1][0].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock5 = true;
@@ -4719,7 +4585,7 @@ void process_deck5()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[1][0].id, matrix3[3][3].id))
+            if (check_match(matrix[1][0].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock5 = true;
@@ -4747,10 +4613,10 @@ void process_deck6()
     }
     if (backPressed6)
     {
-        draw_sprite_xpm(&matrix3[1][1], mode_info.XResolution / 4, mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 4);
         if (backPressed1)
         {
-            if (check_match(matrix3[1][1].id, matrix3[0][0].id))
+            if (check_match(matrix[1][1].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock6 = true;
@@ -4767,7 +4633,7 @@ void process_deck6()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[1][1].id, matrix3[0][1].id))
+            if (check_match(matrix[1][1].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock6 = true;
@@ -4784,7 +4650,7 @@ void process_deck6()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[1][1].id, matrix3[0][2].id))
+            if (check_match(matrix[1][1].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock6 = true;
@@ -4801,7 +4667,7 @@ void process_deck6()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[1][1].id, matrix3[0][3].id))
+            if (check_match(matrix[1][1].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock6 = true;
@@ -4818,7 +4684,7 @@ void process_deck6()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[1][1].id, matrix3[1][0].id))
+            if (check_match(matrix[1][1].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock6 = true;
@@ -4835,7 +4701,7 @@ void process_deck6()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[1][1].id, matrix3[1][2].id))
+            if (check_match(matrix[1][1].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock6 = true;
@@ -4852,7 +4718,7 @@ void process_deck6()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[1][1].id, matrix3[1][3].id))
+            if (check_match(matrix[1][1].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock6 = true;
@@ -4869,7 +4735,7 @@ void process_deck6()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[1][1].id, matrix3[2][0].id))
+            if (check_match(matrix[1][1].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock6 = true;
@@ -4886,7 +4752,7 @@ void process_deck6()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[1][1].id, matrix3[2][1].id))
+            if (check_match(matrix[1][1].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock6 = true;
@@ -4903,7 +4769,7 @@ void process_deck6()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[1][1].id, matrix3[2][2].id))
+            if (check_match(matrix[1][1].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock6 = true;
@@ -4920,7 +4786,7 @@ void process_deck6()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[1][1].id, matrix3[2][3].id))
+            if (check_match(matrix[1][1].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock6 = true;
@@ -4937,7 +4803,7 @@ void process_deck6()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[1][1].id, matrix3[3][0].id))
+            if (check_match(matrix[1][1].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock6 = true;
@@ -4954,7 +4820,7 @@ void process_deck6()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[1][1].id, matrix3[3][1].id))
+            if (check_match(matrix[1][1].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock6 = true;
@@ -4971,7 +4837,7 @@ void process_deck6()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[1][1].id, matrix3[3][2].id))
+            if (check_match(matrix[1][1].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock6 = true;
@@ -4988,7 +4854,7 @@ void process_deck6()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[1][1].id, matrix3[3][3].id))
+            if (check_match(matrix[1][1].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock6 = true;
@@ -5016,10 +4882,10 @@ void process_deck7()
     }
     if (backPressed7)
     {
-        draw_sprite_xpm(&matrix3[1][2], mode_info.XResolution / 2, mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 4);
         if (backPressed1)
         {
-            if (check_match(matrix3[1][2].id, matrix3[0][0].id))
+            if (check_match(matrix[1][2].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock7 = true;
@@ -5036,7 +4902,7 @@ void process_deck7()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[1][2].id, matrix3[0][1].id))
+            if (check_match(matrix[1][2].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock7 = true;
@@ -5053,7 +4919,7 @@ void process_deck7()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[1][2].id, matrix3[0][2].id))
+            if (check_match(matrix[1][2].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock7 = true;
@@ -5070,7 +4936,7 @@ void process_deck7()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[1][2].id, matrix3[0][3].id))
+            if (check_match(matrix[1][2].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock7 = true;
@@ -5087,7 +4953,7 @@ void process_deck7()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[1][2].id, matrix3[1][0].id))
+            if (check_match(matrix[1][2].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock7 = true;
@@ -5104,7 +4970,7 @@ void process_deck7()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[1][2].id, matrix3[1][1].id))
+            if (check_match(matrix[1][2].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock7 = true;
@@ -5121,7 +4987,7 @@ void process_deck7()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[1][2].id, matrix3[1][3].id))
+            if (check_match(matrix[1][2].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock7 = true;
@@ -5138,7 +5004,7 @@ void process_deck7()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[1][2].id, matrix3[2][0].id))
+            if (check_match(matrix[1][2].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock7 = true;
@@ -5155,7 +5021,7 @@ void process_deck7()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[1][2].id, matrix3[2][1].id))
+            if (check_match(matrix[1][2].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock7 = true;
@@ -5172,7 +5038,7 @@ void process_deck7()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[1][2].id, matrix3[2][2].id))
+            if (check_match(matrix[1][2].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock7 = true;
@@ -5189,7 +5055,7 @@ void process_deck7()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[1][2].id, matrix3[2][3].id))
+            if (check_match(matrix[1][2].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock7 = true;
@@ -5206,7 +5072,7 @@ void process_deck7()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[1][2].id, matrix3[3][0].id))
+            if (check_match(matrix[1][2].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock7 = true;
@@ -5223,7 +5089,7 @@ void process_deck7()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[1][2].id, matrix3[3][1].id))
+            if (check_match(matrix[1][2].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock7 = true;
@@ -5240,7 +5106,7 @@ void process_deck7()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[1][2].id, matrix3[3][2].id))
+            if (check_match(matrix[1][2].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock7 = true;
@@ -5257,7 +5123,7 @@ void process_deck7()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[1][2].id, matrix3[3][3].id))
+            if (check_match(matrix[1][2].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock7 = true;
@@ -5285,10 +5151,10 @@ void process_deck8()
     }
     if (backPressed8)
     {
-        draw_sprite_xpm(&matrix3[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 4);
         if (backPressed1)
         {
-            if (check_match(matrix3[1][3].id, matrix3[0][0].id))
+            if (check_match(matrix[1][3].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock8 = true;
@@ -5305,7 +5171,7 @@ void process_deck8()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[1][3].id, matrix3[0][1].id))
+            if (check_match(matrix[1][3].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock8 = true;
@@ -5322,7 +5188,7 @@ void process_deck8()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[1][3].id, matrix3[0][2].id))
+            if (check_match(matrix[1][3].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock8 = true;
@@ -5339,7 +5205,7 @@ void process_deck8()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[1][3].id, matrix3[0][3].id))
+            if (check_match(matrix[1][3].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock8 = true;
@@ -5356,7 +5222,7 @@ void process_deck8()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[1][3].id, matrix3[1][0].id))
+            if (check_match(matrix[1][3].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock8 = true;
@@ -5373,7 +5239,7 @@ void process_deck8()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[1][3].id, matrix3[1][1].id))
+            if (check_match(matrix[1][3].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock8 = true;
@@ -5390,7 +5256,7 @@ void process_deck8()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[1][3].id, matrix3[1][2].id))
+            if (check_match(matrix[1][3].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock8 = true;
@@ -5407,7 +5273,7 @@ void process_deck8()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[1][3].id, matrix3[2][0].id))
+            if (check_match(matrix[1][3].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock8 = true;
@@ -5424,7 +5290,7 @@ void process_deck8()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[1][3].id, matrix3[2][1].id))
+            if (check_match(matrix[1][3].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock8 = true;
@@ -5441,7 +5307,7 @@ void process_deck8()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[1][3].id, matrix3[2][2].id))
+            if (check_match(matrix[1][3].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock8 = true;
@@ -5458,7 +5324,7 @@ void process_deck8()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[1][3].id, matrix3[2][3].id))
+            if (check_match(matrix[1][3].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock8 = true;
@@ -5475,7 +5341,7 @@ void process_deck8()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[1][3].id, matrix3[3][0].id))
+            if (check_match(matrix[1][3].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock8 = true;
@@ -5492,7 +5358,7 @@ void process_deck8()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[1][3].id, matrix3[3][1].id))
+            if (check_match(matrix[1][3].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock8 = true;
@@ -5509,7 +5375,7 @@ void process_deck8()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[1][3].id, matrix3[3][2].id))
+            if (check_match(matrix[1][3].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock8 = true;
@@ -5526,7 +5392,7 @@ void process_deck8()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[1][3].id, matrix3[3][3].id))
+            if (check_match(matrix[1][3].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock8 = true;
@@ -5554,10 +5420,10 @@ void process_deck9()
     }
     if (backPressed9)
     {
-        draw_sprite_xpm(&matrix3[2][0], 0, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[2][0], 0, mode_info.YResolution / 2);
         if (backPressed1)
         {
-            if (check_match(matrix3[2][0].id, matrix3[0][0].id))
+            if (check_match(matrix[2][0].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock9 = true;
@@ -5574,7 +5440,7 @@ void process_deck9()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[2][0].id, matrix3[0][1].id))
+            if (check_match(matrix[2][0].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock9 = true;
@@ -5591,7 +5457,7 @@ void process_deck9()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[2][0].id, matrix3[0][2].id))
+            if (check_match(matrix[2][0].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock9 = true;
@@ -5608,7 +5474,7 @@ void process_deck9()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[2][0].id, matrix3[0][3].id))
+            if (check_match(matrix[2][0].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock9 = true;
@@ -5625,7 +5491,7 @@ void process_deck9()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[2][0].id, matrix3[1][0].id))
+            if (check_match(matrix[2][0].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock9 = true;
@@ -5642,7 +5508,7 @@ void process_deck9()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[2][0].id, matrix3[1][1].id))
+            if (check_match(matrix[2][0].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock9 = true;
@@ -5659,7 +5525,7 @@ void process_deck9()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[2][0].id, matrix3[1][2].id))
+            if (check_match(matrix[2][0].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock9 = true;
@@ -5676,7 +5542,7 @@ void process_deck9()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[2][0].id, matrix3[1][3].id))
+            if (check_match(matrix[2][0].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock9 = true;
@@ -5693,7 +5559,7 @@ void process_deck9()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[2][0].id, matrix3[2][1].id))
+            if (check_match(matrix[2][0].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock9 = true;
@@ -5710,7 +5576,7 @@ void process_deck9()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[2][0].id, matrix3[2][2].id))
+            if (check_match(matrix[2][0].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock9 = true;
@@ -5727,7 +5593,7 @@ void process_deck9()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[2][0].id, matrix3[2][3].id))
+            if (check_match(matrix[2][0].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock9 = true;
@@ -5744,7 +5610,7 @@ void process_deck9()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[2][0].id, matrix3[3][0].id))
+            if (check_match(matrix[2][0].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock9 = true;
@@ -5761,7 +5627,7 @@ void process_deck9()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[2][0].id, matrix3[3][1].id))
+            if (check_match(matrix[2][0].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock9 = true;
@@ -5778,7 +5644,7 @@ void process_deck9()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[2][0].id, matrix3[3][2].id))
+            if (check_match(matrix[2][0].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock9 = true;
@@ -5795,7 +5661,7 @@ void process_deck9()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[2][0].id, matrix3[3][3].id))
+            if (check_match(matrix[2][0].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock9 = true;
@@ -5823,10 +5689,10 @@ void process_deck10()
     }
     if (backPressed10)
     {
-        draw_sprite_xpm(&matrix3[2][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[2][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
         if (backPressed1)
         {
-            if (check_match(matrix3[2][1].id, matrix3[0][0].id))
+            if (check_match(matrix[2][1].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock10 = true;
@@ -5843,7 +5709,7 @@ void process_deck10()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[2][1].id, matrix3[0][1].id))
+            if (check_match(matrix[2][1].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock10 = true;
@@ -5860,7 +5726,7 @@ void process_deck10()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[2][1].id, matrix3[0][2].id))
+            if (check_match(matrix[2][1].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock10 = true;
@@ -5877,7 +5743,7 @@ void process_deck10()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[2][1].id, matrix3[0][3].id))
+            if (check_match(matrix[2][1].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock10 = true;
@@ -5894,7 +5760,7 @@ void process_deck10()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[2][1].id, matrix3[1][0].id))
+            if (check_match(matrix[2][1].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock10 = true;
@@ -5911,7 +5777,7 @@ void process_deck10()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[2][1].id, matrix3[1][1].id))
+            if (check_match(matrix[2][1].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock10 = true;
@@ -5928,7 +5794,7 @@ void process_deck10()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[2][1].id, matrix3[1][2].id))
+            if (check_match(matrix[2][1].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock10 = true;
@@ -5945,7 +5811,7 @@ void process_deck10()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[2][1].id, matrix3[1][3].id))
+            if (check_match(matrix[2][1].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock10 = true;
@@ -5962,7 +5828,7 @@ void process_deck10()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[2][1].id, matrix3[2][0].id))
+            if (check_match(matrix[2][1].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock10 = true;
@@ -5979,7 +5845,7 @@ void process_deck10()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[2][1].id, matrix3[2][2].id))
+            if (check_match(matrix[2][1].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock10 = true;
@@ -5996,7 +5862,7 @@ void process_deck10()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[2][1].id, matrix3[2][3].id))
+            if (check_match(matrix[2][1].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock10 = true;
@@ -6013,7 +5879,7 @@ void process_deck10()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[2][1].id, matrix3[3][0].id))
+            if (check_match(matrix[2][1].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock10 = true;
@@ -6030,7 +5896,7 @@ void process_deck10()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[2][1].id, matrix3[3][1].id))
+            if (check_match(matrix[2][1].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock10 = true;
@@ -6047,7 +5913,7 @@ void process_deck10()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[2][1].id, matrix3[3][2].id))
+            if (check_match(matrix[2][1].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock10 = true;
@@ -6064,7 +5930,7 @@ void process_deck10()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[2][1].id, matrix3[3][3].id))
+            if (check_match(matrix[2][1].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock10 = true;
@@ -6092,10 +5958,10 @@ void process_deck11()
     }
     if (backPressed11)
     {
-        draw_sprite_xpm(&matrix3[2][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[2][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
         if (backPressed1)
         {
-            if (check_match(matrix3[2][2].id, matrix3[0][0].id))
+            if (check_match(matrix[2][2].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock11 = true;
@@ -6112,7 +5978,7 @@ void process_deck11()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[2][2].id, matrix3[0][1].id))
+            if (check_match(matrix[2][2].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock11 = true;
@@ -6129,7 +5995,7 @@ void process_deck11()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[2][2].id, matrix3[0][2].id))
+            if (check_match(matrix[2][2].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock11 = true;
@@ -6146,7 +6012,7 @@ void process_deck11()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[2][2].id, matrix3[0][3].id))
+            if (check_match(matrix[2][2].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock11 = true;
@@ -6163,7 +6029,7 @@ void process_deck11()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[2][2].id, matrix3[1][0].id))
+            if (check_match(matrix[2][2].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock11 = true;
@@ -6180,7 +6046,7 @@ void process_deck11()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[2][2].id, matrix3[1][1].id))
+            if (check_match(matrix[2][2].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock11 = true;
@@ -6197,7 +6063,7 @@ void process_deck11()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[2][2].id, matrix3[1][2].id))
+            if (check_match(matrix[2][2].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock11 = true;
@@ -6214,7 +6080,7 @@ void process_deck11()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[2][2].id, matrix3[1][3].id))
+            if (check_match(matrix[2][2].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock11 = true;
@@ -6231,7 +6097,7 @@ void process_deck11()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[2][2].id, matrix3[2][0].id))
+            if (check_match(matrix[2][2].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock11 = true;
@@ -6248,7 +6114,7 @@ void process_deck11()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[2][2].id, matrix3[2][1].id))
+            if (check_match(matrix[2][2].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock11 = true;
@@ -6265,7 +6131,7 @@ void process_deck11()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[2][2].id, matrix3[2][3].id))
+            if (check_match(matrix[2][2].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock11 = true;
@@ -6282,7 +6148,7 @@ void process_deck11()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[2][2].id, matrix3[3][0].id))
+            if (check_match(matrix[2][2].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock11 = true;
@@ -6299,7 +6165,7 @@ void process_deck11()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[2][2].id, matrix3[3][1].id))
+            if (check_match(matrix[2][2].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock11 = true;
@@ -6316,7 +6182,7 @@ void process_deck11()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[2][2].id, matrix3[3][2].id))
+            if (check_match(matrix[2][2].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock11 = true;
@@ -6333,7 +6199,7 @@ void process_deck11()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[2][2].id, matrix3[3][3].id))
+            if (check_match(matrix[2][2].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock11 = true;
@@ -6361,10 +6227,10 @@ void process_deck12()
     }
     if (backPressed12)
     {
-        draw_sprite_xpm(&matrix3[2][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[2][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
         if (backPressed1)
         {
-            if (check_match(matrix3[2][3].id, matrix3[0][0].id))
+            if (check_match(matrix[2][3].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock12 = true;
@@ -6381,7 +6247,7 @@ void process_deck12()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[2][3].id, matrix3[0][1].id))
+            if (check_match(matrix[2][3].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock12 = true;
@@ -6398,7 +6264,7 @@ void process_deck12()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[2][3].id, matrix3[0][2].id))
+            if (check_match(matrix[2][3].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock12 = true;
@@ -6415,7 +6281,7 @@ void process_deck12()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[2][3].id, matrix3[0][3].id))
+            if (check_match(matrix[2][3].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock12 = true;
@@ -6432,7 +6298,7 @@ void process_deck12()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[2][3].id, matrix3[1][0].id))
+            if (check_match(matrix[2][3].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock12 = true;
@@ -6449,7 +6315,7 @@ void process_deck12()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[2][3].id, matrix3[1][1].id))
+            if (check_match(matrix[2][3].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock12 = true;
@@ -6466,7 +6332,7 @@ void process_deck12()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[2][3].id, matrix3[1][2].id))
+            if (check_match(matrix[2][3].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock12 = true;
@@ -6483,7 +6349,7 @@ void process_deck12()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[2][3].id, matrix3[1][3].id))
+            if (check_match(matrix[2][3].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock12 = true;
@@ -6500,7 +6366,7 @@ void process_deck12()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[2][3].id, matrix3[2][0].id))
+            if (check_match(matrix[2][3].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock12 = true;
@@ -6517,7 +6383,7 @@ void process_deck12()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[2][3].id, matrix3[2][1].id))
+            if (check_match(matrix[2][3].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock12 = true;
@@ -6534,7 +6400,7 @@ void process_deck12()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[2][3].id, matrix3[2][2].id))
+            if (check_match(matrix[2][3].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock12 = true;
@@ -6551,7 +6417,7 @@ void process_deck12()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[2][3].id, matrix3[3][0].id))
+            if (check_match(matrix[2][3].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock12 = true;
@@ -6568,7 +6434,7 @@ void process_deck12()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[2][3].id, matrix3[3][1].id))
+            if (check_match(matrix[2][3].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock12 = true;
@@ -6585,7 +6451,7 @@ void process_deck12()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[2][3].id, matrix3[3][2].id))
+            if (check_match(matrix[2][3].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock12 = true;
@@ -6602,7 +6468,7 @@ void process_deck12()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[2][3].id, matrix3[3][3].id))
+            if (check_match(matrix[2][3].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock12 = true;
@@ -6630,10 +6496,10 @@ void process_deck13()
     }
     if (backPressed13)
     {
-        draw_sprite_xpm(&matrix3[3][0], 0, 3 * mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[3][0], 0, 3 * mode_info.YResolution / 4);
         if (backPressed1)
         {
-            if (check_match(matrix3[3][0].id, matrix3[0][0].id))
+            if (check_match(matrix[3][0].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock13 = true;
@@ -6650,7 +6516,7 @@ void process_deck13()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[3][0].id, matrix3[0][1].id))
+            if (check_match(matrix[3][0].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock13 = true;
@@ -6667,7 +6533,7 @@ void process_deck13()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[3][0].id, matrix3[0][2].id))
+            if (check_match(matrix[3][0].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock13 = true;
@@ -6684,7 +6550,7 @@ void process_deck13()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[3][0].id, matrix3[0][3].id))
+            if (check_match(matrix[3][0].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock13 = true;
@@ -6701,7 +6567,7 @@ void process_deck13()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[3][0].id, matrix3[1][0].id))
+            if (check_match(matrix[3][0].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock13 = true;
@@ -6718,7 +6584,7 @@ void process_deck13()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[3][0].id, matrix3[1][1].id))
+            if (check_match(matrix[3][0].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock13 = true;
@@ -6735,7 +6601,7 @@ void process_deck13()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[3][0].id, matrix3[1][2].id))
+            if (check_match(matrix[3][0].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock13 = true;
@@ -6752,7 +6618,7 @@ void process_deck13()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[3][0].id, matrix3[1][3].id))
+            if (check_match(matrix[3][0].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock13 = true;
@@ -6769,7 +6635,7 @@ void process_deck13()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[3][0].id, matrix3[2][0].id))
+            if (check_match(matrix[3][0].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock13 = true;
@@ -6786,7 +6652,7 @@ void process_deck13()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[3][0].id, matrix3[2][1].id))
+            if (check_match(matrix[3][0].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock13 = true;
@@ -6803,7 +6669,7 @@ void process_deck13()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[3][0].id, matrix3[2][2].id))
+            if (check_match(matrix[3][0].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock13 = true;
@@ -6820,7 +6686,7 @@ void process_deck13()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[3][0].id, matrix3[2][3].id))
+            if (check_match(matrix[3][0].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock13 = true;
@@ -6837,7 +6703,7 @@ void process_deck13()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[3][0].id, matrix3[3][1].id))
+            if (check_match(matrix[3][0].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock13 = true;
@@ -6853,7 +6719,7 @@ void process_deck13()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[3][0].id, matrix3[3][2].id))
+            if (check_match(matrix[3][0].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock13 = true;
@@ -6869,7 +6735,7 @@ void process_deck13()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[3][0].id, matrix3[3][3].id))
+            if (check_match(matrix[3][0].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock13 = true;
@@ -6896,10 +6762,10 @@ void process_deck14()
     }
     if (backPressed14)
     {
-        draw_sprite_xpm(&matrix3[3][1], mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[3][1], mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
         if (backPressed1)
         {
-            if (check_match(matrix3[3][1].id, matrix3[0][0].id))
+            if (check_match(matrix[3][1].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock14 = true;
@@ -6916,7 +6782,7 @@ void process_deck14()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[3][1].id, matrix3[0][1].id))
+            if (check_match(matrix[3][1].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock14 = true;
@@ -6933,7 +6799,7 @@ void process_deck14()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[3][1].id, matrix3[0][2].id))
+            if (check_match(matrix[3][1].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock14 = true;
@@ -6950,7 +6816,7 @@ void process_deck14()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[3][1].id, matrix3[0][3].id))
+            if (check_match(matrix[3][1].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock14 = true;
@@ -6967,7 +6833,7 @@ void process_deck14()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[3][1].id, matrix3[1][0].id))
+            if (check_match(matrix[3][1].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock14 = true;
@@ -6984,7 +6850,7 @@ void process_deck14()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[3][1].id, matrix3[1][1].id))
+            if (check_match(matrix[3][1].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock14 = true;
@@ -7001,7 +6867,7 @@ void process_deck14()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[3][1].id, matrix3[1][2].id))
+            if (check_match(matrix[3][1].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock14 = true;
@@ -7018,7 +6884,7 @@ void process_deck14()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[3][1].id, matrix3[1][3].id))
+            if (check_match(matrix[3][1].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock14 = true;
@@ -7035,7 +6901,7 @@ void process_deck14()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[3][1].id, matrix3[2][0].id))
+            if (check_match(matrix[3][1].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock14 = true;
@@ -7052,7 +6918,7 @@ void process_deck14()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[3][1].id, matrix3[2][1].id))
+            if (check_match(matrix[3][1].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock14 = true;
@@ -7069,7 +6935,7 @@ void process_deck14()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[3][1].id, matrix3[2][2].id))
+            if (check_match(matrix[3][1].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock14 = true;
@@ -7086,7 +6952,7 @@ void process_deck14()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[3][1].id, matrix3[2][3].id))
+            if (check_match(matrix[3][1].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock14 = true;
@@ -7103,7 +6969,7 @@ void process_deck14()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[3][1].id, matrix3[3][0].id))
+            if (check_match(matrix[3][1].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock14 = true;
@@ -7120,7 +6986,7 @@ void process_deck14()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[3][1].id, matrix3[3][2].id))
+            if (check_match(matrix[3][1].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock14 = true;
@@ -7137,7 +7003,7 @@ void process_deck14()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[3][1].id, matrix3[3][3].id))
+            if (check_match(matrix[3][1].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock14 = true;
@@ -7165,10 +7031,10 @@ void process_deck15()
     }
     if (backPressed15)
     {
-        draw_sprite_xpm(&matrix3[3][2], mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[3][2], mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
         if (backPressed1)
         {
-            if (check_match(matrix3[3][2].id, matrix3[0][0].id))
+            if (check_match(matrix[3][2].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock15 = true;
@@ -7185,7 +7051,7 @@ void process_deck15()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[3][2].id, matrix3[0][1].id))
+            if (check_match(matrix[3][2].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock15 = true;
@@ -7202,7 +7068,7 @@ void process_deck15()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[3][2].id, matrix3[0][2].id))
+            if (check_match(matrix[3][2].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock15 = true;
@@ -7219,7 +7085,7 @@ void process_deck15()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[3][2].id, matrix3[0][3].id))
+            if (check_match(matrix[3][2].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock15 = true;
@@ -7236,7 +7102,7 @@ void process_deck15()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[3][2].id, matrix3[1][0].id))
+            if (check_match(matrix[3][2].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock15 = true;
@@ -7253,7 +7119,7 @@ void process_deck15()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[3][2].id, matrix3[1][1].id))
+            if (check_match(matrix[3][2].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock15 = true;
@@ -7270,7 +7136,7 @@ void process_deck15()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[3][2].id, matrix3[1][2].id))
+            if (check_match(matrix[3][2].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock15 = true;
@@ -7287,7 +7153,7 @@ void process_deck15()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[3][2].id, matrix3[1][3].id))
+            if (check_match(matrix[3][2].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock15 = true;
@@ -7304,7 +7170,7 @@ void process_deck15()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[3][2].id, matrix3[2][0].id))
+            if (check_match(matrix[3][2].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock15 = true;
@@ -7321,7 +7187,7 @@ void process_deck15()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[3][2].id, matrix3[2][1].id))
+            if (check_match(matrix[3][2].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock15 = true;
@@ -7338,7 +7204,7 @@ void process_deck15()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[3][2].id, matrix3[2][2].id))
+            if (check_match(matrix[3][2].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock15 = true;
@@ -7355,7 +7221,7 @@ void process_deck15()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[3][2].id, matrix3[2][3].id))
+            if (check_match(matrix[3][2].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock15 = true;
@@ -7372,7 +7238,7 @@ void process_deck15()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[3][2].id, matrix3[3][0].id))
+            if (check_match(matrix[3][2].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock15 = true;
@@ -7389,7 +7255,7 @@ void process_deck15()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[3][2].id, matrix3[3][1].id))
+            if (check_match(matrix[3][2].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock15 = true;
@@ -7406,7 +7272,7 @@ void process_deck15()
         }
         if (backPressed16)
         {
-            if (check_match(matrix3[3][2].id, matrix3[3][3].id))
+            if (check_match(matrix[3][2].id, matrix[3][3].id))
             {
                 backBlock16 = true;
                 backBlock15 = true;
@@ -7434,10 +7300,10 @@ void process_deck16()
     }
     if (backPressed16)
     {
-        draw_sprite_xpm(&matrix3[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
         if (backPressed1)
         {
-            if (check_match(matrix3[3][3].id, matrix3[0][0].id))
+            if (check_match(matrix[3][3].id, matrix[0][0].id))
             {
                 backBlock1 = true;
                 backBlock16 = true;
@@ -7454,7 +7320,7 @@ void process_deck16()
         }
         if (backPressed2)
         {
-            if (check_match(matrix3[3][3].id, matrix3[0][1].id))
+            if (check_match(matrix[3][3].id, matrix[0][1].id))
             {
                 backBlock2 = true;
                 backBlock16 = true;
@@ -7471,7 +7337,7 @@ void process_deck16()
         }
         if (backPressed3)
         {
-            if (check_match(matrix3[3][3].id, matrix3[0][2].id))
+            if (check_match(matrix[3][3].id, matrix[0][2].id))
             {
                 backBlock3 = true;
                 backBlock16 = true;
@@ -7488,7 +7354,7 @@ void process_deck16()
         }
         if (backPressed4)
         {
-            if (check_match(matrix3[3][3].id, matrix3[0][3].id))
+            if (check_match(matrix[3][3].id, matrix[0][3].id))
             {
                 backBlock4 = true;
                 backBlock16 = true;
@@ -7505,7 +7371,7 @@ void process_deck16()
         }
         if (backPressed5)
         {
-            if (check_match(matrix3[3][3].id, matrix3[1][0].id))
+            if (check_match(matrix[3][3].id, matrix[1][0].id))
             {
                 backBlock5 = true;
                 backBlock16 = true;
@@ -7522,7 +7388,7 @@ void process_deck16()
         }
         if (backPressed6)
         {
-            if (check_match(matrix3[3][3].id, matrix3[1][1].id))
+            if (check_match(matrix[3][3].id, matrix[1][1].id))
             {
                 backBlock6 = true;
                 backBlock16 = true;
@@ -7539,7 +7405,7 @@ void process_deck16()
         }
         if (backPressed7)
         {
-            if (check_match(matrix3[3][3].id, matrix3[1][2].id))
+            if (check_match(matrix[3][3].id, matrix[1][2].id))
             {
                 backBlock7 = true;
                 backBlock16 = true;
@@ -7556,7 +7422,7 @@ void process_deck16()
         }
         if (backPressed8)
         {
-            if (check_match(matrix3[3][3].id, matrix3[1][3].id))
+            if (check_match(matrix[3][3].id, matrix[1][3].id))
             {
                 backBlock8 = true;
                 backBlock16 = true;
@@ -7573,7 +7439,7 @@ void process_deck16()
         }
         if (backPressed9)
         {
-            if (check_match(matrix3[3][3].id, matrix3[2][0].id))
+            if (check_match(matrix[3][3].id, matrix[2][0].id))
             {
                 backBlock9 = true;
                 backBlock16 = true;
@@ -7590,7 +7456,7 @@ void process_deck16()
         }
         if (backPressed10)
         {
-            if (check_match(matrix3[3][3].id, matrix3[2][1].id))
+            if (check_match(matrix[3][3].id, matrix[2][1].id))
             {
                 backBlock10 = true;
                 backBlock16 = true;
@@ -7607,7 +7473,7 @@ void process_deck16()
         }
         if (backPressed11)
         {
-            if (check_match(matrix3[3][3].id, matrix3[2][2].id))
+            if (check_match(matrix[3][3].id, matrix[2][2].id))
             {
                 backBlock11 = true;
                 backBlock16 = true;
@@ -7624,7 +7490,7 @@ void process_deck16()
         }
         if (backPressed12)
         {
-            if (check_match(matrix3[3][3].id, matrix3[2][3].id))
+            if (check_match(matrix[3][3].id, matrix[2][3].id))
             {
                 backBlock12 = true;
                 backBlock16 = true;
@@ -7641,7 +7507,7 @@ void process_deck16()
         }
         if (backPressed13)
         {
-            if (check_match(matrix3[3][3].id, matrix3[3][0].id))
+            if (check_match(matrix[3][3].id, matrix[3][0].id))
             {
                 backBlock13 = true;
                 backBlock16 = true;
@@ -7658,7 +7524,7 @@ void process_deck16()
         }
         if (backPressed14)
         {
-            if (check_match(matrix3[3][3].id, matrix3[3][1].id))
+            if (check_match(matrix[3][3].id, matrix[3][1].id))
             {
                 backBlock14 = true;
                 backBlock16 = true;
@@ -7675,7 +7541,7 @@ void process_deck16()
         }
         if (backPressed15)
         {
-            if (check_match(matrix3[3][3].id, matrix3[3][2].id))
+            if (check_match(matrix[3][3].id, matrix[3][2].id))
             {
                 backBlock15 = true;
                 backBlock16 = true;
@@ -7744,7 +7610,7 @@ void draw_game_menu_3()
     }
     else if (backBlock1)
     {
-        draw_sprite_xpm(&matrix3[0][0], 0, 0);
+        draw_sprite_xpm(&matrix[0][0], 0, 0);
     }
     if (!backBlock2)
     {
@@ -7752,7 +7618,7 @@ void draw_game_menu_3()
     }
     else if (backBlock2)
     {
-        draw_sprite_xpm(&matrix3[0][1], mode_info.XResolution / 4, 0);
+        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
     }
     if (!backBlock3)
     {
@@ -7760,7 +7626,7 @@ void draw_game_menu_3()
     }
     else if (backBlock3)
     {
-        draw_sprite_xpm(&matrix3[0][2], mode_info.XResolution / 2, 0);
+        draw_sprite_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
     }
     if (!backBlock4)
     {
@@ -7768,7 +7634,7 @@ void draw_game_menu_3()
     }
     else if (backBlock4)
     {
-        draw_sprite_xpm(&matrix3[0][3], 3 * mode_info.XResolution / 4, 0);
+        draw_sprite_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
     }
     if (!backBlock5)
     {
@@ -7776,7 +7642,7 @@ void draw_game_menu_3()
     }
     else if (backBlock5)
     {
-        draw_sprite_xpm(&matrix3[1][0], 0, mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 4);
     }
     if (!backBlock6)
     {
@@ -7784,7 +7650,7 @@ void draw_game_menu_3()
     }
     else if (backBlock6)
     {
-        draw_sprite_xpm(&matrix3[1][1], mode_info.XResolution / 4, mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 4);
     }
     if (!backBlock7)
     {
@@ -7792,7 +7658,7 @@ void draw_game_menu_3()
     }
     else if (backBlock7)
     {
-        draw_sprite_xpm(&matrix3[1][2], mode_info.XResolution / 2, mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 4);
     }
     if (!backBlock8)
     {
@@ -7800,7 +7666,7 @@ void draw_game_menu_3()
     }
     else if (backBlock8)
     {
-        draw_sprite_xpm(&matrix3[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 4);
     }
     if (!backBlock9)
     {
@@ -7808,7 +7674,7 @@ void draw_game_menu_3()
     }
     else if (backBlock9)
     {
-        draw_sprite_xpm(&matrix3[2][0], 0, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[2][0], 0, mode_info.YResolution / 2);
     }
     if (!backBlock10)
     {
@@ -7816,7 +7682,7 @@ void draw_game_menu_3()
     }
     else if (backBlock10)
     {
-        draw_sprite_xpm(&matrix3[2][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[2][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
     }
     if (!backBlock11)
     {
@@ -7824,7 +7690,7 @@ void draw_game_menu_3()
     }
     else if (backBlock11)
     {
-        draw_sprite_xpm(&matrix3[2][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[2][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
     }
     if (!backBlock12)
     {
@@ -7832,7 +7698,7 @@ void draw_game_menu_3()
     }
     else if (backBlock12)
     {
-        draw_sprite_xpm(&matrix3[2][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[2][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
     }
     if (!backBlock13)
     {
@@ -7840,7 +7706,7 @@ void draw_game_menu_3()
     }
     else if (backBlock13)
     {
-        draw_sprite_xpm(&matrix3[3][0], 0, 3 * mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[3][0], 0, 3 * mode_info.YResolution / 4);
     }
     if (!backBlock14)
     {
@@ -7848,7 +7714,7 @@ void draw_game_menu_3()
     }
     else if (backBlock14)
     {
-        draw_sprite_xpm(&matrix3[3][1], mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[3][1], mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
     }
     if (!backBlock15)
     {
@@ -7856,7 +7722,7 @@ void draw_game_menu_3()
     }
     else if (backBlock15)
     {
-        draw_sprite_xpm(&matrix3[3][2], mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[3][2], mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
     }
     if (!backBlock16)
     {
@@ -7864,7 +7730,7 @@ void draw_game_menu_3()
     }
     else if (backBlock16)
     {
-        draw_sprite_xpm(&matrix3[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
     }
     if (backBlock1 && backBlock2 && backBlock3 && backBlock4 && backBlock5 && backBlock6 && backBlock7 && backBlock8 && backBlock9 && backBlock10 && backBlock11 && backBlock12 && backBlock13 && backBlock14 && backBlock15 && backBlock16)
     {
@@ -7921,7 +7787,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock1)
     {
-        draw_sprite_xpm(&matrix3[0][0], 0, 0);
+        draw_sprite_xpm(&matrix[0][0], 0, 0);
     }
     if (!backBlock2)
     {
@@ -7929,7 +7795,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock2)
     {
-        draw_sprite_xpm(&matrix3[0][1], mode_info.XResolution / 4, 0);
+        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
     }
     if (!backBlock3)
     {
@@ -7937,7 +7803,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock3)
     {
-        draw_sprite_xpm(&matrix3[0][2], mode_info.XResolution / 2, 0);
+        draw_sprite_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
     }
     if (!backBlock4)
     {
@@ -7945,7 +7811,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock4)
     {
-        draw_sprite_xpm(&matrix3[0][3], 3 * mode_info.XResolution / 4, 0);
+        draw_sprite_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
     }
     if (!backBlock5)
     {
@@ -7953,7 +7819,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock5)
     {
-        draw_sprite_xpm(&matrix3[1][0], 0, mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 4);
     }
     if (!backBlock6)
     {
@@ -7961,7 +7827,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock6)
     {
-        draw_sprite_xpm(&matrix3[1][1], mode_info.XResolution / 4, mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 4);
     }
     if (!backBlock7)
     {
@@ -7969,7 +7835,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock7)
     {
-        draw_sprite_xpm(&matrix3[1][2], mode_info.XResolution / 2, mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 4);
     }
     if (!backBlock8)
     {
@@ -7977,7 +7843,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock8)
     {
-        draw_sprite_xpm(&matrix3[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 4);
     }
     if (!backBlock9)
     {
@@ -7985,7 +7851,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock9)
     {
-        draw_sprite_xpm(&matrix3[2][0], 0, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[2][0], 0, mode_info.YResolution / 2);
     }
     if (!backBlock10)
     {
@@ -7993,7 +7859,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock10)
     {
-        draw_sprite_xpm(&matrix3[2][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[2][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
     }
     if (!backBlock11)
     {
@@ -8001,7 +7867,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock11)
     {
-        draw_sprite_xpm(&matrix3[2][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[2][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
     }
     if (!backBlock12)
     {
@@ -8009,7 +7875,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock12)
     {
-        draw_sprite_xpm(&matrix3[2][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_sprite_xpm(&matrix[2][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
     }
     if (!backBlock13)
     {
@@ -8017,7 +7883,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock13)
     {
-        draw_sprite_xpm(&matrix3[3][0], 0, 3 * mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[3][0], 0, 3 * mode_info.YResolution / 4);
     }
     if (!backBlock14)
     {
@@ -8025,7 +7891,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock14)
     {
-        draw_sprite_xpm(&matrix3[3][1], mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[3][1], mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
     }
     if (!backBlock15)
     {
@@ -8033,7 +7899,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock15)
     {
-        draw_sprite_xpm(&matrix3[3][2], mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[3][2], mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
     }
     if (!backBlock16)
     {
@@ -8041,7 +7907,7 @@ void draw_game_menu_game_4() {
     }
     else if (backBlock16)
     {
-        draw_sprite_xpm(&matrix3[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
+        draw_sprite_xpm(&matrix[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
     }
     if (backBlock1 && backBlock2 && backBlock3 && backBlock4 && backBlock5 && backBlock6 && backBlock7 && backBlock8 && backBlock9 && backBlock10 && backBlock11 && backBlock12 && backBlock13 && backBlock14 && backBlock15 && backBlock16)
     {
