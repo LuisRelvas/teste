@@ -31,19 +31,11 @@ Sprite *number7;
 Sprite *number8;
 Sprite *back;
 Sprite *game;
-<<<<<<< HEAD
-Sprite *easy;
-Sprite *medium;
-Sprite *hard;
-Sprite *quit;
-Sprite *start;
-=======
 Sprite *start;
 Sprite *hard;
 Sprite *easy;
 Sprite *medium;
 Sprite *quit;
->>>>>>> 1c47680f7da062caed0c00ad2aa24f113164752e
 
 // Contador de interrupções do timer
 int timer_interrupts = 0;
