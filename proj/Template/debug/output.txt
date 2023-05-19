@@ -1,1206 +1,151 @@
-NOW: 2023/5/18 @22:38:15
-NOW: 2023/5/18 @22:38:16
+NOW: 2023/5/19 @12:13:8
 Match found: matrix[0][0].id = 5 and matrix[1][1].id = 5
 Match found: matrix[0][1].id = 6 and matrix[1][0].id = 6
 Match found: matrix[1][0].id = 6 and matrix[0][1].id = 6
 Match found: matrix[1][1].id = 5 and matrix[0][0].id = 5
 matrix allocated
-,137769600matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-NOW: 2023/5/18 @22:38:17
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-NOW: 2023/5/18 @22:38:18
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-NOW: 2023/5/18 @22:38:19
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
-matrix: -1
-process_button1
-The value of index_1 is: 139350016
-matrix bool: 0
-The value of index_2 is: 139350040
-matrix bool: 0
-player1: 1
-player2: 0
-player1: 1
-player2: 0
+,137765504matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+NOW: 2023/5/19 @12:13:9
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+NOW: 2023/5/19 @12:13:10
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: 6
+NOW: 2023/5/19 @12:13:11
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
+matrix: 6
