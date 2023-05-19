@@ -1287,7 +1287,7 @@ void draw_game_menu_2()
     Sprite cards2[] = {*number1, *number1, *number2, *number2, *number3, *number3, *number4, *number4};
     if (pre1 == 0)
     {
-        matrix = alloc_matrix(2,4);
+        matrix = alloc_matrix(4,2);
         shuffle2(cards2);
         pre1++;
     }
@@ -1369,10 +1369,7 @@ void draw_game_menu_2()
         draw_finish_menu();
         menuState = END;
     }
-    {
-        draw_finish_menu();
-        menuState = END;
-    }
+
 }
 void process_deck1()
 {

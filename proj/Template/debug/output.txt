@@ -1,5 +1,451 @@
-NOW: 2023/5/19 @15:56:25
-NOW: 2023/5/19 @15:56:26
-NOW: 2023/5/19 @15:56:27
-5 8 6029448 6029448 
-5 7 1836017711 1886217556 
+NOW: 2023/5/19 @18:53:17
+NOW: 2023/5/19 @18:53:18
+NOW: 2023/5/19 @18:53:19
+8 6 7 6 
+5 5 8 7 
+Entrei no botao 1
+The value of index_1 on button1 is 139337904
+The value of matrix_id1 on button1 is 8NOW: 2023/5/19 @18:53:20
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139337752
+The value of matrix_id2 on button1 is 6The value of the cardPressed2 is 0NOW: 2023/5/19 @18:53:21
+Entrei no botao 1
+The value of index_1 on button1 is 139337752
+The value of matrix_id1 on button1 is 6Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/19 @18:53:22
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139337856
+The value of matrix_id2 on button1 is 5The value of the cardPressed5 is 0NOW: 2023/5/19 @18:53:23
+Entrei no botao 1
+The value of index_1 on button1 is 139337880
+The value of matrix_id1 on button1 is 5Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/19 @18:53:24
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139337856
+The value of matrix_id2 on button1 is 5NOW: 2023/5/19 @18:53:25
+Entrei no botao 1
+The value of index_1 on button1 is 139337752
+The value of matrix_id1 on button1 is 6Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/19 @18:53:26
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139337904
+The value of matrix_id2 on button1 is 8The value of the cardPressed7 is 0NOW: 2023/5/19 @18:53:27
+Entrei no botao 1
+The value of index_1 on button1 is 139337776
+The value of matrix_id1 on button1 is 7Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/19 @18:53:28
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139337728
+The value of matrix_id2 on button1 is 8The value of the cardPressed1 is 0Entrei no botao 1
+The value of index_1 on button1 is 139337728
+The value of matrix_id1 on button1 is 8NOW: 2023/5/19 @18:53:29
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139337752
+The value of matrix_id2 on button1 is 6The value of the cardPressed2 is 0NOW: 2023/5/19 @18:53:30
+Entrei no botao 1
+The value of index_1 on button1 is 139337728
+The value of matrix_id1 on button1 is 8Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/19 @18:53:31
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/19 @18:53:32
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139337904
+The value of matrix_id2 on button1 is 8NOW: 2023/5/19 @18:53:33
+Entrei no botao 1
+The value of index_1 on button1 is 139337776
+The value of matrix_id1 on button1 is 7Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139337800
+The value of matrix_id2 on button1 is 6The value of the cardPressed4 is 0NOW: 2023/5/19 @18:53:34
+Entrei no botao 1
+The value of index_1 on button1 is 139337752
+The value of matrix_id1 on button1 is 6Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/19 @18:53:35
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139337800
+The value of matrix_id2 on button1 is 6Entrei no botao 1
+The value of index_1 on button1 is 139337776
+The value of matrix_id1 on button1 is 7Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/19 @18:53:36
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139337928
+The value of matrix_id2 on button1 is 7
