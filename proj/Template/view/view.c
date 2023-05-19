@@ -459,201 +459,179 @@ bool check_match(int id1, int id2)
 
 void process_button1(Sprite *cards, int size)
 {
-    if (mouse_info.x >= 0 && mouse_info.y >= 0 && mouse_info.x <= mode_info.XResolution / 2 && mouse_info.y <= mode_info.XResolution / 2)
+    if (mouse_info.x < mode_info.XResolution / 2 && mouse_info.y < mode_info.YResolution / 2)
     {
         if(mouse_info.left_click){
+        printf("BOTAO 1 CLICK\n");
         button1Pressed = true;
-        
         counter_cards++;
-        if(matrix_id1 == -1){
-            matrix_id1 = matrix[0][0].id;
-        } 
-        else if(matrix_id2 == -1) {
-            matrix_id2 = matrix[0][0].id;
-         }
         }
-        
     }
         if (button1Pressed)
     {
-        if(index_1 == NULL){
-        index_1_bool = &button1Pressed;
-       
-        index_1 = &matrix[0][0];
-        
-        }
-        else if(index_2 == NULL) {
-            index_2_bool = &button1Pressed;
-            
-            index_2 = &matrix[0][0];
-           
-            
-        }
         draw_sprite_xpm(&matrix[0][0], 0, 0);
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[0][0].id;
+            index_1_bool = &button1Pressed;
+            index_1 = &matrix[0][0];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[0][0]) {
+            matrix_id2 = matrix[0][0].id;
+            index_2_bool = &button1Pressed;
+            index_2 = &matrix[0][0];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
         if(matrix_id1 != -1 && matrix_id2 != -1) {
         if (check_match(matrix_id1,matrix_id2)){
-            printf("MATCH FOUND");
         index_1->block = true;
         index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the button1Pressed is %d",button1Pressed);
         }
-
-            index_1 = NULL;
-            index_2 = NULL;
-            matrix_id1 = -1;
-            matrix_id2 = -1;
-            index_1_bool = false;
-            index_2_bool = false;
-            
-            
-         }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
+        }
         
     }
 }
 
 void process_button2(Sprite *cards, int size)
 {
-    if (mouse_info.x >= 0 && mouse_info.y >= 0 && mouse_info.x <= mode_info.XResolution && mouse_info.y <= mode_info.XResolution / 2)
+    if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.y <= mode_info.YResolution / 2)
     {
         if(mouse_info.left_click){
         button2Pressed = true;
         counter_cards++;
-        if(matrix_id1 == 0) { 
-            matrix_id1 = matrix[0][1].id;
-        }
-        else if(matrix_id2 != 0) { 
-            matrix_id2 = matrix[0][1].id;
-        }
         }
     }
 
-    if (button2Pressed)
-    {if(index_1 == NULL){
-        index_1_bool = &button2Pressed;
-        index_1 = &matrix[0][1]; }
-        else if(index_2 == NULL) {
-            index_2_bool = &button2Pressed;
-            
-            index_2 = &matrix[0][1];
-        }
+    if (button2Pressed){
         draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 2, 0);
+        printf("ENTREI NO BOTAO 2\n");
+        if(matrix_id1 == -1) { 
+            matrix_id1 = matrix[0][1].id;
+            index_1_bool = &button2Pressed;
+            index_1 = &matrix[0][1]; 
+            printf("The value of index_1 on button2 is %d\n",index_1);
+            printf("The value of matrix_id1 on  button2 is %d\n",matrix_id1);
+        }
+        else if(matrix_id2 == -1  && index_1 != &matrix[0][1]) { 
+            matrix_id2 = matrix[0][1].id;
+            index_2_bool = &button2Pressed;
+            index_2 = &matrix[0][1];
+            printf("The value of index_2 on button2 is %d\n",index_2);
+            printf("The value of matrix_id2 on  button2 is %d\n",matrix_id2);
+        }
         if(matrix_id1 != -1 && matrix_id2 != -1) {
         if (check_match(matrix_id1,matrix_id2)){
-        printf("MATCH FOUND");
         index_1->block = true;
         index_2->block = true;
         }
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+        }
 
-            index_1 = NULL;
-            index_2 = NULL;
-            matrix_id1 = -1;
-            matrix_id2 = -1;
-            index_1_bool = false;
-            index_2_bool = false;
+        matrix_id1 = -1;
+        matrix_id2 = -1;
+
+           
     }
+
 }
 }
 
 void process_button3(Sprite *cards, int size)
 {
-    if (mouse_info.x >= 0 && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.x <= mode_info.XResolution / 2 && mouse_info.y <= mode_info.XResolution)
+    if (mouse_info.x < mode_info.XResolution / 2 && mouse_info.y >= mode_info.YResolution / 2)
     {
         if(mouse_info.left_click){
         button3Pressed = true;
-        
         counter_cards++;
-        if(matrix_id1 == -1){
-            matrix_id1 = matrix[1][0].id;
-        } 
-        else if(matrix_id2 == -1) {
-            matrix_id2 = matrix[1][0].id;
-         }
         }
         
     }
         if (button3Pressed)
     {
-        if(index_1 == NULL){
-        index_1_bool = &button3Pressed;
-       
-        index_1 = &matrix[1][0];
-        
-        }
-        else if(index_2 == NULL) {
-            index_2_bool = &button3Pressed;
-            
-            index_2 = &matrix[1][0];
-           
-            
-        }
         draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
+        printf("ENTREI NO BOTAO 3\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[1][0].id;
+            index_1_bool = &button3Pressed;
+            index_1 = &matrix[1][0];
+            printf("The value of index_1 on button3 is %d\n",index_1);
+            printf("The value of matrix_id1 on button3 is %d\n",matrix_id1);
+        } 
+        
+        else if(matrix_id2 == -1 && index_1 != &matrix[1][0]) {
+            matrix_id2 = matrix[1][0].id;
+            index_2_bool = &button3Pressed;
+            index_2 = &matrix[1][0];
+            printf("The value of index_2 on button3 is %d\n",index_2);
+            printf("The value of matrix_id2 on button3 is %d\n",matrix_id2);
+         }
         if(matrix_id1 != -1 && matrix_id2 != -1) {
         if (check_match(matrix_id1,matrix_id2)){
         index_1->block = true;
         index_2->block = true;
         }
-
-            index_1 = NULL;
-            index_2 = NULL;
-            matrix_id1 = -1;
-            matrix_id2 = -1;
-            index_1_bool = false;
-            index_2_bool = false;
-            
-            
-         }
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+        }
+        matrix_id1 = -1; 
+        matrix_id2 = -1;
+        }
         
     }
 }
 
 void process_button4(Sprite *cards, int size)
 {
-   if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.x <= mode_info.XResolution && mouse_info.y <= mode_info.XResolution)
+   if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.y > mode_info.YResolution / 2)
     {
         if(mouse_info.left_click){
         button4Pressed = true;
-        
-        counter_cards++;
-        if(matrix_id1 == -1){
-            matrix_id1 = matrix[1][1].id;
-        } 
-        else if(matrix_id2 == -1) {
-            matrix_id2 = matrix[1][1].id;
-         }
         }
         
     }
         if (button4Pressed)
     {
-        if(index_1 == NULL){
-        index_1_bool = &button4Pressed;
-       
-        index_1 = &matrix[1][1];
-        
-        }
-        else if(index_2 == NULL) {
+        draw_sprite_xpm(&matrix[1][1],mode_info.XResolution / 2, mode_info.YResolution / 2);
+        printf("ENTREI NO BOTAO 4\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[1][1].id;
+            index_1_bool = &button4Pressed;
+            index_1 = &matrix[1][1];
+            printf("The value of index_1 on button4 is %d\n",index_1);
+            printf("The value of matrix_id1 on button4 is %d\n",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[1][1]) {
+            matrix_id2 = matrix[1][1].id;
             index_2_bool = &button4Pressed;
-            
             index_2 = &matrix[1][1];
-           
-            
-        }
-        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 2, mode_info.YResolution/2);
+            printf("The value of index_2 on button4 is %d\n",index_2);
+            printf("The value of matrix_id2 on button4 is %d\n",matrix_id2);
+         }
         if(matrix_id1 != -1 && matrix_id2 != -1) {
         if (check_match(matrix_id1,matrix_id2)){
         index_1->block = true;
         index_2->block = true;
         }
-
-            index_1 = NULL;
-            index_2 = NULL;
-            matrix_id1 = -1;
-            matrix_id2 = -1;
-            index_1_bool = false;
-            index_2_bool = false;
-            
-            
-         }
-        
+        else { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+        }
+        matrix_id1 = -1; 
+        matrix_id2 = -1;
+        }
     }
 }
 
@@ -730,7 +708,7 @@ void draw_game_menu()
         printf("CONSEGUIU BLOQUEAR");
         draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 2, mode_info.YResolution / 2);
     }
-    if (block1 && block2 && block3 && block4)
+    if (matrix[0][0].block == true && matrix[0][1].block == true && matrix[1][0].block == true && matrix[1][1].block == true)
     {
         printf("player1: %d\n", player_1);
         printf("player2: %d\n", player_2);
@@ -957,259 +935,40 @@ void process_cardPressed1()
             cardPressed1 = true;
         }
     }
-    if (cardPressed1)
+        if (cardPressed1)
     {
         draw_sprite_xpm(&matrix[0][0], 0, 0);
-        if (cardPressed2)
-        {
-            if (check_match(matrix[0][0].id, matrix[0][1].id))
-            {
-                cardBlock1 = true;
-                cardBlock2 = true;
-                cardPressed1 = false;
-                cardPressed2 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-                
-            }
-            else
-            {
-                printf("ERROU");
-                cardPressed1 = false;
-                cardPressed2 = false;
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-                
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[0][0].id;
+            index_1_bool = &cardPressed1;
+            index_1 = &matrix[0][0];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[0][0]) {
+            matrix_id2 = matrix[0][0].id;
+            index_2_bool = &cardPressed1;
+            index_2 = &matrix[0][0];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the cardPressed1 is %d",cardPressed1);
         }
-        if (cardPressed3)
-        {
-            if (check_match(matrix[0][0].id, matrix[0][2].id))
-            {
-                cardBlock1 = true;
-                cardBlock3 = true;
-                cardPressed1 = false;
-                cardPressed3 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed3 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
-        if (cardPressed4)
-        {
-            if (check_match(matrix[0][0].id, matrix[0][3].id))
-            {
-                cardBlock1 = true;
-                cardBlock4 = true;
-                cardPressed1 = false;
-                cardPressed4 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-                
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed4 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed5)
-        {
-            if (check_match(matrix[0][0].id, matrix[1][0].id))
-            {
-                cardBlock1 = true;
-                cardBlock5 = true;
-                cardPressed1 = false;
-                cardPressed5 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed5 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed6)
-        {
-            if (check_match(matrix[0][0].id, matrix[1][1].id))
-            {
-                cardBlock1 = true;
-                cardBlock6 = true;
-                cardPressed1 = false;
-                cardPressed6 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed6 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed7)
-        {
-            if (check_match(matrix[0][0].id, matrix[1][2].id))
-            {
-                cardBlock1 = true;
-                cardBlock7 = true;
-                cardPressed1 = false;
-                cardPressed7 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed7 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed8)
-        {
-            if (check_match(matrix[0][0].id, matrix[1][3].id))
-            {
-                cardBlock1 = true;
-                cardBlock8 = true;
-                cardPressed1 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-                
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
+        
     }
+        
 }
 void process_cardPressed2()
 {
@@ -1223,258 +982,37 @@ void process_cardPressed2()
     if (cardPressed2)
     {
 
-        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
-        if (cardPressed1)
-        {
-            if (check_match(matrix[0][1].id, matrix[0][0].id))
-            {
-                cardBlock1 = true;
-                cardBlock2 = true;
-                cardPressed1 = false;
-                cardPressed2 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed2 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4 , 0);
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[0][1].id;
+            index_1_bool = &cardPressed2;
+            index_1 = &matrix[0][1];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[0][1]) {
+            matrix_id2 = matrix[0][1].id;
+            index_2_bool = &cardPressed2;
+            index_2 = &matrix[0][1];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the cardPressed2 is %d",cardPressed2);
         }
-        if (cardPressed3)
-        {
-            if (check_match(matrix[0][1].id, matrix[0][2].id))
-            {
-                cardBlock2 = true;
-                cardBlock3 = true;
-                cardPressed2 = false;
-                cardPressed3 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed2 = false;
-                cardPressed3 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed4)
-        {
-            if (check_match(matrix[0][1].id, matrix[0][3].id))
-            {
-                cardBlock2 = true;
-                cardBlock4 = true;
-                cardPressed2 = false;
-                cardPressed4 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed2 = false;
-                cardPressed4 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed5)
-        {
-            if (check_match(matrix[0][1].id, matrix[1][0].id))
-            {
-                cardBlock2 = true;
-                cardBlock5 = true;
-                cardPressed2 = false;
-                cardPressed5 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed2 = false;
-                cardPressed5 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed6)
-        {
-            if (check_match(matrix[0][1].id, matrix[1][1].id))
-            {
-                cardBlock2 = true;
-                cardBlock6 = true;
-                cardPressed2 = false;
-                cardPressed6 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed2 = false;
-                cardPressed6 = false;
-                printf("ERROU");
-
-if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed7)
-        {
-            if (check_match(matrix[0][1].id, matrix[1][2].id))
-            {
-                cardBlock2 = true;
-                cardBlock7 = true;
-                cardPressed2 = false;
-                cardPressed7 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-                
-            }
-            else
-            {
-                cardPressed2 = false;
-                cardPressed7 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-                
-            }
-        }
-        if (cardPressed8)
-        {
-            if (check_match(matrix[0][1].id, matrix[1][3].id))
-            {
-                cardBlock2 = true;
-                cardBlock8 = true;
-                cardPressed2 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-                
-            }
-            else
-            {
-                cardPressed2 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
+
 }
 
 void process_cardPressed3()
@@ -1490,250 +1028,33 @@ void process_cardPressed3()
     {
 
         draw_sprite_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
-        if (cardPressed1)
-        {
-            if (check_match(matrix[0][2].id, matrix[0][0].id))
-            {
-                cardBlock1 = true;
-                cardBlock3 = true;
-                cardPressed1 = false;
-                cardPressed3 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed3 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[0][2].id;
+            index_1_bool = &cardPressed3;
+            index_1 = &matrix[0][2];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[0][2]) {
+            matrix_id2 = matrix[0][2].id;
+            index_2_bool = &cardPressed3;
+            index_2 = &matrix[0][2];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the cardPressed3 is %d",cardPressed3);
         }
-        if (cardPressed2)
-        {
-            if (check_match(matrix[0][2].id, matrix[0][1].id))
-            {
-                cardBlock2 = true;
-                cardBlock3 = true;
-                cardPressed2 = false;
-                cardPressed3 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed2 = false;
-                cardPressed3 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed4)
-        {
-            if (check_match(matrix[0][2].id, matrix[0][3].id))
-            {
-                cardBlock3 = true;
-                cardBlock4 = true;
-                cardPressed3 = false;
-                cardPressed4 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed3 = false;
-                cardPressed4 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed5)
-        {
-            if (check_match(matrix[0][2].id, matrix[1][0].id))
-            {
-                cardBlock3 = true;
-                cardBlock5 = true;
-                cardPressed3 = false;
-                cardPressed5 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed3 = false;
-                cardPressed5 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed6)
-        {
-            if (check_match(matrix[0][2].id, matrix[1][1].id))
-            {
-                cardBlock3 = true;
-                cardBlock6 = true;
-                cardPressed3 = false;
-                cardPressed6 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed3 = false;
-                cardPressed6 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed7)
-        {
-            if (check_match(matrix[0][2].id, matrix[1][2].id))
-            {
-                cardBlock3 = true;
-                cardBlock7 = true;
-                cardPressed3 = false;
-                cardPressed7 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed3 = false;
-                cardPressed7 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed8)
-        {
-            if (check_match(matrix[0][2].id, matrix[1][3].id))
-            {
-                cardBlock3 = true;
-                cardBlock8 = true;
-                cardPressed3 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed3 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -1750,250 +1071,33 @@ void process_cardPressed4()
     if (cardPressed4)
     {
         draw_sprite_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
-        if (cardPressed1)
-        {
-            if (check_match(matrix[0][3].id, matrix[0][0].id))
-            {
-                cardBlock1 = true;
-                cardBlock4 = true;
-                cardPressed1 = false;
-                cardPressed4 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed4 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[0][3].id;
+            index_1_bool = &cardPressed4;
+            index_1 = &matrix[0][3];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[0][3]) {
+            matrix_id2 = matrix[0][3].id;
+            index_2_bool = &cardPressed4;
+            index_2 = &matrix[0][3];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the cardPressed4 is %d",cardPressed4);
         }
-        if (cardPressed2)
-        {
-            if (check_match(matrix[0][3].id, matrix[0][1].id))
-            {
-                cardBlock2 = true;
-                cardBlock4 = true;
-                cardPressed2 = false;
-                cardPressed4 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed2 = false;
-                cardPressed4 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed3)
-        {
-            if (check_match(matrix[0][3].id, matrix[0][2].id))
-            {
-                cardBlock3 = true;
-                cardBlock4 = true;
-                cardPressed3 = false;
-                cardPressed4 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed4 = false;
-                cardPressed3 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed5)
-        {
-            if (check_match(matrix[0][3].id, matrix[1][0].id))
-            {
-                cardBlock4 = true;
-                cardBlock5 = true;
-                cardPressed4 = false;
-                cardPressed5 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed4 = false;
-                cardPressed5 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed6)
-        {
-            if (check_match(matrix[0][3].id, matrix[1][1].id))
-            {
-                cardBlock4 = true;
-                cardBlock6 = true;
-                cardPressed4 = false;
-                cardPressed6 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed4 = false;
-                cardPressed6 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed7)
-        {
-            if (check_match(matrix[0][3].id, matrix[1][2].id))
-            {
-                cardBlock4 = true;
-                cardBlock7 = true;
-                cardPressed4 = false;
-                cardPressed7 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed4 = false;
-                cardPressed7 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed8)
-        {
-            if (check_match(matrix[0][3].id, matrix[1][3].id))
-            {
-                cardBlock4 = true;
-                cardBlock8 = true;
-                cardPressed4 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed4 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -2010,250 +1114,33 @@ void process_cardPressed5()
     if (cardPressed5)
     {
         draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
-        if (cardPressed1)
-        {
-            if (check_match(matrix[1][0].id, matrix[0][0].id))
-            {
-                cardBlock1 = true;
-                cardBlock5 = true;
-                cardPressed1 = false;
-                cardPressed5 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed5 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                } 
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[1][0].id;
+            index_1_bool = &cardPressed5;
+            index_1 = &matrix[1][0];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[1][0]) {
+            matrix_id2 = matrix[1][0].id;
+            index_2_bool = &cardPressed5;
+            index_2 = &matrix[1][0];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the cardPressed5 is %d",cardPressed5);
         }
-        if (cardPressed2)
-        {
-            if (check_match(matrix[1][0].id, matrix[0][1].id))
-            {
-                cardBlock2 = true;
-                cardBlock5 = true;
-                cardPressed2 = false;
-                cardPressed5 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed2 = false;
-                cardPressed5 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed3)
-        {
-            if (check_match(matrix[1][0].id, matrix[0][2].id))
-            {
-                cardBlock3 = true;
-                cardBlock5 = true;
-                cardPressed3 = false;
-                cardPressed5 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed3 = false;
-                cardPressed5 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed4)
-        {
-            if (check_match(matrix[1][0].id, matrix[0][3].id))
-            {
-                cardBlock4 = true;
-                cardBlock5 = true;
-                cardPressed4 = false;
-                cardPressed5 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed5 = false;
-                cardPressed4 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed6)
-        {
-            if (check_match(matrix[1][0].id, matrix[1][1].id))
-            {
-                cardBlock5 = true;
-                cardBlock6 = true;
-                cardPressed5 = false;
-                cardPressed6 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed5 = false;
-                cardPressed6 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed7)
-        {
-            if (check_match(matrix[1][0].id, matrix[1][2].id))
-            {
-                cardBlock5 = true;
-                cardBlock7 = true;
-                cardPressed5 = false;
-                cardPressed7 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed5 = false;
-                cardPressed7 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed8)
-        {
-            if (check_match(matrix[1][0].id, matrix[1][3].id))
-            {
-                cardBlock5 = true;
-                cardBlock8 = true;
-                cardPressed5 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed5 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -2270,251 +1157,33 @@ void process_cardPressed6()
     if (cardPressed6)
     {
         draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
-        if (cardPressed1)
-        {
-            if (check_match(matrix[1][1].id, matrix[0][0].id))
-            {
-                cardBlock1 = true;
-                cardBlock6 = true;
-                cardPressed1 = false;
-                cardPressed6 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed6 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[1][1].id;
+            index_1_bool = &cardPressed6;
+            index_1 = &matrix[1][1];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[1][1]) {
+            matrix_id2 = matrix[1][1].id;
+            index_2_bool = &cardPressed6;
+            index_2 = &matrix[1][1];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the cardPressed6 is %d",cardPressed6);
         }
-        if (cardPressed2)
-        {
-            if (check_match(matrix[1][1].id, matrix[0][1].id))
-            {
-                cardBlock2 = true;
-                cardBlock6 = true;
-                cardPressed2 = false;
-                cardPressed6 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed2 = false;
-                cardPressed6 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed3)
-        {
-            if (check_match(matrix[1][1].id, matrix[0][2].id))
-            {
-                cardBlock3 = true;
-                cardBlock6 = true;
-                cardPressed3 = false;
-                cardPressed6 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed3 = false;
-                cardPressed6 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed4)
-        {
-            if (check_match(matrix[1][1].id, matrix[0][3].id))
-            {
-                cardBlock4 = true;
-                cardBlock6 = true;
-                cardPressed4 = false;
-                cardPressed6 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-
-            }
-            else
-            {
-                cardPressed4 = false;
-                cardPressed6 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed5)
-        {
-            if (check_match(matrix[1][1].id, matrix[1][0].id))
-            {
-                cardBlock5 = true;
-                cardBlock6 = true;
-                cardPressed5 = false;
-                cardPressed6 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed5 = false;
-                cardPressed6 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed7)
-        {
-            if (check_match(matrix[1][1].id, matrix[1][2].id))
-            {
-                cardBlock6 = true;
-                cardBlock7 = true;
-                cardPressed6 = false;
-                cardPressed7 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed7 = false;
-                cardPressed6 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed8)
-        {
-            if (check_match(matrix[1][1].id, matrix[1][3].id))
-            {
-                cardBlock6 = true;
-                cardBlock8 = true;
-                cardPressed6 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed6 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -2531,252 +1200,35 @@ void process_cardPressed7()
     if (cardPressed7)
     {
         draw_sprite_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
-        if (cardPressed1)
-        {
-            if (check_match(matrix[1][2].id, matrix[0][0].id))
-            {
-                cardBlock1 = true;
-                cardBlock7 = true;
-                cardPressed1 = false;
-                cardPressed7 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed7 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[1][2].id;
+            index_1_bool = &cardPressed7;
+            index_1 = &matrix[1][2];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[1][2]) {
+            matrix_id2 = matrix[1][2].id;
+            index_2_bool = &cardPressed7;
+            index_2 = &matrix[1][2];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the cardPressed7 is %d",cardPressed7);
         }
-        if (cardPressed2)
-        {
-            if (check_match(matrix[1][2].id, matrix[0][1].id))
-            {
-                cardBlock2 = true;
-                cardBlock7 = true;
-                cardPressed2 = false;
-                cardPressed7 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed2 = false;
-                cardPressed7 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed3)
-        {
-            if (check_match(matrix[1][2].id, matrix[0][2].id))
-            {
-                cardBlock3 = true;
-                cardBlock7 = true;
-                cardPressed3 = false;
-                cardPressed7 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed3 = false;
-                cardPressed7 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed4)
-        {
-            if (check_match(matrix[1][2].id, matrix[0][3].id))
-            {
-                cardBlock4 = true;
-                cardBlock7 = true;
-                cardPressed4 = false;
-                cardPressed7 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed4 = false;
-                cardPressed7 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed5)
-        {
-            if (check_match(matrix[1][2].id, matrix[1][0].id))
-            {
-                cardBlock5 = true;
-                cardBlock7 = true;
-                cardPressed5 = false;
-                cardPressed7 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed5 = false;
-                cardPressed7 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed6)
-        {
-            if (check_match(matrix[1][2].id, matrix[1][1].id))
-            {
-                cardBlock6 = true;
-                cardBlock7 = true;
-                cardPressed6 = false;
-                cardPressed7 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed6 = false;
-                cardPressed7 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed8)
-        {
-            if (check_match(matrix[1][2].id, matrix[1][3].id))
-            {
-                cardBlock7 = true;
-                cardBlock8 = true;
-                cardPressed7 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed8 = false;
-                cardPressed7 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
     }
+}
 }
 
 void process_cardPressed8()
@@ -2791,250 +1243,33 @@ void process_cardPressed8()
     if (cardPressed8)
     {
         draw_sprite_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
-        if (cardPressed1)
-        {
-            if (check_match(matrix[1][3].id, matrix[0][0].id))
-            {
-                cardBlock1 = true;
-                cardBlock8 = true;
-                cardPressed1 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed1 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[1][3].id;
+            index_1_bool = &cardPressed8;
+            index_1 = &matrix[1][3];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[1][3]) {
+            matrix_id2 = matrix[1][3].id;
+            index_2_bool = &cardPressed8;
+            index_2 = &matrix[1][3];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the cardPressed8 is %d",cardPressed8);
         }
-        if (cardPressed2)
-        {
-            if (check_match(matrix[1][3].id, matrix[0][1].id))
-            {
-                cardBlock2 = true;
-                cardBlock8 = true;
-                cardPressed2 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed2 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed3)
-        {
-            if (check_match(matrix[1][3].id, matrix[0][2].id))
-            {
-                cardBlock3 = true;
-                cardBlock8 = true;
-                cardPressed3 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed3 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed4)
-        {
-            if (check_match(matrix[1][3].id, matrix[0][3].id))
-            {
-                cardBlock4 = true;
-                cardBlock8 = true;
-                cardPressed4 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed4 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed5)
-        {
-            if (check_match(matrix[1][3].id, matrix[1][0].id))
-            {
-                cardBlock5 = true;
-                cardBlock8 = true;
-                cardPressed5 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed5 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed6)
-        {
-            if (check_match(matrix[1][3].id, matrix[1][1].id))
-            {
-                cardBlock6 = true;
-                cardBlock8 = true;
-                cardPressed6 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed6 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
-        }
-        if (cardPressed7)
-        {
-            if (check_match(matrix[1][3].id, matrix[1][2].id))
-            {
-                cardBlock7 = true;
-                cardBlock8 = true;
-                cardPressed7 = false;
-                cardPressed8 = false;
-                printf("ACERTOU");
-                if(menuState == GAME_8_2) {
-                if(player1){
-                    player_1++;
-                }
-                else if(player2){
-                    player_2++;
-                }
-                }
-            }
-            else
-            {
-                cardPressed7 = false;
-                cardPressed8 = false;
-                printf("ERROU");
-                if(menuState == GAME_8_2) { 
-                if(player1) { 
-                    player1 = false; 
-                    player2 = true;
-                }
-                else if(player2) { 
-                    player2 = false; 
-                    player1 = true;
-                }
-                }
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -3052,6 +1287,7 @@ void draw_game_menu_2()
     Sprite cards2[] = {*number1, *number1, *number2, *number2, *number3, *number3, *number4, *number4};
     if (pre1 == 0)
     {
+        matrix = alloc_matrix(2,4);
         shuffle2(cards2);
         pre1++;
     }
@@ -3065,71 +1301,74 @@ void draw_game_menu_2()
     draw_sprite_xpm(back6, mode_info.XResolution / 4, mode_info.YResolution / 2);
     draw_sprite_xpm(back7, mode_info.XResolution / 2, mode_info.YResolution / 2);
     draw_sprite_xpm(back8, 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
-    if (!cardBlock1)
+    if (matrix[0][0].block == false)
     {
         process_cardPressed1();
     }
-    else if (cardBlock1)
+    else if (matrix[0][0].block == true)
     {
         draw_sprite_xpm(&matrix[0][0], 0, 0);
     }
-    if (!cardBlock2)
+    if (matrix[0][1].block== false)
     {
         process_cardPressed2();
     }
-    else if (cardBlock2)
+    else if (matrix[0][1].block == true)
     {
         draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
     }
-    if (!cardBlock3)
+    if (matrix[0][2].block == false)
     {
         process_cardPressed3();
     }
-    else if (cardBlock3)
+    else if (matrix[0][2].block == true)
     {
         draw_sprite_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
     }
-    if (!cardBlock4)
+    if (matrix[0][3].block == false)
     {
         process_cardPressed4();
     }
-    else if (cardBlock4)
+    else if (matrix[0][3].block == true)
     {
         draw_sprite_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
     }
-    if (!cardBlock5)
+    if (matrix[1][0].block == false)
     {
         process_cardPressed5();
     }
-    else if (cardBlock5)
+    else if (matrix[1][0].block == true)
     {
         draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
     }
-    if (!cardBlock6)
+    if (matrix[1][1].block == false)
     {
         process_cardPressed6();
     }
-    else if (cardBlock6)
+    else if (matrix[1][1].block == true)
     {
         draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
     }
-    if (!cardBlock7)
+    if (matrix[1][2].block== false)
     {
         process_cardPressed7();
     }
-    else if (cardBlock7)
+    else if (matrix[1][2].block == true)
     {
         draw_sprite_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
     }
-    if (!cardBlock8)
+    if (matrix[1][3].block == false)
     {
         process_cardPressed8();
     }
-    else if (cardBlock8)
+    else if (matrix[1][3].block == true)
     {
         draw_sprite_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
     }
-    if (cardBlock1 && cardBlock2 && cardBlock3 && cardBlock4 && cardBlock5 && cardBlock6 && cardBlock7 && cardBlock8)
+    if (matrix[0][0].block == true && matrix[0][1].block == true && matrix[0][2].block == true && matrix[0][3].block == true && matrix[1][0].block == true && matrix[1][1].block == true && matrix[1][2].block == true && matrix[1][3].block == true){
+        draw_finish_menu();
+        menuState = END;
+    }
     {
         draw_finish_menu();
         menuState = END;
