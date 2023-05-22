@@ -1383,260 +1383,34 @@ void process_deck1()
     if (backPressed1)
     {
         draw_sprite_xpm(&matrix[0][0], 0, 0);
-        if (backPressed2)
-        {
-            if (check_match(matrix[0][0].id, matrix[0][1].id))
-            {
-                backBlock1 = true;
-                backBlock2 = true;
-                backPressed1 = false;
-                backPressed2 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed2 = false;
-                printf("ERROU");
-            }
+       printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[0][0].id;
+            index_1_bool = &backPressed1;
+            index_1 = &matrix[0][0];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[0][0]) {
+            matrix_id2 = matrix[0][0].id;
+            index_2_bool = &backPressed1;
+            index_2 = &matrix[0][0];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed1 is %d",backPressed1);
         }
-        if (backPressed3)
-        {
-            if (check_match(matrix[0][0].id, matrix[0][2].id))
-            {
-                backBlock1 = true;
-                backBlock3 = true;
-                backPressed1 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[0][0].id, matrix[0][3].id))
-            {
-                backBlock1 = true;
-                backBlock4 = true;
-                backPressed1 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[0][0].id, matrix[1][0].id))
-            {
-                backBlock1 = true;
-                backBlock5 = true;
-                backPressed1 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[0][0].id, matrix[1][1].id))
-            {
-                backBlock1 = true;
-                backBlock6 = true;
-                backPressed1 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[0][0].id, matrix[1][2].id))
-            {
-                backBlock1 = true;
-                backBlock7 = true;
-                backPressed1 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[0][0].id, matrix[1][3].id))
-            {
-                backBlock1 = true;
-                backBlock8 = true;
-                backPressed1 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[0][0].id, matrix[2][0].id))
-            {
-                backBlock1 = true;
-                backBlock9 = true;
-                backPressed1 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[0][0].id, matrix[2][1].id))
-            {
-                backBlock1 = true;
-                backBlock10 = true;
-                backPressed1 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[0][0].id, matrix[2][2].id))
-            {
-                backBlock1 = true;
-                backBlock11 = true;
-                backPressed1 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[0][0].id, matrix[2][3].id))
-            {
-                backBlock1 = true;
-                backBlock12 = true;
-                backPressed1 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[0][0].id, matrix[3][0].id))
-            {
-                backBlock1 = true;
-                backBlock13 = true;
-                backPressed1 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[0][0].id, matrix[3][1].id))
-            {
-                backBlock1 = true;
-                backBlock14 = true;
-                backPressed1 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[0][0].id, matrix[3][2].id))
-            {
-                backBlock1 = true;
-                backBlock15 = true;
-                backPressed1 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[0][0].id, matrix[3][3].id))
-            {
-                backBlock1 = true;
-                backBlock16 = true;
-                backPressed1 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
+        
         }
     }
 }
@@ -1652,260 +1426,33 @@ void process_deck2()
     if (backPressed2)
     {
         draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
-        if (backPressed1)
-        {
-            if (check_match(matrix[0][1].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock2 = true;
-                backPressed1 = false;
-                backPressed2 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed2 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[0][1].id;
+            index_1_bool = &backPressed2;
+            index_1 = &matrix[0][1];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[0][1]) {
+            matrix_id2 = matrix[0][1].id;
+            index_2_bool = &backPressed2;
+            index_2 = &matrix[0][1];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed2 is %d",backPressed2);
         }
-        if (backPressed3)
-        {
-            if (check_match(matrix[0][1].id, matrix[0][2].id))
-            {
-                backBlock2 = true;
-                backBlock3 = true;
-                backPressed2 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[0][1].id, matrix[0][3].id))
-            {
-                backBlock2 = true;
-                backBlock4 = true;
-                backPressed2 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[0][1].id, matrix[1][0].id))
-            {
-                backBlock2 = true;
-                backBlock5 = true;
-                backPressed2 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[0][1].id, matrix[1][1].id))
-            {
-                backBlock2 = true;
-                backBlock6 = true;
-                backPressed2 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[0][1].id, matrix[1][2].id))
-            {
-                backBlock2 = true;
-                backBlock7 = true;
-                backPressed2 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[0][1].id, matrix[1][3].id))
-            {
-                backBlock2 = true;
-                backBlock8 = true;
-                backPressed2 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[0][1].id, matrix[2][0].id))
-            {
-                backBlock2 = true;
-                backBlock9 = true;
-                backPressed2 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[0][1].id, matrix[2][1].id))
-            {
-                backBlock2 = true;
-                backBlock10 = true;
-                backPressed2 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[0][1].id, matrix[2][2].id))
-            {
-                backBlock2 = true;
-                backBlock11 = true;
-                backPressed2 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[0][1].id, matrix[2][3].id))
-            {
-                backBlock2 = true;
-                backBlock12 = true;
-                backPressed2 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[0][1].id, matrix[3][0].id))
-            {
-                backBlock2 = true;
-                backBlock13 = true;
-                backPressed2 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[0][1].id, matrix[3][1].id))
-            {
-                backBlock2 = true;
-                backBlock14 = true;
-                backPressed2 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[0][1].id, matrix[3][2].id))
-            {
-                backBlock2 = true;
-                backBlock15 = true;
-                backPressed2 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[0][1].id, matrix[3][3].id))
-            {
-                backBlock2 = true;
-                backBlock16 = true;
-                backPressed2 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -1921,260 +1468,33 @@ void process_deck3()
     if (backPressed3)
     {
         draw_sprite_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
-        if (backPressed1)
-        {
-            if (check_match(matrix[0][2].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock3 = true;
-                backPressed1 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[0][2].id;
+            index_1_bool = &backPressed3;
+            index_1 = &matrix[0][2];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[0][2]) {
+            matrix_id2 = matrix[0][2].id;
+            index_2_bool = &backPressed3;
+            index_2 = &matrix[0][2];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed3 is %d",backPressed3);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[0][2].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock3 = true;
-                backPressed2 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[0][2].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock3 = true;
-                backPressed4 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[0][2].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock3 = true;
-                backPressed5 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[0][2].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock3 = true;
-                backPressed6 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[0][2].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock3 = true;
-                backPressed7 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[0][2].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock3 = true;
-                backPressed8 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[0][2].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock3 = true;
-                backPressed9 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[0][2].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock3 = true;
-                backPressed10 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[0][2].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock3 = true;
-                backPressed11 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[0][2].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock3 = true;
-                backPressed12 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[0][2].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock3 = true;
-                backPressed13 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[0][2].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock3 = true;
-                backPressed14 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed14 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[0][2].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock3 = true;
-                backPressed15 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed15 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[0][2].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock3 = true;
-                backPressed16 = false;
-                backPressed3 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed16 = false;
-                backPressed3 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -2190,260 +1510,33 @@ void process_deck4()
     if (backPressed4)
     {
         draw_sprite_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
-        if (backPressed1)
-        {
-            if (check_match(matrix[0][3].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock4 = true;
-                backPressed1 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[0][3].id;
+            index_1_bool = &backPressed4;
+            index_1 = &matrix[0][3];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[0][3]) {
+            matrix_id2 = matrix[0][3].id;
+            index_2_bool = &backPressed4;
+            index_2 = &matrix[0][3];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed4 is %d",backPressed4);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[0][3].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock4 = true;
-                backPressed2 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[0][3].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock4 = true;
-                backPressed3 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[0][3].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock4 = true;
-                backPressed5 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[0][3].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock4 = true;
-                backPressed6 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[0][3].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock4 = true;
-                backPressed7 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[0][3].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock4 = true;
-                backPressed8 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[0][3].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock4 = true;
-                backPressed9 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[0][3].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock4 = true;
-                backPressed10 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[0][3].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock4 = true;
-                backPressed11 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[0][3].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock4 = true;
-                backPressed12 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[0][3].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock4 = true;
-                backPressed13 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[0][3].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock4 = true;
-                backPressed14 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed14 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[0][3].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock4 = true;
-                backPressed15 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed15 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[0][3].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock4 = true;
-                backPressed16 = false;
-                backPressed4 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed16 = false;
-                backPressed4 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -2459,260 +1552,33 @@ void process_deck5()
     if (backPressed5)
     {
         draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 4);
-        if (backPressed1)
-        {
-            if (check_match(matrix[1][0].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock5 = true;
-                backPressed1 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[1][0].id;
+            index_1_bool = &backPressed5;
+            index_1 = &matrix[1][0];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[1][0]) {
+            matrix_id2 = matrix[1][0].id;
+            index_2_bool = &backPressed5;
+            index_2 = &matrix[1][0];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed5 is %d",backPressed5);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[1][0].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock5 = true;
-                backPressed2 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[1][0].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock5 = true;
-                backPressed3 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[1][0].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock5 = true;
-                backPressed4 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[1][0].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock5 = true;
-                backPressed6 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[1][0].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock5 = true;
-                backPressed7 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[1][0].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock5 = true;
-                backPressed8 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[1][0].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock5 = true;
-                backPressed9 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[1][0].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock5 = true;
-                backPressed10 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[1][0].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock5 = true;
-                backPressed11 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[1][0].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock5 = true;
-                backPressed12 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[1][0].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock5 = true;
-                backPressed13 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[1][0].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock5 = true;
-                backPressed14 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed14 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[1][0].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock5 = true;
-                backPressed15 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed15 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[1][0].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock5 = true;
-                backPressed16 = false;
-                backPressed5 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed16 = false;
-                backPressed5 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -2728,260 +1594,33 @@ void process_deck6()
     if (backPressed6)
     {
         draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 4);
-        if (backPressed1)
-        {
-            if (check_match(matrix[1][1].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock6 = true;
-                backPressed1 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[1][1].id;
+            index_1_bool = &backPressed6;
+            index_1 = &matrix[1][1];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[1][1]) {
+            matrix_id2 = matrix[1][1].id;
+            index_2_bool = &backPressed6;
+            index_2 = &matrix[1][1];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed6 is %d",backPressed6);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[1][1].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock6 = true;
-                backPressed2 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[1][1].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock6 = true;
-                backPressed3 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[1][1].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock6 = true;
-                backPressed4 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[1][1].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock6 = true;
-                backPressed5 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[1][1].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock6 = true;
-                backPressed7 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[1][1].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock6 = true;
-                backPressed8 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[1][1].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock6 = true;
-                backPressed9 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[1][1].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock6 = true;
-                backPressed10 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[1][1].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock6 = true;
-                backPressed11 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[1][1].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock6 = true;
-                backPressed12 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[1][1].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock6 = true;
-                backPressed13 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[1][1].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock6 = true;
-                backPressed14 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed14 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[1][1].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock6 = true;
-                backPressed15 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed15 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[1][1].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock6 = true;
-                backPressed16 = false;
-                backPressed6 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed16 = false;
-                backPressed6 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -2997,260 +1636,33 @@ void process_deck7()
     if (backPressed7)
     {
         draw_sprite_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 4);
-        if (backPressed1)
-        {
-            if (check_match(matrix[1][2].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock7 = true;
-                backPressed1 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[1][2].id;
+            index_1_bool = &backPressed7;
+            index_1 = &matrix[1][2];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[1][2]) {
+            matrix_id2 = matrix[1][2].id;
+            index_2_bool = &backPressed7;
+            index_2 = &matrix[1][2];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed7 is %d",backPressed7);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[1][2].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock7 = true;
-                backPressed2 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[1][2].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock7 = true;
-                backPressed3 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[1][2].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock7 = true;
-                backPressed4 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[1][2].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock7 = true;
-                backPressed5 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[1][2].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock7 = true;
-                backPressed6 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[1][2].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock7 = true;
-                backPressed8 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[1][2].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock7 = true;
-                backPressed9 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[1][2].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock7 = true;
-                backPressed10 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[1][2].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock7 = true;
-                backPressed11 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[1][2].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock7 = true;
-                backPressed12 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[1][2].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock7 = true;
-                backPressed13 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[1][2].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock7 = true;
-                backPressed14 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed14 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[1][2].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock7 = true;
-                backPressed15 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed15 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[1][2].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock7 = true;
-                backPressed16 = false;
-                backPressed7 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed16 = false;
-                backPressed7 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -3266,260 +1678,33 @@ void process_deck8()
     if (backPressed8)
     {
         draw_sprite_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 4);
-        if (backPressed1)
-        {
-            if (check_match(matrix[1][3].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock8 = true;
-                backPressed1 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[1][3].id;
+            index_1_bool = &backPressed8;
+            index_1 = &matrix[1][3];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[1][3]) {
+            matrix_id2 = matrix[1][3].id;
+            index_2_bool = &backPressed8;
+            index_2 = &matrix[1][3];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed8 is %d",backPressed8);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[1][3].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock8 = true;
-                backPressed2 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[1][3].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock8 = true;
-                backPressed3 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[1][3].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock8 = true;
-                backPressed4 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[1][3].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock8 = true;
-                backPressed5 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[1][3].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock8 = true;
-                backPressed6 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[1][3].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock8 = true;
-                backPressed7 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[1][3].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock8 = true;
-                backPressed9 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[1][3].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock8 = true;
-                backPressed10 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[1][3].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock8 = true;
-                backPressed11 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[1][3].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock8 = true;
-                backPressed12 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[1][3].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock8 = true;
-                backPressed13 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[1][3].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock8 = true;
-                backPressed14 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed14 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[1][3].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock8 = true;
-                backPressed15 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed15 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[1][3].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock8 = true;
-                backPressed16 = false;
-                backPressed8 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed16 = false;
-                backPressed8 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -3535,260 +1720,33 @@ void process_deck9()
     if (backPressed9)
     {
         draw_sprite_xpm(&matrix[2][0], 0, mode_info.YResolution / 2);
-        if (backPressed1)
-        {
-            if (check_match(matrix[2][0].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock9 = true;
-                backPressed1 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[2][0].id;
+            index_1_bool = &backPressed9;
+            index_1 = &matrix[2][0];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[2][0]) {
+            matrix_id2 = matrix[2][0].id;
+            index_2_bool = &backPressed9;
+            index_2 = &matrix[2][0];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed9 is %d",backPressed9);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[2][0].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock9 = true;
-                backPressed2 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[2][0].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock9 = true;
-                backPressed3 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[2][0].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock9 = true;
-                backPressed4 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[2][0].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock9 = true;
-                backPressed5 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[2][0].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock9 = true;
-                backPressed6 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[2][0].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock9 = true;
-                backPressed7 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[2][0].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock9 = true;
-                backPressed8 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[2][0].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock9 = true;
-                backPressed10 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[2][0].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock9 = true;
-                backPressed11 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[2][0].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock9 = true;
-                backPressed12 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[2][0].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock9 = true;
-                backPressed13 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[2][0].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock9 = true;
-                backPressed14 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed14 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[2][0].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock9 = true;
-                backPressed15 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed15 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[2][0].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock9 = true;
-                backPressed16 = false;
-                backPressed9 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed16 = false;
-                backPressed9 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -3804,260 +1762,33 @@ void process_deck10()
     if (backPressed10)
     {
         draw_sprite_xpm(&matrix[2][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
-        if (backPressed1)
-        {
-            if (check_match(matrix[2][1].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock10 = true;
-                backPressed1 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[2][1].id;
+            index_1_bool = &backPressed10;
+            index_1 = &matrix[2][1];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[2][1]) {
+            matrix_id2 = matrix[2][1].id;
+            index_2_bool = &backPressed10;
+            index_2 = &matrix[2][1];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed10 is %d",backPressed10);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[2][1].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock10 = true;
-                backPressed2 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[2][1].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock10 = true;
-                backPressed3 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[2][1].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock10 = true;
-                backPressed4 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[2][1].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock10 = true;
-                backPressed5 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[2][1].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock10 = true;
-                backPressed6 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[2][1].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock10 = true;
-                backPressed7 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[2][1].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock10 = true;
-                backPressed8 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[2][1].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock10 = true;
-                backPressed9 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[2][1].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock10 = true;
-                backPressed11 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[2][1].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock10 = true;
-                backPressed12 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[2][1].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock10 = true;
-                backPressed13 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[2][1].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock10 = true;
-                backPressed14 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed14 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[2][1].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock10 = true;
-                backPressed15 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed15 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[2][1].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock10 = true;
-                backPressed16 = false;
-                backPressed10 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed16 = false;
-                backPressed10 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -4073,260 +1804,33 @@ void process_deck11()
     if (backPressed11)
     {
         draw_sprite_xpm(&matrix[2][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
-        if (backPressed1)
-        {
-            if (check_match(matrix[2][2].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock11 = true;
-                backPressed1 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[2][2].id;
+            index_1_bool = &backPressed11;
+            index_1 = &matrix[2][2];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[2][2]) {
+            matrix_id2 = matrix[2][2].id;
+            index_2_bool = &backPressed11;
+            index_2 = &matrix[2][2];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed11 is %d",backPressed11);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[2][2].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock11 = true;
-                backPressed2 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[2][2].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock11 = true;
-                backPressed3 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[2][2].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock11 = true;
-                backPressed4 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[2][2].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock11 = true;
-                backPressed5 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[2][2].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock11 = true;
-                backPressed6 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[2][2].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock11 = true;
-                backPressed7 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[2][2].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock11 = true;
-                backPressed8 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[2][2].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock11 = true;
-                backPressed9 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[2][2].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock11 = true;
-                backPressed10 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[2][2].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock11 = true;
-                backPressed12 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[2][2].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock11 = true;
-                backPressed13 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[2][2].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock11 = true;
-                backPressed14 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed14 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[2][2].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock11 = true;
-                backPressed15 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed15 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[2][2].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock11 = true;
-                backPressed16 = false;
-                backPressed11 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed16 = false;
-                backPressed11 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -4342,260 +1846,33 @@ void process_deck12()
     if (backPressed12)
     {
         draw_sprite_xpm(&matrix[2][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
-        if (backPressed1)
-        {
-            if (check_match(matrix[2][3].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock12 = true;
-                backPressed1 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
+       printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[2][3].id;
+            index_1_bool = &backPressed12;
+            index_1 = &matrix[2][3];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[2][3]) {
+            matrix_id2 = matrix[2][3].id;
+            index_2_bool = &backPressed12;
+            index_2 = &matrix[2][3];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed12 is %d",backPressed12);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[2][3].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock12 = true;
-                backPressed2 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[2][3].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock12 = true;
-                backPressed3 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[2][3].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock12 = true;
-                backPressed4 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[2][3].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock12 = true;
-                backPressed5 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[2][3].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock12 = true;
-                backPressed6 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[2][3].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock12 = true;
-                backPressed7 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[2][3].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock12 = true;
-                backPressed8 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[2][3].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock12 = true;
-                backPressed9 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[2][3].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock12 = true;
-                backPressed10 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[2][3].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock12 = true;
-                backPressed11 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[2][3].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock12 = true;
-                backPressed13 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[2][3].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock12 = true;
-                backPressed14 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed14 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[2][3].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock12 = true;
-                backPressed15 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed15 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[2][3].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock12 = true;
-                backPressed16 = false;
-                backPressed12 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed16 = false;
-                backPressed12 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -4611,257 +1888,33 @@ void process_deck13()
     if (backPressed13)
     {
         draw_sprite_xpm(&matrix[3][0], 0, 3 * mode_info.YResolution / 4);
-        if (backPressed1)
-        {
-            if (check_match(matrix[3][0].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock13 = true;
-                backPressed1 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[3][0].id;
+            index_1_bool = &backPressed13;
+            index_1 = &matrix[3][0];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[3][0]) {
+            matrix_id2 = matrix[3][0].id;
+            index_2_bool = &backPressed13;
+            index_2 = &matrix[3][0];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed13 is %d",backPressed13);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[3][0].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock13 = true;
-                backPressed2 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[3][0].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock13 = true;
-                backPressed3 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[3][0].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock13 = true;
-                backPressed4 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[3][0].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock13 = true;
-                backPressed5 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[3][0].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock13 = true;
-                backPressed6 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[3][0].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock13 = true;
-                backPressed7 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[3][0].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock13 = true;
-                backPressed8 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[3][0].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock13 = true;
-                backPressed9 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[3][0].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock13 = true;
-                backPressed10 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[3][0].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock13 = true;
-                backPressed11 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[3][0].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock13 = true;
-                backPressed12 = false;
-                backPressed13 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[3][0].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock13 = true;
-                backPressed13 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[3][0].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock13 = true;
-                backPressed13 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[3][0].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock13 = true;
-                backPressed13 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -4877,260 +1930,33 @@ void process_deck14()
     if (backPressed14)
     {
         draw_sprite_xpm(&matrix[3][1], mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
-        if (backPressed1)
-        {
-            if (check_match(matrix[3][1].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock14 = true;
-                backPressed1 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[3][1].id;
+            index_1_bool = &backPressed14;
+            index_1 = &matrix[3][1];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[3][1]) {
+            matrix_id2 = matrix[3][1].id;
+            index_2_bool = &backPressed14;
+            index_2 = &matrix[3][1];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed14 is %d",backPressed14);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[3][1].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock14 = true;
-                backPressed2 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[3][1].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock14 = true;
-                backPressed3 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[3][1].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock14 = true;
-                backPressed4 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[3][1].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock14 = true;
-                backPressed5 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[3][1].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock14 = true;
-                backPressed6 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[3][1].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock14 = true;
-                backPressed7 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[3][1].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock14 = true;
-                backPressed8 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[3][1].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock14 = true;
-                backPressed9 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[3][1].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock14 = true;
-                backPressed10 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[3][1].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock14 = true;
-                backPressed11 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[3][1].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock14 = true;
-                backPressed12 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[3][1].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock14 = true;
-                backPressed13 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[3][1].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock14 = true;
-                backPressed15 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed15 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[3][1].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock14 = true;
-                backPressed16 = false;
-                backPressed14 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed16 = false;
-                backPressed14 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -5146,260 +1972,33 @@ void process_deck15()
     if (backPressed15)
     {
         draw_sprite_xpm(&matrix[3][2], mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
-        if (backPressed1)
-        {
-            if (check_match(matrix[3][2].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock15 = true;
-                backPressed1 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[3][2].id;
+            index_1_bool = &backPressed15;
+            index_1 = &matrix[3][2];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[3][2]) {
+            matrix_id2 = matrix[3][2].id;
+            index_2_bool = &backPressed15;
+            index_2 = &matrix[3][2];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[3][2].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock15 = true;
-                backPressed2 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[3][2].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock15 = true;
-                backPressed3 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[3][2].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock15 = true;
-                backPressed4 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[3][2].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock15 = true;
-                backPressed5 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[3][2].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock15 = true;
-                backPressed6 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[3][2].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock15 = true;
-                backPressed7 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[3][2].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock15 = true;
-                backPressed8 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[3][2].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock15 = true;
-                backPressed9 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[3][2].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock15 = true;
-                backPressed10 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[3][2].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock15 = true;
-                backPressed11 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[3][2].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock15 = true;
-                backPressed12 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[3][2].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock15 = true;
-                backPressed13 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[3][2].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock15 = true;
-                backPressed14 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed14 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed16)
-        {
-            if (check_match(matrix[3][2].id, matrix[3][3].id))
-            {
-                backBlock16 = true;
-                backBlock15 = true;
-                backPressed16 = false;
-                backPressed15 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed16 = false;
-                backPressed15 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -5415,260 +2014,33 @@ void process_deck16()
     if (backPressed16)
     {
         draw_sprite_xpm(&matrix[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
-        if (backPressed1)
-        {
-            if (check_match(matrix[3][3].id, matrix[0][0].id))
-            {
-                backBlock1 = true;
-                backBlock16 = true;
-                backPressed1 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed1 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
+        printf("Entrei no botao 1\n");
+        if(matrix_id1 == -1){
+            matrix_id1 = matrix[3][3].id;
+            index_1_bool = &backPressed16;
+            index_1 = &matrix[3][3];
+            printf("The value of index_1 on button1 is %d\n",index_1);
+            printf("The value of matrix_id1 on button1 is %d",matrix_id1);
+        } 
+        else if(matrix_id2 == -1 && index_1 != &matrix[3][3]) {
+            matrix_id2 = matrix[3][3].id;
+            index_2_bool = &backPressed16;
+            index_2 = &matrix[3][3];
+            printf("The value of index_2 on button1 is %d\n",index_2);
+            printf("The value of matrix_id2 on button1 is %d",matrix_id2);
+         }
+        if(matrix_id1 != -1 && matrix_id2 != -1) {
+        if (check_match(matrix_id1,matrix_id2)){
+        index_1->block = true;
+        index_2->block = true;
+        } 
+        else if(!check_match(matrix_id1,matrix_id2)) { 
+            *index_2_bool = false; 
+            *index_1_bool = false; 
+            printf("The value of the backPressed16 is %d",backPressed16);
         }
-        if (backPressed2)
-        {
-            if (check_match(matrix[3][3].id, matrix[0][1].id))
-            {
-                backBlock2 = true;
-                backBlock16 = true;
-                backPressed2 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed2 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed3)
-        {
-            if (check_match(matrix[3][3].id, matrix[0][2].id))
-            {
-                backBlock3 = true;
-                backBlock16 = true;
-                backPressed3 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed3 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed4)
-        {
-            if (check_match(matrix[3][3].id, matrix[0][3].id))
-            {
-                backBlock4 = true;
-                backBlock16 = true;
-                backPressed4 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed4 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed5)
-        {
-            if (check_match(matrix[3][3].id, matrix[1][0].id))
-            {
-                backBlock5 = true;
-                backBlock16 = true;
-                backPressed5 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed5 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed6)
-        {
-            if (check_match(matrix[3][3].id, matrix[1][1].id))
-            {
-                backBlock6 = true;
-                backBlock16 = true;
-                backPressed6 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed6 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed7)
-        {
-            if (check_match(matrix[3][3].id, matrix[1][2].id))
-            {
-                backBlock7 = true;
-                backBlock16 = true;
-                backPressed7 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed7 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed8)
-        {
-            if (check_match(matrix[3][3].id, matrix[1][3].id))
-            {
-                backBlock8 = true;
-                backBlock16 = true;
-                backPressed8 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed8 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed9)
-        {
-            if (check_match(matrix[3][3].id, matrix[2][0].id))
-            {
-                backBlock9 = true;
-                backBlock16 = true;
-                backPressed9 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed9 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed10)
-        {
-            if (check_match(matrix[3][3].id, matrix[2][1].id))
-            {
-                backBlock10 = true;
-                backBlock16 = true;
-                backPressed10 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed10 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed11)
-        {
-            if (check_match(matrix[3][3].id, matrix[2][2].id))
-            {
-                backBlock11 = true;
-                backBlock16 = true;
-                backPressed11 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed11 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed12)
-        {
-            if (check_match(matrix[3][3].id, matrix[2][3].id))
-            {
-                backBlock12 = true;
-                backBlock16 = true;
-                backPressed12 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed12 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed13)
-        {
-            if (check_match(matrix[3][3].id, matrix[3][0].id))
-            {
-                backBlock13 = true;
-                backBlock16 = true;
-                backPressed13 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed13 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed14)
-        {
-            if (check_match(matrix[3][3].id, matrix[3][1].id))
-            {
-                backBlock14 = true;
-                backBlock16 = true;
-                backPressed14 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed14 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
-        }
-        if (backPressed15)
-        {
-            if (check_match(matrix[3][3].id, matrix[3][2].id))
-            {
-                backBlock15 = true;
-                backBlock16 = true;
-                backPressed15 = false;
-                backPressed16 = false;
-                printf("ACERTOU");
-            }
-            else
-            {
-                backPressed15 = false;
-                backPressed16 = false;
-                printf("ERROU");
-            }
+        matrix_id1 = -1;
+        matrix_id2 = -1; 
         }
     }
 }
@@ -5718,135 +2090,135 @@ void draw_game_menu_3()
     draw_sprite_xpm(deck15, mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
     draw_sprite_xpm(deck16, 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
 
-    if (!backBlock1)
+    if (matrix[0][0].block == false)
     {
         process_deck1();
     }
-    else if (backBlock1)
+    else if (matrix[0][0].block == true)
     {
         draw_sprite_xpm(&matrix[0][0], 0, 0);
     }
-    if (!backBlock2)
+    if (matrix[0][1].block == false)
     {
         process_deck2();
     }
-    else if (backBlock2)
+    else if (matrix[0][1].block == true)
     {
         draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
     }
-    if (!backBlock3)
+    if (matrix[0][2].block == false)
     {
         process_deck3();
     }
-    else if (backBlock3)
+    else if (matrix[0][2].block == true)
     {
         draw_sprite_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
     }
-    if (!backBlock4)
+    if (matrix[0][3].block== false)
     {
         process_deck4();
     }
-    else if (backBlock4)
+    else if (matrix[0][3].block == true)
     {
         draw_sprite_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
     }
-    if (!backBlock5)
+    if (matrix[1][0].block == false)
     {
         process_deck5();
     }
-    else if (backBlock5)
+    else if (matrix[1][0].block== true)
     {
         draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 4);
     }
-    if (!backBlock6)
+    if (matrix[1][1].block == false)
     {
         process_deck6();
     }
-    else if (backBlock6)
+    else if (matrix[1][1].block == true)
     {
         draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 4);
     }
-    if (!backBlock7)
+    if (matrix[1][2].block == false)
     {
         process_deck7();
     }
-    else if (backBlock7)
+    else if (matrix[1][2].block == true)
     {
         draw_sprite_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 4);
     }
-    if (!backBlock8)
+    if (matrix[1][3].block == false)
     {
         process_deck8();
     }
-    else if (backBlock8)
+    else if (matrix[1][3].block == true)
     {
         draw_sprite_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 4);
     }
-    if (!backBlock9)
+    if (matrix[2][0].block == false)
     {
         process_deck9();
     }
-    else if (backBlock9)
+    else if (matrix[2][0].block == true)
     {
         draw_sprite_xpm(&matrix[2][0], 0, mode_info.YResolution / 2);
     }
-    if (!backBlock10)
+    if (matrix[2][1].block == false)
     {
         process_deck10();
     }
-    else if (backBlock10)
+    else if (matrix[2][1].block == true)
     {
         draw_sprite_xpm(&matrix[2][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
     }
-    if (!backBlock11)
+    if (matrix[2][2].block == false)
     {
         process_deck11();
     }
-    else if (backBlock11)
+    else if (matrix[2][2].block == true)
     {
         draw_sprite_xpm(&matrix[2][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
     }
-    if (!backBlock12)
+    if (matrix[2][3].block== false)
     {
         process_deck12();
     }
-    else if (backBlock12)
+    else if (matrix[2][3].block == true)
     {
         draw_sprite_xpm(&matrix[2][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
     }
-    if (!backBlock13)
+    if (matrix[3][0].block == false)
     {
         process_deck13();
     }
-    else if (backBlock13)
+    else if (matrix[3][0].block == true)
     {
         draw_sprite_xpm(&matrix[3][0], 0, 3 * mode_info.YResolution / 4);
     }
-    if (!backBlock14)
+    if (matrix[3][1].block == false)
     {
         process_deck14();
     }
-    else if (backBlock14)
+    else if (matrix[3][1].block == true)
     {
         draw_sprite_xpm(&matrix[3][1], mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
     }
-    if (!backBlock15)
+    if (matrix[3][2].block == false)
     {
         process_deck15();
     }
-    else if (backBlock15)
+    else if (matrix[3][2].block == true)
     {
         draw_sprite_xpm(&matrix[3][2], mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
     }
-    if (!backBlock16)
+    if (matrix[3][3].block == false)
     {
         process_deck16();
     }
-    else if (backBlock16)
+    else if (matrix[3][3].block == true)
     {
         draw_sprite_xpm(&matrix[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
     }
-    if (backBlock1 && backBlock2 && backBlock3 && backBlock4 && backBlock5 && backBlock6 && backBlock7 && backBlock8 && backBlock9 && backBlock10 && backBlock11 && backBlock12 && backBlock13 && backBlock14 && backBlock15 && backBlock16)
+    if (deck1->block && deck2->block && deck3->block && deck4->block && deck5->block && deck6->block && deck7->block && deck8->block && deck9->block && deck10->block && deck11->block && deck12->block && deck13->block && deck14->block && deck15->block && deck16->block)
     {
         menuState = END;
     }
