@@ -2,15 +2,20 @@
 
 
 
-extern uint8_t scancode;
-extern uint8_t byte_index;
-SystemState systemState = RUNNING;
-MenuState menuState = START;
-extern MouseInfo mouse_info;
+extern int pre2;
+extern Sprite **matrix;
+extern Sprite *index_1;
+extern Sprite *index_2;
+extern bool *index_1_bool;
+extern bool *index_2_bool;
+extern int matrix_id1; 
+extern int matrix_id2;
+extern int timer_interrupts;
 extern vbe_mode_info_t mode_info;
+extern MouseInfo mouse_info;
 extern real_time_info time_info;
-Sprite **matrix;
-int pre2 = 0;
+extern MenuState menuState;
+extern SystemState systemState;
 extern Sprite *mouse;
 extern Sprite *hand;
 extern Sprite *smile;
@@ -37,109 +42,28 @@ extern Sprite *medium;
 extern Sprite *hard;
 extern Sprite *quit;
 extern Sprite *start;
-bool backPressed1 = false;
-bool backPressed2 = false;
-bool backPressed3 = false;
-bool backPressed4 = false;
-bool backPressed5 = false;
-bool backPressed6 = false;
-bool backPressed7 = false;
-bool backPressed8 = false;
-bool backPressed9 = false;
-bool backPressed10 = false;
-bool backPressed11 = false;
-bool backPressed12 = false;
-bool backPressed13 = false;
-bool backPressed14 = false;
-bool backPressed15 = false;
-bool backPressed16 = false;
-bool backBlock1 = false;
-bool backBlock2 = false;
-bool backBlock3 = false;
-bool backBlock4 = false;
-bool backBlock5 = false;
-bool backBlock6 = false;
-bool backBlock7 = false;
-bool backBlock8 = false;
-bool backBlock9 = false;
-bool backBlock10 = false;
-bool backBlock11 = false;
-bool backBlock12 = false;
-bool backBlock13 = false;
-bool backBlock14 = false;
-bool backBlock15 = false;
-bool backBlock16 = false;
-Sprite **matrix;
-Sprite *index_1;
-Sprite *index_2;
-bool *index_1_bool;
-bool *index_2_bool;
-int matrix_id1 = -1; 
-int matrix_id2 = -1;
+extern bool backPressed1;
+extern bool backPressed2;
+extern bool backPressed3;
+extern bool backPressed4;
+extern bool backPressed5;
+extern bool backPressed6;
+extern bool backPressed7;
+extern bool backPressed8;
+extern bool backPressed9;
+extern bool backPressed10;
+extern bool backPressed11;
+extern bool backPressed12;
+extern bool backPressed13;
+extern bool backPressed14;
+extern bool backPressed15;
+extern bool backPressed16;
+extern uint8_t *main_frame_buffer;
+extern uint8_t *secondary_frame_buffer;
+extern uint8_t *drawing_frame_buffer;
+extern uint32_t frame_buffer_size;
 
 
-
-bool check_match(int id1, int id2)
-{
-    if (id1 == id2)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-
-
-Sprite **alloc_matrix(int n,int m) 
-{ 
-    Sprite **mat = (Sprite**)malloc(sizeof(Sprite*)*m);
-    for(int i = 0; i < n; i++) { 
-        mat[i] = (Sprite*)malloc(sizeof(Sprite)*n);
-    }
-    return mat; 
-}
-
-void shuffle3(Sprite *cards)
-{
-    int size = 16;
-
-    srand(time(NULL));
-    for (int i = size - 1; i >= 0; i--)
-    {
-        int j = rand() % (i + 1);
-        Sprite temp = cards[i];
-        cards[i] = cards[j];
-        cards[j] = temp;
-    }
-    matrix[0][0] = cards[0];
-    matrix[0][1] = cards[1];
-    matrix[0][2] = cards[2];
-    matrix[0][3] = cards[3];
-    matrix[1][0] = cards[4];
-    matrix[1][1] = cards[5];
-    matrix[1][2] = cards[6];
-    matrix[1][3] = cards[7];
-    matrix[2][0] = cards[8];
-    matrix[2][1] = cards[9];
-    matrix[2][2] = cards[10];
-    matrix[2][3] = cards[11];
-    matrix[3][0] = cards[12];
-    matrix[3][1] = cards[13];
-    matrix[3][2] = cards[14];
-    matrix[3][3] = cards[15];
-
-    // Printing the shuffled matrix
-    for (int i = 0; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            printf("%d ", matrix[i][j].id);
-        }
-        printf("\n");
-    }
-}
 
 void process_deck1()
 {
@@ -988,9 +912,10 @@ void draw_game_menu_3()
     {
         draw_sprite_xpm(&matrix[3][3], 3 * mode_info.XResolution / 4, 3 * mode_info.YResolution / 4);
     }
-    if (deck1->block && deck2->block && deck3->block && deck4->block && deck5->block && deck6->block && deck7->block && deck8->block && deck9->block && deck10->block && deck11->block && deck12->block && deck13->block && deck14->block && deck15->block && deck16->block)
+    if (matrix[0][0].block == true && matrix[0][1].block == true && matrix[0][2].block == true && matrix[0][3].block == true && matrix[1][0].block == true && matrix[1][1].block == true && matrix[1][2].block == true && matrix[1][3].block == true && matrix[2][0].block == true && matrix[2][1].block == true && matrix[2][2].block == true && matrix[2][3].block == true && matrix[3][0].block == true && matrix[3][1].block == true && matrix[3][2].block == true && matrix[3][3].block == true)
     {
         menuState = END;
     }
     
 }
+

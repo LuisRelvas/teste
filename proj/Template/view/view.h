@@ -9,12 +9,18 @@
 #include "controller/rtc/rtc.h"
 #include "model/sprite.h"
 #include "model/model.h"
+#include "game/modes/mode_1.h"
+#include "game/modes/mode_2.h"
+#include "game/modes/mode_3.h"
 
+
+Sprite **alloc_matrix(int n,int m); 
 void draw_new_frame();
+bool check_match(int id1, int id2);
 void draw_initial_menu();
+void draw_game_menu_2();
 void draw_game_menu();
 void draw_finish_menu();
-void draw_game_menu_2();
 void draw_mouse();
 void swap_buffers();
 void display_real_time();
@@ -23,26 +29,14 @@ int draw_sprite_button(Sprite *sprite, int x, int y);
 int set_frame_buffers(uint16_t mode);
 void draw_xpm_draw_buffer(xpm_map_t xpm, uint16_t x, uint16_t y);
 int get_number(Sprite *cards, int size);
-void process_button2(Sprite *cards, int size);
-void process_button1(Sprite *cards, int size);
-void process_button3(Sprite *cards, int size);
-void process_button4(Sprite *cards, int size);
+void draw_game_menu_3();
 void shuffle(Sprite *cards, int size);
 void shuffle2(Sprite *cards);
-void process_cardPressed1();
-void process_cardPressed2();
-void process_cardPressed3();
-void process_cardPressed4();
-void process_cardPressed5();
-void process_cardPressed6();
-void process_cardPressed7();
-void process_cardPressed8();
+void shuffle3(Sprite *cards);
 void draw_mode_menu();
-void draw_game_menu_3();
 void draw_game_menu_game_2();
 void draw_game_menu_game_4();
 void draw_game_menu_game_3();
-
 void draw_card_animation(uint16_t x, uint16_t y);
 
 #endif

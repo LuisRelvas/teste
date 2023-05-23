@@ -4,7 +4,8 @@
 #include "../../controller/video/VBE.h"
 #include "../../controller/video/graphics.h"
 #include "../../controller/mouse/mouse.h"
+#include "view/view.h"
 
-int drawMenu();
+
 
 #endif

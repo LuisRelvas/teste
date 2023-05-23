@@ -1,12 +1,20 @@
 #include "mode_1.h"
-#include "menu.h"
 
+
+extern int pre;
+extern Sprite **matrix;
+extern Sprite *index_1;
+extern Sprite *index_2;
+extern bool *index_1_bool;
+extern bool *index_2_bool;
+extern int matrix_id1; 
+extern int matrix_id2;
+extern int timer_interrupts;
+extern vbe_mode_info_t mode_info;
+extern MouseInfo mouse_info;
+extern real_time_info time_info;
 extern MenuState menuState;
-
-bool button1Pressed = false;
-bool button2Pressed = false;
-bool button3Pressed = false;
-bool button4Pressed = false;
+extern SystemState systemState;
 extern Sprite *mouse;
 extern Sprite *hand;
 extern Sprite *smile;
@@ -33,78 +41,14 @@ extern Sprite *medium;
 extern Sprite *hard;
 extern Sprite *quit;
 extern Sprite *start;
-Sprite **matrix;
-Sprite *index_1;
-Sprite *index_2;
-bool *index_1_bool;
-bool *index_2_bool;
-int matrix_id1 = -1; 
-int matrix_id2 = -1;
-
-
-bool check_match(int id1, int id2)
-{
-    if (id1 == id2)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-
-
-Sprite **alloc_matrix(int n,int m) 
-{ 
-    Sprite **mat = (Sprite**)malloc(sizeof(Sprite*)*m);
-    for(int i = 0; i < n; i++) { 
-        mat[i] = (Sprite*)malloc(sizeof(Sprite)*n);
-    }
-    return mat; 
-}
-
-void shuffle(Sprite *cards, int size)
-{
-    srand(time(NULL));
-    for (int i = size - 1; i >= 0; i--)
-    {
-        int j = rand() % (i + 1);
-        Sprite temp = cards[i];
-        cards[i] = cards[j];
-        cards[j] = temp;
-    }
-
-    matrix[0][0] = cards[0];
-    matrix[0][1] = cards[1];
-    matrix[1][0] = cards[2];
-    matrix[1][1] = cards[3];
-    // how can I compare the values  ?
-    //  Compare all elements in the matrix
-    for (int i = 0; i < 2; i++)
-    {
-        for (int j = 0; j < 2; j++)
-        {
-            // Compare the current element to all other elements in the matrix
-            for (int k = 0; k < 2; k++)
-            {
-                for (int l = 0; l < 2; l++)
-                {
-                    // If the current element is not being compared to itself and has the same id as another element,
-                    // print a message indicating that there is a match
-                    if (i != k || j != l)
-                    {
-                        if (matrix[i][j].id == matrix[k][l].id)
-                        {
-                            printf("Match found: matrix[%d][%d].id = %d and matrix[%d][%d].id = %d\n",
-                                   i, j, matrix[i][j].id, k, l, matrix[k][l].id);
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+extern bool button1Pressed;
+extern bool button2Pressed;
+extern bool button3Pressed;
+extern bool button4Pressed;
+extern uint8_t *main_frame_buffer;
+extern uint8_t *secondary_frame_buffer;
+extern uint8_t *drawing_frame_buffer;
+extern uint32_t frame_buffer_size;
 
 
 void process_button1(Sprite *cards, int size)
@@ -358,3 +302,4 @@ void draw_game_menu()
         menuState = END;
     }
 }
+

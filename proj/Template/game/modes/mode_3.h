@@ -1,9 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
+#include "menu.h"
+#include "view/view.h"
 
-#include "mode_3.c"
-
-
-
-void shuffle3(Sprite *cards);
+void draw_game_menu_2();
 void process_deck1();
 void process_deck2();
 void process_deck3();
@@ -20,6 +22,3 @@ void process_deck13();
 void process_deck14();
 void process_deck15();
 void process_deck16();
-bool check_match(int id1, int id2);
-Sprite **alloc_matrix(int n,int m);
-

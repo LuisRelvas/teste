@@ -1,22 +1,20 @@
 #include "mode_2.h"
 
 
-bool cardPressed1 = false;
-bool cardPressed2 = false;
-bool cardPressed3 = false;
-bool cardPressed4 = false;
-bool cardPressed5 = false;
-bool cardPressed6 = false;
-bool cardPressed7 = false;
-bool cardPressed8 = false;
-bool cardBlock1 = false;
-bool cardBlock2 = false;
-bool cardBlock3 = false;
-bool cardBlock4 = false;
-bool cardBlock5 = false;
-bool cardBlock6 = false;
-bool cardBlock7 = false;
-bool cardBlock8 = false;
+extern int pre1;
+extern Sprite **matrix;
+extern Sprite *index_1;
+extern Sprite *index_2;
+extern bool *index_1_bool;
+extern bool *index_2_bool;
+extern int matrix_id1; 
+extern int matrix_id2;
+extern int timer_interrupts;
+extern vbe_mode_info_t mode_info;
+extern MouseInfo mouse_info;
+extern real_time_info time_info;
+extern MenuState menuState;
+extern SystemState systemState;
 extern Sprite *mouse;
 extern Sprite *hand;
 extern Sprite *smile;
@@ -43,70 +41,20 @@ extern Sprite *medium;
 extern Sprite *hard;
 extern Sprite *quit;
 extern Sprite *start;
-int pre1 = 0;
-Sprite **matrix;
-Sprite *index_1;
-Sprite *index_2;
-bool *index_1_bool;
-bool *index_2_bool;
-int matrix_id1 = -1; 
-int matrix_id2 = -1;
+extern bool cardPressed1; 
+extern bool cardPressed2;
+extern bool cardPressed3;
+extern bool cardPressed4;
+extern bool cardPressed5;
+extern bool cardPressed6;
+extern bool cardPressed7;
+extern bool cardPressed8;
+extern uint8_t *main_frame_buffer;
+extern uint8_t *secondary_frame_buffer;
+extern uint8_t *drawing_frame_buffer;
+extern uint32_t frame_buffer_size;
 
 
-
-bool check_match(int id1, int id2)
-{
-    if (id1 == id2)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-
-
-Sprite **alloc_matrix(int n,int m) 
-{ 
-    Sprite **mat = (Sprite**)malloc(sizeof(Sprite*)*m);
-    for(int i = 0; i < n; i++) { 
-        mat[i] = (Sprite*)malloc(sizeof(Sprite)*n);
-    }
-    return mat; 
-}
-
-void shuffle2(Sprite *cards)
-{
-    int size = 8;
-
-    srand(time(NULL));
-    for (int i = size - 1; i >= 0; i--)
-    {
-        int j = rand() % (i + 1);
-        Sprite temp = cards[i];
-        cards[i] = cards[j];
-        cards[j] = temp;
-    }
-    matrix[0][0] = cards[0];
-    matrix[0][1] = cards[1];
-    matrix[0][2] = cards[2];
-    matrix[0][3] = cards[3];
-    matrix[1][0] = cards[4];
-    matrix[1][1] = cards[5];
-    matrix[1][2] = cards[6];
-    matrix[1][3] = cards[7];
-
-    // Printing the shuffled matrix
-    for (int i = 0; i < 2; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            printf("%d ", matrix[i][j].id);
-        }
-        printf("\n");
-    }
-}
 
 
 void process_cardPressed1()
@@ -552,5 +500,5 @@ void draw_game_menu_2()
         draw_finish_menu();
         menuState = END;
     }
-
 }
+

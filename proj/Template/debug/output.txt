@@ -1,14 +1,14 @@
-NOW: 2023/5/22 @9:57:33
-NOW: 2023/5/22 @9:57:34
-NOW: 2023/5/22 @9:57:35
-6 5 12 10 
-8 6 7 9 
-5 7 8 11 
-12 11 10 9 
+NOW: 2023/5/23 @9:37:1
+NOW: 2023/5/23 @9:37:2
+9 8 12 10 
+12 9 7 5 
+5 6 11 7 
+11 6 8 10 
 Entrei no botao 1
-The value of index_1 on button1 is 139313584
-The value of matrix_id1 on button1 is 10Entrei no botao 1
+The value of index_1 on button1 is 139293104
+The value of matrix_id1 on button1 is 8Entrei no botao 1
 Entrei no botao 1
+NOW: 2023/5/23 @9:37:3
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
@@ -41,74 +41,10 @@ Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
+The value of index_2 on button1 is 139292976
+The value of matrix_id2 on button1 is 11The value of the backPressed11 is 0NOW: 2023/5/23 @9:37:4
 Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-The value of index_2 on button1 is 139313456
-The value of matrix_id2 on button1 is 8The value of the backPressed11 is 0NOW: 2023/5/22 @9:57:36
-Entrei no botao 1
-The value of index_1 on button1 is 139313432
-The value of matrix_id1 on button1 is 7Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-NOW: 2023/5/22 @9:57:37
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-The value of index_2 on button1 is 139313304
-The value of matrix_id2 on button1 is 6The value of the backPressed6 is 0NOW: 2023/5/22 @9:57:38
-Entrei no botao 1
-The value of index_1 on button1 is 139313304
+The value of index_1 on button1 is 139293080
 The value of matrix_id1 on button1 is 6Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
@@ -137,10 +73,80 @@ Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
-The value of index_2 on button1 is 139313328
-The value of matrix_id2 on button1 is 7The value of the backPressed7 is 0NOW: 2023/5/22 @9:57:39
 Entrei no botao 1
-The value of index_1 on button1 is 139313328
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292952
+The value of matrix_id2 on button1 is 6NOW: 2023/5/23 @9:37:5
+Entrei no botao 1
+The value of index_1 on button1 is 139292824
+The value of matrix_id1 on button1 is 9Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/23 @9:37:6
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292848
+The value of matrix_id2 on button1 is 7The value of the backPressed7 is 0Entrei no botao 1
+The value of index_1 on button1 is 139292848
 The value of matrix_id1 on button1 is 7Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
@@ -164,6 +170,16 @@ Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
+NOW: 2023/5/23 @9:37:7
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292720
+The value of matrix_id2 on button1 is 12The value of the backPressed3 is 0Entrei no botao 1
+The value of index_1 on button1 is 139292696
+The value of matrix_id1 on button1 is 8Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
@@ -178,10 +194,174 @@ Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
-The value of index_2 on button1 is 139313352
-The value of matrix_id2 on button1 is 9The value of the backPressed8 is 0NOW: 2023/5/22 @9:57:40
 Entrei no botao 1
-The value of index_1 on button1 is 139313224
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/23 @9:37:8
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292976
+The value of matrix_id2 on button1 is 11The value of the backPressed11 is 0Entrei no botao 1
+The value of index_1 on button1 is 139292976
+The value of matrix_id1 on button1 is 11Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/23 @9:37:9
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139293104
+The value of matrix_id2 on button1 is 8Entrei no botao 1
+The value of index_1 on button1 is 139293104
+The value of matrix_id1 on button1 is 8Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292696
+The value of matrix_id2 on button1 is 8NOW: 2023/5/23 @9:37:10
+Entrei no botao 1
+The value of index_1 on button1 is 139293128
 The value of matrix_id1 on button1 is 10Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
@@ -215,7 +395,32 @@ Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
-NOW: 2023/5/22 @9:57:41
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/23 @9:37:11
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292848
+The value of matrix_id2 on button1 is 7The value of the backPressed7 is 0Entrei no botao 1
+The value of index_1 on button1 is 139292848
+The value of matrix_id1 on button1 is 7Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
@@ -231,9 +436,193 @@ Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
-The value of index_2 on button1 is 139313304
-The value of matrix_id2 on button1 is 6The value of the backPressed6 is 0Entrei no botao 1
-The value of index_1 on button1 is 139313176
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292872
+The value of matrix_id2 on button1 is 5The value of the backPressed8 is 0NOW: 2023/5/23 @9:37:12
+Entrei no botao 1
+The value of index_1 on button1 is 139292744
+The value of matrix_id1 on button1 is 10Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/23 @9:37:13
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292976
+The value of matrix_id2 on button1 is 11The value of the backPressed11 is 0Entrei no botao 1
+The value of index_1 on button1 is 139292976
+The value of matrix_id1 on button1 is 11Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139293128
+The value of matrix_id2 on button1 is 10The value of the backPressed16 is 0NOW: 2023/5/23 @9:37:14
+Entrei no botao 1
+The value of index_1 on button1 is 139293128
+The value of matrix_id1 on button1 is 10Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/23 @9:37:15
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292744
+The value of matrix_id2 on button1 is 10Entrei no botao 1
+The value of index_1 on button1 is 139292872
 The value of matrix_id1 on button1 is 5Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
@@ -250,23 +639,23 @@ Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
-NOW: 2023/5/22 @9:57:42
 Entrei no botao 1
 Entrei no botao 1
+NOW: 2023/5/23 @9:37:16
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
-The value of index_2 on button1 is 139313200
-The value of matrix_id2 on button1 is 12The value of the backPressed3 is 0Entrei no botao 1
-The value of index_1 on button1 is 139313152
-The value of matrix_id1 on button1 is 6Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
+The value of index_2 on button1 is 139292848
+The value of matrix_id2 on button1 is 7The value of the backPressed7 is 0Entrei no botao 1
+The value of index_1 on button1 is 139293000
+The value of matrix_id1 on button1 is 7Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
@@ -277,11 +666,11 @@ Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
-NOW: 2023/5/22 @9:57:43
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
+NOW: 2023/5/23 @9:37:17
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
@@ -324,117 +713,10 @@ Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
+The value of index_2 on button1 is 139292848
+The value of matrix_id2 on button1 is 7NOW: 2023/5/23 @9:37:18
 Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-The value of index_2 on button1 is 139313432
-The value of matrix_id2 on button1 is 7The value of the backPressed10 is 0NOW: 2023/5/22 @9:57:44
-Entrei no botao 1
-The value of index_1 on button1 is 139313304
-The value of matrix_id1 on button1 is 6Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-The value of index_2 on button1 is 139313432
-The value of matrix_id2 on button1 is 7The value of the backPressed10 is 0Entrei no botao 1
-The value of index_1 on button1 is 139313304
-The value of matrix_id1 on button1 is 6NOW: 2023/5/22 @9:57:45
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-The value of index_2 on button1 is 139313152
-The value of matrix_id2 on button1 is 6Entrei no botao 1
-The value of index_1 on button1 is 139313280
-The value of matrix_id1 on button1 is 8Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-NOW: 2023/5/22 @9:57:46
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-Entrei no botao 1
-The value of index_2 on button1 is 139313176
-The value of matrix_id2 on button1 is 5The value of the backPressed2 is 0NOW: 2023/5/22 @9:57:47
-Entrei no botao 1
-The value of index_1 on button1 is 139313200
+The value of index_1 on button1 is 139292720
 The value of matrix_id1 on button1 is 12Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
@@ -450,9 +732,214 @@ Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
-The value of index_2 on button1 is 139313328
-The value of matrix_id2 on button1 is 7The value of the backPressed7 is 0Entrei no botao 1
-The value of index_1 on button1 is 139313352
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292672
+The value of matrix_id2 on button1 is 9The value of the backPressed1 is 0NOW: 2023/5/23 @9:37:19
+Entrei no botao 1
+The value of index_1 on button1 is 139292800
+The value of matrix_id1 on button1 is 12Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292720
+The value of matrix_id2 on button1 is 12NOW: 2023/5/23 @9:37:20
+Entrei no botao 1
+The value of index_1 on button1 is 139292928
+The value of matrix_id1 on button1 is 5Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/23 @9:37:21
+Entrei no botao 1
+The value of index_2 on button1 is 139292824
+The value of matrix_id2 on button1 is 9The value of the backPressed6 is 0Entrei no botao 1
+The value of index_1 on button1 is 139293056
+The value of matrix_id1 on button1 is 11Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/23 @9:37:22
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292976
+The value of matrix_id2 on button1 is 11NOW: 2023/5/23 @9:37:23
+Entrei no botao 1
+The value of index_1 on button1 is 139292824
 The value of matrix_id1 on button1 is 9Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
@@ -468,5 +955,74 @@ Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
 Entrei no botao 1
-The value of index_2 on button1 is 139313224
-The value of matrix_id2 on button1 is 10The value of the backPressed4 is 0NOW: 2023/5/22 @9:57:48
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+The value of index_2 on button1 is 139292672
+The value of matrix_id2 on button1 is 9NOW: 2023/5/23 @9:37:24
+Entrei no botao 1
+The value of index_1 on button1 is 139292928
+The value of matrix_id1 on button1 is 5Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+Entrei no botao 1
+NOW: 2023/5/23 @9:37:25
+Entrei no botao 1
+The value of index_2 on button1 is 139292872
+The value of matrix_id2 on button1 is 5
