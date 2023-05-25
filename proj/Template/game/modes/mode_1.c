@@ -323,7 +323,26 @@ void draw_game_menu()
     Sprite *curr_frame = back_anim1;
     uint16_t x = 0;
     uint16_t y = 0;
-
+    if (button1Pressed)
+    {
+        x = 0;
+        y = 0;
+    }
+    if (button2Pressed)
+    {
+        x = mode_info.XResolution / 2;
+        y = 0;
+    }
+    if (button3Pressed)
+    {
+        x = 0;
+        y = mode_info.YResolution / 2;
+    }
+    if (button4Pressed)
+    {
+        x = mode_info.XResolution / 2;
+        y = mode_info.YResolution / 2;
+    }
     if (isAnimating)
     {
         switch (animationFrame)
@@ -340,26 +359,6 @@ void draw_game_menu()
         case 3:
             curr_frame = back_anim4;
             break;
-        }
-        if (button1Pressed)
-        {
-            x = 0;
-            y = 0;
-        }
-        if (button2Pressed)
-        {
-            x = mode_info.XResolution / 2;
-            y = 0;
-        }
-        if (button3Pressed)
-        {
-            x = 0;
-            y = mode_info.YResolution / 2;
-        }
-        if (button4Pressed)
-        {
-            x = mode_info.XResolution / 2;
-            y = mode_info.YResolution / 2;
         }
 
         draw_sprite_xpm(curr_frame, x, y);

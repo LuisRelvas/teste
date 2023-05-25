@@ -551,7 +551,46 @@ void draw_game_menu_2()
     Sprite *curr_frame = back_anim1;
     uint16_t x = 0;
     uint16_t y = 0;
-
+    if (cardPressed1)
+    {
+        x = 0;
+        y = 0;
+    }
+    if (cardPressed2)
+    {
+        x = mode_info.XResolution / 4;
+        y = 0;
+    }
+    if (cardPressed3)
+    {
+        x = mode_info.XResolution / 2;
+        y = 0;
+    }
+    if (cardPressed4)
+    {
+        x = 3 * mode_info.XResolution / 4;
+        y = 0;
+    }
+    if (cardPressed5)
+    {
+        x = 0;
+        y = mode_info.YResolution / 2;
+    }
+    if (cardPressed6)
+    {
+        x = mode_info.XResolution / 4;
+        y = mode_info.YResolution / 2;
+    }
+    if (cardPressed7)
+    {
+        x = mode_info.XResolution / 2;
+        y = mode_info.YResolution / 2;
+    }
+    if (cardPressed8)
+    {
+        x = 3 * mode_info.XResolution / 4;
+        y = mode_info.YResolution / 2;
+    }
     if (isAnimating)
     {
         switch (animationFrame)
@@ -568,46 +607,6 @@ void draw_game_menu_2()
         case 3:
             curr_frame = back_anim4;
             break;
-        }
-        if (cardPressed1)
-        {
-            x = 0;
-            y = 0;
-        }
-        if (cardPressed2)
-        {
-            x = mode_info.XResolution / 4;
-            y = 0;
-        }
-        if (cardPressed3)
-        {
-            x = mode_info.XResolution / 2;
-            y = 0;
-        }
-        if (cardPressed4)
-        {
-            x = 3 * mode_info.XResolution / 4;
-            y = 0;
-        }
-        if (cardPressed5)
-        {
-            x = 0;
-            y = mode_info.YResolution / 2;
-        }
-        if (cardPressed6)
-        {
-            x = mode_info.XResolution / 4;
-            y = mode_info.YResolution / 2;
-        }
-        if (cardPressed7)
-        {
-            x = mode_info.XResolution / 2;
-            y = mode_info.YResolution / 2;
-        }
-        if (cardPressed8)
-        {
-            x = 3 * mode_info.XResolution / 4;
-            y = mode_info.YResolution / 2;
         }
 
         draw_sprite_xpm(curr_frame, x, y);

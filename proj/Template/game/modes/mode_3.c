@@ -1015,6 +1015,86 @@ void draw_game_menu_3()
     Sprite *curr_frame = back_anim1;
     uint16_t x = 0;
     uint16_t y = 0;
+    if (backPressed1)
+    {
+        x = 0;
+        y = 0;
+    }
+    if (backPressed2)
+    {
+        x = mode_info.XResolution / 4;
+        y = 0;
+    }
+    if (backPressed3)
+    {
+        x = mode_info.XResolution / 2;
+        y = 0;
+    }
+    if (backPressed4)
+    {
+        x = 3 * mode_info.XResolution / 4;
+        y = 0;
+    }
+    if (backPressed5)
+    {
+        x = 0;
+        y = mode_info.YResolution / 4;
+    }
+    if (backPressed6)
+    {
+        x = mode_info.XResolution / 4;
+        y = mode_info.YResolution / 4;
+    }
+    if (backPressed7)
+    {
+        x = mode_info.XResolution / 2;
+        y = mode_info.YResolution / 4;
+    }
+    if (backPressed8)
+    {
+        x = 3 * mode_info.XResolution / 4;
+        y = mode_info.YResolution / 4;
+    }
+    if (backPressed9)
+    {
+        x = 0;
+        y = mode_info.YResolution / 2;
+    }
+    if (backPressed10)
+    {
+        x = mode_info.XResolution / 4;
+        y = mode_info.YResolution / 2;
+    }
+    if (backPressed11)
+    {
+        x = mode_info.XResolution / 2;
+        y = mode_info.YResolution / 2;
+    }
+    if (backPressed12)
+    {
+        x = 3 * mode_info.XResolution / 4;
+        y = mode_info.YResolution / 2;
+    }
+    if (backPressed13)
+    {
+        x = 0;
+        y = 3 * mode_info.YResolution / 4;
+    }
+    if (backPressed14)
+    {
+        x = mode_info.XResolution / 4;
+        y = 3 * mode_info.YResolution / 4;
+    }
+    if (backPressed15)
+    {
+        x = mode_info.XResolution / 2;
+        y = 3 * mode_info.YResolution / 4;
+    }
+    if (backPressed16)
+    {
+        x = 3 * mode_info.XResolution / 4;
+        y = 3 * mode_info.YResolution / 4;
+    }
 
     if (isAnimating)
     {
@@ -1032,86 +1112,6 @@ void draw_game_menu_3()
         case 3:
             curr_frame = back_anim4;
             break;
-        }
-        if (backPressed1)
-        {
-            x = 0;
-            y = 0;
-        }
-        if (backPressed2)
-        {
-            x = mode_info.XResolution / 4;
-            y = 0;
-        }
-        if (backPressed3)
-        {
-            x = mode_info.XResolution / 2;
-            y = 0;
-        }
-        if (backPressed4)
-        {
-            x = 3 * mode_info.XResolution / 4;
-            y = 0;
-        }
-        if (backPressed5)
-        {
-            x = 0;
-            y = mode_info.YResolution / 4;
-        }
-        if (backPressed6)
-        {
-            x = mode_info.XResolution / 4;
-            y = mode_info.YResolution / 4;
-        }
-        if (backPressed7)
-        {
-            x = mode_info.XResolution / 2;
-            y = mode_info.YResolution / 4;
-        }
-        if (backPressed8)
-        {
-            x = 3 * mode_info.XResolution / 4;
-            y = mode_info.YResolution / 4;
-        }
-        if (backPressed9)
-        {
-            x = 0;
-            y = mode_info.YResolution / 2;
-        }
-        if (backPressed10)
-        {
-            x = mode_info.XResolution / 4;
-            y = mode_info.YResolution / 2;
-        }
-        if (backPressed11)
-        {
-            x = mode_info.XResolution / 2;
-            y = mode_info.YResolution / 2;
-        }
-        if (backPressed12)
-        {
-            x = 3 * mode_info.XResolution / 4;
-            y = mode_info.YResolution / 2;
-        }
-        if (backPressed13)
-        {
-            x = 0;
-            y = 3 * mode_info.YResolution / 4;
-        }
-        if (backPressed14)
-        {
-            x = mode_info.XResolution / 4;
-            y = 3 * mode_info.YResolution / 4;
-        }
-        if (backPressed15)
-        {
-            x = mode_info.XResolution / 2;
-            y = 3 * mode_info.YResolution / 4;
-        }
-        if (backPressed16)
-        {
-            x = 3 * mode_info.XResolution / 4;
-            y = 3 * mode_info.YResolution / 4;
         }
 
         draw_sprite_xpm(curr_frame, x, y);
