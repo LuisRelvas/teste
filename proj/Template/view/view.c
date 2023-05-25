@@ -886,7 +886,6 @@ void animation_trigger(Sprite *card, int x, int y)
     {
     case 0:
         draw_sprite_xpm(back, x, y);
-        card->state++;
         break;
     case 1:
         draw_sprite_xpm(back_anim1, x, y);

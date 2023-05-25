@@ -61,7 +61,6 @@ void process_button1(Sprite *cards, int size)
         {
             printf("BOTAO 1 CLICK\n");
             button1Pressed = true;
-            index_1->state = 1;
         }
     }
     if (button1Pressed)
@@ -72,6 +71,7 @@ void process_button1(Sprite *cards, int size)
             matrix_id1 = matrix[0][0].id;
             index_1_bool = &button1Pressed;
             index_1 = &matrix[0][0];
+            index_1->state = 1;
             printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
@@ -264,7 +264,7 @@ void draw_game_menu()
     }
 
     memset(drawing_frame_buffer, 0, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
-    animation_trigger(number1, 0, 0);
+    animation_trigger(&matrix[0][0], 0, 0);
     draw_sprite_xpm(back2, mode_info.XResolution / 2, 0);
     draw_sprite_xpm(back3, 0, mode_info.YResolution / 2);
     draw_sprite_xpm(back4, mode_info.XResolution / 2, mode_info.YResolution / 2);
