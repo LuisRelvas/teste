@@ -74,7 +74,7 @@ void process_deck1()
         if (mouse_info.left_click)
         {
             backPressed1 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed1)
@@ -122,7 +122,7 @@ void process_deck2()
         if (mouse_info.left_click)
         {
             backPressed2 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed2)
@@ -170,7 +170,7 @@ void process_deck3()
         if (mouse_info.left_click)
         {
             backPressed3 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed3)
@@ -218,7 +218,7 @@ void process_deck4()
         if (mouse_info.left_click)
         {
             backPressed4 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed4)
@@ -266,7 +266,7 @@ void process_deck5()
         if (mouse_info.left_click)
         {
             backPressed5 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed5)
@@ -314,7 +314,7 @@ void process_deck6()
         if (mouse_info.left_click)
         {
             backPressed6 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed6)
@@ -362,7 +362,7 @@ void process_deck7()
         if (mouse_info.left_click)
         {
             backPressed7 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed7)
@@ -410,7 +410,7 @@ void process_deck8()
         if (mouse_info.left_click)
         {
             backPressed8 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed8)
@@ -458,7 +458,7 @@ void process_deck9()
         if (mouse_info.left_click)
         {
             backPressed9 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed9)
@@ -506,7 +506,7 @@ void process_deck10()
         if (mouse_info.left_click)
         {
             backPressed10 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed10)
@@ -554,7 +554,7 @@ void process_deck11()
         if (mouse_info.left_click)
         {
             backPressed11 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed11)
@@ -602,7 +602,7 @@ void process_deck12()
         if (mouse_info.left_click)
         {
             backPressed12 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed12)
@@ -650,7 +650,7 @@ void process_deck13()
         if (mouse_info.left_click)
         {
             backPressed13 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed13)
@@ -698,7 +698,7 @@ void process_deck14()
         if (mouse_info.left_click)
         {
             backPressed14 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed14)
@@ -746,7 +746,7 @@ void process_deck15()
         if (mouse_info.left_click)
         {
             backPressed15 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed15)
@@ -793,7 +793,7 @@ void process_deck16()
         if (mouse_info.left_click)
         {
             backPressed16 = true;
-            animation_trigger();
+            
         }
     }
     if (backPressed16)

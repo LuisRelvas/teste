@@ -8,6 +8,7 @@ MenuState menuState = START;
 extern MouseInfo mouse_info;
 extern vbe_mode_info_t mode_info;
 extern real_time_info time_info;
+int gameplayCounter = 200;
 
 // Objetos a construir e manipular com a mudança de estados
 Sprite *mouse;
@@ -124,6 +125,11 @@ void update_timer_state()
     if (DOUBLE_BUFFER)
         swap_buffers();
     timer_interrupts++;
+    if (timer_interrupts % 60 == 0 && (menuState == GAME || menuState == GAME_2 || menuState == GAME_3 || menuState == GAME_4_2))
+    {
+        gameplayCounter--;
+        printf("Counter: %d\n", gameplayCounter);
+    }
 }
 
 // Como o Real Time Clock é um módulo mais pesado,

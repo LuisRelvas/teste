@@ -880,12 +880,32 @@ void draw_xpm_draw_buffer(xpm_map_t xpm, uint16_t x, uint16_t y)
     return;
 }
 
-void animation_trigger()
+void animation_trigger(Sprite *card, int x, int y)
 {
-    if (!isAnimating)
+    switch (card->state)
     {
-        // Start the animation
-        animationFrame = 0;
-        isAnimating = true;
+    case 0:
+        draw_sprite_xpm(back, x, y);
+        card->state++;
+        break;
+    case 1:
+        draw_sprite_xpm(back_anim1, x, y);
+        card->state++;
+        break;
+    case 2:
+        draw_sprite_xpm(back_anim2, x, y);
+        card->state++;
+        break;
+    case 3:
+        draw_sprite_xpm(back_anim3, x, y);
+        card->state++;
+        break;
+    case 4:
+        draw_sprite_xpm(back_anim4, x, y);
+        card->state++;
+        break;
+    case 5:
+        draw_sprite_xpm(card, x, y);
+        break;
     }
 }

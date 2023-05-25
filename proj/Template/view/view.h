@@ -37,6 +37,6 @@ void draw_game_menu_game_2();
 void draw_game_menu_game_4();
 void draw_game_menu_game_3();
 void draw_card_animation(uint16_t x, uint16_t y);
-void animation_trigger();
+void animation_trigger(Sprite *card, int x, int y);
 
 #endif

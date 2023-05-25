@@ -48,8 +48,6 @@ extern uint8_t *main_frame_buffer;
 extern uint8_t *secondary_frame_buffer;
 extern uint8_t *drawing_frame_buffer;
 extern uint32_t frame_buffer_size;
-extern bool isAnimating;
-extern int animationFrame;
 extern Sprite *back_anim1;
 extern Sprite *back_anim2;
 extern Sprite *back_anim3;
@@ -63,12 +61,11 @@ void process_button1(Sprite *cards, int size)
         {
             printf("BOTAO 1 CLICK\n");
             button1Pressed = true;
-            animation_trigger();
+            index_1->state = 1;
         }
     }
     if (button1Pressed)
     {
-        draw_sprite_xpm(&matrix[0][0], 0, 0);
         printf("Entrei no botao 1\n");
         if (matrix_id1 == -1)
         {
@@ -112,7 +109,6 @@ void process_button2(Sprite *cards, int size)
         if (mouse_info.left_click)
         {
             button2Pressed = true;
-            animation_trigger();
         }
     }
 
@@ -162,7 +158,6 @@ void process_button3(Sprite *cards, int size)
         if (mouse_info.left_click)
         {
             button3Pressed = true;
-            animation_trigger();
         }
     }
     if (button3Pressed)
@@ -211,7 +206,6 @@ void process_button4(Sprite *cards, int size)
         if (mouse_info.left_click)
         {
             button4Pressed = true;
-            animation_trigger();
         }
     }
     if (button4Pressed)
@@ -254,8 +248,6 @@ void process_button4(Sprite *cards, int size)
 
 void draw_game_menu()
 {
-
-    Sprite *back1 = back;
     Sprite *back2 = back;
     Sprite *back3 = back;
     Sprite *back4 = back;
@@ -272,7 +264,7 @@ void draw_game_menu()
     }
 
     memset(drawing_frame_buffer, 0, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
-    draw_sprite_xpm(back1, 0, 0);
+    animation_trigger(number1, 0, 0);
     draw_sprite_xpm(back2, mode_info.XResolution / 2, 0);
     draw_sprite_xpm(back3, 0, mode_info.YResolution / 2);
     draw_sprite_xpm(back4, mode_info.XResolution / 2, mode_info.YResolution / 2);
@@ -319,58 +311,5 @@ void draw_game_menu()
     if (matrix[0][0].block == true && matrix[0][1].block == true && matrix[1][0].block == true && matrix[1][1].block == true)
     {
         menuState = END;
-    }
-    Sprite *curr_frame = back_anim1;
-    uint16_t x = 0;
-    uint16_t y = 0;
-    if (button1Pressed)
-    {
-        x = 0;
-        y = 0;
-    }
-    if (button2Pressed)
-    {
-        x = mode_info.XResolution / 2;
-        y = 0;
-    }
-    if (button3Pressed)
-    {
-        x = 0;
-        y = mode_info.YResolution / 2;
-    }
-    if (button4Pressed)
-    {
-        x = mode_info.XResolution / 2;
-        y = mode_info.YResolution / 2;
-    }
-    if (isAnimating)
-    {
-        switch (animationFrame)
-        {
-        case 0:
-            curr_frame = back_anim1;
-            break;
-        case 1:
-            curr_frame = back_anim2;
-            break;
-        case 2:
-            curr_frame = back_anim3;
-            break;
-        case 3:
-            curr_frame = back_anim4;
-            break;
-        }
-
-        draw_sprite_xpm(curr_frame, x, y);
-
-        // Increment animation frame
-        animationFrame++;
-
-        // Check if reached the end of the animation frames
-        if (animationFrame == 3)
-        {
-            isAnimating = false; // Animation finished, reset the animation state
-            // Perform any additional actions after the animation finishes
-        }
     }
 }

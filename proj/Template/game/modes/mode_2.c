@@ -66,7 +66,6 @@ void process_cardPressed1()
         if (mouse_info.left_click)
         {
             cardPressed1 = true;
-            animation_trigger();
         }
     }
     if (cardPressed1)
@@ -114,7 +113,6 @@ void process_cardPressed2()
         if (mouse_info.left_click)
         {
             cardPressed2 = true;
-            animation_trigger();
         }
     }
     if (cardPressed2)
@@ -164,7 +162,6 @@ void process_cardPressed3()
         if (mouse_info.left_click)
         {
             cardPressed3 = true;
-            animation_trigger();
         }
     }
     if (cardPressed3)
@@ -214,7 +211,6 @@ void process_cardPressed4()
         if (mouse_info.left_click)
         {
             cardPressed4 = true;
-            animation_trigger();
         }
     }
     if (cardPressed4)
@@ -263,7 +259,6 @@ void process_cardPressed5()
         if (mouse_info.left_click)
         {
             cardPressed5 = true;
-            animation_trigger();
         }
     }
     if (cardPressed5)
@@ -312,7 +307,6 @@ void process_cardPressed6()
         if (mouse_info.left_click)
         {
             cardPressed6 = true;
-            animation_trigger();
         }
     }
     if (cardPressed6)
@@ -361,7 +355,6 @@ void process_cardPressed7()
         if (mouse_info.left_click)
         {
             cardPressed7 = true;
-            animation_trigger();
         }
     }
     if (cardPressed7)
@@ -410,7 +403,6 @@ void process_cardPressed8()
         if (mouse_info.left_click)
         {
             cardPressed8 = true;
-            animation_trigger();
         }
     }
     if (cardPressed8)
