@@ -80,6 +80,7 @@ void process_button1(Sprite *cards, int size)
             matrix_id2 = matrix[0][0].id;
             index_2_bool = &button1Pressed;
             index_2 = &matrix[0][0];
+            index_2->state = 1;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
@@ -94,6 +95,9 @@ void process_button1(Sprite *cards, int size)
             {
                 *index_2_bool = false;
                 *index_1_bool = false;
+                index_1->state = 0;
+                index_2->state = 0;
+
                 printf("The value of the button1Pressed is %d", button1Pressed);
             }
             matrix_id1 = -1;
@@ -114,13 +118,13 @@ void process_button2(Sprite *cards, int size)
 
     if (button2Pressed)
     {
-        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 2, 0);
         printf("ENTREI NO BOTAO 2\n");
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[0][1].id;
             index_1_bool = &button2Pressed;
             index_1 = &matrix[0][1];
+            index_1->state = 1;
             printf("The value of index_1 on button2 is %d\n", index_1);
             printf("The value of matrix_id1 on  button2 is %d\n", matrix_id1);
         }
@@ -129,6 +133,7 @@ void process_button2(Sprite *cards, int size)
             matrix_id2 = matrix[0][1].id;
             index_2_bool = &button2Pressed;
             index_2 = &matrix[0][1];
+            index_2->state = 1;
             printf("The value of index_2 on button2 is %d\n", index_2);
             printf("The value of matrix_id2 on  button2 is %d\n", matrix_id2);
         }
@@ -143,6 +148,8 @@ void process_button2(Sprite *cards, int size)
             {
                 *index_2_bool = false;
                 *index_1_bool = false;
+                index_1->state = 0;
+                index_2->state = 0;
             }
 
             matrix_id1 = -1;
@@ -162,13 +169,13 @@ void process_button3(Sprite *cards, int size)
     }
     if (button3Pressed)
     {
-        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
         printf("ENTREI NO BOTAO 3\n");
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[1][0].id;
             index_1_bool = &button3Pressed;
             index_1 = &matrix[1][0];
+            index_1->state = 1;
             printf("The value of index_1 on button3 is %d\n", index_1);
             printf("The value of matrix_id1 on button3 is %d\n", matrix_id1);
         }
@@ -178,6 +185,7 @@ void process_button3(Sprite *cards, int size)
             matrix_id2 = matrix[1][0].id;
             index_2_bool = &button3Pressed;
             index_2 = &matrix[1][0];
+            index_2->state = 1;
             printf("The value of index_2 on button3 is %d\n", index_2);
             printf("The value of matrix_id2 on button3 is %d\n", matrix_id2);
         }
@@ -192,6 +200,8 @@ void process_button3(Sprite *cards, int size)
             {
                 *index_2_bool = false;
                 *index_1_bool = false;
+                index_1->state = 0;
+                index_2->state = 0;
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
@@ -210,13 +220,13 @@ void process_button4(Sprite *cards, int size)
     }
     if (button4Pressed)
     {
-        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 2, mode_info.YResolution / 2);
         printf("ENTREI NO BOTAO 4\n");
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[1][1].id;
             index_1_bool = &button4Pressed;
             index_1 = &matrix[1][1];
+            index_1->state = 1;
             printf("The value of index_1 on button4 is %d\n", index_1);
             printf("The value of matrix_id1 on button4 is %d\n", matrix_id1);
         }
@@ -225,6 +235,7 @@ void process_button4(Sprite *cards, int size)
             matrix_id2 = matrix[1][1].id;
             index_2_bool = &button4Pressed;
             index_2 = &matrix[1][1];
+            index_2->state = 1;
             printf("The value of index_2 on button4 is %d\n", index_2);
             printf("The value of matrix_id2 on button4 is %d\n", matrix_id2);
         }
@@ -248,9 +259,6 @@ void process_button4(Sprite *cards, int size)
 
 void draw_game_menu()
 {
-    Sprite *back2 = back;
-    Sprite *back3 = back;
-    Sprite *back4 = back;
 
     Sprite cards[] = {*number1, *number1, *number2, *number2};
     int j = sizeof(cards) / sizeof(cards[0]);
@@ -265,9 +273,9 @@ void draw_game_menu()
 
     memset(drawing_frame_buffer, 0, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
     animation_trigger(&matrix[0][0], 0, 0);
-    draw_sprite_xpm(back2, mode_info.XResolution / 2, 0);
-    draw_sprite_xpm(back3, 0, mode_info.YResolution / 2);
-    draw_sprite_xpm(back4, mode_info.XResolution / 2, mode_info.YResolution / 2);
+    animation_trigger(&matrix[0][1], mode_info.XResolution / 2, 0);
+    animation_trigger(&matrix[1][0], 0, mode_info.YResolution / 2);
+    animation_trigger(&matrix[1][1], mode_info.XResolution / 2, mode_info.YResolution / 2);
 
     printf("matrix: %d\n", matrix_id1);
 
@@ -278,7 +286,7 @@ void draw_game_menu()
     if (matrix[0][0].block == true)
     {
         printf("CONSEGUIU BLOQUEAR");
-        draw_sprite_xpm(&matrix[0][0], 0, 0);
+        matrix[0][0].state = 5;
     }
 
     if (matrix[0][1].block == false)
@@ -288,7 +296,7 @@ void draw_game_menu()
     else if (matrix[0][1].block == true)
     {
         printf("CONSEGUIU BLOQUEAR");
-        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 2, 0);
+        matrix[0][1].state = 5;
     }
     if (matrix[1][0].block == false)
     {
@@ -297,7 +305,7 @@ void draw_game_menu()
     else if (matrix[1][0].block == true)
     {
         printf("CONSEGUIU BLOQUEAR");
-        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
+        matrix[1][0].state = 5;
     }
     if (matrix[1][1].block == false)
     {
@@ -306,7 +314,7 @@ void draw_game_menu()
     else if (matrix[1][1].block == true)
     {
         printf("CONSEGUIU BLOQUEAR");
-        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 2, mode_info.YResolution / 2);
+        matrix[1][1].state = 5;
     }
     if (matrix[0][0].block == true && matrix[0][1].block == true && matrix[1][0].block == true && matrix[1][1].block == true)
     {

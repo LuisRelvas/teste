@@ -1,11 +1,378 @@
-NOW: 2023/5/25 @16:53:9
-NOW: 2023/5/25 @16:53:10
-Match found: matrix[0][0].id = 5 and matrix[1][0].id = 5
-Match found: matrix[0][1].id = 6 and matrix[1][1].id = 6
-Match found: matrix[1][0].id = 5 and matrix[0][0].id = 5
-Match found: matrix[1][1].id = 6 and matrix[0][1].id = 6
+NOW: 2023/5/25 @17:47:26
+NOW: 2023/5/25 @17:47:27
+Match found: matrix[0][0].id = 6 and matrix[1][0].id = 6
+Match found: matrix[0][1].id = 5 and matrix[1][1].id = 5
+Match found: matrix[1][0].id = 6 and matrix[0][0].id = 6
+Match found: matrix[1][1].id = 5 and matrix[0][1].id = 5
 matrix allocated
 ,137716352matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+Counter: 199
+NOW: 2023/5/25 @17:47:28
+matrix: -1
+matrix: -1
+matrix: -1
+BOTAO 1 CLICK
+Entrei no botao 1
+The value of index_1 on button1 is 139296768
+The value of matrix_id1 on button1 is 6matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+Counter: 198
+NOW: 2023/5/25 @17:47:29
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+ENTREI NO BOTAO 4
+The value of index_2 on button4 is 139296860
+The value of matrix_id2 on button4 is 5
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+Counter: 197
+NOW: 2023/5/25 @17:47:30
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
+BOTAO 1 CLICK
+Entrei no botao 1
+The value of index_1 on button1 is 139296768
+The value of matrix_id1 on button1 is 6matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+Counter: 196
+NOW: 2023/5/25 @17:47:31
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+matrix: 6
+Entrei no botao 1
+ENTREI NO BOTAO 2
+The value of index_2 on button2 is 139296796
+The value of matrix_id2 on  button2 is 5
+matrix: -1
+matrix: -1
+matrix: -1
+matrix: -1
 matrix: -1
 matrix: -1
 matrix: -1
@@ -58,959 +425,406 @@ matrix: -1
 BOTAO 1 CLICK
 Entrei no botao 1
 The value of index_1 on button1 is 139296768
-The value of matrix_id1 on button1 is 5matrix: 5
+The value of matrix_id1 on button1 is 6matrix: 6
 Entrei no botao 1
-Counter: 199
-NOW: 2023/5/25 @16:53:11
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-Counter: 198
-matrix: 5
-Entrei no botao 1
-NOW: 2023/5/25 @16:53:12
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-matrix: 5
-Entrei no botao 1
-Counter: 197
-NOW: 2023/5/25 @16:53:13
-matrix: 5
-Entrei no botao 1
-ENTREI NO BOTAO 4
-The value of index_2 on button4 is 139296860
-The value of matrix_id2 on button4 is 6
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-Counter: 196
-matrix: -1
-NOW: 2023/5/25 @16:53:14
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-ENTREI NO BOTAO 4
-The value of index_1 on button4 is 139296860
-The value of matrix_id1 on button4 is 6
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 Counter: 195
+NOW: 2023/5/25 @17:47:32
 matrix: 6
-ENTREI NO BOTAO 4
-NOW: 2023/5/25 @16:53:15
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
+Entrei no botao 1
 matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-Counter: 194
-NOW: 2023/5/25 @16:53:16
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
-ENTREI NO BOTAO 4
-matrix: 6
+Entrei no botao 1
 ENTREI NO BOTAO 3
 The value of index_2 on button3 is 139296832
-The value of matrix_id2 on button3 is 5
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-Counter: 193
-matrix: -1
-NOW: 2023/5/25 @16:53:17
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-ENTREI NO BOTAO 3
-The value of index_1 on button3 is 139296832
-The value of matrix_id1 on button3 is 5
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-Counter: 192
-matrix: 5
-ENTREI NO BOTAO 3
-NOW: 2023/5/25 @16:53:18
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 3
-matrix: 5
-ENTREI NO BOTAO 2
-The value of index_2 on button2 is 139296796
-The value of matrix_id2 on  button2 is 6
-matrix: -1
-Counter: 191
-matrix: -1
-NOW: 2023/5/25 @16:53:19
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-matrix: -1
-ENTREI NO BOTAO 2
+The value of matrix_id2 on button3 is 6
+matrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARCounter: 194
+NOW: 2023/5/25 @17:47:33
+matrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 The value of index_1 on button2 is 139296796
-The value of matrix_id1 on  button2 is 6
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-Counter: 190
-matrix: 6
-ENTREI NO BOTAO 2
-NOW: 2023/5/25 @16:53:20
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-matrix: 6
-ENTREI NO BOTAO 2
-ENTREI NO BOTAO 4
-The value of index_2 on button4 is 139296860
-The value of matrix_id2 on button4 is 6
-matrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARmatrix: -1
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
-The value of index_1 on button3 is 139296832
-The value of matrix_id1 on button3 is 5
-CONSEGUIU BLOQUEARCounter: 189
-NOW: 2023/5/25 @16:53:21
+The value of matrix_id1 on  button2 is 5
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARCounter: 193
+NOW: 2023/5/25 @17:47:34
 matrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-CONSEGUIU BLOQUEARENTREI NO BOTAO 3
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
 CONSEGUIU BLOQUEARmatrix: 5
-BOTAO 1 CLICK
-Entrei no botao 1
-The value of index_2 on button1 is 139296768
-The value of matrix_id2 on button1 is 5CONSEGUIU BLOQUEARCONSEGUIU BLOQUEARCONSEGUIU BLOQUEARCONSEGUIU BLOQUEAR
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARmatrix: 5
+CONSEGUIU BLOQUEARENTREI NO BOTAO 2
+CONSEGUIU BLOQUEARENTREI NO BOTAO 4
+The value of index_2 on button4 is 139296860
+The value of matrix_id2 on button4 is 5
+NOW: 2023/5/25 @17:47:36
+NOW: 2023/5/25 @17:47:37
+NOW: 2023/5/25 @17:47:38
+NOW: 2023/5/25 @17:47:39
+NOW: 2023/5/25 @17:47:40
+NOW: 2023/5/25 @17:47:41
+NOW: 2023/5/25 @17:47:42
+NOW: 2023/5/25 @17:47:43
+NOW: 2023/5/25 @17:47:44
+NOW: 2023/5/25 @17:47:45
+NOW: 2023/5/25 @17:47:46
+NOW: 2023/5/25 @17:47:47
+NOW: 2023/5/25 @17:47:48
+NOW: 2023/5/25 @17:47:49
+NOW: 2023/5/25 @17:47:50
+NOW: 2023/5/25 @17:47:51
+NOW: 2023/5/25 @17:47:52
+NOW: 2023/5/25 @17:47:53
+NOW: 2023/5/25 @17:47:54
+NOW: 2023/5/25 @17:47:55
+NOW: 2023/5/25 @17:47:56
+NOW: 2023/5/25 @17:47:57
+NOW: 2023/5/25 @17:47:58
+NOW: 2023/5/25 @17:47:59
+NOW: 2023/5/25 @17:48:0
+NOW: 2023/5/25 @17:48:1
+NOW: 2023/5/25 @17:48:2
+NOW: 2023/5/25 @17:48:3
+NOW: 2023/5/25 @17:48:4
+NOW: 2023/5/25 @17:48:5
+NOW: 2023/5/25 @17:48:6
+NOW: 2023/5/25 @17:48:7
+NOW: 2023/5/25 @17:48:8
+NOW: 2023/5/25 @17:48:9
+NOW: 2023/5/25 @17:48:10
+NOW: 2023/5/25 @17:48:11
+NOW: 2023/5/25 @17:48:12
+NOW: 2023/5/25 @17:48:13
+NOW: 2023/5/25 @17:48:14
+NOW: 2023/5/25 @17:48:15
+NOW: 2023/5/25 @17:48:16
+NOW: 2023/5/25 @17:48:17
+NOW: 2023/5/25 @17:48:18
+NOW: 2023/5/25 @17:48:19
+NOW: 2023/5/25 @17:48:20
+NOW: 2023/5/25 @17:48:21
+NOW: 2023/5/25 @17:48:22
+NOW: 2023/5/25 @17:48:23
+NOW: 2023/5/25 @17:48:24
+NOW: 2023/5/25 @17:48:25
+NOW: 2023/5/25 @17:48:26
+NOW: 2023/5/25 @17:48:27
+NOW: 2023/5/25 @17:48:28
+NOW: 2023/5/25 @17:48:29
+NOW: 2023/5/25 @17:48:30
+NOW: 2023/5/25 @17:48:31
+NOW: 2023/5/25 @17:48:32
+NOW: 2023/5/25 @17:48:33
+NOW: 2023/5/25 @17:48:34
+NOW: 2023/5/25 @17:48:35
+NOW: 2023/5/25 @17:48:36
+NOW: 2023/5/25 @17:48:37
+NOW: 2023/5/25 @17:48:38
+NOW: 2023/5/25 @17:48:39
+NOW: 2023/5/25 @17:48:40
+NOW: 2023/5/25 @17:48:41
+NOW: 2023/5/25 @17:48:42
+NOW: 2023/5/25 @17:48:43
+NOW: 2023/5/25 @17:48:44
+NOW: 2023/5/25 @17:48:45
+NOW: 2023/5/25 @17:48:46
+NOW: 2023/5/25 @17:48:47
+NOW: 2023/5/25 @17:48:48
+NOW: 2023/5/25 @17:48:49
+NOW: 2023/5/25 @17:48:50
+NOW: 2023/5/25 @17:48:51
+NOW: 2023/5/25 @17:48:52
+NOW: 2023/5/25 @17:48:53
+NOW: 2023/5/25 @17:48:54
+NOW: 2023/5/25 @17:48:55
+NOW: 2023/5/25 @17:48:56
+NOW: 2023/5/25 @17:48:57
+NOW: 2023/5/25 @17:48:58
+NOW: 2023/5/25 @17:48:59
+NOW: 2023/5/25 @17:49:0
+NOW: 2023/5/25 @17:49:1
+NOW: 2023/5/25 @17:49:2
+NOW: 2023/5/25 @17:49:3
+NOW: 2023/5/25 @17:49:4
+NOW: 2023/5/25 @17:49:5
+NOW: 2023/5/25 @17:49:6
+NOW: 2023/5/25 @17:49:7
+NOW: 2023/5/25 @17:49:8
+NOW: 2023/5/25 @17:49:9
+NOW: 2023/5/25 @17:49:10
+NOW: 2023/5/25 @17:49:11
+NOW: 2023/5/25 @17:49:12
+NOW: 2023/5/25 @17:49:13
+NOW: 2023/5/25 @17:49:14
+NOW: 2023/5/25 @17:49:15
+NOW: 2023/5/25 @17:49:16
+NOW: 2023/5/25 @17:49:17
+NOW: 2023/5/25 @17:49:18
+NOW: 2023/5/25 @17:49:19
+NOW: 2023/5/25 @17:49:20
+NOW: 2023/5/25 @17:49:21
+NOW: 2023/5/25 @17:49:22
+NOW: 2023/5/25 @17:49:23
+NOW: 2023/5/25 @17:49:24
+NOW: 2023/5/25 @17:49:25
+NOW: 2023/5/25 @17:49:26
+NOW: 2023/5/25 @17:49:27
+NOW: 2023/5/25 @17:49:28
+NOW: 2023/5/25 @17:49:29
+NOW: 2023/5/25 @17:49:30
+NOW: 2023/5/25 @17:49:31
+NOW: 2023/5/25 @17:49:32
+NOW: 2023/5/25 @17:49:33
+NOW: 2023/5/25 @17:49:34
+NOW: 2023/5/25 @17:49:35
+NOW: 2023/5/25 @17:49:36
+NOW: 2023/5/25 @17:49:37
+NOW: 2023/5/25 @17:49:38
+NOW: 2023/5/25 @17:49:39
+NOW: 2023/5/25 @17:49:40
+NOW: 2023/5/25 @17:49:41
+NOW: 2023/5/25 @17:49:42
+NOW: 2023/5/25 @17:49:43
+NOW: 2023/5/25 @17:49:44
+NOW: 2023/5/25 @17:49:45
+NOW: 2023/5/25 @17:49:46
+NOW: 2023/5/25 @17:49:47
+NOW: 2023/5/25 @17:49:48
+NOW: 2023/5/25 @17:49:49
+NOW: 2023/5/25 @17:49:50
+NOW: 2023/5/25 @17:49:51
+NOW: 2023/5/25 @17:49:52
+NOW: 2023/5/25 @17:49:53
+NOW: 2023/5/25 @17:49:54
+NOW: 2023/5/25 @17:49:55
+NOW: 2023/5/25 @17:49:56
+NOW: 2023/5/25 @17:49:57
+NOW: 2023/5/25 @17:49:58
+NOW: 2023/5/25 @17:49:59
+NOW: 2023/5/25 @17:50:0
