@@ -885,26 +885,34 @@ void animation_trigger(Sprite *card, int x, int y)
     switch (card->state)
     {
     case 0:
+        printf("VOLTADA PARA BAIXO \n");
         draw_sprite_xpm(back, x, y);
         break;
     case 1:
+        printf("VOLTADA PARA 1 \n");
         draw_sprite_xpm(back_anim1, x, y);
-        card->state++;
+        card->state = 2;
         break;
-    case 2:
-        draw_sprite_xpm(back_anim2, x, y);
-        card->state++;
+    case 2: 
+        printf("VOLTADA PARA 2 \n");
+        draw_sprite_xpm(back_anim3, x, y);
+        card->state = 3;
         break;
     case 3:
-        draw_sprite_xpm(back_anim3, x, y);
-        card->state++;
+        printf("VOLTADA PARA 3 \n");
+        draw_sprite_xpm(back_anim2, x, y);
+        card->state = 4;
         break;
     case 4:
+        printf("VOLTADA PARA 4 \n");
         draw_sprite_xpm(back_anim4, x, y);
-        card->state++;
+        card->state = 5;
         break;
-    case 5:
+    case 5: 
+        printf("VOLTADA PARA 5 \n");
         draw_sprite_xpm(card, x, y);
         break;
     }
+
 }
+
