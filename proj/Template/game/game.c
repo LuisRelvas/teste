@@ -440,6 +440,8 @@ bool check_match(int id1, int id2)
 // O menu final é apenas um retângulo com tamanho máximo, com um smile ao centro
 void draw_finish_menu()
 {
+    printf("The value of player_1 is %d\n", player_1);
+    printf("The value of player_2 is %d\n", player_2);
     draw_rectangle(0, 0, mode_info.XResolution, mode_info.YResolution, 0x000000, drawing_frame_buf);
     if (player_1 != 0)
     {
