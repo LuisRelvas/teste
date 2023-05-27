@@ -9,6 +9,7 @@
         "vbe.h": "c",
         "sprite.h": "c",
         "cstdlib": "c",
-        "graphics.h": "c"
+        "graphics.h": "c",
+        "stdio.h": "c"
     }
 }

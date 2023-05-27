@@ -52,6 +52,7 @@ extern Sprite *back_anim4;
 int animationFrame = 0;
 bool isAnimating = false;
 int chosen;
+extern int gameplayCounter;
 
 // alocação da memoria para a matriz;
 
@@ -885,34 +886,46 @@ void animation_trigger(Sprite *card, int x, int y)
     switch (card->state)
     {
     case 0:
+     printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
         printf("VOLTADA PARA BAIXO \n");
         draw_sprite_xpm(back, x, y);
         break;
     case 1:
+     printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
         printf("VOLTADA PARA 1 \n");
         draw_sprite_xpm(back_anim1, x, y);
         card->state = 2;
         break;
     case 2: 
+     printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
         printf("VOLTADA PARA 2 \n");
-        draw_sprite_xpm(back_anim3, x, y);
+        draw_sprite_xpm(back_anim2, x, y);
         card->state = 3;
         break;
     case 3:
+     printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
         printf("VOLTADA PARA 3 \n");
-        draw_sprite_xpm(back_anim2, x, y);
+        draw_sprite_xpm(back_anim3, x, y);
         card->state = 4;
         break;
+
     case 4:
+     printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
         printf("VOLTADA PARA 4 \n");
         draw_sprite_xpm(back_anim4, x, y);
         card->state = 5;
         break;
+    if(gameplayCounter % 5 == 0) {
     case 5: 
+     printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
         printf("VOLTADA PARA 5 \n");
         draw_sprite_xpm(card, x, y);
         break;
     }
-
+    }
 }
+    
+    
+
+
 

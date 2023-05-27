@@ -122,6 +122,7 @@ void destroy_sprites()
 // Na altura da interrupção há troca dos buffers e incremento do contador
 void update_timer_state()
 {
+    
     if (DOUBLE_BUFFER)
         swap_buffers();
     timer_interrupts++;
@@ -130,6 +131,7 @@ void update_timer_state()
         gameplayCounter--;
         printf("Counter: %d\n", gameplayCounter);
     }
+    draw_new_frame();
 }
 
 // Como o Real Time Clock é um módulo mais pesado,
@@ -186,11 +188,13 @@ void update_mouse_state()
     if (byte_index == 3)
     {
         mouse_sync_info();
-        update_buttons_state();
         draw_new_frame();
+        update_buttons_state();
+        
         byte_index = 0;
     }
 }
+
 
 // Se o rato tiver o botão esquerdo pressionado (mouse_info.left_click) então
 // muda o estado do botão no mesmo quadrante

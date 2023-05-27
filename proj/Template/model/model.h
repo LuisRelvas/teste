@@ -61,5 +61,5 @@ void update_buttons_state();
 void update_rtc_state();
 void setup_sprites();
 void destroy_sprites();
-
+void update_timer_state();
 #endif
