@@ -311,7 +311,7 @@ void draw_game_menu()
     }
     if (matrix[0][0].block == true)
     {
-        printf("CONSEGUIU BLOQUEAR");
+            printf("CONSEGUIU BLOQUEAR");
         matrix[0][0].state = 5;
     }
 

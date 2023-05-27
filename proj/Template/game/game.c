@@ -109,6 +109,9 @@ void draw_new_fb()
     case GAME:
         draw_game_menu();
         break;
+    case GAME_2P:
+        draw_game_menu_2_2();
+        break;
     case END:
         draw_finish_menu();
         break;
@@ -170,7 +173,6 @@ void process_mode1()
         if (mouse_info_s.left_click)
         {
             menuState = GAME;
-            chosen = 1;
         }
     }
 }
@@ -182,7 +184,6 @@ void process_mode2()
         if (mouse_info_s.left_click)
         {
             menuState = GAME_2;
-            chosen = 2;
         }
     }
 }
@@ -487,6 +488,9 @@ void draw_mouse()
     case GAME:
         draw_xpm(hand, mouse_info_s.x, mouse_info_s.y);
         break;
+    case GAME_2P: 
+        draw_xpm(hand,mouse_info_s.x,mouse_info_s.y);
+        break;
     case GAME_2:
         draw_xpm(hand, mouse_info_s.x, mouse_info_s.y);
         break;
@@ -546,6 +550,7 @@ int draw_sprite_button(Sprite *sprite, int x, int y)
             }
         }
     }
+    
 
     for (int h = 0; h < height; h++)
     {
@@ -582,7 +587,6 @@ void animation_trigger(Sprite *card, int x, int y)
         draw_xpm(back_anim3, x, y);
         card->state = 4;
         break;
-
     case 4:
         draw_xpm(back_anim4, x, y);
         card->state = 5;

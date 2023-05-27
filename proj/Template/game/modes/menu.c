@@ -129,7 +129,7 @@ void update_timer_frame()
     if (DOUBLE_BUFFER)
         swap_buffers();
     timer_interrupts++;
-    if (timer_interrupts % 60 == 0 && (menuState == GAME || menuState == GAME_2 || menuState == GAME_3))
+    if (timer_interrupts % 60 == 0 && (menuState == GAME || menuState == GAME_2 || menuState == GAME_3 || menuState == GAME_2P))
     {
         gameplayCounter--;
         printf("Counter: %d\n", gameplayCounter);
@@ -165,6 +165,9 @@ void update_keyboard_frame()
         break;
     case H_KEY:
         menuState = GAME_3;
+        break;
+    case K_KEY:
+        menuState = GAME_2P;
         break;
     default:
         break;

@@ -54,6 +54,7 @@ typedef enum
 {
     START,
     GAME,
+    GAME_2P,
     GAME_2,
     END,
     MODE,

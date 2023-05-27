@@ -15,7 +15,7 @@ PROG=proj
 .PATH: ${.CURDIR}/game
 
 # Ficheiros ".c" a compilar. Têm de estar contidos nas pastas indicadas no passo anterior.
-SRCS = 	main.c timer.c utils.c graphics.c KBC.c keyboard.c mouse.c sprite.c game.c rtc.c mode_1.c menu.c mode_2.c mode_3.c
+SRCS = 	main.c timer.c utils.c graphics.c KBC.c keyboard.c mouse.c sprite.c game.c rtc.c mode_1.c menu.c mode_2.c mode_3.c mode_1_2.c
 
 # Flags de compilação
 CFLAGS += -pedantic -D_LCOM_OPTIMIZED_ -O2
