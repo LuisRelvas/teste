@@ -2,10 +2,10 @@
 
 extern int pre2;
 extern Sprite **matrix;
-extern Sprite *position_1;
-extern Sprite *position_2;
-extern bool *position_1_bool;
-extern bool *position_2_bool;
+extern Sprite *index_1;
+extern Sprite *index_2;
+extern bool *index_1_bool;
+extern bool *index_2_bool;
 extern int matrix_id1;
 extern int matrix_id2;
 extern int timer_interrupts;
@@ -84,30 +84,30 @@ void process_deck1()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[0][0].id;
-            position_1_bool = &backPressed1;
-            position_1 = &matrix[0][0];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed1;
+            index_1 = &matrix[0][0];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[0][0])
+        else if (matrix_id2 == -1 && index_1 != &matrix[0][0])
         {
             matrix_id2 = matrix[0][0].id;
-            position_2_bool = &backPressed1;
-            position_2 = &matrix[0][0];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed1;
+            index_2 = &matrix[0][0];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed1 is %d", backPressed1);
             }
             matrix_id1 = -1;
@@ -132,30 +132,30 @@ void process_deck2()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[0][1].id;
-            position_1_bool = &backPressed2;
-            position_1 = &matrix[0][1];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed2;
+            index_1 = &matrix[0][1];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[0][1])
+        else if (matrix_id2 == -1 && index_1 != &matrix[0][1])
         {
             matrix_id2 = matrix[0][1].id;
-            position_2_bool = &backPressed2;
-            position_2 = &matrix[0][1];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed2;
+            index_2 = &matrix[0][1];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed2 is %d", backPressed2);
             }
             matrix_id1 = -1;
@@ -180,30 +180,30 @@ void process_deck3()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[0][2].id;
-            position_1_bool = &backPressed3;
-            position_1 = &matrix[0][2];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed3;
+            index_1 = &matrix[0][2];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[0][2])
+        else if (matrix_id2 == -1 && index_1 != &matrix[0][2])
         {
             matrix_id2 = matrix[0][2].id;
-            position_2_bool = &backPressed3;
-            position_2 = &matrix[0][2];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed3;
+            index_2 = &matrix[0][2];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed3 is %d", backPressed3);
             }
             matrix_id1 = -1;
@@ -228,30 +228,30 @@ void process_deck4()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[0][3].id;
-            position_1_bool = &backPressed4;
-            position_1 = &matrix[0][3];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed4;
+            index_1 = &matrix[0][3];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[0][3])
+        else if (matrix_id2 == -1 && index_1 != &matrix[0][3])
         {
             matrix_id2 = matrix[0][3].id;
-            position_2_bool = &backPressed4;
-            position_2 = &matrix[0][3];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed4;
+            index_2 = &matrix[0][3];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed4 is %d", backPressed4);
             }
             matrix_id1 = -1;
@@ -276,30 +276,30 @@ void process_deck5()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[1][0].id;
-            position_1_bool = &backPressed5;
-            position_1 = &matrix[1][0];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed5;
+            index_1 = &matrix[1][0];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[1][0])
+        else if (matrix_id2 == -1 && index_1 != &matrix[1][0])
         {
             matrix_id2 = matrix[1][0].id;
-            position_2_bool = &backPressed5;
-            position_2 = &matrix[1][0];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed5;
+            index_2 = &matrix[1][0];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed5 is %d", backPressed5);
             }
             matrix_id1 = -1;
@@ -324,30 +324,30 @@ void process_deck6()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[1][1].id;
-            position_1_bool = &backPressed6;
-            position_1 = &matrix[1][1];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed6;
+            index_1 = &matrix[1][1];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[1][1])
+        else if (matrix_id2 == -1 && index_1 != &matrix[1][1])
         {
             matrix_id2 = matrix[1][1].id;
-            position_2_bool = &backPressed6;
-            position_2 = &matrix[1][1];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed6;
+            index_2 = &matrix[1][1];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed6 is %d", backPressed6);
             }
             matrix_id1 = -1;
@@ -372,30 +372,30 @@ void process_deck7()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[1][2].id;
-            position_1_bool = &backPressed7;
-            position_1 = &matrix[1][2];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed7;
+            index_1 = &matrix[1][2];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[1][2])
+        else if (matrix_id2 == -1 && index_1 != &matrix[1][2])
         {
             matrix_id2 = matrix[1][2].id;
-            position_2_bool = &backPressed7;
-            position_2 = &matrix[1][2];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed7;
+            index_2 = &matrix[1][2];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed7 is %d", backPressed7);
             }
             matrix_id1 = -1;
@@ -420,30 +420,30 @@ void process_deck8()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[1][3].id;
-            position_1_bool = &backPressed8;
-            position_1 = &matrix[1][3];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed8;
+            index_1 = &matrix[1][3];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[1][3])
+        else if (matrix_id2 == -1 && index_1 != &matrix[1][3])
         {
             matrix_id2 = matrix[1][3].id;
-            position_2_bool = &backPressed8;
-            position_2 = &matrix[1][3];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed8;
+            index_2 = &matrix[1][3];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed8 is %d", backPressed8);
             }
             matrix_id1 = -1;
@@ -468,30 +468,30 @@ void process_deck9()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[2][0].id;
-            position_1_bool = &backPressed9;
-            position_1 = &matrix[2][0];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed9;
+            index_1 = &matrix[2][0];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[2][0])
+        else if (matrix_id2 == -1 && index_1 != &matrix[2][0])
         {
             matrix_id2 = matrix[2][0].id;
-            position_2_bool = &backPressed9;
-            position_2 = &matrix[2][0];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed9;
+            index_2 = &matrix[2][0];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed9 is %d", backPressed9);
             }
             matrix_id1 = -1;
@@ -516,30 +516,30 @@ void process_deck10()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[2][1].id;
-            position_1_bool = &backPressed10;
-            position_1 = &matrix[2][1];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed10;
+            index_1 = &matrix[2][1];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[2][1])
+        else if (matrix_id2 == -1 && index_1 != &matrix[2][1])
         {
             matrix_id2 = matrix[2][1].id;
-            position_2_bool = &backPressed10;
-            position_2 = &matrix[2][1];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed10;
+            index_2 = &matrix[2][1];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed10 is %d", backPressed10);
             }
             matrix_id1 = -1;
@@ -564,30 +564,30 @@ void process_deck11()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[2][2].id;
-            position_1_bool = &backPressed11;
-            position_1 = &matrix[2][2];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed11;
+            index_1 = &matrix[2][2];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[2][2])
+        else if (matrix_id2 == -1 && index_1 != &matrix[2][2])
         {
             matrix_id2 = matrix[2][2].id;
-            position_2_bool = &backPressed11;
-            position_2 = &matrix[2][2];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed11;
+            index_2 = &matrix[2][2];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed11 is %d", backPressed11);
             }
             matrix_id1 = -1;
@@ -612,30 +612,30 @@ void process_deck12()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[2][3].id;
-            position_1_bool = &backPressed12;
-            position_1 = &matrix[2][3];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed12;
+            index_1 = &matrix[2][3];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[2][3])
+        else if (matrix_id2 == -1 && index_1 != &matrix[2][3])
         {
             matrix_id2 = matrix[2][3].id;
-            position_2_bool = &backPressed12;
-            position_2 = &matrix[2][3];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed12;
+            index_2 = &matrix[2][3];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed12 is %d", backPressed12);
             }
             matrix_id1 = -1;
@@ -660,30 +660,30 @@ void process_deck13()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[3][0].id;
-            position_1_bool = &backPressed13;
-            position_1 = &matrix[3][0];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed13;
+            index_1 = &matrix[3][0];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[3][0])
+        else if (matrix_id2 == -1 && index_1 != &matrix[3][0])
         {
             matrix_id2 = matrix[3][0].id;
-            position_2_bool = &backPressed13;
-            position_2 = &matrix[3][0];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed13;
+            index_2 = &matrix[3][0];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed13 is %d", backPressed13);
             }
             matrix_id1 = -1;
@@ -708,30 +708,30 @@ void process_deck14()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[3][1].id;
-            position_1_bool = &backPressed14;
-            position_1 = &matrix[3][1];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed14;
+            index_1 = &matrix[3][1];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[3][1])
+        else if (matrix_id2 == -1 && index_1 != &matrix[3][1])
         {
             matrix_id2 = matrix[3][1].id;
-            position_2_bool = &backPressed14;
-            position_2 = &matrix[3][1];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed14;
+            index_2 = &matrix[3][1];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed14 is %d", backPressed14);
             }
             matrix_id1 = -1;
@@ -756,30 +756,30 @@ void process_deck15()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[3][2].id;
-            position_1_bool = &backPressed15;
-            position_1 = &matrix[3][2];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed15;
+            index_1 = &matrix[3][2];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[3][2])
+        else if (matrix_id2 == -1 && index_1 != &matrix[3][2])
         {
             matrix_id2 = matrix[3][2].id;
-            position_2_bool = &backPressed15;
-            position_2 = &matrix[3][2];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed15;
+            index_2 = &matrix[3][2];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
@@ -803,30 +803,30 @@ void process_deck16()
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[3][3].id;
-            position_1_bool = &backPressed16;
-            position_1 = &matrix[3][3];
-            printf("The value of position_1 on button1 is %d\n", position_1);
+            index_1_bool = &backPressed16;
+            index_1 = &matrix[3][3];
+            printf("The value of index_1 on button1 is %d\n", index_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && position_1 != &matrix[3][3])
+        else if (matrix_id2 == -1 && index_1 != &matrix[3][3])
         {
             matrix_id2 = matrix[3][3].id;
-            position_2_bool = &backPressed16;
-            position_2 = &matrix[3][3];
-            printf("The value of position_2 on button1 is %d\n", position_2);
+            index_2_bool = &backPressed16;
+            index_2 = &matrix[3][3];
+            printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                position_1->block = true;
-                position_2->block = true;
+                index_1->block = true;
+                index_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *position_2_bool = false;
-                *position_1_bool = false;
+                *index_2_bool = false;
+                *index_1_bool = false;
                 printf("The value of the backPressed16 is %d", backPressed16);
             }
             matrix_id1 = -1;

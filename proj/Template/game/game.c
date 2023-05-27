@@ -206,10 +206,10 @@ void draw_mode_menu()
 }
 
 Sprite **matrix;
-Sprite *position_1;
-Sprite *position_2;
-bool *position_1_bool;
-bool *position_2_bool;
+Sprite *index_1;
+Sprite *index_2;
+bool *index_1_bool;
+bool *index_2_bool;
 
 int id1 = 0;
 int id2 = 0;
