@@ -38,6 +38,7 @@
 #include "game/xpm/back_anim2.xpm"
 #include "game/xpm/back_anim3.xpm"
 #include "game/xpm/back_anim4.xpm"
+#include "game/xpm/menu.xpm"
 
 typedef enum
 {
@@ -63,4 +64,3 @@ void update_rtc_frame();
 void start_sprites();
 void destroy_sprites();
 #endif
-

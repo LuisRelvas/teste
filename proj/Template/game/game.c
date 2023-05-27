@@ -49,11 +49,11 @@ extern Sprite *back_anim1;
 extern Sprite *back_anim2;
 extern Sprite *back_anim3;
 extern Sprite *back_anim4;
+extern Sprite *menu;
 int animationFrame = 0;
 bool isAnimating = false;
 int chosen;
 extern int gameplayCounter;
-
 
 Sprite **alloc_matrix(int n, int m)
 {
@@ -148,7 +148,7 @@ void process_quit_button()
 void draw_initial_menu()
 {
     memset(drawing_frame_buf, 0xFFFFFF, frame_buf_size);
-    draw_xpm(logo, mode_info.XResolution / 3, 0);
+    draw_xpm(menu, 0, 0);
 
     draw_xpm(start, mode_info.XResolution / 3, mode_info.YResolution / 3);
     process_start_button();
@@ -431,8 +431,6 @@ bool check_match(int id1, int id2)
 
 // O menu do jogo é constituído por quatro botões
 
-
-
 // O menu final é apenas um retângulo com tamanho máximo, com um smile ao centro
 void draw_finish_menu()
 {
@@ -556,59 +554,52 @@ int draw_sprite_button(Sprite *sprite, int x, int y)
     return 0;
 }
 
-
 void rtc_print()
 {
     printf("NOW: %d/%d/%d @%d:%d:%d\n", 2000 + time_mode_info.year, time_mode_info.month, time_mode_info.day, time_mode_info.hours, time_mode_info.minutes, time_mode_info.SECONDSonds);
 }
-
-
 
 void animation_trigger(Sprite *card, int x, int y)
 {
     switch (card->state)
     {
     case 0:
-     printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
+        printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
         printf("VOLTADA PARA BAIXO \n");
         draw_xpm(back, x, y);
         break;
     case 1:
-     printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
+        printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
         printf("VOLTADA PARA 1 \n");
         draw_xpm(back_anim1, x, y);
         card->state = 2;
         break;
-    case 2: 
-     printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
+    case 2:
+        printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
         printf("VOLTADA PARA 2 \n");
         draw_xpm(back_anim2, x, y);
         card->state = 3;
         break;
     case 3:
-     printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
+        printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
         printf("VOLTADA PARA 3 \n");
         draw_xpm(back_anim3, x, y);
         card->state = 4;
         break;
 
     case 4:
-     printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
+        printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
         printf("VOLTADA PARA 4 \n");
         draw_xpm(back_anim4, x, y);
         card->state = 5;
         break;
-    if(gameplayCounter % 5 == 0) {
-    case 5: 
-     printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
-        printf("VOLTADA PARA 5 \n");
-        draw_xpm(card, x, y);
-        break;
-    }
+        if (gameplayCounter % 5 == 0)
+        {
+        case 5:
+            printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
+            printf("VOLTADA PARA 5 \n");
+            draw_xpm(card, x, y);
+            break;
+        }
     }
 }
-    
-    
-
-
-

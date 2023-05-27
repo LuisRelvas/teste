@@ -41,6 +41,7 @@ Sprite *hard;
 Sprite *easy;
 Sprite *medium;
 Sprite *quit;
+Sprite *menu;
 
 int timer_interrupts = 0;
 
@@ -77,6 +78,7 @@ void start_sprites()
     back_anim2 = initiate_xpm((xpm_map_t)back_anim2_xpm);
     back_anim3 = initiate_xpm((xpm_map_t)back_anim3_xpm);
     back_anim4 = initiate_xpm((xpm_map_t)back_anim4_xpm);
+    menu = initiate_xpm((xpm_map_t)menu_xpm);
 }
 
 void destroy_sprites()
@@ -106,16 +108,16 @@ void destroy_sprites()
     destroy_sprite(back_anim2);
     destroy_sprite(back_anim3);
     destroy_sprite(back_anim4);
+    destroy_sprite(menu);
 }
-
 
 void update_timer_frame()
 {
-    
+
     if (DOUBLE_BUFFER)
         swap_buffers();
     timer_interrupts++;
-    if (timer_interrupts % 60 == 0 && (menuState == GAME || menuState == GAME_2 || menuState == GAME_3 ))
+    if (timer_interrupts % 60 == 0 && (menuState == GAME || menuState == GAME_2 || menuState == GAME_3))
     {
         gameplayCounter--;
         printf("Counter: %d\n", gameplayCounter);
@@ -123,13 +125,11 @@ void update_timer_frame()
     draw_new_fb();
 }
 
-
 void update_rtc_frame()
 {
     if (timer_interrupts % FPS == 0)
         rtc_update_display();
 }
-
 
 void update_keyboard_frame()
 {
@@ -139,7 +139,7 @@ void update_keyboard_frame()
     case S_KEY:
         menuState = START;
         break;
-     case G_KEY:
+    case G_KEY:
         menuState = GAME;
         break;
     case E_KEY:
@@ -167,15 +167,7 @@ void update_mouse_frame()
     if (byte_position == 3)
     {
         mouse_sync_info();
-        draw_new_fb();    
+        draw_new_fb();
         byte_position = 0;
     }
 }
-
-
-
-
-
-
-
-
