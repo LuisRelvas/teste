@@ -11,6 +11,7 @@
 #include "game/modes/mode_1.h"
 #include "game/modes/mode_2.h"
 #include "game/modes/mode_3.h"
+#include "game/modes/mode_1_2.h"
 
 Sprite **alloc_matrix(int n, int m);
 void draw_new_fb();

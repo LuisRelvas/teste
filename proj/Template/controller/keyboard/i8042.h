@@ -23,5 +23,6 @@
 #define I_KEY           23
 #define H_KEY           35
 #define J_KEY           36
+#define K_KEY           37
 
 #endif
