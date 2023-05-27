@@ -211,10 +211,10 @@ void draw_mode_menu()
 }
 
 Sprite **matrix;
-Sprite *position_1;
-Sprite *position_2;
-bool *position_1_bool;
-bool *position_2_bool;
+Sprite *index_1;
+Sprite *index_2;
+bool *index_1_bool;
+bool *index_2_bool;
 
 int id1 = 0;
 int id2 = 0;
@@ -530,7 +530,6 @@ int draw_sprite_button(Sprite *sprite, int x, int y)
         {
             if (mouse_info_s.x > 0 && mouse_info_s.x < mode_info.XResolution / 2 && mouse_info_s.y > 0 && mouse_info_s.y < mode_info.YResolution / 2)
             {
-
                 menuState = START;
             }
             else if (mouse_info_s.x > mode_info.XResolution / 2 && mouse_info_s.x < mode_info.XResolution && mouse_info_s.y > 0 && mouse_info_s.y < mode_info.YResolution / 2)
@@ -569,42 +568,27 @@ void animation_trigger(Sprite *card, int x, int y)
     switch (card->state)
     {
     case 0:
-        printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
-        printf("VOLTADA PARA BAIXO \n");
         draw_xpm(back, x, y);
         break;
     case 1:
-        printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
-        printf("VOLTADA PARA 1 \n");
         draw_xpm(back_anim1, x, y);
         card->state = 2;
         break;
     case 2:
-        printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
-        printf("VOLTADA PARA 2 \n");
         draw_xpm(back_anim2, x, y);
         card->state = 3;
         break;
     case 3:
-        printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
-        printf("VOLTADA PARA 3 \n");
         draw_xpm(back_anim3, x, y);
         card->state = 4;
         break;
 
     case 4:
-        printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
-        printf("VOLTADA PARA 4 \n");
         draw_xpm(back_anim4, x, y);
         card->state = 5;
         break;
-        if (gameplayCounter % 5 == 0)
-        {
-        case 5:
-            printf("The value of GAMEPLAYCOUNTER IS %d\n", gameplayCounter);
-            printf("VOLTADA PARA 5 \n");
-            draw_xpm(card, x, y);
-            break;
-        }
+    case 5:
+        draw_xpm(card, x, y);
+        break;
     }
 }
