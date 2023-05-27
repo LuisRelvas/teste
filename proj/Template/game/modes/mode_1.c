@@ -265,7 +265,6 @@ void process_button4(Sprite *cards, int size)
             {
                 index_1->block = true;
                 index_2->block = true;
-                
             }
             else
             {
