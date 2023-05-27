@@ -38,7 +38,11 @@
 #include "game/xpm/back_anim2.xpm"
 #include "game/xpm/back_anim3.xpm"
 #include "game/xpm/back_anim4.xpm"
-#include "game/xpm/menu.xpm"
+#include "game/xpm/Start.xpm"
+#include "game/xpm/Quit.xpm"
+#include "game/xpm/Easy.xpm"
+#include "game/xpm/Medium.xpm"
+#include "game/xpm/Hard.xpm"
 
 typedef enum
 {

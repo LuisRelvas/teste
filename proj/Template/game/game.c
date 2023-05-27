@@ -49,7 +49,12 @@ extern Sprite *back_anim1;
 extern Sprite *back_anim2;
 extern Sprite *back_anim3;
 extern Sprite *back_anim4;
-extern Sprite *menu;
+extern Sprite *Menu;
+extern Sprite *Start;
+extern Sprite *Quit;
+extern Sprite *Easy;
+extern Sprite *Medium;
+extern Sprite *Hard;
 int animationFrame = 0;
 bool isAnimating = false;
 int chosen;
@@ -123,9 +128,9 @@ void draw_new_fb()
 
 void process_start_button()
 {
-    if (mouse_info_s.x >= mode_info.XResolution / 3 && mouse_info_s.x <= mode_info.XResolution / 3 + game->width && mouse_info_s.y >= mode_info.YResolution / 3 && mouse_info_s.y <= mode_info.YResolution / 3 + game->height)
+    if (mouse_info_s.x >= mode_info.XResolution / 3 && mouse_info_s.x <= mode_info.XResolution / 3 + Start->width && mouse_info_s.y >= mode_info.YResolution / 3 && mouse_info_s.y <= mode_info.YResolution / 3 + Start->height)
     {
-        draw_xpm(start, mode_info.XResolution / 3, mode_info.YResolution / 3);
+        draw_xpm(Start, mode_info.XResolution / 3, mode_info.YResolution / 3);
         if (mouse_info_s.left_click)
         {
             menuState = MODE;
@@ -135,9 +140,9 @@ void process_start_button()
 
 void process_quit_button()
 {
-    if (mouse_info_s.x >= mode_info.XResolution / 3 && mouse_info_s.x <= mode_info.XResolution / 3 + quit->width && mouse_info_s.y >= mode_info.YResolution / 2 && mouse_info_s.y <= mode_info.YResolution / 2 + quit->height)
+    if (mouse_info_s.x >= mode_info.XResolution / 3 && mouse_info_s.x <= mode_info.XResolution / 3 + Quit->width && mouse_info_s.y >= mode_info.YResolution / 2 && mouse_info_s.y <= mode_info.YResolution / 2 + Quit->height)
     {
-        draw_xpm(quit, mode_info.XResolution / 3, mode_info.YResolution / 2);
+        draw_xpm(Quit, mode_info.XResolution / 3, mode_info.YResolution / 2);
         if (mouse_info_s.left_click)
         {
             menuState = END;
@@ -147,21 +152,21 @@ void process_quit_button()
 
 void draw_initial_menu()
 {
-    memset(drawing_frame_buf, 0xFFFFFF, frame_buf_size);
-    draw_xpm(menu, 0, 0);
+    memset(drawing_frame_buf, 0x000000, frame_buf_size);
+    draw_xpm(logo, mode_info.XResolution / 2 - logo->width / 2, mode_info.YResolution / 4 - logo->height);
 
-    draw_xpm(start, mode_info.XResolution / 3, mode_info.YResolution / 3);
+    draw_xpm(Start, mode_info.XResolution / 3, mode_info.YResolution / 3);
     process_start_button();
 
-    draw_xpm(quit, mode_info.XResolution / 3, mode_info.YResolution / 2);
+    draw_xpm(Quit, mode_info.XResolution / 3, mode_info.YResolution / 2);
     process_quit_button();
 }
 
 void process_mode1()
 {
-    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.x <= mode_info.XResolution / 2 + easy->width && mouse_info_s.y >= mode_info.YResolution / 4 && mouse_info_s.y <= mode_info.YResolution / 4 + easy->height)
+    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.x <= mode_info.XResolution / 2 + Easy->width && mouse_info_s.y >= mode_info.YResolution / 4 && mouse_info_s.y <= mode_info.YResolution / 4 + Easy->height)
     {
-        draw_xpm(easy, mode_info.XResolution / 2, mode_info.YResolution / 4);
+        draw_xpm(Easy, mode_info.XResolution / 2, mode_info.YResolution / 4);
         if (mouse_info_s.left_click)
         {
             menuState = GAME;
@@ -171,9 +176,9 @@ void process_mode1()
 }
 void process_mode2()
 {
-    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.x <= mode_info.XResolution / 2 + medium->width && mouse_info_s.y >= mode_info.YResolution / 2 && mouse_info_s.y <= mode_info.YResolution / 2 + medium->height)
+    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.x <= mode_info.XResolution / 2 + Medium->width && mouse_info_s.y >= mode_info.YResolution / 2 && mouse_info_s.y <= mode_info.YResolution / 2 + Medium->height)
     {
-        draw_xpm(medium, mode_info.XResolution / 2, mode_info.YResolution / 2);
+        draw_xpm(Medium, mode_info.XResolution / 2, mode_info.YResolution / 2);
         if (mouse_info_s.left_click)
         {
             menuState = GAME_2;
@@ -184,9 +189,9 @@ void process_mode2()
 
 void process_mode3()
 {
-    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.x <= mode_info.XResolution / 2 + hard->width && mouse_info_s.y >= 3 * mode_info.YResolution / 4 && mouse_info_s.y <= 3 * mode_info.YResolution / 4 + hard->height)
+    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.x <= mode_info.XResolution / 2 + Hard->width && mouse_info_s.y >= 3 * mode_info.YResolution / 4 && mouse_info_s.y <= 3 * mode_info.YResolution / 4 + Hard->height)
     {
-        draw_xpm(hard, mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
+        draw_xpm(Hard, mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
         if (mouse_info_s.left_click)
         {
             menuState = GAME_3;
@@ -197,11 +202,11 @@ void process_mode3()
 void draw_mode_menu()
 {
     memset(drawing_frame_buf, 0x000000, frame_buf_size);
-    draw_xpm(easy, mode_info.XResolution / 2, mode_info.YResolution / 4);
+    draw_xpm(Easy, mode_info.XResolution / 2, mode_info.YResolution / 4);
     process_mode1();
-    draw_xpm(medium, mode_info.XResolution / 2, mode_info.YResolution / 2);
+    draw_xpm(Medium, mode_info.XResolution / 2, mode_info.YResolution / 2);
     process_mode2();
-    draw_xpm(hard, mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
+    draw_xpm(Hard, mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
     process_mode3();
 }
 

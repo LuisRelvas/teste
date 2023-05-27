@@ -41,7 +41,11 @@ Sprite *hard;
 Sprite *easy;
 Sprite *medium;
 Sprite *quit;
-Sprite *menu;
+Sprite *Start;
+Sprite *Quit;
+Sprite *Easy;
+Sprite *Medium;
+Sprite *Hard;
 
 int timer_interrupts = 0;
 
@@ -78,7 +82,11 @@ void start_sprites()
     back_anim2 = initiate_xpm((xpm_map_t)back_anim2_xpm);
     back_anim3 = initiate_xpm((xpm_map_t)back_anim3_xpm);
     back_anim4 = initiate_xpm((xpm_map_t)back_anim4_xpm);
-    menu = initiate_xpm((xpm_map_t)menu_xpm);
+    Start = initiate_xpm((xpm_map_t)Start_xpm);
+    Quit = initiate_xpm((xpm_map_t)Quit_xpm);
+    Easy = initiate_xpm((xpm_map_t)Easy_xpm);
+    Medium = initiate_xpm((xpm_map_t)Medium_xpm);
+    Hard = initiate_xpm((xpm_map_t)Hard_xpm);
 }
 
 void destroy_sprites()
@@ -108,7 +116,11 @@ void destroy_sprites()
     destroy_sprite(back_anim2);
     destroy_sprite(back_anim3);
     destroy_sprite(back_anim4);
-    destroy_sprite(menu);
+    destroy_sprite(Start);
+    destroy_sprite(Quit);
+    destroy_sprite(Easy);
+    destroy_sprite(Medium);
+    destroy_sprite(Hard);
 }
 
 void update_timer_frame()
