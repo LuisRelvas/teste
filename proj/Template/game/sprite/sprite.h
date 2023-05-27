@@ -2,8 +2,8 @@
 #define _LCOM_SPRITE_H_
 
 #include "controller/video/graphics.h"
-#include "../model/xpm/buttons/quitButton.xpm"
-#include "../model/xpm/buttons/quitButtonPressed.xpm"
+#include "../xpm/buttons/quitButton.xpm"
+#include "../xpm/buttons/quitButtonPressed.xpm"
 
 typedef struct
 {
@@ -17,8 +17,7 @@ typedef struct
     int state;
 } Sprite;
 
-Sprite *create_sprite_xpm(xpm_map_t sprite);
-Sprite *create_sprite_button(uint16_t width, uint16_t height, uint32_t color);
+Sprite *initiate_xpm(xpm_map_t sprite);
 void destroy_sprite(Sprite *sprite);
 
 #endif

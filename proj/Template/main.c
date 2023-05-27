@@ -4,12 +4,12 @@
 #include "controller/keyboard/keyboard.h"
 #include "controller/mouse/mouse.h"
 #include "controller/rtc/rtc.h"
-#include "model/model.h"
-#include "view/view.h"
+#include "game/modes/menu.h"
+#include "game/game.h"
 #include "config.h"
 
 extern SystemState systemState;
-extern struct packet mouseP;
+extern struct packet packet_from_mouse;
 extern int x;
 extern int y;
 extern int mouse_counter;
@@ -35,19 +35,18 @@ int setup()
 {
 
   // Atualização da frequência
-  if (timer_set_frequency(TIMER, GAME_FREQUENCY) != 0)
+  if (timer_set_frequency(TIMER, FPS) != 0)
     return 1;
 
   // Inicialização dos buffers de vídeo (double buffering)
-  if (set_frame_buffers(VIDEO_MODE) != 0)
+  if (define_frame_bufs(RESOLUTION) != 0)
     return 1;
 
   // Inicialização do modo gráfico
-  if (set_graphic_mode(VIDEO_MODE) != 0)
+  if (set_graphics_mode(RESOLUTION) != 0)
     return 1;
 
-  // Inicialização dos sprites
-  setup_sprites();
+  start_sprites();
 
   // Ativação das interrupções dos dispositivos
   if (timer_subscribe_interrupts() != 0)
@@ -60,13 +59,13 @@ int setup()
     return 1;
 
   // Ativar stream-mode e report de dados do rato
-  if (mouse_write(ENABLE_STREAM_MODE) != 0)
+  if (mouse_write(ON_STREAM) != 0)
     return 1;
-  if (mouse_write(ENABLE_DATA_REPORT) != 0)
+  if (mouse_write(ON_DATA_REP) != 0)
     return 1;
 
   // Setup do Real Time Clock
-  rtc_setup();
+  start_rtc();
 
   return 0;
 }
@@ -92,7 +91,7 @@ int teardown()
     return 1;
 
   // Desativar o report de dados do rato
-  if (mouse_write(DISABLE_DATA_REPORT) != 0)
+  if (mouse_write(OFF_DATA_REP) != 0)
     return 1;
 
   return 0;
@@ -106,7 +105,7 @@ int(proj_main_loop)(int argc, char *argv[])
     return teardown();
 
   // Desenha a primeira frame
-  draw_new_frame();
+  draw_new_fb();
 
   // Tratamento das interrupções
   int ipc_status;
@@ -126,13 +125,13 @@ int(proj_main_loop)(int argc, char *argv[])
       {
       case HARDWARE:
         if (msg.m_notify.interrupts & TIMER_MASK)
-          update_timer_state();
+          update_timer_frame();
         if (msg.m_notify.interrupts & KEYBOARD_MASK)
-          update_keyboard_state();
+          update_keyboard_frame();
         if (msg.m_notify.interrupts & MOUSE_MASK)
-          update_mouse_state();
-        if (msg.m_notify.interrupts & RTC_MASK)
-          update_rtc_state();
+          update_mouse_frame();
+        if (msg.m_notify.interrupts & MASK_OF_RTC)
+          update_rtc_frame();
       }
     }
   }

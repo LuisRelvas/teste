@@ -10,6 +10,8 @@
         "sprite.h": "c",
         "cstdlib": "c",
         "graphics.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "kbc.h": "c",
+        "mouse.h": "c"
     }
 }

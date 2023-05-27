@@ -2,16 +2,16 @@
 
 extern int pre1;
 extern Sprite **matrix;
-extern Sprite *index_1;
-extern Sprite *index_2;
-extern bool *index_1_bool;
-extern bool *index_2_bool;
+extern Sprite *position_1;
+extern Sprite *position_2;
+extern bool *position_1_bool;
+extern bool *position_2_bool;
 extern int matrix_id1;
 extern int matrix_id2;
 extern int timer_interrupts;
 extern vbe_mode_info_t mode_info;
-extern MouseInfo mouse_info;
-extern real_time_info time_info;
+extern Mouse_Info_Struct mouse_info_s;
+extern real_time_mode_info time_mode_info;
 extern MenuState menuState;
 extern SystemState systemState;
 extern Sprite *mouse;
@@ -48,10 +48,10 @@ extern bool cardPressed5;
 extern bool cardPressed6;
 extern bool cardPressed7;
 extern bool cardPressed8;
-extern uint8_t *main_frame_buffer;
-extern uint8_t *secondary_frame_buffer;
-extern uint8_t *drawing_frame_buffer;
-extern uint32_t frame_buffer_size;
+extern uint8_t *main_frame_buf;
+extern uint8_t *SECONDSondary_frame_buf;
+extern uint8_t *drawing_frame_buf;
+extern uint32_t frame_buf_size;
 extern bool isAnimating;
 extern int animationFrame;
 extern Sprite *back_anim1;
@@ -61,44 +61,44 @@ extern Sprite *back_anim4;
 
 void process_cardPressed1()
 {
-    if (mouse_info.x >= 0 && mouse_info.y >= 0 && mouse_info.x <= mode_info.XResolution / 4 && mouse_info.y <= mode_info.YResolution / 2)
+    if (mouse_info_s.x >= 0 && mouse_info_s.y >= 0 && mouse_info_s.x <= mode_info.XResolution / 4 && mouse_info_s.y <= mode_info.YResolution / 2)
     {
-        if (mouse_info.left_click)
+        if (mouse_info_s.left_click)
         {
             cardPressed1 = true;
         }
     }
     if (cardPressed1)
     {
-        draw_sprite_xpm(&matrix[0][0], 0, 0);
+        draw_xpm(&matrix[0][0], 0, 0);
         printf("Entrei no botao 1\n");
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[0][0].id;
-            index_1_bool = &cardPressed1;
-            index_1 = &matrix[0][0];
-            printf("The value of index_1 on button1 is %d\n", index_1);
+            position_1_bool = &cardPressed1;
+            position_1 = &matrix[0][0];
+            printf("The value of position_1 on button1 is %d\n", position_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && index_1 != &matrix[0][0])
+        else if (matrix_id2 == -1 && position_1 != &matrix[0][0])
         {
             matrix_id2 = matrix[0][0].id;
-            index_2_bool = &cardPressed1;
-            index_2 = &matrix[0][0];
-            printf("The value of index_2 on button1 is %d\n", index_2);
+            position_2_bool = &cardPressed1;
+            position_2 = &matrix[0][0];
+            printf("The value of position_2 on button1 is %d\n", position_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                index_1->block = true;
-                index_2->block = true;
+                position_1->block = true;
+                position_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *index_2_bool = false;
-                *index_1_bool = false;
+                *position_2_bool = false;
+                *position_1_bool = false;
                 printf("The value of the cardPressed1 is %d", cardPressed1);
             }
             matrix_id1 = -1;
@@ -108,9 +108,9 @@ void process_cardPressed1()
 }
 void process_cardPressed2()
 {
-    if (mouse_info.x >= mode_info.XResolution / 4 && mouse_info.y >= 0 && mouse_info.x <= mode_info.XResolution / 2 && mouse_info.y <= mode_info.YResolution / 2)
+    if (mouse_info_s.x >= mode_info.XResolution / 4 && mouse_info_s.y >= 0 && mouse_info_s.x <= mode_info.XResolution / 2 && mouse_info_s.y <= mode_info.YResolution / 2)
     {
-        if (mouse_info.left_click)
+        if (mouse_info_s.left_click)
         {
             cardPressed2 = true;
         }
@@ -118,35 +118,35 @@ void process_cardPressed2()
     if (cardPressed2)
     {
 
-        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
+        draw_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
         printf("Entrei no botao 1\n");
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[0][1].id;
-            index_1_bool = &cardPressed2;
-            index_1 = &matrix[0][1];
-            printf("The value of index_1 on button1 is %d\n", index_1);
+            position_1_bool = &cardPressed2;
+            position_1 = &matrix[0][1];
+            printf("The value of position_1 on button1 is %d\n", position_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && index_1 != &matrix[0][1])
+        else if (matrix_id2 == -1 && position_1 != &matrix[0][1])
         {
             matrix_id2 = matrix[0][1].id;
-            index_2_bool = &cardPressed2;
-            index_2 = &matrix[0][1];
-            printf("The value of index_2 on button1 is %d\n", index_2);
+            position_2_bool = &cardPressed2;
+            position_2 = &matrix[0][1];
+            printf("The value of position_2 on button1 is %d\n", position_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                index_1->block = true;
-                index_2->block = true;
+                position_1->block = true;
+                position_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *index_2_bool = false;
-                *index_1_bool = false;
+                *position_2_bool = false;
+                *position_1_bool = false;
                 printf("The value of the cardPressed2 is %d", cardPressed2);
             }
             matrix_id1 = -1;
@@ -157,9 +157,9 @@ void process_cardPressed2()
 
 void process_cardPressed3()
 {
-    if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.y >= 0 && mouse_info.x <= 3 * mode_info.XResolution / 4 && mouse_info.y <= mode_info.YResolution / 2)
+    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.y >= 0 && mouse_info_s.x <= 3 * mode_info.XResolution / 4 && mouse_info_s.y <= mode_info.YResolution / 2)
     {
-        if (mouse_info.left_click)
+        if (mouse_info_s.left_click)
         {
             cardPressed3 = true;
         }
@@ -167,35 +167,35 @@ void process_cardPressed3()
     if (cardPressed3)
     {
 
-        draw_sprite_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
+        draw_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
         printf("Entrei no botao 1\n");
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[0][2].id;
-            index_1_bool = &cardPressed3;
-            index_1 = &matrix[0][2];
-            printf("The value of index_1 on button1 is %d\n", index_1);
+            position_1_bool = &cardPressed3;
+            position_1 = &matrix[0][2];
+            printf("The value of position_1 on button1 is %d\n", position_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && index_1 != &matrix[0][2])
+        else if (matrix_id2 == -1 && position_1 != &matrix[0][2])
         {
             matrix_id2 = matrix[0][2].id;
-            index_2_bool = &cardPressed3;
-            index_2 = &matrix[0][2];
-            printf("The value of index_2 on button1 is %d\n", index_2);
+            position_2_bool = &cardPressed3;
+            position_2 = &matrix[0][2];
+            printf("The value of position_2 on button1 is %d\n", position_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                index_1->block = true;
-                index_2->block = true;
+                position_1->block = true;
+                position_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *index_2_bool = false;
-                *index_1_bool = false;
+                *position_2_bool = false;
+                *position_1_bool = false;
                 printf("The value of the cardPressed3 is %d", cardPressed3);
             }
             matrix_id1 = -1;
@@ -206,44 +206,44 @@ void process_cardPressed3()
 
 void process_cardPressed4()
 {
-    if (mouse_info.x >= 3 * mode_info.XResolution / 4 && mouse_info.y >= 0 && mouse_info.x <= mode_info.XResolution && mouse_info.y <= mode_info.YResolution / 2)
+    if (mouse_info_s.x >= 3 * mode_info.XResolution / 4 && mouse_info_s.y >= 0 && mouse_info_s.x <= mode_info.XResolution && mouse_info_s.y <= mode_info.YResolution / 2)
     {
-        if (mouse_info.left_click)
+        if (mouse_info_s.left_click)
         {
             cardPressed4 = true;
         }
     }
     if (cardPressed4)
     {
-        draw_sprite_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
+        draw_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
         printf("Entrei no botao 1\n");
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[0][3].id;
-            index_1_bool = &cardPressed4;
-            index_1 = &matrix[0][3];
-            printf("The value of index_1 on button1 is %d\n", index_1);
+            position_1_bool = &cardPressed4;
+            position_1 = &matrix[0][3];
+            printf("The value of position_1 on button1 is %d\n", position_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && index_1 != &matrix[0][3])
+        else if (matrix_id2 == -1 && position_1 != &matrix[0][3])
         {
             matrix_id2 = matrix[0][3].id;
-            index_2_bool = &cardPressed4;
-            index_2 = &matrix[0][3];
-            printf("The value of index_2 on button1 is %d\n", index_2);
+            position_2_bool = &cardPressed4;
+            position_2 = &matrix[0][3];
+            printf("The value of position_2 on button1 is %d\n", position_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                index_1->block = true;
-                index_2->block = true;
+                position_1->block = true;
+                position_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *index_2_bool = false;
-                *index_1_bool = false;
+                *position_2_bool = false;
+                *position_1_bool = false;
                 printf("The value of the cardPressed4 is %d", cardPressed4);
             }
             matrix_id1 = -1;
@@ -254,44 +254,44 @@ void process_cardPressed4()
 
 void process_cardPressed5()
 {
-    if (mouse_info.x >= 0 && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.x <= mode_info.XResolution / 4 && mouse_info.y <= mode_info.YResolution)
+    if (mouse_info_s.x >= 0 && mouse_info_s.y >= mode_info.YResolution / 2 && mouse_info_s.x <= mode_info.XResolution / 4 && mouse_info_s.y <= mode_info.YResolution)
     {
-        if (mouse_info.left_click)
+        if (mouse_info_s.left_click)
         {
             cardPressed5 = true;
         }
     }
     if (cardPressed5)
     {
-        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
+        draw_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
         printf("Entrei no botao 1\n");
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[1][0].id;
-            index_1_bool = &cardPressed5;
-            index_1 = &matrix[1][0];
-            printf("The value of index_1 on button1 is %d\n", index_1);
+            position_1_bool = &cardPressed5;
+            position_1 = &matrix[1][0];
+            printf("The value of position_1 on button1 is %d\n", position_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && index_1 != &matrix[1][0])
+        else if (matrix_id2 == -1 && position_1 != &matrix[1][0])
         {
             matrix_id2 = matrix[1][0].id;
-            index_2_bool = &cardPressed5;
-            index_2 = &matrix[1][0];
-            printf("The value of index_2 on button1 is %d\n", index_2);
+            position_2_bool = &cardPressed5;
+            position_2 = &matrix[1][0];
+            printf("The value of position_2 on button1 is %d\n", position_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                index_1->block = true;
-                index_2->block = true;
+                position_1->block = true;
+                position_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *index_2_bool = false;
-                *index_1_bool = false;
+                *position_2_bool = false;
+                *position_1_bool = false;
                 printf("The value of the cardPressed5 is %d", cardPressed5);
             }
             matrix_id1 = -1;
@@ -302,44 +302,44 @@ void process_cardPressed5()
 
 void process_cardPressed6()
 {
-    if (mouse_info.x >= mode_info.XResolution / 4 && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.x <= mode_info.XResolution / 2 && mouse_info.y <= mode_info.YResolution)
+    if (mouse_info_s.x >= mode_info.XResolution / 4 && mouse_info_s.y >= mode_info.YResolution / 2 && mouse_info_s.x <= mode_info.XResolution / 2 && mouse_info_s.y <= mode_info.YResolution)
     {
-        if (mouse_info.left_click)
+        if (mouse_info_s.left_click)
         {
             cardPressed6 = true;
         }
     }
     if (cardPressed6)
     {
-        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
         printf("Entrei no botao 1\n");
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[1][1].id;
-            index_1_bool = &cardPressed6;
-            index_1 = &matrix[1][1];
-            printf("The value of index_1 on button1 is %d\n", index_1);
+            position_1_bool = &cardPressed6;
+            position_1 = &matrix[1][1];
+            printf("The value of position_1 on button1 is %d\n", position_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && index_1 != &matrix[1][1])
+        else if (matrix_id2 == -1 && position_1 != &matrix[1][1])
         {
             matrix_id2 = matrix[1][1].id;
-            index_2_bool = &cardPressed6;
-            index_2 = &matrix[1][1];
-            printf("The value of index_2 on button1 is %d\n", index_2);
+            position_2_bool = &cardPressed6;
+            position_2 = &matrix[1][1];
+            printf("The value of position_2 on button1 is %d\n", position_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                index_1->block = true;
-                index_2->block = true;
+                position_1->block = true;
+                position_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *index_2_bool = false;
-                *index_1_bool = false;
+                *position_2_bool = false;
+                *position_1_bool = false;
                 printf("The value of the cardPressed6 is %d", cardPressed6);
             }
             matrix_id1 = -1;
@@ -350,44 +350,44 @@ void process_cardPressed6()
 
 void process_cardPressed7()
 {
-    if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.x <= 3 * mode_info.XResolution / 4 && mouse_info.y <= mode_info.YResolution)
+    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.y >= mode_info.YResolution / 2 && mouse_info_s.x <= 3 * mode_info.XResolution / 4 && mouse_info_s.y <= mode_info.YResolution)
     {
-        if (mouse_info.left_click)
+        if (mouse_info_s.left_click)
         {
             cardPressed7 = true;
         }
     }
     if (cardPressed7)
     {
-        draw_sprite_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
+        draw_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
         printf("Entrei no botao 1\n");
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[1][2].id;
-            index_1_bool = &cardPressed7;
-            index_1 = &matrix[1][2];
-            printf("The value of index_1 on button1 is %d\n", index_1);
+            position_1_bool = &cardPressed7;
+            position_1 = &matrix[1][2];
+            printf("The value of position_1 on button1 is %d\n", position_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && index_1 != &matrix[1][2])
+        else if (matrix_id2 == -1 && position_1 != &matrix[1][2])
         {
             matrix_id2 = matrix[1][2].id;
-            index_2_bool = &cardPressed7;
-            index_2 = &matrix[1][2];
-            printf("The value of index_2 on button1 is %d\n", index_2);
+            position_2_bool = &cardPressed7;
+            position_2 = &matrix[1][2];
+            printf("The value of position_2 on button1 is %d\n", position_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                index_1->block = true;
-                index_2->block = true;
+                position_1->block = true;
+                position_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *index_2_bool = false;
-                *index_1_bool = false;
+                *position_2_bool = false;
+                *position_1_bool = false;
                 printf("The value of the cardPressed7 is %d", cardPressed7);
             }
             matrix_id1 = -1;
@@ -398,44 +398,44 @@ void process_cardPressed7()
 
 void process_cardPressed8()
 {
-    if (mouse_info.x >= 3 * mode_info.XResolution / 4 && mouse_info.y >= mode_info.YResolution / 2 && mouse_info.x <= mode_info.XResolution && mouse_info.y <= mode_info.YResolution)
+    if (mouse_info_s.x >= 3 * mode_info.XResolution / 4 && mouse_info_s.y >= mode_info.YResolution / 2 && mouse_info_s.x <= mode_info.XResolution && mouse_info_s.y <= mode_info.YResolution)
     {
-        if (mouse_info.left_click)
+        if (mouse_info_s.left_click)
         {
             cardPressed8 = true;
         }
     }
     if (cardPressed8)
     {
-        draw_sprite_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
         printf("Entrei no botao 1\n");
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[1][3].id;
-            index_1_bool = &cardPressed8;
-            index_1 = &matrix[1][3];
-            printf("The value of index_1 on button1 is %d\n", index_1);
+            position_1_bool = &cardPressed8;
+            position_1 = &matrix[1][3];
+            printf("The value of position_1 on button1 is %d\n", position_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && index_1 != &matrix[1][3])
+        else if (matrix_id2 == -1 && position_1 != &matrix[1][3])
         {
             matrix_id2 = matrix[1][3].id;
-            index_2_bool = &cardPressed8;
-            index_2 = &matrix[1][3];
-            printf("The value of index_2 on button1 is %d\n", index_2);
+            position_2_bool = &cardPressed8;
+            position_2 = &matrix[1][3];
+            printf("The value of position_2 on button1 is %d\n", position_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             if (check_match(matrix_id1, matrix_id2))
             {
-                index_1->block = true;
-                index_2->block = true;
+                position_1->block = true;
+                position_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *index_2_bool = false;
-                *index_1_bool = false;
+                *position_2_bool = false;
+                *position_1_bool = false;
                 printf("The value of the cardPressed8 is %d", cardPressed8);
             }
             matrix_id1 = -1;
@@ -462,22 +462,22 @@ void draw_game_menu_2()
         pre1++;
     }
 
-    memset(drawing_frame_buffer, 0, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
-    draw_sprite_xpm(back1, 0, 0);
-    draw_sprite_xpm(back2, mode_info.XResolution / 4, 0);
-    draw_sprite_xpm(back3, mode_info.XResolution / 2, 0);
-    draw_sprite_xpm(back4, 3 * mode_info.XResolution / 4, 0);
-    draw_sprite_xpm(back5, 0, mode_info.YResolution / 2);
-    draw_sprite_xpm(back6, mode_info.XResolution / 4, mode_info.YResolution / 2);
-    draw_sprite_xpm(back7, mode_info.XResolution / 2, mode_info.YResolution / 2);
-    draw_sprite_xpm(back8, 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+    memset(drawing_frame_buf, 0, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
+    draw_xpm(back1, 0, 0);
+    draw_xpm(back2, mode_info.XResolution / 4, 0);
+    draw_xpm(back3, mode_info.XResolution / 2, 0);
+    draw_xpm(back4, 3 * mode_info.XResolution / 4, 0);
+    draw_xpm(back5, 0, mode_info.YResolution / 2);
+    draw_xpm(back6, mode_info.XResolution / 4, mode_info.YResolution / 2);
+    draw_xpm(back7, mode_info.XResolution / 2, mode_info.YResolution / 2);
+    draw_xpm(back8, 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
     if (matrix[0][0].block == false)
     {
         process_cardPressed1();
     }
     else if (matrix[0][0].block == true)
     {
-        draw_sprite_xpm(&matrix[0][0], 0, 0);
+        draw_xpm(&matrix[0][0], 0, 0);
     }
     if (matrix[0][1].block == false)
     {
@@ -485,7 +485,7 @@ void draw_game_menu_2()
     }
     else if (matrix[0][1].block == true)
     {
-        draw_sprite_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
+        draw_xpm(&matrix[0][1], mode_info.XResolution / 4, 0);
     }
     if (matrix[0][2].block == false)
     {
@@ -493,7 +493,7 @@ void draw_game_menu_2()
     }
     else if (matrix[0][2].block == true)
     {
-        draw_sprite_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
+        draw_xpm(&matrix[0][2], mode_info.XResolution / 2, 0);
     }
     if (matrix[0][3].block == false)
     {
@@ -501,7 +501,7 @@ void draw_game_menu_2()
     }
     else if (matrix[0][3].block == true)
     {
-        draw_sprite_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
+        draw_xpm(&matrix[0][3], 3 * mode_info.XResolution / 4, 0);
     }
     if (matrix[1][0].block == false)
     {
@@ -509,7 +509,7 @@ void draw_game_menu_2()
     }
     else if (matrix[1][0].block == true)
     {
-        draw_sprite_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
+        draw_xpm(&matrix[1][0], 0, mode_info.YResolution / 2);
     }
     if (matrix[1][1].block == false)
     {
@@ -517,7 +517,7 @@ void draw_game_menu_2()
     }
     else if (matrix[1][1].block == true)
     {
-        draw_sprite_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_xpm(&matrix[1][1], mode_info.XResolution / 4, mode_info.YResolution / 2);
     }
     if (matrix[1][2].block == false)
     {
@@ -525,7 +525,7 @@ void draw_game_menu_2()
     }
     else if (matrix[1][2].block == true)
     {
-        draw_sprite_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
+        draw_xpm(&matrix[1][2], mode_info.XResolution / 2, mode_info.YResolution / 2);
     }
     if (matrix[1][3].block == false)
     {
@@ -533,7 +533,7 @@ void draw_game_menu_2()
     }
     else if (matrix[1][3].block == true)
     {
-        draw_sprite_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
+        draw_xpm(&matrix[1][3], 3 * mode_info.XResolution / 4, mode_info.YResolution / 2);
     }
     if (matrix[0][0].block == true && matrix[0][1].block == true && matrix[0][2].block == true && matrix[0][3].block == true && matrix[1][0].block == true && matrix[1][1].block == true && matrix[1][2].block == true && matrix[1][3].block == true)
     {
@@ -601,7 +601,7 @@ void draw_game_menu_2()
             break;
         }
 
-        draw_sprite_xpm(curr_frame, x, y);
+        draw_xpm(curr_frame, x, y);
 
         // Increment animation frame
         animationFrame++;

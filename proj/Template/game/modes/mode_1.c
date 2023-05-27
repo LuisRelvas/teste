@@ -2,16 +2,16 @@
 
 extern int pre;
 extern Sprite **matrix;
-extern Sprite *index_1;
-extern Sprite *index_2;
-extern bool *index_1_bool;
-extern bool *index_2_bool;
+extern Sprite *position_1;
+extern Sprite *position_2;
+extern bool *position_1_bool;
+extern bool *position_2_bool;
 extern int matrix_id1;
 extern int matrix_id2;
 extern int timer_interrupts;
 extern vbe_mode_info_t mode_info;
-extern MouseInfo mouse_info;
-extern real_time_info time_info;
+extern Mouse_Info_Struct mouse_info_s;
+extern real_time_mode_info time_mode_info;
 extern MenuState menuState;
 extern SystemState systemState;
 extern Sprite *mouse;
@@ -44,10 +44,10 @@ extern bool button1Pressed;
 extern bool button2Pressed;
 extern bool button3Pressed;
 extern bool button4Pressed;
-extern uint8_t *main_frame_buffer;
-extern uint8_t *secondary_frame_buffer;
-extern uint8_t *drawing_frame_buffer;
-extern uint32_t frame_buffer_size;
+extern uint8_t *main_frame_buf;
+extern uint8_t *SECONDSondary_frame_buf;
+extern uint8_t *drawing_frame_buf;
+extern uint32_t frame_buf_size;
 extern Sprite *back_anim1;
 extern Sprite *back_anim2;
 extern Sprite *back_anim3;
@@ -57,9 +57,9 @@ int jacob = 0;
 
 void process_button1(Sprite *cards, int size)
 {
-    if (mouse_info.x < mode_info.XResolution / 2 && mouse_info.y < mode_info.YResolution / 2)
+    if (mouse_info_s.x < mode_info.XResolution / 2 && mouse_info_s.y < mode_info.YResolution / 2)
     {
-        if (mouse_info.left_click)
+        if (mouse_info_s.left_click)
         {
             printf("BOTAO 1 CLICK\n");
             button1Pressed = true;
@@ -71,23 +71,21 @@ void process_button1(Sprite *cards, int size)
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[0][0].id;
-            index_1_bool = &button1Pressed;
-            index_1 = &matrix[0][0];
-            index_1->state = 1;
-            animation_trigger(index_1,0,0);
-            printf("THe value of the index_1->state on button 1 is %d\n", index_1->state);
-            printf("The value of index_1 on button1 is %d\n", index_1);
+            position_1_bool = &button1Pressed;
+            position_1 = &matrix[0][0];
+            position_1->state = 1;
+            printf("THe value of the position_1->state on button 1 is %d\n", position_1->state);
+            printf("The value of position_1 on button1 is %d\n", position_1);
             printf("The value of matrix_id1 on button1 is %d", matrix_id1);
         }
-        else if (matrix_id2 == -1 && index_1 != &matrix[0][0])
+        else if (matrix_id2 == -1 && position_1 != &matrix[0][0])
         {
             matrix_id2 = matrix[0][0].id;
-            index_2_bool = &button1Pressed;
-            index_2 = &matrix[0][0];
-            index_2->state = 1;
-                animation_trigger(index_2,0,0);
-            printf("THe value of the index_1->state on button 1 is %d\n", index_2->state);
-            printf("The value of index_2 on button1 is %d\n", index_2);
+            position_2_bool = &button1Pressed;
+            position_2 = &matrix[0][0];
+            position_2->state = 1;
+            printf("THe value of the position_1->state on button 1 is %d\n", position_2->state);
+            printf("The value of position_2 on button1 is %d\n", position_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
@@ -95,15 +93,15 @@ void process_button1(Sprite *cards, int size)
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
-                index_1->block = true;
-                index_2->block = true;
+                position_1->block = true;
+                position_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *index_2_bool = false;
-                *index_1_bool = false;
-                index_1->state = 0;
-                index_2->state = 0;
+                *position_2_bool = false;
+                *position_1_bool = false;
+                position_1->state = 0;
+                position_2->state = 0;
             
                 
                 printf("The value of the button1Pressed is %d", button1Pressed);
@@ -117,9 +115,9 @@ void process_button1(Sprite *cards, int size)
 
 void process_button2(Sprite *cards, int size)
 {
-    if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.y <= mode_info.YResolution / 2)
+    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.y <= mode_info.YResolution / 2)
     {
-        if (mouse_info.left_click)
+        if (mouse_info_s.left_click)
         {
             button2Pressed = true;
         }
@@ -131,21 +129,21 @@ void process_button2(Sprite *cards, int size)
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[0][1].id;
-            index_1_bool = &button2Pressed;
-            index_1 = &matrix[0][1];
-            index_1->state = 1;
-            printf("THe value of the index_1->state is %d\n", index_1->state);
-            printf("The value of index_1 on button2 is %d\n", index_1);
+            position_1_bool = &button2Pressed;
+            position_1 = &matrix[0][1];
+            position_1->state = 1;
+            printf("THe value of the position_1->state is %d\n", position_1->state);
+            printf("The value of position_1 on button2 is %d\n", position_1);
             printf("The value of matrix_id1 on  button2 is %d\n", matrix_id1);
         }
-        else if (matrix_id2 == -1 && index_1 != &matrix[0][1])
+        else if (matrix_id2 == -1 && position_1 != &matrix[0][1])
         {
             matrix_id2 = matrix[0][1].id;
-            index_2_bool = &button2Pressed;
-            index_2 = &matrix[0][1];
-            index_2->state = 1;        
-            printf("THe value of the index_1->state on button 2 is %d\n", index_2->state);
-            printf("The value of index_2 on button2 is %d\n", index_2);
+            position_2_bool = &button2Pressed;
+            position_2 = &matrix[0][1];
+            position_2->state = 1;        
+            printf("THe value of the position_1->state on button 2 is %d\n", position_2->state);
+            printf("The value of position_2 on button2 is %d\n", position_2);
             printf("The value of matrix_id2 on  button2 is %d\n", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
@@ -153,15 +151,15 @@ void process_button2(Sprite *cards, int size)
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
-                index_1->block = true;
-                index_2->block = true;
+                position_1->block = true;
+                position_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                *index_2_bool = false;
-                *index_1_bool = false;   
-                index_1->state = 0;
-                index_2->state = 0;
+                *position_2_bool = false;
+                *position_1_bool = false;   
+                position_1->state = 0;
+                position_2->state = 0;
                             }
             matrix_id1 = -1;
             matrix_id2 = -1;
@@ -172,9 +170,9 @@ void process_button2(Sprite *cards, int size)
 
 void process_button3(Sprite *cards, int size)
 {
-    if (mouse_info.x < mode_info.XResolution / 2 && mouse_info.y >= mode_info.YResolution / 2)
+    if (mouse_info_s.x < mode_info.XResolution / 2 && mouse_info_s.y >= mode_info.YResolution / 2)
     {
-        if (mouse_info.left_click)
+        if (mouse_info_s.left_click)
         {
             button3Pressed = true;
         }
@@ -185,24 +183,22 @@ void process_button3(Sprite *cards, int size)
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[1][0].id;
-            index_1_bool = &button3Pressed;
-            index_1 = &matrix[1][0];
-            index_1->state = 1;
-            animation_trigger(index_1,0,mode_info.YResolution/2);
-            printf("THe value of the index_1->state on button 3 is %d\n", index_1->state);
-            printf("The value of index_1 on button3 is %d\n", index_1);
+            position_1_bool = &button3Pressed;
+            position_1 = &matrix[1][0];
+            position_1->state = 1;
+            printf("THe value of the position_1->state on button 3 is %d\n", position_1->state);
+            printf("The value of position_1 on button3 is %d\n", position_1);
             printf("The value of matrix_id1 on button3 is %d\n", matrix_id1);
         }
 
-        else if (matrix_id2 == -1 && index_1 != &matrix[1][0])
+        else if (matrix_id2 == -1 && position_1 != &matrix[1][0])
         {
             matrix_id2 = matrix[1][0].id;
-            index_2_bool = &button3Pressed;
-            index_2 = &matrix[1][0];
-            index_2->state = 1;
-            animation_trigger(index_2,0,mode_info.YResolution/2);
-            printf("THe value of the index_1->state on button 3 is %d\n", index_2->state);
-            printf("The value of index_2 on button3 is %d\n", index_2);
+            position_2_bool = &button3Pressed;
+            position_2 = &matrix[1][0];
+            position_2->state = 1;
+            printf("THe value of the position_1->state on button 3 is %d\n", position_2->state);
+            printf("The value of position_2 on button3 is %d\n", position_2);
             printf("The value of matrix_id2 on button3 is %d\n", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
@@ -210,16 +206,16 @@ void process_button3(Sprite *cards, int size)
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
-                index_1->block = true;
-                index_2->block = true;
+                position_1->block = true;
+                position_2->block = true;
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
 
-                *index_2_bool = false;
-                *index_1_bool = false;
-                index_1->state = 0;
-                index_2->state = 0;
+                *position_2_bool = false;
+                *position_1_bool = false;
+                position_1->state = 0;
+                position_2->state = 0;
                             }
             matrix_id1 = -1;
             matrix_id2 = -1;
@@ -230,9 +226,9 @@ void process_button3(Sprite *cards, int size)
 
 void process_button4(Sprite *cards, int size)
 {
-    if (mouse_info.x >= mode_info.XResolution / 2 && mouse_info.y > mode_info.YResolution / 2)
+    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.y > mode_info.YResolution / 2)
     {
-        if (mouse_info.left_click)
+        if (mouse_info_s.left_click)
         {
             button4Pressed = true;
         }
@@ -243,24 +239,23 @@ void process_button4(Sprite *cards, int size)
         if (matrix_id1 == -1)
         {
             matrix_id1 = matrix[1][1].id;
-            index_1_bool = &button4Pressed;
-            index_1 = &matrix[1][1];
-            index_1->state = 1;
+            position_1_bool = &button4Pressed;
+            position_1 = &matrix[1][1];
+            position_1->state = 1;
 
-            animation_trigger(index_1,mode_info.XResolution/2,mode_info.YResolution/2);
-            printf("THe value of the index_1->state on button 4 is %d\n", index_1->state);
-            printf("The value of index_1 on button4 is %d\n", index_1);
+            animation_trigger(position_1,mode_info.XResolution/2,mode_info.YResolution/2);
+            printf("THe value of the position_1->state on button 4 is %d\n", position_1->state);
+            printf("The value of position_1 on button4 is %d\n", position_1);
             printf("The value of matrix_id1 on button4 is %d\n", matrix_id1);
         }
-        else if (matrix_id2 == -1 && index_1 != &matrix[1][1])
+        else if (matrix_id2 == -1 && position_1 != &matrix[1][1])
         {
             matrix_id2 = matrix[1][1].id;
-            index_2_bool = &button4Pressed;
-            index_2 = &matrix[1][1];
-            index_2->state = 1;
-            animation_trigger(index_2,mode_info.XResolution/2,mode_info.YResolution/2);
-            printf("THe value of the index_2->state on button 4  is %d\n", index_2->state); 
-            printf("The value of index_2 on button4 is %d\n", index_2);
+            position_2_bool = &button4Pressed;
+            position_2 = &matrix[1][1];
+            position_2->state = 1;
+            printf("THe value of the position_2->state on button 4  is %d\n", position_2->state); 
+            printf("The value of position_2 on button4 is %d\n", position_2);
             printf("The value of matrix_id2 on button4 is %d\n", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
@@ -268,16 +263,16 @@ void process_button4(Sprite *cards, int size)
             if(gameplayCounter % 7 == 0){
             if (check_match(matrix_id1, matrix_id2))
             {
-                index_1->block = true;
-                index_2->block = true;
+                position_1->block = true;
+                position_2->block = true;
                 
             }
             else
             {
-                *index_2_bool = false;
-                *index_1_bool = false;
-                index_1->state = 0;
-                index_2->state = 0;
+                *position_2_bool = false;
+                *position_1_bool = false;
+                position_1->state = 0;
+                position_2->state = 0;
             
             }
             matrix_id1 = -1;
@@ -302,7 +297,7 @@ void draw_game_menu()
     }
     printf("VOLTEI AQUI\n");
 
-    memset(drawing_frame_buffer, 0, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
+    memset(drawing_frame_buf, 0, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
     animation_trigger(&matrix[0][0], 0, 0);
     animation_trigger(&matrix[0][1], mode_info.XResolution / 2, 0);
     animation_trigger(&matrix[1][0], 0, mode_info.YResolution / 2);

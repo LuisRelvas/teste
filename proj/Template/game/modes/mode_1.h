@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include "menu.h"
-#include "view/view.h"
+#include "game/game.h"
 
 void draw_game_menu();
 void process_button1(Sprite *cards, int size);

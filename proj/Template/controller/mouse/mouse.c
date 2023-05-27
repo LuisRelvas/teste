@@ -1,61 +1,60 @@
 #include "mouse.h"
 
-// Variáveis globais do módulo
-int hook_id_mouse = 2;        // um valor qualquer [0..7], desde que seja diferente do teclado e do timer
-uint8_t byte_index = 0;       // [0..2]
-uint8_t mouse_bytes[3];       // bytes apanhados
-uint8_t current_byte;         // o byte mais recente lido
-MouseInfo mouse_info = {0, 0, 100, 100};
-struct packet mouseP;
+int mouse_hook_id = 2;
+uint8_t byte_position = 0;       
+uint8_t bytes_from_mouse[3];
+uint8_t byte_actual;
+Mouse_Info_Struct mouse_info_s = {0, 0, 100, 100};
+struct packet packet_from_mouse;
 extern vbe_mode_info_t mode_info;
 
-// Subscrição das interrupções
-// Modo REENABLE e modo EXCLUSIVE
+
 int (mouse_subscribe_interrupts)(){
-  return sys_irqsetpolicy(IRQ_MOUSE, IRQ_REENABLE | IRQ_EXCLUSIVE, &hook_id_mouse);
+  if(sys_irqsetpolicy(MOUSE_IRQ_LINE, IRQ_REENABLE | IRQ_EXCLUSIVE, &mouse_hook_id) != 0) {
+    printf("Error: Failed to subscribe mouse interrupts!\n");
+    return 1;
+  }
+  return 0;
 }
 
-// Desativação das interrupções
 int (mouse_unsubscribe_interrupts)(){
-  return sys_irqrmpolicy(&hook_id_mouse);
+  if(sys_irqrmpolicy(&mouse_hook_id) != 0) { 
+    printf("Error: Failed to unsubscribe mouse interrupts!\n");
+    return 1;
+  }
+  return 0;
 }
 
-// Em cada chamada do IH (interrupt handler), lê um novo byte do rato
 void (mouse_ih)(){
-  read_KBC_output(KBC_WRITE_CMD, &current_byte, 1);
+  keyboard_read_output_buffer(KBD_WRITE_CMD, &byte_actual, 1);
 }
 
-// Avalia a disposição dos bytes no array @mouse_bytes
-// O primeiro byte do pacote é sempre o que tem o BIT(3) ativo
-void mouse_sync_bytes() {
-  if (byte_index == 0 && (current_byte & FIRST_BYTE)) { // é o byte CONTROL, o bit 3 está ativo
-    mouse_bytes[byte_index]= current_byte;
-    byte_index++;
+
+void mouse_align_bytes() {
+  if (byte_position == 0 && (byte_actual & START_BYTE)) { 
+    bytes_from_mouse[byte_position]= byte_actual;
+    byte_position++;
   }
-  else if (byte_index > 0) {                            // recebe os deslocamentos em X e Y
-    mouse_bytes[byte_index] = current_byte;
-    byte_index++;
+  else if (byte_position > 0) {                        
+    bytes_from_mouse[byte_position] = byte_actual;
+    byte_position++;
   }
 }
 
-// Transforma o array de bytes numa struct definida de acordo com as necessidades da aplicação
+
 void (mouse_sync_info)(){
 
-  mouse_info.right_click = mouse_bytes[0] & MOUSE_RB;
-  mouse_info.left_click = mouse_bytes[0] & MOUSE_LB;
-
-  if (mouse_bytes[0] & MOUSE_X_OVERFLOW || mouse_bytes[0] & MOUSE_Y_OVERFLOW) return;
-
-  int16_t delta_x = mouse_info.x + ((mouse_bytes[0] & MOUSE_X_SIGNAL) ? (0xFF00 | mouse_bytes[1]) : mouse_bytes[1]);
-  int16_t delta_y = mouse_info.y - ((mouse_bytes[0] & MOUSE_Y_SIGNAL) ? (0xFF00 | mouse_bytes[2]) : mouse_bytes[2]);
-
+  mouse_info_s.right_click = bytes_from_mouse[0] & MOUSE_RIGHT_CLICK;
+  mouse_info_s.left_click = bytes_from_mouse[0] & MOUSE_LEFT_CLICK;
+  if (bytes_from_mouse[0] & MOUSE_OVERFLOW_X || bytes_from_mouse[0] & MOUSE_OVERFLOW_Y) return;
+  int16_t delta_x = mouse_info_s.x + ((bytes_from_mouse[0] & MOUSE_SIGNAL_X) ? (0xFF00 | bytes_from_mouse[1]) : bytes_from_mouse[1]);
+  int16_t delta_y = mouse_info_s.y - ((bytes_from_mouse[0] & MOUSE_SIGNAL_Y) ? (0xFF00 | bytes_from_mouse[2]) : bytes_from_mouse[2]);
   if (delta_x < 0 || delta_x > mode_info.XResolution || delta_y < 0 || delta_y > mode_info.YResolution) return;
-  mouse_info.x = delta_x;
-  mouse_info.y = delta_y;
+  mouse_info_s.x = delta_x;
+  mouse_info_s.y = delta_y;
 }
 
-// A escrita para o rato tem de ser feita de forma mais controlada do que no keyboard
-// Temos de injetar o comando DIRETAMENTE no rato e esperar por uma resposta afirmativa (ACK).
+
 int (mouse_write)(uint8_t command) {
 
   uint8_t attemps = MAX_ATTEMPS;
@@ -63,10 +62,10 @@ int (mouse_write)(uint8_t command) {
 
   do {
     attemps--;
-    if (write_KBC_command(KBC_IN_CMD, WRITE_BYTE_MOUSE)) return 1;
-    if (write_KBC_command(KBC_OUT_CMD, command)) return 1;
-    tickdelay(micros_to_ticks(WAIT_KBC));
-    if (util_sys_inb(KBC_OUT_CMD, &mouse_response)) return 1;
+    if (keyboard_writing(KBD_INPUT_CMD, MOUSE_WRITE_B)) return 1;
+    if (keyboard_writing(KBD_OUTPUT_CMD, command)) return 1;
+    tickdelay(micros_to_ticks(WAIT_4_KBC));
+    if (util_sys_inb(KBD_OUTPUT_CMD, &mouse_response)) return 1;
   } while (mouse_response != ACK && attemps);
 
   return 0;

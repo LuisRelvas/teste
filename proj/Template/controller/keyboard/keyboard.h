@@ -14,6 +14,6 @@ int (keyboard_unsubscribe_interrupts)();
 
 void (kbc_ih)();
 
-int (keyboard_restore)();
+int (keyboard_refresh)();
 
 #endif

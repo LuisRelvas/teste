@@ -1,17 +1,17 @@
 #include "KBC.h"
 
-int (read_KBC_status)(uint8_t* status) {
-    return util_sys_inb(KBC_STATUS_REG, status);
+int (keyboard_read_status)(uint8_t* status) {
+    return util_sys_inb(KEYBOARD_REG, status);
 }
 
-int read_KBC_output(uint8_t port, uint8_t *output, uint8_t mouse) {
+int keyboard_read_output_buffer(uint8_t port, uint8_t *output, uint8_t mouse) {
 
     uint8_t status;
     uint8_t attemps = 10;
     
     while (attemps) {
 
-        if (read_KBC_status(&status) != 0) {                // lê o status
+        if (keyboard_read_status(&status) != 0) {                // lê o status
             printf("Error: Status not available!\n");
             return 1;
         }
@@ -45,19 +45,19 @@ int read_KBC_output(uint8_t port, uint8_t *output, uint8_t mouse) {
     return 1; // se ultrapassar o número de tentativas lança um erro
 }
 
-int (write_KBC_command)(uint8_t port, uint8_t commandByte) {
+int (keyboard_writing)(uint8_t port, uint8_t commandByte) {
 
     uint8_t status;
     uint8_t attemps = MAX_ATTEMPS;
 
     while (attemps) {
 
-        if (read_KBC_status(&status) != 0){
+        if (keyboard_read_status(&status) != 0){
             printf("Error: Status not available!\n");
             return 1;
         }
 
-        if ((status & FULL_IN_BUFFER) == 0){
+        if ((status & FULL_INPUT_BUFFER) == 0){
 
             if(sys_outb(port, commandByte) != 0){
                 printf("Error: Could not write commandByte!\n");
@@ -66,7 +66,7 @@ int (write_KBC_command)(uint8_t port, uint8_t commandByte) {
 
             return 0;
         }
-        tickdelay(micros_to_ticks(WAIT_KBC));
+        tickdelay(micros_to_ticks(WAIT_4_KBC));
         attemps--;
     }
     

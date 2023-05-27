@@ -1,89 +1,118 @@
 #include "rtc.h"
 
-// Variáveis globais
-int rtc_hook_id = RTC_MASK; // Máscara constante = 5
-real_time_info time_info;   // Estrutura que irá conter toda a informação
-uint8_t binary_mode;        // Modo de contagem, variável booleana
+int hook_id_rtc = MASK_OF_RTC; 
+real_time_mode_info time_mode_info;  
+uint8_t BIN_mode;
 
-// O setup consiste em determinar o modo de contagem do RTC
-// E também preencher pela primeira vez a informação do tempo
-void rtc_setup() {
-    binary_mode = rtc_is_binary();
-    rtc_update_time();
+
+void start_rtc() {
+    BIN_mode = rtc_check_BIN();
+    rtc_update_display();
 }
 
-// Subscrição das interrupções. Semelhante aos labs anteriores.
+
 int rtc_subscribe_interrupts() {
-    return sys_irqsetpolicy(IRQ_RTC, IRQ_REENABLE, &rtc_hook_id);
-}
-
-// Desativação das interrupções. Semelhante aos labs anteriores.
-int rtc_unsubscribe_interrupts() {
-    return sys_irqrmpolicy(&rtc_hook_id);
-}
-
-// Leitura do output do RTC, dado um comando
-int rtc_output(uint8_t command, uint8_t *output) {
-    if (sys_outb(REGISTER_INPUT, command) != 0) return 1;
-	if (util_sys_inb(REGISTER_OUTPUT, output) != 0) return 1;
+    if(sys_irqsetpolicy(RTC_IRQ_LINE, IRQ_REENABLE, &hook_id_rtc) != 0){
+        printf("Error in the function sys_irqsetpolicy in rtc");
+        return 1;
+    }
     return 0;
 }
 
-// Retorna 1 se naquele momento o RTC está a atualizar os seus valores internos
-// Nesse caso não devemos ler nenhum registo
-int rtc_is_updating() {
-    uint8_t result;
-    if (rtc_output(REGISTER_UPDATING, &result)) return 1;
-	return result & UPDATING;
+
+int rtc_unsubscribe_interrupts() {
+    if(sys_irqrmpolicy(&hook_id_rtc) != 0) {
+        printf("Error in the function sys_irqrmpolicy in rtc");
+        return 1;
+    }
+    return 0;
 }
 
-// Retorna 1 se o modo de contagem for binário
-int rtc_is_binary() {
-    uint8_t result;
-    if (rtc_output(REGISTER_COUNTING, &result)) return 1;
-	return result & BINARY;
+
+int read_output_rtc(uint8_t command, uint8_t *output) {
+    if (sys_outb(IN_REG, command) != 0){
+     printf("Error reading the register input");
+     return 1;}
+	if (util_sys_inb(OUT_REG, output) != 0) {
+    printf("Error in the function util_sys_inb in rtc");
+    return 1;}
+    return 0;
 }
 
-// Retorna 1 se o modo de contagem for BCD
-int rtc_is_bcd() {
-    return !rtc_is_binary();
+
+int rtc_refreshing() {
+    uint8_t time;
+    if (read_output_rtc(REGISTER_IS_REFRESHING, &time)) return 1;
+	return time & REFRESHING;
 }
 
-// Transforma um valor de 8 bits BCD em binário
-uint8_t to_binary(uint8_t bcd_number) {
-    return ((bcd_number >> 4) * 10) + (bcd_number & 0xF);
-}
 
-// Faz update às informações da struct time_info
-int rtc_update_time() {
+int rtc_check_BIN() {
+    uint8_t time;
+    if (read_output_rtc(REGISTER_IN_COUNT, &time)) {
+        printf("Error in the function read_output_rtc in rtc");
+        return 1;
+        }
     
-    // Se o RTC estiver ocupado a atualizar os registos não devemos ler dados
-    if (rtc_is_updating() != 0) return 1;
+	return time & BIN;
+}
+
+
+int rtc_check_bcd() {
+    return !rtc_check_BIN();
+}
+
+uint8_t rtc_2_BIN(uint8_t bcd_convert_number) {
+    return ((bcd_convert_number >> 4) * 10) + (bcd_convert_number & 0xF);
+}
+
+int rtc_update_display() {
+    
+    if (rtc_refreshing() != 0) return 1;
     uint8_t output;
 
-    // Seconds
-    if (rtc_output(SECONDS, &output) != 0) return 1;
-    time_info.seconds = binary_mode ? output : to_binary(output);
+    if (read_output_rtc(SECONDS, &output) != 0) 
+    {
+        printf("Error in the function read_output_rtc in rtc");
+        return 1;
+    }
+    time_mode_info.SECONDSonds = BIN_mode ? output : rtc_2_BIN(output);
 
-    // Minutes
-    if (rtc_output(MINUTES, &output) != 0) return 1;
-    time_info.minutes = binary_mode ? output : to_binary(output);
+    if (read_output_rtc(MINUTES, &output) != 0)
+    { 
+        printf("Error in the function read_output_rtc in rtc");
+        return 1;
+    }
+    time_mode_info.minutes = BIN_mode ? output : rtc_2_BIN(output);
 
-    // Hours
-    if (rtc_output(HOURS, &output) != 0) return 1;
-    time_info.hours = binary_mode ? output : to_binary(output);
+    if (read_output_rtc(HOURS, &output) != 0) 
+    {
+        printf("Error in the function read_output_rtc in rtc");
+        return 1;
+    }
+    time_mode_info.hours = BIN_mode ? output : rtc_2_BIN(output);
 
-    // Day
-    if (rtc_output(DAY, &output) != 0) return 1;
-    time_info.day = binary_mode ? output : to_binary(output);
+    if (read_output_rtc(DAY, &output) != 0) 
+    {
+        printf("Error in the function read_output_rtc in rtc");
+        return 1;
+    }
 
-    // Month
-    if (rtc_output(MONTH, &output) != 0) return 1;
-    time_info.month = binary_mode ? output : to_binary(output);
+    time_mode_info.day = BIN_mode ? output : rtc_2_BIN(output);
 
-    // Year
-    if (rtc_output(YEAR, &output) != 0) return 1;
-    time_info.year = binary_mode ? output : to_binary(output);
+    if (read_output_rtc(MONTH, &output) != 0)
+    {
+        printf("Error in the function read_output_rtc in rtc");
+        return 1;
+    } 
+    time_mode_info.month = BIN_mode ? output : rtc_2_BIN(output);
+
+    if (read_output_rtc(YEAR, &output) != 0)
+    {
+        printf("Error in the function read_output_rtc in rtc");
+        return 1;
+    }
+    time_mode_info.year = BIN_mode ? output : rtc_2_BIN(output);
 
     return 0;
 }

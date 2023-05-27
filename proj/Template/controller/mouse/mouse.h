@@ -14,7 +14,7 @@ typedef struct {
     uint8_t left_click;
     int16_t x;
     int16_t y;
-} MouseInfo;   
+} Mouse_Info_Struct;   
 
 int (mouse_subscribe_interrupts)();
 
@@ -22,7 +22,7 @@ int (mouse_unsubscribe_interrupts)();
 
 void (mouse_ih)();
 
-void (mouse_sync_bytes)();
+void (mouse_align_bytes)();
 
 void (mouse_sync_info)();
 
