@@ -52,10 +52,10 @@ extern Sprite *back_anim1;
 extern Sprite *back_anim2;
 extern Sprite *back_anim3;
 extern Sprite *back_anim4;
-bool player1_bool = true;
-bool player2_bool = false;
-int player_1_score = 0;
-int player_2_score = 0;
+extern bool player1;
+extern bool player2;
+extern int player_1;
+extern int player_2;
 extern int gameplayCounter; 
 
 void process_button1_2(Sprite *cards, int size)
@@ -98,13 +98,13 @@ void process_button1_2(Sprite *cards, int size)
             {
                 printf("ENTERED HERE");
 
-                if(player1_bool){
-                    printf("player1_bool");
-                    player_1_score++;
+                if(player1){
+                    printf("player1");
+                    player_1++;
                 }
-                else if(player2_bool){
-                    printf("player2_bool");
-                    player_2_score++;
+                else if(player2){
+                    printf("player2");
+                    player_2++;
                 }
                 index_1->block = true;
                 index_2->block = true;
@@ -113,8 +113,8 @@ void process_button1_2(Sprite *cards, int size)
             else if (!check_match(matrix_id1, matrix_id2))
             {
 
-                player1_bool = !player1_bool;
-                player2_bool = !player2_bool;
+                player1 = !player1;
+                player2 = !player2;
                 *index_2_bool = false;
                 *index_1_bool = false;
                 index_1->state = 0;
@@ -169,13 +169,13 @@ void process_button2_2(Sprite *cards, int size)
             {
                 printf("ENTERED HERE");
 
-                if(player1_bool){
+                if(player1){
                     printf("player 1");
-                    player_1_score++;
+                    player_1++;
                 }
-                else if(player2_bool){
+                else if(player2){
                     printf("player 2");
-                    player_2_score++;
+                    player_2++;
                 }
                 index_1->block = true;
                 index_2->block = true;
@@ -184,8 +184,8 @@ void process_button2_2(Sprite *cards, int size)
             else if (!check_match(matrix_id1, matrix_id2))
             {
 
-                player1_bool = !player1_bool;
-                player2_bool = !player2_bool;
+                player1 = !player1;
+                player2 = !player2;
                 *index_2_bool = false;
                 *index_1_bool = false;   
                 index_1->state = 0;
@@ -238,13 +238,13 @@ void process_button3_2(Sprite *cards, int size)
             if (check_match(matrix_id1, matrix_id2))
             {
                 printf("ENTERED HERE");
-                if(player1_bool){
-                    printf("ENTERED HERE player1_bool");
-                    player_1_score++;
+                if(player1){
+                    printf("ENTERED HERE player1");
+                    player_1++;
                 }
-                else if(player2_bool){
-                    printf("ENTERED HERE player2_bool");
-                    player_2_score++;
+                else if(player2){
+                    printf("ENTERED HERE player2");
+                    player_2++;
                 }
                 index_1->block = true;
                 index_2->block = true;
@@ -252,8 +252,8 @@ void process_button3_2(Sprite *cards, int size)
             }
             else if (!check_match(matrix_id1, matrix_id2))
             {
-                player1_bool = !player1_bool;
-                player2_bool = !player2_bool;
+                player1 = !player1;
+                player2 = !player2;
                 *index_2_bool = false;
                 *index_1_bool = false;
                 index_1->state = 0;
@@ -306,13 +306,13 @@ void process_button4_2(Sprite *cards, int size)
             if(gameplayCounter % 7 == 0){
             if (check_match(matrix_id1, matrix_id2))
             {
-                if(player1_bool){
-                    printf("ENTERED HERE player1_bool");
-                    player_1_score++;
+                if(player1){
+                    printf("ENTERED HERE player1");
+                    player_1++;
                 }
-                else if(player2_bool){
-                    printf("ENTERED HERE player2_bool");
-                    player_2_score++;
+                else if(player2){
+                    printf("ENTERED HERE player2");
+                    player_2++;
                 }
                 index_1->block = true;
                 index_2->block = true;
@@ -320,8 +320,8 @@ void process_button4_2(Sprite *cards, int size)
             }
             else
             {
-                player1_bool = !player1_bool;
-                player2_bool = !player2_bool;
+                player1 = !player1;
+                player2 = !player2;
                 *index_2_bool = false;
                 *index_1_bool = false;
                 index_1->state = 0;
@@ -354,10 +354,10 @@ void draw_game_menu_2_2()
     animation_trigger(&matrix[1][0], 0, mode_info.YResolution / 2);
     animation_trigger(&matrix[1][1], mode_info.XResolution / 2, mode_info.YResolution / 2);
     printf("gameplayCounter %d",gameplayCounter);
-    printf("player1_bool %d", player1_bool);
-    printf("player2_bool %d", player2_bool);
-    printf("player1score %d", player_1_score);
-    printf("player2score %d", player_2_score);
+    printf("player1 %d", player1);
+    printf("player2 %d", player2);
+    printf("player1score %d", player_1);
+    printf("player2score %d", player_2);
     printf("matrix: %d\n", matrix_id1);
     
 
@@ -401,8 +401,8 @@ void draw_game_menu_2_2()
     }
     if (matrix[0][0].block == true && matrix[0][1].block == true && matrix[1][0].block == true && matrix[1][1].block == true)
     {
-        printf("player1Score %d", player_1_score);
-        printf("player2Score %d", player_2_score);
+        printf("player1Score %d", player_1);
+        printf("player2Score %d", player_2);
         menuState = END;
     }
 }
