@@ -12,6 +12,7 @@
         "graphics.h": "c",
         "stdio.h": "c",
         "kbc.h": "c",
-        "mouse.h": "c"
+        "mouse.h": "c",
+        "mode_1_2.h": "c"
     }
 }
