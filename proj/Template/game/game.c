@@ -565,7 +565,7 @@ int draw_sprite_button(Sprite *sprite, int x, int y)
 
 void rtc_print()
 {
-    printf("NOW: %d/%d/%d @%d:%d:%d\n", 2000 + time_mode_info.year, time_mode_info.month, time_mode_info.day, time_mode_info.hours, time_mode_info.minutes, time_mode_info.SECONDSonds);
+    printf("NOW: %d/%d/%d @%d:%d:%d\n", 2000 + time_mode_info.year, time_mode_info.month, time_mode_info.day, time_mode_info.hours, time_mode_info.minutes, time_mode_info.seconds);
 }
 
 void animation_trigger(Sprite *card, int x, int y)
