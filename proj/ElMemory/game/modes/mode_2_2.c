@@ -634,6 +634,7 @@ void draw_game_menu_4_2()
     Sprite cards2[] = {*number1, *number1, *number2, *number2, *number3, *number3, *number4, *number4};
     if (pre1 == 0)
     {
+        is_processing = false;
         player1 = true;
         player2 = false;
         player_1 = 0;

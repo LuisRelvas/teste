@@ -35,6 +35,13 @@ void shuffle(Sprite *cards, int size);
 void shuffle2(Sprite *cards);
 void shuffle3(Sprite *cards);
 void draw_mode_menu();
+void draw_select_player();
+void process_player_1();
+void process_player_2();
+void draw_mode_2player();
+void process_mode1_2();
+void process_mode2_2();
+void process_mode3_2();
 
 void draw_card_animation(uint16_t x, uint16_t y);
 void animation_trigger(Sprite *card, int x, int y);

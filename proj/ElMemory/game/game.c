@@ -118,51 +118,50 @@ void draw_new_fb()
     switch (menuState)
     {
     case START:
-        
         draw_initial_menu();
         mouse_info_s.left_click = 0;
         break;
     case GAME:
-        
         draw_game_menu();
         mouse_info_s.left_click = 0;
         break;
     case GAME_2P:
-    
         draw_game_menu_2_2();
         mouse_info_s.left_click = 0;
         break;
     case GAME_4_2P:
-    mouse_info_s.left_click = 0;
         draw_game_menu_4_2();
+        mouse_info_s.left_click = 0;
         break;
     case GAME_8_2P:
-    
         draw_game_menu_8_2();
         mouse_info_s.left_click = 0;
         break;
     case END:
-    
         draw_finish_menu();
         mouse_info_s.left_click = 0;
         break;
     case GAME_2:
-    
         draw_game_menu_2();
         mouse_info_s.left_click = 0;
         break;
     case MODE:
-    
         draw_mode_menu();
         mouse_info_s.left_click = 0;
         break;
+    case SEL_P:
+        draw_select_player();
+        mouse_info_s.left_click = 0;
+        break;
     case GAME_3:
-    
         draw_game_menu_3();
         mouse_info_s.left_click = 0;
         break;
+    case MODE_2:
+        draw_mode_2player();
+        mouse_info_s.left_click = 0;
+        break;
     }
-
     draw_mouse();
 }
 
@@ -173,7 +172,7 @@ void process_start_button()
         draw_xpm(Start, mode_info.XResolution / 3, mode_info.YResolution / 3);
         if (mouse_info_s.left_click)
         {
-            menuState = MODE;
+            menuState = SEL_P;
         }
     }
 }
@@ -204,9 +203,9 @@ void draw_initial_menu()
 
 void process_mode1()
 {
-    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.x <= mode_info.XResolution / 2 + Easy->width && mouse_info_s.y >= mode_info.YResolution / 4 && mouse_info_s.y <= mode_info.YResolution / 4 + Easy->height)
+    if (mouse_info_s.x >= mode_info.XResolution / 3 && mouse_info_s.x <= mode_info.XResolution / 3 + Easy->width && mouse_info_s.y >= mode_info.YResolution / 4 && mouse_info_s.y <= mode_info.YResolution / 4 + Easy->height)
     {
-        draw_xpm(Easy, mode_info.XResolution / 2, mode_info.YResolution / 4);
+        draw_xpm(Easy, mode_info.XResolution / 3, mode_info.YResolution / 4);
         if (mouse_info_s.left_click)
         {
             menuState = GAME;
@@ -215,9 +214,9 @@ void process_mode1()
 }
 void process_mode2()
 {
-    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.x <= mode_info.XResolution / 2 + Medium->width && mouse_info_s.y >= mode_info.YResolution / 2 && mouse_info_s.y <= mode_info.YResolution / 2 + Medium->height)
+    if (mouse_info_s.x >= mode_info.XResolution / 3 && mouse_info_s.x <= mode_info.XResolution / 3 + Medium->width && mouse_info_s.y >= mode_info.YResolution / 2 && mouse_info_s.y <= mode_info.YResolution / 2 + Medium->height)
     {
-        draw_xpm(Medium, mode_info.XResolution / 2, mode_info.YResolution / 2);
+        draw_xpm(Medium, mode_info.XResolution / 3, mode_info.YResolution / 2);
         if (mouse_info_s.left_click)
         {
             menuState = GAME_2;
@@ -227,9 +226,9 @@ void process_mode2()
 
 void process_mode3()
 {
-    if (mouse_info_s.x >= mode_info.XResolution / 2 && mouse_info_s.x <= mode_info.XResolution / 2 + Hard->width && mouse_info_s.y >= 3 * mode_info.YResolution / 4 && mouse_info_s.y <= 3 * mode_info.YResolution / 4 + Hard->height)
+    if (mouse_info_s.x >= mode_info.XResolution / 3 && mouse_info_s.x <= mode_info.XResolution / 3 + Hard->width && mouse_info_s.y >= 3 * mode_info.YResolution / 4 && mouse_info_s.y <= 3 * mode_info.YResolution / 4 + Hard->height)
     {
-        draw_xpm(Hard, mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
+        draw_xpm(Hard, mode_info.XResolution / 3, 3 * mode_info.YResolution / 4);
         if (mouse_info_s.left_click)
         {
             menuState = GAME_3;
@@ -237,15 +236,98 @@ void process_mode3()
     }
 }
 
+void process_player_1() 
+{
+    if (mouse_info_s.x >= mode_info.XResolution / 3 && mouse_info_s.x <= mode_info.XResolution / 3 + player_1_menu->width && mouse_info_s.y >= mode_info.YResolution / 3 && mouse_info_s.y <= mode_info.YResolution / 3 + player_1_menu->height)
+    {
+        draw_xpm(player_1_menu, mode_info.XResolution / 3, mode_info.YResolution / 3);
+        if (mouse_info_s.left_click)
+        {
+            menuState = MODE;
+        }
+    }
+}
+
+void process_player_2() 
+{
+
+    if (mouse_info_s.x >= mode_info.XResolution / 3 && mouse_info_s.x <= mode_info.XResolution / 3 + player_2_menu->width && mouse_info_s.y >= mode_info.YResolution / 2 && mouse_info_s.y <= mode_info.YResolution / 2 + player_2_menu->height)
+    {
+        draw_xpm(player_2_menu, mode_info.XResolution / 3, mode_info.YResolution / 2);
+        if (mouse_info_s.left_click)
+        {
+            menuState = MODE_2;
+        }
+    }
+}
+
 void draw_mode_menu()
 {
+
     memset(drawing_frame_buf, 0x000000, frame_buf_size);
-    draw_xpm(Easy, mode_info.XResolution / 2, mode_info.YResolution / 4);
+    draw_xpm(Easy, mode_info.XResolution / 3, mode_info.YResolution / 4);
     process_mode1();
-    draw_xpm(Medium, mode_info.XResolution / 2, mode_info.YResolution / 2);
+    draw_xpm(Medium, mode_info.XResolution / 3, mode_info.YResolution / 2);
     process_mode2();
-    draw_xpm(Hard, mode_info.XResolution / 2, 3 * mode_info.YResolution / 4);
+    draw_xpm(Hard, mode_info.XResolution / 3, 3 * mode_info.YResolution / 4);
     process_mode3();
+}
+
+
+void draw_select_player() 
+{ 
+    memset(drawing_frame_buf,0x000000,frame_buf_size);
+    draw_xpm(player_1_menu,mode_info.XResolution / 3, mode_info.YResolution / 3);
+    process_player_1();
+    draw_xpm(player_2_menu,mode_info.XResolution / 3, mode_info.YResolution / 2);
+    process_player_2();
+}
+
+void process_mode1_2()
+{
+     if (mouse_info_s.x >= mode_info.XResolution / 3 && mouse_info_s.x <= mode_info.XResolution / 3 + Easy->width && mouse_info_s.y >= mode_info.YResolution / 4 && mouse_info_s.y <= mode_info.YResolution / 4 + Easy->height)
+    {
+        draw_xpm(Easy, mode_info.XResolution / 3, mode_info.YResolution / 4);
+        if (mouse_info_s.left_click)
+        {
+            menuState = GAME_2P;
+        }
+    }
+
+}
+
+void process_mode2_2() 
+{
+    if (mouse_info_s.x >= mode_info.XResolution / 3 && mouse_info_s.x <= mode_info.XResolution / 3 + Medium->width && mouse_info_s.y >= mode_info.YResolution / 2 && mouse_info_s.y <= mode_info.YResolution / 2 + Medium->height)
+    {
+        draw_xpm(Medium, mode_info.XResolution / 3, mode_info.YResolution / 2);
+        if (mouse_info_s.left_click)
+        {
+            menuState = GAME_4_2P;
+        }
+    }
+}
+
+void process_mode3_2() 
+{
+    if (mouse_info_s.x >= mode_info.XResolution / 3 && mouse_info_s.x <= mode_info.XResolution / 3 + Hard->width && mouse_info_s.y >= 3 * mode_info.YResolution / 4 && mouse_info_s.y <= 3 * mode_info.YResolution / 4 + Hard->height)
+    {
+        draw_xpm(Hard, mode_info.XResolution / 3, 3 * mode_info.YResolution / 4);
+        if (mouse_info_s.left_click)
+        {
+            menuState = GAME_8_2P;
+        }
+    }
+}
+
+void draw_mode_2player() { 
+    memset(drawing_frame_buf,0x000000,frame_buf_size);
+    draw_xpm(Easy,mode_info.XResolution / 3, mode_info.YResolution / 4);
+    process_mode1_2();
+    draw_xpm(Medium,mode_info.XResolution / 3, mode_info.YResolution / 2);
+    process_mode2_2();
+    draw_xpm(Hard,mode_info.XResolution / 3, 3 * mode_info.YResolution / 4);
+    process_mode3_2();
 }
 
 Sprite **matrix;
@@ -517,6 +599,12 @@ void draw_mouse()
         break;
     case GAME_8_2P:
         draw_xpm(hand, mouse_info_s.x, mouse_info_s.y);
+        break;
+    case SEL_P:
+        draw_xpm(mouse, mouse_info_s.x, mouse_info_s.y);
+        break;
+    case MODE_2:
+        draw_xpm(mouse, mouse_info_s.x, mouse_info_s.y);
         break;
     }
 }

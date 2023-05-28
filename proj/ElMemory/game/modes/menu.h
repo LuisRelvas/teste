@@ -72,6 +72,8 @@ typedef enum
     GAME_2,
     END,
     MODE,
+    MODE_2, 
+    SEL_P,
     GAME_3,
     GAME_4_2P,
     GAME_8_2P,
