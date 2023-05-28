@@ -346,6 +346,10 @@ void draw_game_menu_2_2()
 
     if (pre == 0)
     {
+        player1 = true;
+        player2 = false;
+        player_1 = 0;
+        player_2 = 0;
         matrix = alloc_matrix(2, 2);
         shuffle(cards, j);
         printf("matrix allocated\n,%d", matrix);

@@ -1188,6 +1188,10 @@ void draw_game_menu_8_2()
     Sprite cards3[] = {*number1, *number1, *number2, *number2, *number3, *number3, *number4, *number4, *number5, *number5, *number6, *number6, *number7, *number7, *number8, *number8};
     if (pre2 == 0)
     {
+        player1 = true;
+        player2 = false;
+        player_1 = 0;
+        player_2 = 0;
         matrix = alloc_matrix(4, 4);
         shuffle3(cards3);
         pre2++;
