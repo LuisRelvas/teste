@@ -446,38 +446,19 @@ bool check_match(int id1, int id2)
 // O menu final é apenas um retângulo com tamanho máximo, com um smile ao centro
 void draw_finish_menu()
 {
+    Sprite final[] = {*number1,*number2,*number3,*number4,*number5,*number6,*number7,*number8};
     printf("The value of player_1 is %d\n", player_1);
     printf("The value of player_2 is %d\n", player_2);
-    draw_rectangle(0, 0, mode_info.XResolution, mode_info.YResolution, 0x000000, drawing_frame_buf);
+    memset(drawing_frame_buf, 0, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
     if (player_1 != 0)
     {
-        if (player_1 == 0)
-        {
-            draw_xpm(back, mode_info.XResolution / 2 - 100, mode_info.YResolution / 2 - 100);
-        }
-        else if (player_1 == 1)
-        {
-            draw_xpm(number1, mode_info.XResolution / 2 - 100, mode_info.YResolution / 2 - 100);
-        }
-        else if (player_1 == 2)
-        {
-            draw_xpm(number2, mode_info.XResolution / 2 - 100, mode_info.YResolution / 2 - 100);
-        }
+        draw_xpm(&final[0], 0, 0);
+        draw_xpm(&final[player_1-1], mode_info.XResolution / 2, 0);
     }
     if (player_2 != 0)
     {
-        if (player_2 == 0)
-        {
-            draw_xpm(back, mode_info.XResolution / 3, mode_info.YResolution / 3);
-        }
-        else if (player_2 == 1)
-        {
-            draw_xpm(number1, mode_info.XResolution / 3, mode_info.YResolution / 3);
-        }
-        else if (player_2 == 2)
-        {
-            draw_xpm(number2, mode_info.XResolution / 3, mode_info.YResolution / 3);
-        }
+        draw_xpm(&final[2], 0, mode_info.YResolution / 2);
+        draw_xpm(&final[player_2-1], mode_info.XResolution / 2, mode_info.YResolution / 2);
     }
     if (player_1 == 0 && player_2 == 0)
     {

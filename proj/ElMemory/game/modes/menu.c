@@ -47,6 +47,15 @@ Sprite *Quit;
 Sprite *Easy;
 Sprite *Medium;
 Sprite *Hard;
+Sprite *score1; 
+Sprite *score2; 
+Sprite *score3; 
+Sprite *score4; 
+Sprite *score5; 
+Sprite *score6;
+Sprite *score7;
+Sprite *score8;
+Sprite *score9;
 
 int timer_interrupts = 0;
 
@@ -88,6 +97,8 @@ void start_sprites()
     Easy = initiate_xpm((xpm_map_t)Easy_xpm);
     Medium = initiate_xpm((xpm_map_t)Medium_xpm);
     Hard = initiate_xpm((xpm_map_t)Hard_xpm);
+
+
 }
 
 void destroy_sprites()
