@@ -63,6 +63,7 @@ extern bool player1;
 extern bool player2; 
 extern int player_1;
 extern int player_2;
+extern bool is_processing;
 
 void process_cardPressed1_2()
 {
@@ -70,7 +71,10 @@ void process_cardPressed1_2()
     {
         if (mouse_info_s.left_click)
         {
-            cardPressed1 = true;
+            if(!is_processing){
+                cardPressed1 = true;
+            }
+            
         }
     }
     if (cardPressed1)
@@ -97,6 +101,7 @@ void process_cardPressed1_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -125,6 +130,7 @@ void process_cardPressed1_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false; 
         }
         }
     }
@@ -135,7 +141,8 @@ void process_cardPressed2_2()
     {
         if (mouse_info_s.left_click)
         {
-            cardPressed2 = true;
+            if(!is_processing) {
+            cardPressed2 = true;}
         }
     }
     if (cardPressed2)
@@ -162,6 +169,7 @@ void process_cardPressed2_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true; 
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -191,6 +199,7 @@ void process_cardPressed2_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -202,7 +211,8 @@ void process_cardPressed3_2()
     {
         if (mouse_info_s.left_click)
         {
-            cardPressed3 = true;
+            if(!is_processing){
+            cardPressed3 = true;}
         }
     }
     if (cardPressed3)
@@ -229,6 +239,7 @@ void process_cardPressed3_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true; 
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -259,6 +270,7 @@ void process_cardPressed3_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -270,7 +282,8 @@ void process_cardPressed4_2()
     {
         if (mouse_info_s.left_click)
         {
-            cardPressed4 = true;
+            if(!is_processing){
+            cardPressed4 = true;}
         }
     }
     if (cardPressed4)
@@ -296,6 +309,7 @@ void process_cardPressed4_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -324,6 +338,7 @@ void process_cardPressed4_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -335,7 +350,8 @@ void process_cardPressed5_2()
     {
         if (mouse_info_s.left_click)
         {
-            cardPressed5 = true;
+            if(!is_processing){
+            cardPressed5 = true;}
         }
     }
     if (cardPressed5)
@@ -361,6 +377,7 @@ void process_cardPressed5_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true; 
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -389,6 +406,7 @@ void process_cardPressed5_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -400,7 +418,8 @@ void process_cardPressed6_2()
     {
         if (mouse_info_s.left_click)
         {
-            cardPressed6 = true;
+            if(!is_processing){
+            cardPressed6 = true;}
         }
     }
     if (cardPressed6)
@@ -427,6 +446,7 @@ void process_cardPressed6_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -455,6 +475,7 @@ void process_cardPressed6_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -466,7 +487,8 @@ void process_cardPressed7_2()
     {
         if (mouse_info_s.left_click)
         {
-            cardPressed7 = true;
+            if(!is_processing){
+            cardPressed7 = true;}
         }
     }
     if (cardPressed7)
@@ -492,6 +514,7 @@ void process_cardPressed7_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -521,6 +544,7 @@ void process_cardPressed7_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -532,7 +556,8 @@ void process_cardPressed8_2()
     {
         if (mouse_info_s.left_click)
         {
-            cardPressed8 = true;
+            if(!is_processing){
+            cardPressed8 = true;}
         }
     }
     if (cardPressed8)
@@ -559,6 +584,7 @@ void process_cardPressed8_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -588,6 +614,7 @@ void process_cardPressed8_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }

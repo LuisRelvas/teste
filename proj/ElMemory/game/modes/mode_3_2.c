@@ -71,6 +71,7 @@ extern bool player1;
 extern bool player2; 
 extern int player_1;
 extern int player_2;
+extern bool is_processing; 
 
 void process_deck1_2()
 {
@@ -78,7 +79,8 @@ void process_deck1_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed1 = true;
+            if(!is_processing){
+            backPressed1 = true;}
             
         }
     }
@@ -105,6 +107,7 @@ void process_deck1_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -133,6 +136,7 @@ void process_deck1_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false; 
         }
         }
     }
@@ -143,7 +147,8 @@ void process_deck2_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed2 = true;
+            if(!is_processing){
+            backPressed2 = true;}
             
         }
     }
@@ -170,6 +175,7 @@ void process_deck2_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -199,6 +205,7 @@ void process_deck2_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -209,7 +216,8 @@ void process_deck3_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed3 = true;
+            if(!is_processing){
+            backPressed3 = true;}
             
         }
     }
@@ -236,6 +244,7 @@ void process_deck3_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true; 
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -265,6 +274,7 @@ void process_deck3_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
     }
     }
@@ -275,7 +285,8 @@ void process_deck4_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed4 = true;
+            if(!is_processing){
+            backPressed4 = true;}
             
         }
     }
@@ -302,6 +313,7 @@ void process_deck4_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true; 
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -331,6 +343,7 @@ void process_deck4_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -341,7 +354,8 @@ void process_deck5_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed5 = true;
+            if(!is_processing){
+            backPressed5 = true;}
             
         }
     }
@@ -368,6 +382,7 @@ void process_deck5_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -396,6 +411,7 @@ void process_deck5_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -406,7 +422,8 @@ void process_deck6_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed6 = true;
+            if(!is_processing){
+            backPressed6 = true;}
             
         }
     }
@@ -434,6 +451,7 @@ void process_deck6_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -464,6 +482,7 @@ void process_deck6_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -474,7 +493,8 @@ void process_deck7_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed7 = true;
+            if(!is_processing){
+            backPressed7 = true;}
             
         }
     }
@@ -501,6 +521,7 @@ void process_deck7_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -529,6 +550,7 @@ void process_deck7_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -539,7 +561,8 @@ void process_deck8_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed8 = true;
+            if(!is_processing){
+            backPressed8 = true;}
             
         }
     }
@@ -566,6 +589,7 @@ void process_deck8_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -592,6 +616,7 @@ void process_deck8_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -602,7 +627,8 @@ void process_deck9_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed9 = true;
+            if(!is_processing){
+            backPressed9 = true;}
             
         }
     }
@@ -629,6 +655,7 @@ void process_deck9_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {  
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -657,6 +684,7 @@ void process_deck9_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -667,7 +695,8 @@ void process_deck10_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed10 = true;
+            if(!is_processing){
+            backPressed10 = true;}
             
         }
     }
@@ -694,6 +723,7 @@ void process_deck10_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -720,6 +750,7 @@ void process_deck10_2()
                 index_2->state = 0;
                 printf("The value of the backPressed10 is %d", backPressed10);
             }
+            is_processing = false;
             matrix_id1 = -1;
             matrix_id2 = -1;
         }
@@ -732,7 +763,8 @@ void process_deck11_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed11 = true;
+            if(!is_processing){
+            backPressed11 = true;}
             
         }
     }
@@ -759,6 +791,7 @@ void process_deck11_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -788,6 +821,7 @@ void process_deck11_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -798,7 +832,8 @@ void process_deck12_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed12 = true;
+            if(!is_processing){
+            backPressed12 = true;}
             
         }
     }
@@ -825,6 +860,7 @@ void process_deck12_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -853,6 +889,7 @@ void process_deck12_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -863,7 +900,8 @@ void process_deck13_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed13 = true;
+            if(!is_processing){
+            backPressed13 = true;}
             
         }
     }
@@ -890,6 +928,7 @@ void process_deck13_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -918,6 +957,7 @@ void process_deck13_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -928,7 +968,8 @@ void process_deck14_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed14 = true;
+            if(!is_processing){
+            backPressed14 = true;}
             
         }
     }
@@ -955,6 +996,7 @@ void process_deck14_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -983,6 +1025,7 @@ void process_deck14_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -993,7 +1036,8 @@ void process_deck15_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed15 = true;
+            if(!is_processing){
+            backPressed15 = true;}
             
         }
     }
@@ -1020,6 +1064,7 @@ void process_deck15_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -1047,6 +1092,7 @@ void process_deck15_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }
@@ -1057,7 +1103,8 @@ void process_deck16_2()
     {
         if (mouse_info_s.left_click)
         {
-            backPressed16 = true;
+            if(!is_processing){
+            backPressed16 = true;}
             
         }
     }
@@ -1084,6 +1131,7 @@ void process_deck16_2()
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
+            is_processing = true;
             if(gameplayCounter % 7 == 0) {
             if (check_match(matrix_id1, matrix_id2))
             {
@@ -1112,6 +1160,7 @@ void process_deck16_2()
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }

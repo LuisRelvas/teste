@@ -56,6 +56,7 @@ extern bool player1;
 extern bool player2;
 extern int player_1;
 extern int player_2;
+extern bool is_processing; 
 
 extern int gameplayCounter; 
 
@@ -65,8 +66,9 @@ void process_button1_2(Sprite *cards, int size)
     {
         if (mouse_info_s.left_click)
         {
+            if(!is_processing){
             printf("BOTAO 1 CLICK\n");
-            button1Pressed = true;
+            button1Pressed = true;}
         }
     }
     if (button1Pressed)
@@ -88,13 +90,17 @@ void process_button1_2(Sprite *cards, int size)
             index_2_bool = &button1Pressed;
             index_2 = &matrix[0][0];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("THe value of the index_1->state on button 1 is %d\n", index_2->state);
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
+            
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
-            if(gameplayCounter % 7 == 0) {
+            is_processing = true;
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
+            
             if (check_match(matrix_id1, matrix_id2))
             {
                 printf("ENTERED HERE");
@@ -124,6 +130,7 @@ void process_button1_2(Sprite *cards, int size)
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
             }
         }
     }
@@ -135,7 +142,9 @@ void process_button2_2(Sprite *cards, int size)
     {
         if (mouse_info_s.left_click)
         {
+            if(!is_processing){
             button2Pressed = true;
+            }
         }
     }
 
@@ -148,23 +157,20 @@ void process_button2_2(Sprite *cards, int size)
             index_1_bool = &button2Pressed;
             index_1 = &matrix[0][1];
             index_1->state = 1;
-            printf("THe value of the index_1->state is %d\n", index_1->state);
-            printf("The value of index_1 on button2 is %d\n", index_1);
-            printf("The value of matrix_id1 on  button2 is %d\n", matrix_id1);
         }
         else if (matrix_id2 == -1 && index_1 != &matrix[0][1])
         {
             matrix_id2 = matrix[0][1].id;
             index_2_bool = &button2Pressed;
             index_2 = &matrix[0][1];
-            index_2->state = 1;        
-            printf("THe value of the index_1->state on button 2 is %d\n", index_2->state);
-            printf("The value of index_2 on button2 is %d\n", index_2);
-            printf("The value of matrix_id2 on  button2 is %d\n", matrix_id2);
+            index_2->state = 1;
+            gameplayCounter = 5;        
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
-            if(gameplayCounter % 7 == 0) {
+            is_processing = true;
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
+            
             if (check_match(matrix_id1, matrix_id2))
             {
                 printf("ENTERED HERE");
@@ -194,6 +200,7 @@ void process_button2_2(Sprite *cards, int size)
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false; 
         }
         }
     }
@@ -205,7 +212,9 @@ void process_button3_2(Sprite *cards, int size)
     {
         if (mouse_info_s.left_click)
         {
+            if(!is_processing){
             button3Pressed = true;
+            }
         }
     }
     if (button3Pressed)
@@ -217,9 +226,6 @@ void process_button3_2(Sprite *cards, int size)
             index_1_bool = &button3Pressed;
             index_1 = &matrix[1][0];
             index_1->state = 1;
-            printf("THe value of the index_1->state on button 3 is %d\n", index_1->state);
-            printf("The value of index_1 on button3 is %d\n", index_1);
-            printf("The value of matrix_id1 on button3 is %d\n", matrix_id1);
         }
 
         else if (matrix_id2 == -1 && index_1 != &matrix[1][0])
@@ -228,13 +234,12 @@ void process_button3_2(Sprite *cards, int size)
             index_2_bool = &button3Pressed;
             index_2 = &matrix[1][0];
             index_2->state = 1;
-            printf("THe value of the index_1->state on button 3 is %d\n", index_2->state);
-            printf("The value of index_2 on button3 is %d\n", index_2);
-            printf("The value of matrix_id2 on button3 is %d\n", matrix_id2);
+            gameplayCounter = 5;
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
-            if(gameplayCounter % 7 == 0) {
+            is_processing = true;
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 printf("ENTERED HERE");
@@ -261,6 +266,7 @@ void process_button3_2(Sprite *cards, int size)
             }   
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
             
         }
     }
@@ -273,7 +279,9 @@ void process_button4_2(Sprite *cards, int size)
     {
         if (mouse_info_s.left_click)
         {
+            if(!is_processing){
             button4Pressed = true;
+            }
         }
     }
     if (button4Pressed)
@@ -285,11 +293,6 @@ void process_button4_2(Sprite *cards, int size)
             index_1_bool = &button4Pressed;
             index_1 = &matrix[1][1];
             index_1->state = 1;
-
-            animation_trigger(index_1,mode_info.XResolution/2,mode_info.YResolution/2);
-            printf("THe value of the index_1->state on button 4 is %d\n", index_1->state);
-            printf("The value of index_1 on button4 is %d\n", index_1);
-            printf("The value of matrix_id1 on button4 is %d\n", matrix_id1);
         }
         else if (matrix_id2 == -1 && index_1 != &matrix[1][1])
         {
@@ -297,13 +300,12 @@ void process_button4_2(Sprite *cards, int size)
             index_2_bool = &button4Pressed;
             index_2 = &matrix[1][1];
             index_2->state = 1;
-            printf("THe value of the index_2->state on button 4  is %d\n", index_2->state); 
-            printf("The value of index_2 on button4 is %d\n", index_2);
-            printf("The value of matrix_id2 on button4 is %d\n", matrix_id2);
+            gameplayCounter = 5;
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
-            if(gameplayCounter % 7 == 0){
+            is_processing = true;
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4){
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1){
@@ -329,6 +331,7 @@ void process_button4_2(Sprite *cards, int size)
             }
             matrix_id1 = -1;
             matrix_id2 = -1;
+            is_processing = false;
         }
         }
     }

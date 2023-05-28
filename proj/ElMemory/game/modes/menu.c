@@ -10,6 +10,7 @@ extern Mouse_Info_Struct mouse_info_s;
 extern vbe_mode_info_t mode_info;
 extern real_time_mode_info time_mode_info;
 int gameplayCounter = 200;
+bool is_processing = false; 
 
 Sprite *mouse;
 Sprite *hand;
