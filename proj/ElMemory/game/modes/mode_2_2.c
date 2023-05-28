@@ -64,6 +64,7 @@ extern bool player2;
 extern int player_1;
 extern int player_2;
 extern bool is_processing;
+extern uint8_t scancode; 
 
 void process_cardPressed1_2()
 {
@@ -716,4 +717,8 @@ void draw_game_menu_4_2()
         draw_finish_menu();
         menuState = END;
     }
+     if(scancode == R_KEY){
+        pre1 = 0; 
+        menuState = GAME_4_2P;
+    }   
 }

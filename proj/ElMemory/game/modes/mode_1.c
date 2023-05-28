@@ -54,6 +54,7 @@ extern Sprite *back_anim3;
 extern Sprite *back_anim4;
 extern int gameplayCounter;
 extern bool is_processing; 
+extern uint8_t scancode; 
 
 void process_button1(Sprite *cards, int size)
 {
@@ -340,4 +341,8 @@ void draw_game_menu()
     {
         menuState = END;
     }
+     if(scancode == R_KEY){
+        pre = 0; 
+        menuState = GAME;
+    }   
 }

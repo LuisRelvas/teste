@@ -1,6 +1,7 @@
 #include "mode_3.h"
 
 extern int pre2;
+extern uint8_t scancode;
 extern Sprite **matrix;
 extern Sprite *index_1;
 extern Sprite *index_2;
@@ -1141,5 +1142,9 @@ void draw_game_menu_3()
         menuState = END;
     }
 
+    if(scancode == R_KEY){
+        pre2 = 0; 
+        menuState = GAME_3;
+    }    
     
 }

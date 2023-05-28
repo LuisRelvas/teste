@@ -72,6 +72,7 @@ extern bool player2;
 extern int player_1;
 extern int player_2;
 extern bool is_processing; 
+extern uint8_t scancode; 
 
 void process_deck1_2()
 {
@@ -1341,6 +1342,10 @@ void draw_game_menu_8_2()
     {
         menuState = END;
     }
+     if(scancode == R_KEY){
+        pre2 = 0; 
+        menuState = GAME_8_2P;
+    }   
 
     
 }

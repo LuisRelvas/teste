@@ -57,6 +57,7 @@ extern bool player2;
 extern int player_1;
 extern int player_2;
 extern bool is_processing; 
+extern uint8_t scancode; 
 
 extern int gameplayCounter; 
 
@@ -408,4 +409,8 @@ void draw_game_menu_2_2()
         printf("player2Score %d", player_2);
         menuState = END;
     }
+     if(scancode == R_KEY){
+        pre = 0; 
+        menuState = GAME_2P;
+    }   
 }

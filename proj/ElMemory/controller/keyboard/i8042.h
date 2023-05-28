@@ -26,5 +26,6 @@
 #define K_KEY           37
 #define L_KEY           38
 #define P_KEY           25
+#define R_KEY           19
 
 #endif
