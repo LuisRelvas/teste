@@ -1,5 +1,5 @@
 /* XPM */
-static char * 2_xpm[] = {
+static char * score_2_xpm[] = {
 "30 30 3 1",
 " 	c None",
 ".	c #FEFEFE",

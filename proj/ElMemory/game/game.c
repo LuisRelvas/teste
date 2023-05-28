@@ -55,6 +55,20 @@ extern Sprite *Quit;
 extern Sprite *Easy;
 extern Sprite *Medium;
 extern Sprite *Hard;
+extern Sprite *score1;
+extern Sprite *score2;
+extern Sprite *score3;
+extern Sprite *score4;
+extern Sprite *score5;
+extern Sprite *score6;
+extern Sprite *score7;
+extern Sprite *score8;
+extern Sprite *score9;
+extern Sprite *score0;
+extern Sprite *player_1_xpm;
+extern Sprite *player_2_xpm;
+extern Sprite *player_1_menu;
+extern Sprite *player_2_menu;
 int animationFrame = 0;
 bool isAnimating = false;
 int chosen;
@@ -104,31 +118,48 @@ void draw_new_fb()
     switch (menuState)
     {
     case START:
+        
         draw_initial_menu();
+        mouse_info_s.left_click = 0;
         break;
     case GAME:
+        
         draw_game_menu();
+        mouse_info_s.left_click = 0;
         break;
     case GAME_2P:
+    
         draw_game_menu_2_2();
+        mouse_info_s.left_click = 0;
         break;
     case GAME_4_2P:
+    mouse_info_s.left_click = 0;
         draw_game_menu_4_2();
         break;
     case GAME_8_2P:
+    
         draw_game_menu_8_2();
+        mouse_info_s.left_click = 0;
         break;
     case END:
+    
         draw_finish_menu();
+        mouse_info_s.left_click = 0;
         break;
     case GAME_2:
+    
         draw_game_menu_2();
+        mouse_info_s.left_click = 0;
         break;
     case MODE:
+    
         draw_mode_menu();
+        mouse_info_s.left_click = 0;
         break;
     case GAME_3:
+    
         draw_game_menu_3();
+        mouse_info_s.left_click = 0;
         break;
     }
 
@@ -446,24 +477,16 @@ bool check_match(int id1, int id2)
 // O menu final é apenas um retângulo com tamanho máximo, com um smile ao centro
 void draw_finish_menu()
 {
-    Sprite final[] = {*number1,*number2,*number3,*number4,*number5,*number6,*number7,*number8};
+    Sprite final[] = {*score0,*score1,*score2,*score3,*score4,*score5,*score6,*score7,*score8};
     printf("The value of player_1 is %d\n", player_1);
     printf("The value of player_2 is %d\n", player_2);
     memset(drawing_frame_buf, 0, mode_info.XResolution * mode_info.YResolution * mode_info.BitsPerPixel / 8);
-    if (player_1 != 0)
-    {
-        draw_xpm(&final[0], 0, 0);
-        draw_xpm(&final[player_1-1], mode_info.XResolution / 2, 0);
-    }
-    if (player_2 != 0)
-    {
-        draw_xpm(&final[2], 0, mode_info.YResolution / 2);
-        draw_xpm(&final[player_2-1], mode_info.XResolution / 2, mode_info.YResolution / 2);
-    }
-    if (player_1 == 0 && player_2 == 0)
-    {
-        draw_xpm(smile, mode_info.XResolution / 2 - 100, mode_info.YResolution / 2 - 100);
-    }
+ 
+        draw_xpm(player_1_xpm, 0, 0);
+        draw_xpm(&final[player_1], mode_info.XResolution / 2, 0);
+
+        draw_xpm(player_2_xpm, 0, mode_info.YResolution / 2);
+        draw_xpm(&final[player_2], mode_info.XResolution / 2, mode_info.YResolution / 2);
 }
 
 void draw_mouse()

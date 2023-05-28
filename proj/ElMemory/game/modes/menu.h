@@ -43,6 +43,20 @@
 #include "game/xpm/Easy.xpm"
 #include "game/xpm/Medium.xpm"
 #include "game/xpm/Hard.xpm"
+#include "game/xpm/1.xpm"
+#include "game/xpm/2.xpm"
+#include "game/xpm/3.xpm"
+#include "game/xpm/4.xpm"
+#include "game/xpm/5.xpm"
+#include "game/xpm/6.xpm"
+#include "game/xpm/7.xpm"
+#include "game/xpm/8.xpm"
+#include "game/xpm/9.xpm"
+#include "game/xpm/0.xpm"
+#include "game/xpm/1player.xpm"
+#include "game/xpm/2player.xpm"
+#include "game/xpm/player1.xpm"
+#include "game/xpm/player2.xpm"
 
 typedef enum
 {

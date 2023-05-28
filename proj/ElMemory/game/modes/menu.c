@@ -47,6 +47,7 @@ Sprite *Quit;
 Sprite *Easy;
 Sprite *Medium;
 Sprite *Hard;
+Sprite *score0;
 Sprite *score1; 
 Sprite *score2; 
 Sprite *score3; 
@@ -56,6 +57,10 @@ Sprite *score6;
 Sprite *score7;
 Sprite *score8;
 Sprite *score9;
+Sprite *player_1_xpm;
+Sprite *player_2_xpm;
+Sprite *player_1_menu; 
+Sprite *player_2_menu;
 
 int timer_interrupts = 0;
 
@@ -97,6 +102,20 @@ void start_sprites()
     Easy = initiate_xpm((xpm_map_t)Easy_xpm);
     Medium = initiate_xpm((xpm_map_t)Medium_xpm);
     Hard = initiate_xpm((xpm_map_t)Hard_xpm);
+    score0 = initiate_xpm((xpm_map_t)score_0_xpm);
+    score1 = initiate_xpm((xpm_map_t)score_1_xpm);
+    score2 = initiate_xpm((xpm_map_t)score_2_xpm);
+    score3 = initiate_xpm((xpm_map_t)score_3_xpm);
+    score4 = initiate_xpm((xpm_map_t)score_4_xpm);
+    score5 = initiate_xpm((xpm_map_t)score_5_xpm);
+    score6 = initiate_xpm((xpm_map_t)score_6_xpm);
+    score7 = initiate_xpm((xpm_map_t)score_7_xpm);
+    score8 = initiate_xpm((xpm_map_t)score_8_xpm);
+    score9 = initiate_xpm((xpm_map_t)score_9_xpm);
+    player_1_xpm = initiate_xpm((xpm_map_t)player1_xpm);
+    player_2_xpm = initiate_xpm((xpm_map_t)player2_xpm);
+    player_1_menu = initiate_xpm((xpm_map_t)_1player_xpm);
+    player_2_menu = initiate_xpm((xpm_map_t)_2player_xpm);
 
 
 }
@@ -133,6 +152,20 @@ void destroy_sprites()
     destroy_sprite(Easy);
     destroy_sprite(Medium);
     destroy_sprite(Hard);
+    destroy_sprite(score0);
+    destroy_sprite(score1);
+    destroy_sprite(score2);
+    destroy_sprite(score3);
+    destroy_sprite(score4);
+    destroy_sprite(score5);
+    destroy_sprite(score6);
+    destroy_sprite(score7);
+    destroy_sprite(score8);
+    destroy_sprite(score9);
+    destroy_sprite(player_1_xpm);
+    destroy_sprite(player_2_xpm);
+    destroy_sprite(player_1_menu);
+    destroy_sprite(player_2_menu);
 }
 
 void update_timer_frame()
