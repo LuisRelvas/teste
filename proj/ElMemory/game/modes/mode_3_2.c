@@ -102,13 +102,14 @@ void process_deck1_2()
             index_2_bool = &backPressed1;
             index_2 = &matrix[0][0];
             index_2->state = 1;
+            gameplayCounter = 5; 
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -170,13 +171,14 @@ void process_deck2_2()
             index_2_bool = &backPressed2;
             index_2 = &matrix[0][1];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -239,13 +241,14 @@ void process_deck3_2()
             index_2_bool = &backPressed3;
             index_2 = &matrix[0][2];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true; 
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -308,13 +311,14 @@ void process_deck4_2()
             index_2_bool = &backPressed4;
             index_2 = &matrix[0][3];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true; 
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -377,13 +381,14 @@ void process_deck5_2()
             index_2_bool = &backPressed5;
             index_2 = &matrix[1][0];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -446,13 +451,14 @@ void process_deck6_2()
             index_2_bool = &backPressed6;
             index_2 = &matrix[1][1];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -516,13 +522,14 @@ void process_deck7_2()
             index_2_bool = &backPressed7;
             index_2 = &matrix[1][2];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -584,13 +591,14 @@ void process_deck8_2()
             index_2_bool = &backPressed8;
             index_2 = &matrix[1][3];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -650,13 +658,14 @@ void process_deck9_2()
             index_2_bool = &backPressed9;
             index_2 = &matrix[2][0];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {  
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -718,13 +727,14 @@ void process_deck10_2()
             index_2_bool = &backPressed10;
             index_2 = &matrix[2][1];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -786,13 +796,14 @@ void process_deck11_2()
             index_2_bool = &backPressed11;
             index_2 = &matrix[2][2];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -855,13 +866,14 @@ void process_deck12_2()
             index_2_bool = &backPressed12;
             index_2 = &matrix[2][3];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -923,13 +935,14 @@ void process_deck13_2()
             index_2_bool = &backPressed13;
             index_2 = &matrix[3][0];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -991,13 +1004,14 @@ void process_deck14_2()
             index_2_bool = &backPressed14;
             index_2 = &matrix[3][1];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -1059,13 +1073,14 @@ void process_deck15_2()
             index_2_bool = &backPressed15;
             index_2 = &matrix[3][2];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
@@ -1126,13 +1141,14 @@ void process_deck16_2()
             index_2_bool = &backPressed16;
             index_2 = &matrix[3][3];
             index_2->state = 1;
+            gameplayCounter = 5;
             printf("The value of index_2 on button1 is %d\n", index_2);
             printf("The value of matrix_id2 on button1 is %d", matrix_id2);
         }
         if (matrix_id1 != -1 && matrix_id2 != -1)
         {
             is_processing = true;
-            if(gameplayCounter % 7 == 0) {
+            if(gameplayCounter % 2 == 0 && gameplayCounter != 4) {
             if (check_match(matrix_id1, matrix_id2))
             {
                 if(player1)
